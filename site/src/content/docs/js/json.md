@@ -55,7 +55,7 @@ Die Kopie mit `structuredClone` hat ein eigenes Array `parts`, darum ändert `pu
 ## Aufgaben
 
 ::::exercise[Einstieg]
-Lies den JSON-Text `'{"id": 7, "name": "Beamer", "deposit": 80, "available": false}'` mit `JSON.parse`. Gib den Namen aus, das halbe Pfand und «frei» oder «ausgeliehen», je nachdem, was in `available` steht.
+Lies den JSON-Text `'{"id": 6, "name": "Beamer", "deposit": 80, "available": false}'` mit `JSON.parse`. Gib den Namen aus, das halbe Pfand und «frei» oder «ausgeliehen», je nachdem, was in `available` steht.
 
 :::solution[Lösung]
 ::code{file="examples/js/json/{lang}/solution-1.mjs"}
