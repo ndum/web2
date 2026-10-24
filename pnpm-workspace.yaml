@@ -3,8 +3,8 @@
 # The site and the generated German and English variants of the projects, never the bilingual sources
 packages:
   - site
-  - case/de
-  - case/en
+  - case/*/de
+  - case/*/en
   - exercises/*/*/de
   - exercises/*/*/en
   - exercises/*/*/solution/de
