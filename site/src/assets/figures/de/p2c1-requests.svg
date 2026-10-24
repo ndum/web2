@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 342" role="img" aria-labelledby="p2c1-requests-de-title p2c1-requests-de-desc">
+<title id="p2c1-requests-de-title">Anfragen einer mehrseitigen Website und einer SPA</title>
+<desc id="p2c1-requests-de-desc">Links eine mehrseitige Website, rechts eine Single Page Application, jeweils in drei Schritten. Beim Öffnen des Katalogs lädt die mehrseitige Website eine ganze Seite, die SPA eine fast leere Seite, ihr JavaScript und die Daten als JSON. Beim Klick auf den Beamer und beim Zurück zum Katalog lädt die mehrseitige Website jedes Mal eine ganze Seite, die SPA schickt keine Anfrage, ihr JavaScript zeigt das Ding und den Katalog selbst an.</desc>
+<defs><marker id="p2c1-requests-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-text" x="20" y="28">Mehrseitige Website (MPA)</text>
+<text class="fig-text" x="350" y="28">Single Page Application (SPA)</text>
+<text class="fig-sub" x="20" y="64">1. Katalog öffnen</text>
+<rect class="fig-box fig-box-strong" x="20" y="74" width="130" height="26" rx="6"/>
+<text class="fig-code" x="30" y="91">GET /katalog</text>
+<path class="fig-arrow" d="M 154 87 L 180 87" marker-end="url(#p2c1-requests-de-head)"/>
+<text class="fig-sub" x="188" y="91">ganze Seite</text>
+<text class="fig-sub" x="350" y="64">1. Katalog öffnen</text>
+<rect class="fig-box fig-box-strong" x="350" y="74" width="130" height="26" rx="6"/>
+<text class="fig-code" x="360" y="91">GET /</text>
+<path class="fig-arrow" d="M 484 87 L 510 87" marker-end="url(#p2c1-requests-de-head)"/>
+<text class="fig-sub" x="518" y="91">fast leere Seite</text>
+<rect class="fig-box fig-box-strong" x="350" y="108" width="130" height="26" rx="6"/>
+<text class="fig-code" x="360" y="125">GET /main.js</text>
+<path class="fig-arrow" d="M 484 121 L 510 121" marker-end="url(#p2c1-requests-de-head)"/>
+<text class="fig-sub" x="518" y="125">JavaScript</text>
+<rect class="fig-box fig-box-strong" x="350" y="142" width="130" height="26" rx="6"/>
+<text class="fig-code" x="360" y="159">GET /items</text>
+<path class="fig-arrow" d="M 484 155 L 510 155" marker-end="url(#p2c1-requests-de-head)"/>
+<text class="fig-sub" x="518" y="159">Daten als JSON</text>
+<text class="fig-sub" x="20" y="206">2. Klick auf den Beamer</text>
+<rect class="fig-box fig-box-strong" x="20" y="216" width="130" height="26" rx="6"/>
+<text class="fig-code" x="30" y="233">GET /dinge/6</text>
+<path class="fig-arrow" d="M 154 229 L 180 229" marker-end="url(#p2c1-requests-de-head)"/>
+<text class="fig-sub" x="188" y="233">ganze Seite</text>
+<text class="fig-sub" x="350" y="206">2. Klick auf den Beamer</text>
+<rect class="fig-box" x="350" y="216" width="300" height="26" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-sub fig-note" x="360" y="233">keine Anfrage, JavaScript zeigt das Ding</text>
+<text class="fig-sub" x="20" y="280">3. Zurück zum Katalog</text>
+<rect class="fig-box fig-box-strong" x="20" y="290" width="130" height="26" rx="6"/>
+<text class="fig-code" x="30" y="307">GET /katalog</text>
+<path class="fig-arrow" d="M 154 303 L 180 303" marker-end="url(#p2c1-requests-de-head)"/>
+<text class="fig-sub" x="188" y="307">ganze Seite</text>
+<text class="fig-sub" x="350" y="280">3. Zurück zum Katalog</text>
+<rect class="fig-box" x="350" y="290" width="300" height="26" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-sub fig-note" x="360" y="307">keine Anfrage, JavaScript zeigt den Katalog</text>
+</svg>

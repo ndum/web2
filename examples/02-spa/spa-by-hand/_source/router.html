@@ -1,0 +1,36 @@
+<!doctype html>
+<div id="app"></div>
+<script>
+  const items = [
+    { id: 1, name: '[%Bohrmaschine|Drill%]', deposit: 20 },
+    { id: 6, name: '[%Beamer|Projector%]', deposit: 80 },
+  ]
+
+  // Reads the part of the address after the #, for example #/items/6
+  function parseRoute(hash) {
+    const match = /^#\/items\/(\d+)$/.exec(hash)
+    if (match) return { name: 'item', id: Number(match[1]) }
+    if (hash === '' || hash === '#/') return { name: 'catalog' }
+    return { name: 'notFound' }
+  }
+
+  function render() {
+    const route = parseRoute(location.hash)
+    const app = document.querySelector('#app')
+    if (route.name === 'catalog') {
+      app.innerHTML = items.map((item) => `<a href="#/items/${item.id}">${item.name}</a>`).join(' ')
+    } else if (route.name === 'item') {
+      const item = items.find((entry) => entry.id === route.id)
+      app.innerHTML = item
+        ? `<h1>${item.name}</h1><p>[%Pfand|Deposit%] CHF ${item.deposit}</p><a href="#/">[%Zum Katalog|To the catalog%]</a>`
+        : '<p>[%Dieses Ding gibt es nicht.|This thing does not exist.%]</p>'
+    } else {
+      app.innerHTML = '<p>[%Diese Seite gibt es nicht.|This page does not exist.%]</p>'
+    }
+    console.log(route.name, app.querySelector('h1, a, p').textContent)
+  }
+
+  addEventListener('hashchange', render)
+  render()
+  document.querySelector('a[href="#/items/6"]').click()
+</script>

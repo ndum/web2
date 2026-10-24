@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 310" role="img" aria-labelledby="p2c2-loop-de-title p2c2-loop-de-desc">
+<title id="p2c2-loop-de-title">Der Kreislauf der SPA von Hand</title>
+<desc id="p2c2-loop-de-desc">Vier Kästchen bilden einen Kreislauf. Der Zustand ist ein Objekt mit status, items und route. Die Funktion render liest den Zustand und schreibt daraus die Seite. Auf der Seite lösen Klicks, Eingaben und hashchange Events aus. Die Handler der Events ändern den Zustand, und der Kreislauf beginnt von vorn. Die Handler ändern die Seite nie direkt.</desc>
+<defs><marker id="p2c2-loop-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box fig-box-strong" x="60" y="40" width="200" height="64" rx="10"/>
+<text class="fig-text" x="160" y="68" text-anchor="middle">Zustand</text>
+<text class="fig-code" x="160" y="90" text-anchor="middle">{ status, items, route }</text>
+<rect class="fig-box" x="420" y="40" width="200" height="64" rx="10"/>
+<text class="fig-text" x="520" y="68" text-anchor="middle">render()</text>
+<text class="fig-sub" x="520" y="90" text-anchor="middle">baut HTML aus dem Zustand</text>
+<rect class="fig-box" x="420" y="200" width="200" height="64" rx="10"/>
+<text class="fig-text" x="520" y="228" text-anchor="middle">Seite</text>
+<text class="fig-sub" x="520" y="250" text-anchor="middle">das DOM im Browser</text>
+<rect class="fig-box" x="60" y="200" width="200" height="64" rx="10"/>
+<text class="fig-text" x="160" y="228" text-anchor="middle">Event</text>
+<text class="fig-sub" x="160" y="250" text-anchor="middle">Klick, Eingabe, hashchange</text>
+<path class="fig-arrow" d="M 262 72 L 416 72" marker-end="url(#p2c2-loop-de-head)"/>
+<rect class="fig-label-bg" x="318.5" y="53" width="43" height="18" rx="3"/>
+<text class="fig-sub" x="340" y="66" text-anchor="middle">liest</text>
+<path class="fig-arrow" d="M 520 106 L 520 196" marker-end="url(#p2c2-loop-de-head)"/>
+<rect class="fig-label-bg" x="488.6" y="143" width="62.8" height="18" rx="3"/>
+<text class="fig-sub" x="520" y="156" text-anchor="middle">schreibt</text>
+<path class="fig-arrow" d="M 418 232 L 264 232" marker-end="url(#p2c2-loop-de-head)"/>
+<rect class="fig-label-bg" x="308.6" y="213" width="62.8" height="18" rx="3"/>
+<text class="fig-sub" x="340" y="226" text-anchor="middle">löst aus</text>
+<path class="fig-arrow" d="M 160 198 L 160 108" marker-end="url(#p2c2-loop-de-head)"/>
+<rect class="fig-label-bg" x="135.2" y="143" width="49.599999999999994" height="18" rx="3"/>
+<text class="fig-sub" x="160" y="156" text-anchor="middle">ändert</text>
+<text class="fig-sub fig-note" x="340" y="296" text-anchor="middle">Die Handler ändern nur den Zustand, nie direkt die Seite.</text>
+</svg>

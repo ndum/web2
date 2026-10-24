@@ -1,0 +1,23 @@
+<!doctype html>
+<ul id="catalog"></ul>
+<script>
+  const items = [
+    { id: 1, name: 'Bohrmaschine', availableFrom: null },
+    { id: 2, name: 'Zelt für vier Personen', availableFrom: '2026-11-12' },
+    { id: 99, name: '<img src=x onerror=alert(1)>', availableFrom: null },
+  ]
+
+  // Turns the characters that mean something in HTML into plain text
+  function escapeHtml(text) {
+    return text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
+  }
+
+  function renderItem(item) {
+    const state = item.availableFrom === null ? 'Verfügbar' : 'Ausgeliehen'
+    return `<li><a href="#/items/${item.id}">${escapeHtml(item.name)}</a> ${state}</li>`
+  }
+
+  document.querySelector('#catalog').innerHTML = items.map(renderItem).join('')
+  console.log(document.querySelectorAll('#catalog li').length, document.querySelectorAll('#catalog img').length)
+  console.log(document.querySelector('#catalog li:last-child').textContent)
+</script>

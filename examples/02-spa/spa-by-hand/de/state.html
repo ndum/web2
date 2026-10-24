@@ -1,0 +1,25 @@
+<!doctype html>
+<div id="app"></div>
+<script>
+  // Everything the page shows comes from this one object
+  const state = { reservations: 0 }
+
+  function render() {
+    document.querySelector('#app').innerHTML = `
+      <p>Reservationen heute ${state.reservations}</p>
+      <button type="button" data-action="reserve">Reservieren</button>`
+  }
+
+  // One listener on the container, because every render replaces the button
+  document.querySelector('#app').addEventListener('click', (event) => {
+    if (event.target.dataset.action === 'reserve') {
+      state.reservations += 1
+      render()
+    }
+  })
+
+  render()
+  document.querySelector('[data-action="reserve"]').click()
+  document.querySelector('[data-action="reserve"]').click()
+  console.log(document.querySelector('#app p').textContent)
+</script>
