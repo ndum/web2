@@ -1,0 +1,18 @@
+{
+  "de": {
+    "getter.mjs": "3\n5\n30\nDas Pfand liegt zwischen 10 und 80 Franken\n",
+    "proxy.mjs": "geschrieben availableFrom = 2026-11-14\ngelesen name\nZelt\n2026-11-14\n",
+    "reactive.mjs": "49 von 60 Dingen sind da\n48 von 60 Dingen sind da\n48 von 62 Dingen sind da\n",
+    "solution-1.mjs": "70\n80\n",
+    "solution-2.mjs": "30\nRangeError Ungültiges Pfand 5\n",
+    "solution-3.mjs": "Bohrmaschine true\nBohrmaschine false\n"
+  },
+  "en": {
+    "getter.mjs": "3\n5\n30\nThe deposit is between 10 and 80 francs\n",
+    "proxy.mjs": "written availableFrom = 2026-11-14\nread name\nTent\n2026-11-14\n",
+    "reactive.mjs": "49 of 60 things are in\n48 of 60 things are in\n48 of 62 things are in\n",
+    "solution-1.mjs": "70\n80\n",
+    "solution-2.mjs": "30\nRangeError Invalid deposit 5\n",
+    "solution-3.mjs": "Drill true\nDrill false\n"
+  }
+}

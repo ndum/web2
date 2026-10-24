@@ -1,0 +1,18 @@
+{
+  "de": {
+    "callbacks.mjs": "Bohrmaschine\nLeiter\n0 Bohrmaschine\n1 Leiter\n",
+    "closure.mjs": "2 1\n",
+    "find-some.mjs": "Zelt für vier Personen 1\nundefined\ntrue true\n",
+    "map-filter.mjs": "[ 1, 2, 5, 11 ]\n2\n[ 'Bohrmaschine', 'Stichsäge' ]\n",
+    "reduce.mjs": "110\n{ Werkzeug: 3, Camping: 1 }\n[ 'Werkzeug', 'Camping' ] 3\n",
+    "sort.mjs": "[ 'Akkuschrauber', 'Beamer', 'Stichsäge', 'Zelt für vier Personen' ]\n[ 80, 50, 20, 20 ]\nStichsäge\n"
+  },
+  "en": {
+    "callbacks.mjs": "Drill\nLadder\n0 Drill\n1 Ladder\n",
+    "closure.mjs": "2 1\n",
+    "find-some.mjs": "Tent for four 1\nundefined\ntrue true\n",
+    "map-filter.mjs": "[ 1, 2, 5, 11 ]\n2\n[ 'Drill', 'Jigsaw' ]\n",
+    "reduce.mjs": "110\n{ Tools: 3, Camping: 1 }\n[ 'Tools', 'Camping' ] 3\n",
+    "sort.mjs": "[ 'Cordless screwdriver', 'Jigsaw', 'Projector', 'Tent for four' ]\n[ 80, 50, 20, 20 ]\nJigsaw\n"
+  }
+}

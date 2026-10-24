@@ -1,0 +1,20 @@
+{
+  "de": {
+    "catalog.mjs": "",
+    "format.mjs": "",
+    "ids.mjs": "",
+    "items.mjs": "",
+    "main.mjs": "3 von 4 Dingen sind da.\nBeamer, Pfand CHF 80.00\n",
+    "namespace.mjs": "[ 'countAvailable', 'findById' ]\nRaclette-Ofen\n",
+    "shared.mjs": "1 2 3\n"
+  },
+  "en": {
+    "catalog.mjs": "",
+    "format.mjs": "",
+    "ids.mjs": "",
+    "items.mjs": "",
+    "main.mjs": "3 of 4 things are in.\nProjector, deposit CHF 80.00\n",
+    "namespace.mjs": "[ 'countAvailable', 'findById' ]\nRaclette oven\n",
+    "shared.mjs": "1 2 3\n"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "[%web2-asynchron-aufgabe|web2-async-exercise%]",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "overview": "node src/overview.js",
+    "server": "node server.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}

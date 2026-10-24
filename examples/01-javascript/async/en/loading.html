@@ -1,0 +1,29 @@
+<!doctype html>
+<p id="status">Loading the catalog …</p>
+<ul id="catalog"></ul>
+<script>
+  // Stand-in for fetch, the association's server answers after 500 milliseconds
+  async function fetchFromServer() {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    return new Response(JSON.stringify(['Drill', 'Ladder']))
+  }
+
+  async function showCatalog() {
+    const status = document.querySelector('#status')
+    try {
+      const response = await fetchFromServer()
+      const names = await response.json()
+      for (const name of names) {
+        const entry = document.createElement('li')
+        entry.textContent = name
+        document.querySelector('#catalog').append(entry)
+      }
+      status.textContent = `${names.length} things loaded`
+    } catch {
+      status.textContent = 'The catalog could not be loaded.'
+    }
+    console.log(status.textContent)
+  }
+
+  showCatalog()
+</script>
