@@ -1,0 +1,18 @@
+{
+  "de": {
+    "categories.mjs": "Werkzeug Camping Sonstiges\n",
+    "conditions.mjs": "verfügbar bei dir ausgeliehen\nhohes Pfand\n",
+    "loops.mjs": "140\n1\n",
+    "solution-1.mjs": "3\n",
+    "solution-2.mjs": "50\n",
+    "solution-3.mjs": "true false true false\n"
+  },
+  "en": {
+    "categories.mjs": "Tools Camping Other\n",
+    "conditions.mjs": "available with you on loan\nhigh deposit\n",
+    "loops.mjs": "140\n1\n",
+    "solution-1.mjs": "3\n",
+    "solution-2.mjs": "50\n",
+    "solution-3.mjs": "true false true false\n"
+  }
+}

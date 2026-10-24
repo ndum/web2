@@ -1,0 +1,18 @@
+{
+  "de": {
+    "item.mjs": "Raclette-Ofen 30 Winter\nid, name, deposit, tags, available\nVerein\n",
+    "list.mjs": "3 true 2\nBohrmaschine [ 'Zelt', 'Leiter' ]\nStichsäge 20\n",
+    "references.mjs": "false\nfalse true\nfalse true\n1 2\n",
+    "solution-1.mjs": "Martina (M-117) seit 2024\n",
+    "solution-2.mjs": "2 Zelt + Schlafsack\n",
+    "solution-3.mjs": "Beamer 2026-11-07 undefined\nkeine E-Mail\n"
+  },
+  "en": {
+    "item.mjs": "Raclette oven 30 winter\nid, name, deposit, tags, available\nassociation\n",
+    "list.mjs": "3 true 2\nDrill [ 'Tent', 'Ladder' ]\nJigsaw 20\n",
+    "references.mjs": "false\nfalse true\nfalse true\n1 2\n",
+    "solution-1.mjs": "Martina (M-117) since 2024\n",
+    "solution-2.mjs": "2 Tent + Sleeping bag\n",
+    "solution-3.mjs": "Projector 2026-11-07 undefined\nno e-mail\n"
+  }
+}

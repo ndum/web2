@@ -1,0 +1,16 @@
+{
+  "de": {
+    "custom.mjs": "Bohrmaschine reserviert\nZelt ist ausgeliehen\n",
+    "parse.mjs": "20\ngeprüft 20\nRangeError Ungültiges Pfand -5\ngeprüft -5\nRangeError Ungültiges Pfand zwanzig\ngeprüft zwanzig\n",
+    "solution-1.mjs": "3\nEine Ausleihe dauert 1 bis 7 Tage, nicht 9\nEine Ausleihe dauert 1 bis 7 Tage, nicht 2.5\n",
+    "solution-2.mjs": "50\nEinstellungen unlesbar, Standard wird verwendet SyntaxError\n20\n",
+    "solution-3.mjs": "fallback try > catch > finally\n"
+  },
+  "en": {
+    "custom.mjs": "Drill reserved\nTent is on loan\n",
+    "parse.mjs": "20\nchecked 20\nRangeError Invalid deposit -5\nchecked -5\nRangeError Invalid deposit twenty\nchecked twenty\n",
+    "solution-1.mjs": "3\nA loan lasts 1 to 7 days, not 9\nA loan lasts 1 to 7 days, not 2.5\n",
+    "solution-2.mjs": "50\nSettings unreadable, using the default SyntaxError\n20\n",
+    "solution-3.mjs": "fallback try > catch > finally\n"
+  }
+}

@@ -1,0 +1,8 @@
+<!doctype html>
+<p id="note"></p>
+<script>
+  const input = '<img src=x onerror=alert(1)> [%Zelt|Tent%]'
+  // textContent shows the text as it is, innerHTML would turn it into an element
+  document.querySelector('#note').textContent = input
+  console.log(document.querySelector('#note').children.length)
+</script>

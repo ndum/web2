@@ -1,0 +1,24 @@
+<!doctype html>
+<input id="search" placeholder="[%Suchen|Search%]">
+<ul id="catalog"></ul>
+<script>
+  const names = ['[%Bohrmaschine|Drill%]', '[%Stichsäge|Jigsaw%]', '[%Zelt|Tent%]']
+  const list = document.querySelector('#catalog')
+
+  function render(query) {
+    list.replaceChildren()
+    for (const name of names) {
+      if (!name.toLowerCase().includes(query.toLowerCase())) continue
+      const entry = document.createElement('li')
+      entry.textContent = name
+      list.append(entry)
+    }
+    console.log(list.children.length)
+  }
+
+  const search = document.querySelector('#search')
+  search.addEventListener('input', () => render(search.value))
+  render('')
+  search.value = '[%säge|saw%]'
+  search.dispatchEvent(new Event('input'))
+</script>

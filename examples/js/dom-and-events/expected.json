@@ -1,0 +1,18 @@
+{
+  "de": {
+    "events.html": "Gewählt 2 Zelt\n",
+    "form.html": "Martina, 2 Tage\n",
+    "list.html": "3\n",
+    "solution-1.html": "0\n",
+    "solution-2.html": "Bohrmaschine true\nBohrmaschine false\n",
+    "solution-3.html": "3\n1\n"
+  },
+  "en": {
+    "events.html": "Chosen 2 Tent\n",
+    "form.html": "Martina, 2 days\n",
+    "list.html": "3\n",
+    "solution-1.html": "0\n",
+    "solution-2.html": "Drill true\nDrill false\n",
+    "solution-3.html": "3\n1\n"
+  }
+}

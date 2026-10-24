@@ -1,0 +1,16 @@
+{
+  "de": {
+    "copy.mjs": "1 2\nfalse true\nSyntaxError\n",
+    "solution-1.mjs": "Beamer 40 ausgeliehen\n",
+    "solution-2.mjs": "{\"item\":\"Zelt\",\"from\":\"2026-11-02T00:00:00.000Z\"}\n2 true\n",
+    "solution-3.mjs": "{\"pageSize\":20,\"favorites\":{}}\n{\"pageSize\":20,\"favorites\":[3,7]}\n",
+    "stringify.mjs": "{\"id\":2,\"name\":\"Zelt\",\"deposit\":50,\"lentUntil\":\"2026-11-12T00:00:00.000Z\"}\nstring undefined\n{\n  \"tags\": [\n    \"Küche\",\n    \"raclette\"\n  ]\n}\n"
+  },
+  "en": {
+    "copy.mjs": "1 2\nfalse true\nSyntaxError\n",
+    "solution-1.mjs": "Projector 40 on loan\n",
+    "solution-2.mjs": "{\"item\":\"Tent\",\"from\":\"2026-11-02T00:00:00.000Z\"}\n2 true\n",
+    "solution-3.mjs": "{\"pageSize\":20,\"favorites\":{}}\n{\"pageSize\":20,\"favorites\":[3,7]}\n",
+    "stringify.mjs": "{\"id\":2,\"name\":\"Tent\",\"deposit\":50,\"lentUntil\":\"2026-11-12T00:00:00.000Z\"}\nstring undefined\n{\n  \"tags\": [\n    \"kitchen\",\n    \"raclette\"\n  ]\n}\n"
+  }
+}

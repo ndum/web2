@@ -1,0 +1,18 @@
+{
+  "de": {
+    "equality.mjs": "false true\nNaN true\nfalse true false true\n",
+    "fallback.mjs": "20\n0\nkeine Bemerkung\n\n",
+    "solution-1.mjs": "number string boolean undefined object\n",
+    "solution-2.mjs": "50 0 20 20\n",
+    "solution-3.mjs": "0.30000000000000004 false\n30 true 0.30\n",
+    "types.mjs": "string number boolean\nobject undefined\n"
+  },
+  "en": {
+    "equality.mjs": "false true\nNaN true\nfalse true false true\n",
+    "fallback.mjs": "20\n0\nno note\n\n",
+    "solution-1.mjs": "number string boolean undefined object\n",
+    "solution-2.mjs": "50 0 20 20\n",
+    "solution-3.mjs": "0.30000000000000004 false\n30 true 0.30\n",
+    "types.mjs": "string number boolean\nobject undefined\n"
+  }
+}
