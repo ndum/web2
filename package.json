@@ -12,9 +12,13 @@
     "localize": "node scripts/localize.mjs",
     "check:localize": "node scripts/localize.mjs --check",
     "test:scripts": "node --test scripts/*.test.mjs",
-    "test": "pnpm --filter \"./case/*\" --filter \"./exercises/*/*/solution/*\" run test",
+    "test": "pnpm --filter \"./case/*\" --filter \"./exercises/*/*/solution/*\" --filter \"./exercises/00-start/setup/*\" run test",
+    "test:examples": "node scripts/run_examples.mjs",
     "build:projects": "pnpm --filter \"./case/*\" --filter \"./exercises/**\" run build",
     "build:site": "pnpm --filter ./site run build",
     "dev": "pnpm --filter ./site run dev"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.3"
   }
 }
