@@ -23,6 +23,8 @@ jobs:
           cache: pnpm
       - name: Install with the release age policy
         run: pnpm install --frozen-lockfile
+      - name: Every project uses the catalog of the case
+        run: node scripts/sync_data.mjs --check
       - name: German and English variants match their sources
         run: node scripts/localize.mjs --check
       - name: Scripts behave as intended
@@ -30,8 +32,8 @@ jobs:
       - name: Playground examples compile
         working-directory: site
         run: node --test "tests/*.test.mjs"
-      - name: Solutions and the setup project pass their tests
-        run: pnpm --filter "./exercises/*/*/solution/*" --filter "./exercises/00-start/setup/*" run test
+      - name: Solutions, the setup project and the case app pass their tests
+        run: pnpm --filter "./exercises/*/*/solution/*" --filter "./exercises/00-start/setup/*" --filter "./case/*/*" run test
       - name: Examples of the JS workshop print what is recorded
         run: node scripts/run_examples.mjs
       - name: Exercise projects build
@@ -39,6 +41,7 @@ jobs:
       - name: Figures are reproducible
         run: |
           node figures/start.mjs
+          node figures/javascript.mjs
           node figures/components.mjs
           git diff --exit-code
 
