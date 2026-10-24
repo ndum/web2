@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 226" role="img" aria-labelledby="p3c3-directive-de-title p3c3-directive-de-desc">
+<title id="p3c3-directive-de-title">Die Teile einer Direktive</title>
+<desc id="p3c3-directive-de-desc">Die Direktive v-on:click.prevent="reserve" in Teile zerlegt. v-on ist der Name der Direktive, click das Argument, prevent ein Modifikator und reserve der Wert, ein JavaScript-Ausdruck. Darunter die Kurzformen, @ steht für v-on: und der Doppelpunkt für v-bind:.</desc>
+<defs><marker id="p3c3-directive-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box fig-box-strong" x="40" y="24" width="74" height="44" rx="6"/>
+<text class="fig-code" x="77" y="53" text-anchor="middle" style="font-size: 20px">v-on</text>
+<path class="fig-arrow" d="M 77 70 L 77 92" stroke-width="1.5"/>
+<text class="fig-sub" x="77" y="108" text-anchor="middle">Direktive</text>
+<rect class="fig-box" x="120" y="24" width="22.5" height="44" rx="6"/>
+<text class="fig-code" x="131.25" y="53" text-anchor="middle" style="font-size: 20px">:</text>
+<rect class="fig-box fig-box-strong" x="148.5" y="24" width="86.5" height="44" rx="6"/>
+<text class="fig-code" x="191.75" y="53" text-anchor="middle" style="font-size: 20px">click</text>
+<path class="fig-arrow" d="M 191.75 70 L 191.75 92" stroke-width="1.5"/>
+<text class="fig-sub" x="191.75" y="108" text-anchor="middle">Argument</text>
+<rect class="fig-box" x="241" y="24" width="22.5" height="44" rx="6"/>
+<text class="fig-code" x="252.25" y="53" text-anchor="middle" style="font-size: 20px">.</text>
+<rect class="fig-box fig-box-strong" x="269.5" y="24" width="111.5" height="44" rx="6"/>
+<text class="fig-code" x="325.25" y="53" text-anchor="middle" style="font-size: 20px">prevent</text>
+<path class="fig-arrow" d="M 325.25 70 L 325.25 92" stroke-width="1.5"/>
+<text class="fig-sub" x="325.25" y="108" text-anchor="middle">Modifikator</text>
+<rect class="fig-box" x="387" y="24" width="22.5" height="44" rx="6"/>
+<text class="fig-code" x="398.25" y="53" text-anchor="middle" style="font-size: 20px">=</text>
+<rect class="fig-box fig-box-strong" x="415.5" y="24" width="136.5" height="44" rx="6"/>
+<text class="fig-code" x="483.75" y="53" text-anchor="middle" style="font-size: 20px">"reserve"</text>
+<path class="fig-arrow" d="M 483.75 70 L 483.75 92" stroke-width="1.5"/>
+<text class="fig-sub" x="483.75" y="108" text-anchor="middle">Wert, ein JavaScript-Ausdruck</text>
+<text class="fig-text" x="40" y="156">Kurzformen</text>
+<text class="fig-code" x="40" y="182" style="font-size: 15px">@click.prevent="reserve"</text>
+<text class="fig-sub" x="270" y="182">ist gleich</text>
+<text class="fig-code" x="350" y="182" style="font-size: 15px">v-on:click.prevent="reserve"</text>
+<text class="fig-code" x="40" y="210" style="font-size: 15px">:href="link"</text>
+<text class="fig-sub" x="270" y="210">ist gleich</text>
+<text class="fig-code" x="350" y="210" style="font-size: 15px">v-bind:href="link"</text>
+</svg>
