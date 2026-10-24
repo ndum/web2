@@ -43,6 +43,7 @@ jobs:
           node figures/start.mjs
           node figures/javascript.mjs
           node figures/spa.mjs
+          node figures/vue.mjs
           node figures/components.mjs
           git diff --exit-code
 
