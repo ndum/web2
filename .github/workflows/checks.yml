@@ -36,12 +36,13 @@ jobs:
         run: pnpm --filter "./exercises/*/*/solution/*" --filter "./exercises/00-start/setup/*" --filter "./case/*/*" run test
       - name: Examples of the JS workshop print what is recorded
         run: node scripts/run_examples.mjs
-      - name: Exercise projects build
-        run: pnpm --filter "./exercises/**" run build
+      - name: Exercise projects and the case app build
+        run: pnpm --filter "./exercises/**" --filter "./case/*/*" run build
       - name: Figures are reproducible
         run: |
           node figures/start.mjs
           node figures/javascript.mjs
+          node figures/spa.mjs
           node figures/components.mjs
           git diff --exit-code
 
