@@ -136,6 +136,13 @@ const send = (kind, text) => parent.postMessage({ source: 'lt-run', id: __RUN_ID
 console.log = console.info = (...values) => send('out', values.map((value) => format(value, true)).join(' '));
 console.error = console.warn = (...values) => send('err', values.map((value) => format(value, true)).join(' '));
 addEventListener('error', (event) => send('error', event.message));
+// A click on a link with a hash would load an empty page in a srcdoc frame, so the hash is set instead
+addEventListener('click', (event) => {
+  const link = event.target instanceof Element ? event.target.closest('a[href^="#"]') : null;
+  if (!link || event.defaultPrevented) return;
+  event.preventDefault();
+  location.hash = link.getAttribute('href');
+});
 <\/script>`;
 
 function runJavaScript(code, listener) {
