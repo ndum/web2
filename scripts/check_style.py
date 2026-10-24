@@ -68,6 +68,8 @@ STOCK_PHRASES = [
     "is no different",
     "explains a lot",
     "at its core",
+    "at the heart of",
+    "im kern",
     "the real question",
     "liegt die sache anders",
     "dreht man die arbeit um",
