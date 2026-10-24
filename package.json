@@ -1,0 +1,20 @@
+{
+  "name": "web2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "WEB2, a bilingual course on single page applications with Vue",
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "localize": "node scripts/localize.mjs",
+    "check:localize": "node scripts/localize.mjs --check",
+    "test:scripts": "node --test scripts/*.test.mjs",
+    "test": "pnpm --filter \"./case/*\" --filter \"./exercises/*/*/solution/*\" run test",
+    "build:projects": "pnpm --filter \"./case/*\" --filter \"./exercises/**\" run build",
+    "build:site": "pnpm --filter ./site run build",
+    "dev": "pnpm --filter ./site run dev"
+  }
+}
