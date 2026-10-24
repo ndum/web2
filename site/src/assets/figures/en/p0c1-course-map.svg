@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 248" role="img" aria-labelledby="p0c1-map-en-title p0c1-map-en-desc">
+<title id="p0c1-map-en-title">The course at a glance</title>
+<desc id="p0c1-map-en-desc">A horizontal bar shows the 50 lessons of the module. Parts 0 to 7 fill lessons 1 to 28, the exam takes lessons 29 and 30, and the project with part 8 takes lessons 31 to 50. The names of the parts are listed below the bar.</desc>
+<rect class="fig-box" x="21" y="34" width="25.2" height="44" rx="4"/>
+<text class="fig-text" x="33.6" y="62" text-anchor="middle">0</text>
+<rect class="fig-box" x="48.2" y="34" width="52.4" height="44" rx="4"/>
+<text class="fig-text" x="74.4" y="62" text-anchor="middle">1</text>
+<rect class="fig-box" x="102.6" y="34" width="38.8" height="44" rx="4"/>
+<text class="fig-text" x="122" y="62" text-anchor="middle">2</text>
+<rect class="fig-box" x="143.39999999999998" y="34" width="52.4" height="44" rx="4"/>
+<text class="fig-text" x="169.59999999999997" y="62" text-anchor="middle">3</text>
+<rect class="fig-box" x="197.79999999999998" y="34" width="66" height="44" rx="4"/>
+<text class="fig-text" x="230.79999999999998" y="62" text-anchor="middle">4</text>
+<rect class="fig-box" x="265.79999999999995" y="34" width="38.8" height="44" rx="4"/>
+<text class="fig-text" x="285.19999999999993" y="62" text-anchor="middle">5</text>
+<rect class="fig-box" x="306.59999999999997" y="34" width="38.8" height="44" rx="4"/>
+<text class="fig-text" x="325.99999999999994" y="62" text-anchor="middle">6</text>
+<rect class="fig-box" x="347.4" y="34" width="52.4" height="44" rx="4"/>
+<text class="fig-text" x="373.59999999999997" y="62" text-anchor="middle">7</text>
+<rect class="fig-box fig-box-strong" x="401.8" y="34" width="25.2" height="44" rx="4"/>
+<text class="fig-sub" x="414.40000000000003" y="26" text-anchor="middle">Exam</text>
+<rect class="fig-box" x="429" y="34" width="270" height="44" rx="4"/>
+<text class="fig-text" x="564" y="62" text-anchor="middle">Project with part 8</text>
+<text class="fig-sub" x="26.8" y="96" text-anchor="middle">1</text>
+<text class="fig-sub" x="149.2" y="96" text-anchor="middle">10</text>
+<text class="fig-sub" x="285.2" y="96" text-anchor="middle">20</text>
+<text class="fig-sub" x="421.2" y="96" text-anchor="middle">30</text>
+<text class="fig-sub" x="557.1999999999999" y="96" text-anchor="middle">40</text>
+<text class="fig-sub" x="693.1999999999999" y="96" text-anchor="middle">50</text>
+<text class="fig-sub" x="20" y="114">Lesson</text>
+<text class="fig-sub" x="20" y="160"><tspan class="fig-strong">0</tspan>  Getting started</text>
+<text class="fig-sub" x="20" y="182"><tspan class="fig-strong">1</tspan>  JavaScript for SPAs</text>
+<text class="fig-sub" x="20" y="204"><tspan class="fig-strong">2</tspan>  SPA basics</text>
+<text class="fig-sub" x="20" y="226"><tspan class="fig-strong">3</tspan>  Getting started with Vue</text>
+<text class="fig-sub" x="360" y="160"><tspan class="fig-strong">4</tspan>  Components</text>
+<text class="fig-sub" x="360" y="182"><tspan class="fig-strong">5</tspan>  Reactivity and composables</text>
+<text class="fig-sub" x="360" y="204"><tspan class="fig-strong">6</tspan>  Routing</text>
+<text class="fig-sub" x="360" y="226"><tspan class="fig-strong">7</tspan>  State and data</text>
+</svg>
