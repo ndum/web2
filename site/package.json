@@ -1,0 +1,22 @@
+{
+  "name": "web2-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Site of the bilingual course WEB2 on single page applications with Vue",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "7.3.3",
+    "@astrojs/starlight": "0.42.6",
+    "@vue/repl": "4.7.2",
+    "astro": "7.4.0",
+    "remark-directive": "4.0.0",
+    "unist-util-visit": "5.1.0",
+    "vue": "3.5.44"
+  }
+}
