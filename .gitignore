@@ -24,6 +24,8 @@ api/storage/
 .env
 .env.*
 !.env.example
+# The mode demo of the case app holds no secrets, the demo on the course site is built with it
+!case/*/*/.env.demo
 *.pem
 *.key
 *.p12
