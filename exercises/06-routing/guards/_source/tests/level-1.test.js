@@ -4,6 +4,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import App from '../src/App.vue'
 import { signIn, signOut } from '../src/auth.js'
 import router from '../src/router/index.js'
+import TeamView from '../src/views/TeamView.vue'
 
 enableAutoUnmount(afterEach)
 
@@ -36,5 +37,17 @@ describe('[%Einstieg, ein Guard für den Bereich des Teams|Getting started, a gu
     signIn('M-117')
     const wrapper = await visit('/team')
     expect(wrapper.find('h1').text()).toBe('[%Team am Tresen|Team at the counter%]')
+  })
+
+  it('[%prüft das Feld in meta statt des Namens der Route|checks the field in meta instead of the name of the route%]', async () => {
+    // A new page of the team needs no change in the guard
+    const removeRoute = router.addRoute({ path: '/team/stock', component: TeamView, meta: { requiresTeam: true } })
+    try {
+      await visit('/team/stock')
+      expect(router.currentRoute.value.name).toBe('login')
+      expect(router.currentRoute.value.query.redirect).toBe('/team/stock')
+    } finally {
+      removeRoute()
+    }
   })
 })
