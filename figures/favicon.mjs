@@ -1,0 +1,31 @@
+/**
+ * Favicon of the site in the style of the figures, the letters W2 as strokes in the accent blue
+ * in a frame that looks drawn by hand. Its colours follow the colour scheme of the browser, so
+ * the icon stays visible on light and dark tabs. A favicon loads no web fonts, so the letters are
+ * paths.
+ *
+ *   node figures/favicon.mjs
+ */
+import { writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+const stroke = 'fill="none" stroke-linecap="round" stroke-linejoin="round"';
+
+const svg = [
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">',
+  '<style>.ink{stroke:#1f2328}.accent{stroke:#3e5be6}' +
+    '@media (prefers-color-scheme:dark){.ink{stroke:#e8eaed}.accent{stroke:#8ea1ff}}</style>',
+  // The frame, drawn as four slightly bent strokes
+  `<path class="ink" d="M3.6 4.4 Q15.8 3.5 28.2 4.1 Q28.9 16 28.3 27.8 Q16 28.6 3.9 28.1 Q3.1 16.2 3.6 4.4" stroke-width="2" ${stroke}/>`,
+  // W
+  `<path class="accent" d="M6.6 10.5 L9.1 21.6 L11.6 13.9 L14.1 21.6 L16.6 10.5" stroke-width="2.6" ${stroke}/>`,
+  // 2
+  `<path class="accent" d="M18.6 13.2 Q19.4 10.2 22.2 10.3 Q25.4 10.6 25.2 13.4 Q24.9 15.9 18.8 21.7 L25.6 21.6" stroke-width="2.6" ${stroke}/>`,
+  '</svg>',
+  '',
+].join('\n');
+
+writeFileSync(join(ROOT, 'site', 'public', 'favicon.svg'), svg);
