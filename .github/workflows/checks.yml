@@ -51,6 +51,7 @@ jobs:
           node figures/reactivity.mjs
           node figures/routing.mjs
           node figures/state.mjs
+          node figures/architecture.mjs
           git diff --exit-code
 
   text:

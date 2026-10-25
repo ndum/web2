@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 394" role="img" aria-labelledby="p8c1-folders-de-title p8c1-folders-de-desc">
+<title id="p8c1-folders-de-title">Ordner nach Art und nach Feature</title>
+<desc id="p8c1-folders-de-desc">Zwei Ordnerbäume nebeneinander. Links ist die App nach Art der Dateien geordnet, in views, components, stores und composables, und die vier Dateien der Anfragen liegen in vier verschiedenen Ordnern. Rechts hat jedes Feature einen Ordner unter features, catalog und reservations mit ihren Seiten, Komponenten, Stores und Routen. Die Dateien der Anfragen liegen dort beisammen. Gemeinsame Bausteine stehen in components, die Schicht für die API in api.</desc>
+<defs><marker id="p8c1-folders-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-text fig-strong" x="20" y="24" style="font-size: 15px">Nach Art der Dateien</text>
+<text class="fig-code fig-strong" x="20" y="44">src/</text>
+<text class="fig-code fig-strong" x="38" y="66">views/</text>
+<text class="fig-code" x="56" y="88">CatalogView.vue</text>
+<text class="fig-code" x="56" y="110">ItemView.vue</text>
+<rect class="fig-box fig-box-strong" x="50" y="117" width="148.4" height="20" rx="4"/>
+<text class="fig-code" x="56" y="132">RequestsView.vue</text>
+<text class="fig-code fig-strong" x="38" y="154">components/</text>
+<text class="fig-code" x="56" y="176">ItemCard.vue</text>
+<rect class="fig-box fig-box-strong" x="50" y="183" width="173.6" height="20" rx="4"/>
+<text class="fig-code" x="56" y="198">ReservationForm.vue</text>
+<text class="fig-code fig-strong" x="38" y="220">stores/</text>
+<text class="fig-code" x="56" y="242">catalog.js</text>
+<rect class="fig-box fig-box-strong" x="50" y="249" width="140" height="20" rx="4"/>
+<text class="fig-code" x="56" y="264">reservations.js</text>
+<text class="fig-code fig-strong" x="38" y="286">composables/</text>
+<text class="fig-code" x="56" y="308">useSearch.js</text>
+<rect class="fig-box fig-box-strong" x="32" y="315" width="131.60000000000002" height="20" rx="4"/>
+<text class="fig-code" x="38" y="330">reservation.js</text>
+<text class="fig-text fig-strong" x="330" y="24" style="font-size: 15px">Nach Feature</text>
+<text class="fig-code fig-strong" x="330" y="44">src/</text>
+<text class="fig-code fig-strong" x="348" y="66">features/</text>
+<text class="fig-code fig-strong" x="366" y="88">catalog/</text>
+<text class="fig-code" x="384" y="110">CatalogView.vue</text>
+<text class="fig-code" x="384" y="132">catalogStore.js</text>
+<text class="fig-code" x="384" y="154">routes.js</text>
+<rect class="fig-box fig-box-strong" x="360" y="161" width="123.2" height="20" rx="4"/>
+<text class="fig-code fig-strong" x="366" y="176">reservations/</text>
+<rect class="fig-box fig-box-strong" x="378" y="183" width="148.4" height="20" rx="4"/>
+<text class="fig-code" x="384" y="198">RequestsView.vue</text>
+<rect class="fig-box fig-box-strong" x="378" y="205" width="173.6" height="20" rx="4"/>
+<text class="fig-code" x="384" y="220">ReservationForm.vue</text>
+<rect class="fig-box fig-box-strong" x="378" y="227" width="182" height="20" rx="4"/>
+<text class="fig-code" x="384" y="242">reservationsStore.js</text>
+<rect class="fig-box fig-box-strong" x="378" y="249" width="81.2" height="20" rx="4"/>
+<text class="fig-code" x="384" y="264">rules.js</text>
+<text class="fig-code fig-strong" x="348" y="286">components/</text>
+<text class="fig-code" x="366" y="308">ItemCard.vue</text>
+<text class="fig-code fig-strong" x="348" y="330">api/</text>
+<text class="fig-code" x="366" y="352">http.js</text>
+<text class="fig-sub" x="20" y="380">markiert sind die Dateien der Anfragen</text>
+</svg>

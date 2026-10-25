@@ -71,6 +71,8 @@ const CODE_LANGUAGES = {
   '.html': 'html',
   '.css': 'css',
   '.txt': 'text',
+  '.md': 'md',
+  '.yml': 'yaml',
 };
 /** Folders of the repository whose files a page may embed. */
 const EMBED_ROOTS = ['examples', 'exercises', 'case'];

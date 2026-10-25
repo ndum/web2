@@ -474,6 +474,68 @@ importers:
         specifier: 5.0.5
         version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
+  case/08-architecture/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  case/08-architecture/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
   exercises/00-start/setup/de:
     dependencies:
       vue:
@@ -3143,6 +3205,790 @@ importers:
 
   exercises/07-state/where-state/solution/en:
     dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/accessibility/de:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/accessibility/en:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/accessibility/solution/de:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/accessibility/solution/en:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/adr/de:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/adr/en:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/adr/solution/de:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/adr/solution/en:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/ai-review/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/ai-review/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/ai-review/solution/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/ai-review/solution/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/deployment/de:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+      yaml:
+        specifier: 2.9.1
+        version: 2.9.1
+
+  exercises/08-architecture/deployment/en:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+      yaml:
+        specifier: 2.9.1
+        version: 2.9.1
+
+  exercises/08-architecture/deployment/solution/de:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+      yaml:
+        specifier: 2.9.1
+        version: 2.9.1
+
+  exercises/08-architecture/deployment/solution/en:
+    dependencies:
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+      yaml:
+        specifier: 2.9.1
+        version: 2.9.1
+
+  exercises/08-architecture/patterns/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/patterns/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/patterns/solution/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/patterns/solution/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/structure/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/structure/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/structure/solution/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/structure/solution/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+      vue-router:
+        specifier: 5.4.0
+        version: 5.4.0(@pinia/colada@1.4.8(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(vue@3.5.44))(@vue/compiler-sfc@3.5.44)(pinia@4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44))(rolldown@1.2.14)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/testing/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/testing/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/testing/solution/de:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
+      vue:
+        specifier: 3.5.44
+        version: 3.5.44
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 6.0.10
+        version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      '@vue/test-utils':
+        specifier: 2.5.1
+        version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
+      happy-dom:
+        specifier: 21.0.3
+        version: 21.0.3
+      vite:
+        specifier: 8.3.4
+        version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
+      vite-plugin-vue-devtools:
+        specifier: 8.2.1
+        version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
+      vitest:
+        specifier: 5.0.5
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+
+  exercises/08-architecture/testing/solution/en:
+    dependencies:
+      pinia:
+        specifier: 4.1.0
+        version: 4.1.0(@vue/devtools-api@8.2.1)(vue@3.5.44)
       vue:
         specifier: 3.5.44
         version: 3.5.44

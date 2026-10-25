@@ -42,6 +42,11 @@ jobs:
           ASTRO_TELEMETRY_DISABLED: "1"
           SITE_BASE: /web2/pr-preview/pr-${{ github.event.pull_request.number }}/
         run: pnpm --filter ./site run build
+      - name: Build the demo of the case app under the preview path
+        if: github.event.action != 'closed'
+        env:
+          SITE_BASE: /web2/pr-preview/pr-${{ github.event.pull_request.number }}/
+        run: node scripts/build_demo.mjs
       - uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9 # v1.8.1
         with:
           source-dir: site/dist
@@ -70,6 +75,8 @@ jobs:
         env:
           ASTRO_TELEMETRY_DISABLED: "1"
         run: pnpm --filter ./site run build
+      - name: Build the demo of the case app
+        run: node scripts/build_demo.mjs
       - uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4.9.0
         with:
           branch: gh-pages

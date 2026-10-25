@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 410" role="img" aria-labelledby="p8c6-deploy-de-title p8c6-deploy-de-desc">
+<title id="p8c6-deploy-de-title">Vom Push zur veröffentlichten App</title>
+<desc id="p8c6-deploy-de-desc">Ein Ablauf von oben nach unten. Ein Push auf main startet einen Workflow von GitHub Actions, der die Pakete mit npm ci installiert, die Tests mit npm test ausführt und mit npm run build baut. Schlägt ein Test fehl, endet der Workflow, und nichts geht online. Der Ordner dist geht als Artefakt an GitHub Pages, das die App unter name.github.io/lorraine-commons/ ausliefert. Rechts zweigt eine Adresse ab, die GitHub Pages nicht kennt, etwa /lorraine-commons/items/6. Dafür liefert Pages die Datei 404.html, eine Kopie von index.html, und der Router zeigt die Seite des Dings.</desc>
+<defs><marker id="p8c6-deploy-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box fig-box-strong" x="20" y="16" width="300" height="50" rx="6"/>
+<text class="fig-text" x="34" y="37" style="font-size: 14px">Push auf main</text>
+<text class="fig-code" x="34" y="55">git push</text>
+<path class="fig-arrow" d="M 170 68 L 170 94" marker-end="url(#p8c6-deploy-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="98" width="300" height="50" rx="6"/>
+<text class="fig-text" x="34" y="119" style="font-size: 14px">GitHub Actions</text>
+<text class="fig-code" x="34" y="137">npm ci, npm test, npm run build</text>
+<path class="fig-arrow" d="M 170 150 L 170 176" marker-end="url(#p8c6-deploy-de-head)"/>
+<rect class="fig-box" x="20" y="180" width="300" height="50" rx="6"/>
+<text class="fig-text" x="34" y="201" style="font-size: 14px">Artefakt</text>
+<text class="fig-sub" x="34" y="219">der Ordner dist</text>
+<path class="fig-arrow" d="M 170 232 L 170 258" marker-end="url(#p8c6-deploy-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="262" width="300" height="50" rx="6"/>
+<text class="fig-text" x="34" y="283" style="font-size: 14px">GitHub Pages</text>
+<text class="fig-code" x="34" y="301">name.github.io/lorraine-commons/</text>
+<path class="fig-arrow" d="M 322 123 L 376 123" marker-end="url(#p8c6-deploy-de-head)" stroke-dasharray="6 5"/>
+<rect class="fig-box" x="380" y="98" width="270" height="50" rx="6"/>
+<text class="fig-text" x="394" y="119" style="font-size: 14px">Test schlägt fehl</text>
+<text class="fig-sub" x="394" y="137">nichts geht online</text>
+<path class="fig-arrow" d="M 322 287 L 376 287" marker-end="url(#p8c6-deploy-de-head)"/>
+<rect class="fig-box" x="380" y="262" width="270" height="50" rx="6"/>
+<text class="fig-text" x="394" y="283" style="font-size: 14px">Unbekannte Adresse</text>
+<text class="fig-code" x="394" y="301">/lorraine-commons/items/6</text>
+<path class="fig-arrow" d="M 515 314 L 515 340" marker-end="url(#p8c6-deploy-de-head)"/>
+<rect class="fig-box fig-box-strong" x="320" y="344" width="330" height="50" rx="6"/>
+<text class="fig-text" x="334" y="365" style="font-size: 14px">404.html</text>
+<text class="fig-sub" x="334" y="383">Kopie von index.html, der Router zeigt die Seite</text>
+</svg>
