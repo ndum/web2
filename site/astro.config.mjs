@@ -51,6 +51,7 @@ export default defineConfig({
         },
         { label: 'Routing', translations: { en: 'Routing' }, items: [{ autogenerate: { directory: 'routing' } }] },
         { label: 'Zustand und Daten', translations: { en: 'State and data' }, items: [{ autogenerate: { directory: 'state' } }] },
+        { slug: 'exam' },
         {
           label: 'Architektur, Qualität und Betrieb',
           translations: { en: 'Architecture, quality and operations' },
