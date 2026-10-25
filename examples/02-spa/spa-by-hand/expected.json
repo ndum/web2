@@ -1,0 +1,14 @@
+{
+  "de": {
+    "focus.html": "1 false false\n",
+    "render.html": "3 0\n<img src=x onerror=alert(1)> Verfügbar\n",
+    "router.html": "catalog Bohrmaschine\nitem Beamer\n",
+    "state.html": "Reservationen heute 2\n"
+  },
+  "en": {
+    "focus.html": "1 false false\n",
+    "render.html": "3 0\n<img src=x onerror=alert(1)> Available\n",
+    "router.html": "catalog Drill\nitem Projector\n",
+    "state.html": "Reservations today 2\n"
+  }
+}

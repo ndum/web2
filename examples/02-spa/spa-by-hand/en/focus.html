@@ -1,0 +1,27 @@
+<!doctype html>
+<div id="app"></div>
+<script>
+  const state = { query: '', names: ['Drill', 'Jigsaw', 'Tent'] }
+
+  // Renders everything again on every keystroke, the search field included
+  function render() {
+    const found = state.names.filter((name) => name.toLowerCase().includes(state.query.toLowerCase()))
+    document.querySelector('#app').innerHTML = `
+      <input id="search" value="${state.query}" aria-label="Search">
+      <ul>${found.map((name) => `<li>${name}</li>`).join('')}</ul>`
+  }
+
+  document.querySelector('#app').addEventListener('input', (event) => {
+    state.query = event.target.value
+    render()
+  })
+
+  render()
+  // Someone types into the search field
+  const search = document.querySelector('#search')
+  search.focus()
+  search.value = 'saw'
+  search.dispatchEvent(new Event('input', { bubbles: true }))
+
+  console.log(document.querySelectorAll('li').length, search.isConnected, document.activeElement === document.querySelector('#search'))
+</script>

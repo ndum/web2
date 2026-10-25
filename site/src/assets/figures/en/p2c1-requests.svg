@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 342" role="img" aria-labelledby="p2c1-requests-en-title p2c1-requests-en-desc">
+<title id="p2c1-requests-en-title">Requests of a multi-page website and of an SPA</title>
+<desc id="p2c1-requests-en-desc">On the left a multi-page website, on the right a single page application, each in three steps. When the catalog opens, the multi-page website loads a whole page, the SPA an almost empty page, its JavaScript and the data as JSON. On a click on the projector and on going back to the catalog, the multi-page website loads a whole page each time, while the SPA sends no request and its JavaScript shows the thing and the catalog by itself.</desc>
+<defs><marker id="p2c1-requests-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-text" x="20" y="28">Multi-page website (MPA)</text>
+<text class="fig-text" x="350" y="28">Single page application (SPA)</text>
+<text class="fig-sub" x="20" y="64">1. Open the catalog</text>
+<rect class="fig-box fig-box-strong" x="20" y="74" width="130" height="26" rx="6"/>
+<text class="fig-code" x="30" y="91">GET /catalog</text>
+<path class="fig-arrow" d="M 154 87 L 180 87" marker-end="url(#p2c1-requests-en-head)"/>
+<text class="fig-sub" x="188" y="91">whole page</text>
+<text class="fig-sub" x="350" y="64">1. Open the catalog</text>
+<rect class="fig-box fig-box-strong" x="350" y="74" width="130" height="26" rx="6"/>
+<text class="fig-code" x="360" y="91">GET /</text>
+<path class="fig-arrow" d="M 484 87 L 510 87" marker-end="url(#p2c1-requests-en-head)"/>
+<text class="fig-sub" x="518" y="91">almost empty page</text>
+<rect class="fig-box fig-box-strong" x="350" y="108" width="130" height="26" rx="6"/>
+<text class="fig-code" x="360" y="125">GET /main.js</text>
+<path class="fig-arrow" d="M 484 121 L 510 121" marker-end="url(#p2c1-requests-en-head)"/>
+<text class="fig-sub" x="518" y="125">JavaScript</text>
+<rect class="fig-box fig-box-strong" x="350" y="142" width="130" height="26" rx="6"/>
+<text class="fig-code" x="360" y="159">GET /items</text>
+<path class="fig-arrow" d="M 484 155 L 510 155" marker-end="url(#p2c1-requests-en-head)"/>
+<text class="fig-sub" x="518" y="159">data as JSON</text>
+<text class="fig-sub" x="20" y="206">2. Click the projector</text>
+<rect class="fig-box fig-box-strong" x="20" y="216" width="130" height="26" rx="6"/>
+<text class="fig-code" x="30" y="233">GET /things/6</text>
+<path class="fig-arrow" d="M 154 229 L 180 229" marker-end="url(#p2c1-requests-en-head)"/>
+<text class="fig-sub" x="188" y="233">whole page</text>
+<text class="fig-sub" x="350" y="206">2. Click the projector</text>
+<rect class="fig-box" x="350" y="216" width="300" height="26" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-sub fig-note" x="360" y="233">no request, JavaScript shows the thing</text>
+<text class="fig-sub" x="20" y="280">3. Back to the catalog</text>
+<rect class="fig-box fig-box-strong" x="20" y="290" width="130" height="26" rx="6"/>
+<text class="fig-code" x="30" y="307">GET /catalog</text>
+<path class="fig-arrow" d="M 154 303 L 180 303" marker-end="url(#p2c1-requests-en-head)"/>
+<text class="fig-sub" x="188" y="307">whole page</text>
+<text class="fig-sub" x="350" y="280">3. Back to the catalog</text>
+<rect class="fig-box" x="350" y="290" width="300" height="26" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-sub fig-note" x="360" y="307">no request, JavaScript shows the catalog</text>
+</svg>
