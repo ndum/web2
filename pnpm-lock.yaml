@@ -167,44 +167,44 @@ importers:
   .:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
 
   case/01-javascript/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/01-javascript/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/02-spa/de:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/02-spa/en:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/03-vue/de:
     dependencies:
@@ -219,8 +219,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -229,7 +229,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/03-vue/en:
     dependencies:
@@ -244,8 +244,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -254,7 +254,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/04-components/de:
     dependencies:
@@ -269,8 +269,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -279,7 +279,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   case/04-components/en:
     dependencies:
@@ -294,8 +294,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -304,7 +304,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/00-start/setup/de:
     dependencies:
@@ -319,14 +319,14 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/00-start/setup/en:
     dependencies:
@@ -341,194 +341,194 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/arrays/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/arrays/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/arrays/solution/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/arrays/solution/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/async/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/async/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/async/solution/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/async/solution/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/modules/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/modules/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/modules/solution/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/modules/solution/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/references/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/references/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/references/solution/de:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/01-javascript/references/solution/en:
     devDependencies:
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/spa-by-hand/de:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/spa-by-hand/en:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/spa-by-hand/solution/de:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/spa-by-hand/solution/en:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/vite/de:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/vite/en:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/vite/solution/de:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/02-spa/vite/solution/en:
     devDependencies:
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/first-project/de:
     dependencies:
@@ -543,8 +543,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -553,7 +553,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/first-project/en:
     dependencies:
@@ -568,8 +568,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -578,7 +578,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/first-project/solution/de:
     dependencies:
@@ -593,8 +593,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -603,7 +603,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/first-project/solution/en:
     dependencies:
@@ -618,8 +618,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -628,7 +628,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/forms/de:
     dependencies:
@@ -643,8 +643,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -653,7 +653,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/forms/en:
     dependencies:
@@ -668,8 +668,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -678,7 +678,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/forms/solution/de:
     dependencies:
@@ -693,8 +693,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -703,7 +703,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/forms/solution/en:
     dependencies:
@@ -718,8 +718,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -728,7 +728,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/reactive-state/de:
     dependencies:
@@ -743,8 +743,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -753,7 +753,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/reactive-state/en:
     dependencies:
@@ -768,8 +768,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -778,7 +778,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/reactive-state/solution/de:
     dependencies:
@@ -793,8 +793,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -803,7 +803,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/reactive-state/solution/en:
     dependencies:
@@ -818,8 +818,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -828,7 +828,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/template-syntax/de:
     dependencies:
@@ -843,8 +843,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -853,7 +853,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/template-syntax/en:
     dependencies:
@@ -868,8 +868,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -878,7 +878,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/template-syntax/solution/de:
     dependencies:
@@ -893,8 +893,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -903,7 +903,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/03-vue/template-syntax/solution/en:
     dependencies:
@@ -918,8 +918,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -928,7 +928,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/breaking-down/de:
     dependencies:
@@ -943,8 +943,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -953,7 +953,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/breaking-down/en:
     dependencies:
@@ -968,8 +968,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -978,7 +978,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/breaking-down/solution/de:
     dependencies:
@@ -993,8 +993,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1003,7 +1003,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/breaking-down/solution/en:
     dependencies:
@@ -1018,8 +1018,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1028,7 +1028,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/events/de:
     dependencies:
@@ -1043,8 +1043,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1053,7 +1053,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/events/en:
     dependencies:
@@ -1068,8 +1068,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1078,7 +1078,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/events/solution/de:
     dependencies:
@@ -1093,8 +1093,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1103,7 +1103,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/events/solution/en:
     dependencies:
@@ -1118,8 +1118,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1128,7 +1128,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/props/de:
     dependencies:
@@ -1143,14 +1143,14 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/props/en:
     dependencies:
@@ -1165,14 +1165,14 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/props/solution/de:
     dependencies:
@@ -1187,14 +1187,14 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/props/solution/en:
     dependencies:
@@ -1209,14 +1209,14 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/provide-inject/de:
     dependencies:
@@ -1231,8 +1231,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1241,7 +1241,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/provide-inject/en:
     dependencies:
@@ -1256,8 +1256,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1266,7 +1266,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/provide-inject/solution/de:
     dependencies:
@@ -1281,8 +1281,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1291,7 +1291,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/provide-inject/solution/en:
     dependencies:
@@ -1306,8 +1306,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1316,7 +1316,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/slots/de:
     dependencies:
@@ -1331,8 +1331,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1341,7 +1341,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/slots/en:
     dependencies:
@@ -1356,8 +1356,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1366,7 +1366,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/slots/solution/de:
     dependencies:
@@ -1381,8 +1381,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1391,7 +1391,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   exercises/04-components/slots/solution/en:
     dependencies:
@@ -1406,8 +1406,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(@vue/compiler-dom@3.5.44)(@vue/server-renderer@3.5.44)(vue@3.5.44)
       happy-dom:
-        specifier: 21.0.3
-        version: 21.0.3
+        specifier: 21.0.4
+        version: 21.0.4
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
@@ -1416,7 +1416,7 @@ importers:
         version: 8.2.1(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))(vue@3.5.44)
       vitest:
         specifier: 5.0.5
-        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
+        version: 5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
 
   site:
     dependencies:
@@ -2716,8 +2716,8 @@ packages:
   h3@1.15.11:
     resolution: {integrity: sha512-L3THSe2MPeBwgIZVSH5zLdBBU90TOxarvhK9d04IDY2AmVS8j2Jz2LIWtwsGOU3lu2I5jCN7FNvVfY2+XyF+mg==}
 
-  happy-dom@21.0.3:
-    resolution: {integrity: sha512-PesNgu5BnIEmAwzKGewB3K1ORFeznFZJ4JrRz89ea1wkHnxskdpzX9sN/+zb4KO6k8oSMhyJSj/cwXAFrYBBNA==}
+  happy-dom@21.0.4:
+    resolution: {integrity: sha512-tFm+GaLBgo6o0awHnvHaNoraVo27qJ+2tZEtZ+cIa08hXbeitrxAJajLI05hsUy/2/YTKcUjQYzHe5mCcraLBw==}
     engines: {node: '>=20.0.0'}
 
   hast-util-embedded@3.0.0:
@@ -5220,7 +5220,7 @@ snapshots:
       ufo: 1.6.4
       uncrypto: 0.1.3
 
-  happy-dom@21.0.3:
+  happy-dom@21.0.4:
     dependencies:
       '@types/node': 24.19.2
       '@types/whatwg-mimetype': 3.0.2
@@ -6690,7 +6690,7 @@ snapshots:
     optionalDependencies:
       vite: 8.3.4(@types/node@24.19.2)(yaml@2.9.1)
 
-  vitest@5.0.5(@types/node@24.19.2)(happy-dom@21.0.3)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1)):
+  vitest@5.0.5(@types/node@24.19.2)(happy-dom@21.0.4)(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1)):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/mocker': 5.0.5(vite@8.3.4(@types/node@24.19.2)(yaml@2.9.1))
@@ -6708,7 +6708,7 @@ snapshots:
       why-is-node-running: 3.2.1
     optionalDependencies:
       '@types/node': 24.19.2
-      happy-dom: 21.0.3
+      happy-dom: 21.0.4
     transitivePeerDependencies:
       - msw
 
