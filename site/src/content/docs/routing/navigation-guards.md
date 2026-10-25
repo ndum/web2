@@ -48,7 +48,7 @@ Ein Klick auf «Team» führt ohne Anmeldung zu `/login?redirect=/team`. Der Gua
 
 ## Die Anmeldung als Platzhalter
 
-Eine echte Anmeldung braucht einen Server, der Passwörter prüft, und der kommt in Teil 7. Bis dahin steht in der Fallbeispiel-App ein Platzhalter in `src/auth.js`. Er kennt zwei Mitglieder, Martina Hostettler mit der Nummer M-117 und einem Konto des Teams und das Mitglied M-204 ohne. Angemeldet wird nur mit der Mitgliedernummer, Passwörter stehen keine im Code. Den Zustand hält das Modul selbst, und nach dem Neuladen ist die Anmeldung weg.
+Eine Anmeldung muss ein Server prüfen, und der kommt in Teil 7. Bis dahin steht in der Fallbeispiel-App ein Platzhalter in `src/auth.js`. Er kennt zwei Mitglieder, Martina Hostettler mit der Nummer M-117 und einem Konto des Teams und das Mitglied M-204 ohne. Angemeldet wird nur mit der Mitgliedernummer, Passwörter stehen keine im Code. Den Zustand hält das Modul selbst, und nach dem Neuladen ist die Anmeldung weg.
 
 Ein Guard im Browser schützt keine Daten. Er sorgt dafür, dass Mitglieder nicht aus Versehen auf Seiten landen, die nicht für sie sind. Wer den Code im Browser ändert, kommt an ihm vorbei. Laut [OWASP Top 10:2025](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/) wirkt eine Zugriffskontrolle nur in Code auf einem Server, den ein Angreifer nicht verändern kann. Die Daten des Teams muss darum der Server schützen.
 

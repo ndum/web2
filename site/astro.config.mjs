@@ -50,6 +50,7 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'reactivity' } }],
         },
         { label: 'Routing', translations: { en: 'Routing' }, items: [{ autogenerate: { directory: 'routing' } }] },
+        { label: 'Zustand und Daten', translations: { en: 'State and data' }, items: [{ autogenerate: { directory: 'state' } }] },
         { label: 'Projekt', translations: { en: 'Project' }, items: [{ autogenerate: { directory: 'project' } }] },
         { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, items: [{ autogenerate: { directory: 'js' } }] },
       ],

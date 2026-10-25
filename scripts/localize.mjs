@@ -17,7 +17,7 @@ export const LANGUAGES = ['de', 'en'];
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SKIPPED_DIRS = new Set(['node_modules', '.git', '.wiki', 'alt', 'dist', 'coverage', '.vite', '.astro']);
 const TEXT_EXTENSIONS = new Set(['.vue', '.js', '.mjs', '.cjs', '.json', '.html', '.css', '.md', '.txt', '.svg', '.yaml', '.yml']);
-const TEXT_NAMES = new Set(['.gitignore', '.editorconfig']);
+const TEXT_NAMES = new Set(['.gitignore', '.editorconfig', '.env.example']);
 // [% and %] never occur in JavaScript, Vue templates, CSS or JSON, unlike [[ and ]] in nested arrays
 const PAIR = /\[%([^%|]*)\|([^%|]*)%\]/g;
 

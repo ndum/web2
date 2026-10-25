@@ -49,6 +49,6 @@ function submit() {
       <p v-if="error" id="login-error" class="error">{{ error }}</p>
       <button type="submit">[%Anmelden|Sign in%]</button>
     </form>
-    <p>[%Bis Teil 7 genügt die Mitgliedernummer. Das Passwort prüft dann der Server des Vereins.|Until part 7 the member number is enough. Then the association's server checks the password.%]</p>
+    <p>[%Bis Teil 7 genügt die Mitgliedernummer. Dann prüft der Server des Vereins die Anmeldung.|Until part 7 the member number is enough. Then the association's server checks the login.%]</p>
   </section>
 </template>
