@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714 294" role="img" aria-labelledby="p7c4-lifetime-en-title p7c4-lifetime-en-desc">
+<title id="p7c4-lifetime-en-title">How long data stays in the browser</title>
+<desc id="p7c4-lifetime-en-desc">Four bars across six events: load page, reload, second tab, close tab, close browser and open browser. A store in memory lasts until the reload. sessionStorage survives the reload, belongs to this tab only and ends when it closes. A cookie without expiry applies to all tabs and ends when the browser closes. localStorage applies to all tabs and is still there after the next start.</desc>
+<defs><marker id="p7c4-lifetime-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-sub fig-strong" x="212" y="30" text-anchor="middle">load</text>
+<text class="fig-sub fig-strong" x="212" y="47" text-anchor="middle">page</text>
+<path class="fig-arrow" d="M 212 56 L 212 66"/>
+<text class="fig-sub fig-strong" x="296" y="30" text-anchor="middle">reload</text>
+<text class="fig-sub fig-strong" x="296" y="47" text-anchor="middle"></text>
+<path class="fig-arrow" d="M 296 56 L 296 66"/>
+<text class="fig-sub fig-strong" x="380" y="30" text-anchor="middle">second</text>
+<text class="fig-sub fig-strong" x="380" y="47" text-anchor="middle">tab</text>
+<path class="fig-arrow" d="M 380 56 L 380 66"/>
+<text class="fig-sub fig-strong" x="464" y="30" text-anchor="middle">close</text>
+<text class="fig-sub fig-strong" x="464" y="47" text-anchor="middle">tab</text>
+<path class="fig-arrow" d="M 464 56 L 464 66"/>
+<text class="fig-sub fig-strong" x="548" y="30" text-anchor="middle">close</text>
+<text class="fig-sub fig-strong" x="548" y="47" text-anchor="middle">browser</text>
+<path class="fig-arrow" d="M 548 56 L 548 66"/>
+<text class="fig-sub fig-strong" x="632" y="30" text-anchor="middle">open</text>
+<text class="fig-sub fig-strong" x="632" y="47" text-anchor="middle">browser</text>
+<path class="fig-arrow" d="M 632 56 L 632 66"/>
+<text class="fig-text" x="20" y="95" style="font-size: 14px">Store</text>
+<text class="fig-sub" x="20" y="112">in memory</text>
+<rect class="fig-box fig-box-strong" x="212" y="82" width="84" height="30" rx="4"/>
+<text class="fig-sub fig-strong" x="304" y="102">until the reload</text>
+<text class="fig-code fig-strong" x="20" y="149" style="font-size: 14px">sessionStorage</text>
+<text class="fig-sub" x="20" y="166">this tab only</text>
+<rect class="fig-box fig-box-strong" x="212" y="136" width="252" height="30" rx="4"/>
+<text class="fig-sub fig-strong" x="222" y="156">until the tab closes</text>
+<text class="fig-text" x="20" y="203" style="font-size: 14px">Cookie</text>
+<text class="fig-sub" x="20" y="220">without expiry</text>
+<rect class="fig-box fig-box-strong" x="212" y="190" width="336" height="30" rx="4"/>
+<text class="fig-sub fig-strong" x="222" y="210">all tabs</text>
+<text class="fig-code fig-strong" x="20" y="257" style="font-size: 14px">localStorage</text>
+<text class="fig-sub" x="20" y="274">all tabs</text>
+<rect class="fig-box fig-box-strong" x="212" y="244" width="462" height="30" rx="4"/>
+<text class="fig-sub fig-strong" x="222" y="264">stays</text>
+<path class="fig-arrow" d="M 674 259 L 700 259" marker-end="url(#p7c4-lifetime-en-head)"/>
+</svg>

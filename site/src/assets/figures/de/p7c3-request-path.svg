@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 360" role="img" aria-labelledby="p7c3-path-de-title p7c3-path-de-desc">
+<title id="p7c3-path-de-title">Der Weg einer Anfrage</title>
+<desc id="p7c3-path-de-desc">Eine Folge von oben nach unten. Eine Komponente ruft eine Action des Stores auf, der Store schickt fetch an /api/de/items. Vite auf Port 5173 nimmt die Anfrage an und leitet alles unter /api an die Kurs-API auf Port 3000 weiter, die GET /de/items beantwortet und Rückgaben und Anfragen in storage/state.json festhält. Die Antwort nimmt denselben Weg zurück. Rechts führt ein gestrichelter Weg vom Store direkt an http://localhost:3000. Dieser Weg geht an eine andere Adresse und braucht darum CORS.</desc>
+<defs><marker id="p7c3-path-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="16" width="280" height="48" rx="6"/>
+<text class="fig-text" x="34" y="36" style="font-size: 14px">Komponente</text>
+<text class="fig-sub" x="34" y="54">ruft eine Action auf</text>
+<path class="fig-arrow" d="M 160 66 L 160 84" marker-end="url(#p7c3-path-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="86" width="280" height="48" rx="6"/>
+<text class="fig-text" x="34" y="106" style="font-size: 14px">Store</text>
+<text class="fig-code" x="34" y="124">fetch('/api/de/items')</text>
+<path class="fig-arrow" d="M 160 136 L 160 154" marker-end="url(#p7c3-path-de-head)"/>
+<rect class="fig-box" x="20" y="156" width="280" height="48" rx="6"/>
+<text class="fig-text" x="34" y="176" style="font-size: 14px">Vite auf Port 5173</text>
+<text class="fig-sub" x="34" y="194">Proxy, leitet /api weiter</text>
+<path class="fig-arrow" d="M 160 206 L 160 224" marker-end="url(#p7c3-path-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="226" width="280" height="48" rx="6"/>
+<text class="fig-text" x="34" y="246" style="font-size: 14px">Kurs-API auf Port 3000</text>
+<text class="fig-code" x="34" y="264">GET /de/items</text>
+<path class="fig-arrow" d="M 160 276 L 160 294" marker-end="url(#p7c3-path-de-head)"/>
+<rect class="fig-box" x="20" y="296" width="280" height="48" rx="6"/>
+<text class="fig-text" x="34" y="316" style="font-size: 14px">storage/state.json</text>
+<text class="fig-sub" x="34" y="334">Rückgaben und Anfragen</text>
+<path class="fig-arrow" d="M 302 110 L 360 110 L 360 250 L 306 250" marker-end="url(#p7c3-path-de-head)" stroke-dasharray="6 5"/>
+<text class="fig-sub fig-strong" x="372" y="176">direkt an localhost:3000</text>
+<text class="fig-sub" x="372" y="194">nur mit CORS</text>
+</svg>

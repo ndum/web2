@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 472" role="img" aria-labelledby="p7c1-decision-en-title p7c1-decision-en-desc">
+<title id="p7c1-decision-en-title">Where a piece of state belongs</title>
+<desc id="p7c1-decision-en-desc">A decision tree with four questions from top to bottom. If an address should keep the value, to share and reload, it goes into the address, as route.params or route.query. If it lives on the server instead, a store fetches it in an action. If only one component needs it, it stays local as a ref in the component. If a few components with a common parent need it, it goes into the parent and travels with props and events. In every other case it belongs in a store with Pinia.</desc>
+<defs><marker id="p7c1-decision-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="16" width="300" height="56" rx="18"/>
+<text class="fig-sub fig-strong" x="36" y="39" style="font-size: 14px">Should an address keep the value,</text>
+<text class="fig-sub fig-strong" x="36" y="57" style="font-size: 14px">to share and to reload it?</text>
+<path class="fig-arrow" d="M 322 44 L 396 44" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="360" y="36" text-anchor="middle">yes</text>
+<rect class="fig-box fig-box-strong" x="400" y="16" width="250" height="56" rx="6"/>
+<text class="fig-text" x="414" y="39" style="font-size: 14px">Into the address</text>
+<text class="fig-code" x="414" y="58">route.params, route.query</text>
+<path class="fig-arrow" d="M 170 74 L 170 108" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="180" y="97">no</text>
+<rect class="fig-box" x="20" y="112" width="300" height="56" rx="18"/>
+<text class="fig-sub fig-strong" x="36" y="135" style="font-size: 14px">Does the value live on the server,</text>
+<text class="fig-sub fig-strong" x="36" y="153" style="font-size: 14px">such as catalog and requests?</text>
+<path class="fig-arrow" d="M 322 140 L 396 140" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="360" y="132" text-anchor="middle">yes</text>
+<rect class="fig-box fig-box-strong" x="400" y="112" width="250" height="56" rx="6"/>
+<text class="fig-text" x="414" y="135" style="font-size: 14px">A store asks the server</text>
+<text class="fig-code" x="414" y="154">fetch in an action</text>
+<path class="fig-arrow" d="M 170 170 L 170 204" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="180" y="193">no</text>
+<rect class="fig-box" x="20" y="208" width="300" height="56" rx="18"/>
+<text class="fig-sub fig-strong" x="36" y="231" style="font-size: 14px">Does only one component need it,</text>
+<text class="fig-sub fig-strong" x="36" y="249" style="font-size: 14px">such as an open dialog?</text>
+<path class="fig-arrow" d="M 322 236 L 396 236" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="360" y="228" text-anchor="middle">yes</text>
+<rect class="fig-box fig-box-strong" x="400" y="208" width="250" height="56" rx="6"/>
+<text class="fig-text" x="414" y="231" style="font-size: 14px">Local in the component</text>
+<text class="fig-code" x="414" y="250">ref</text>
+<path class="fig-arrow" d="M 170 266 L 170 300" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="180" y="289">no</text>
+<rect class="fig-box" x="20" y="304" width="300" height="56" rx="18"/>
+<text class="fig-sub fig-strong" x="36" y="327" style="font-size: 14px">Do a few components need it</text>
+<text class="fig-sub fig-strong" x="36" y="345" style="font-size: 14px">that share a parent?</text>
+<path class="fig-arrow" d="M 322 332 L 396 332" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="360" y="324" text-anchor="middle">yes</text>
+<rect class="fig-box fig-box-strong" x="400" y="304" width="250" height="56" rx="6"/>
+<text class="fig-text" x="414" y="327" style="font-size: 14px">Into the parent</text>
+<text class="fig-sub" x="414" y="346">props and events</text>
+<path class="fig-arrow" d="M 170 362 L 170 396" marker-end="url(#p7c1-decision-en-head)"/>
+<text class="fig-sub" x="180" y="385">no</text>
+<rect class="fig-box fig-box-strong" x="45" y="400" width="250" height="56" rx="6"/>
+<text class="fig-text" x="59" y="423" style="font-size: 14px">Into a store</text>
+<text class="fig-sub" x="59" y="442">Pinia</text>
+</svg>
