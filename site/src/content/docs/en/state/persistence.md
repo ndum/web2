@@ -156,5 +156,5 @@ The router keeps the page when only the number changes, as in chapter 6.2. The w
 ::::
 
 :::assignment
-The app keeps what it should keep and forgets what it must not keep. Martina Hostettler wants to show it to the association as soon as it runs publicly, and that comes with part 8. With this chapter the material of the exam is complete, and the [competence grid](../competences/) shows you where you stand. If you want to know how libraries cache data from the server, read the Exkurs on server state libraries.
+The app keeps what it should keep and forgets what it must not keep. Martina Hostettler wants to show it to the association as soon as it runs publicly, and that comes with part 8. With this chapter the material of the exam is complete, and the [competence grid](../competences/) shows you where you stand. If you want to know how libraries cache data from the server, read the deep dive on server state libraries.
 :::

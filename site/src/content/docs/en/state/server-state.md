@@ -1,13 +1,13 @@
 ---
 title: Server state libraries
-description: Exkurs on data from the server as a cache, Pinia Colada with useQuery and useMutation, keys, fresh and stale data, and TanStack Query.
+description: A deep dive into data from the server as a cache, Pinia Colada with useQuery and useMutation, keys, fresh and stale data, and TanStack Query.
 sidebar:
   order: 5
   badge:
-    text: Exkurs
+    text: Deep dive
 ---
 
-This chapter is an Exkurs, a deep dive. You don't need it for the exam, and the running case app gets by without the library. It shows how larger apps manage data from the server, though, and in a project with a lot of data from the server it saves a good deal of code.
+This chapter is a deep dive. You don't need it for the exam, and the running case app gets by without the library. It shows how larger apps manage data from the server, though, and in a project with a lot of data from the server it saves a good deal of code.
 
 :::goals
 After this chapter you can

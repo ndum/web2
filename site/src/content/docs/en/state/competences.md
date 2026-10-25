@@ -26,9 +26,9 @@ Use this grid to judge whether you are ready for the exam and the project. Read 
 | keep several tabs in step | Let a store listen to the `storage` event. | [Persistence](../persistence/#several-tabs) |
 | explain what never belongs in the browser's storage | Explain why a login belongs in a cookie with `HttpOnly`. | [Persistence](../persistence/#nothing-secret-in-storage) |
 | ask about a login after a reload | Explain why the guard waits for the course API after a reload. | [Persistence](../persistence/#the-login-after-a-reload) |
-| load data with a server state library (Exkurs) | Load the catalog with `useQuery` and explain what the key is for. | [Server state libraries](../server-state/#queries-with-usequery) |
+| load data with a server state library (deep dive) | Load the catalog with `useQuery` and explain what the key is for. | [Server state libraries](../server-state/#queries-with-usequery) |
 
-With part 7, the material of the [exam](../../exam/) is complete. For the project and for part 8 you mainly need components, the router, stores and data from an API. The last row belongs to the Exkurs and is optional.
+With part 7, the material of the [exam](../../exam/) is complete. For the project and for part 8 you mainly need components, the router, stores and data from an API. The last row belongs to the deep dive and is optional.
 
 ## The app after part 7
 
