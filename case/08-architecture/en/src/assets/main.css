@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #1d1d1d;
+}
+h1 {
+  margin-top: 0;
+}
+/* Hidden on the screen, read by a screen reader */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: center;
+}
+.catalog {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  padding: 0;
+  list-style: none;
+}
+.fields {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 22rem;
+}
+.error {
+  margin: 0;
+  color: #a3341f;
+}
+.search,
+.filter {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
