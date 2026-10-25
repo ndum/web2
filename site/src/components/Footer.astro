@@ -1,0 +1,40 @@
+---
+// The footer of Starlight with a line on the licences of the course below it
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+const english = Astro.locals.starlightRoute.lang === 'en';
+const repo = 'https://github.com/ndum/web2';
+const ccBySa = english ? 'https://creativecommons.org/licenses/by-sa/4.0/' : 'https://creativecommons.org/licenses/by-sa/4.0/deed.de';
+const cc0 = english ? 'https://creativecommons.org/publicdomain/zero/1.0/' : 'https://creativecommons.org/publicdomain/zero/1.0/deed.de';
+const mit = `${repo}/blob/main/LICENSES/MIT.txt`;
+const ofl = 'https://openfontlicense.org/';
+---
+
+<Default><slot /></Default>
+{
+  english ? (
+    <p class="lt-licence">
+      Text and figures are licensed under <a href={ccBySa}>CC BY-SA 4.0</a>, the code under the <a href={mit}>MIT License</a> and
+      the course data under <a href={cc0}>CC0 1.0</a>. The figures use the font Kalam under the <a href={ofl}>SIL Open
+      Font License 1.1</a>. The sources are on <a href={repo}>GitHub</a>.
+    </p>
+  ) : (
+    <p class="lt-licence">
+      Texte und Abbildungen stehen unter <a href={ccBySa}>CC BY-SA 4.0</a>, der Code unter der <a href={mit}>MIT-Lizenz</a> und
+      die Daten des Kurses unter <a href={cc0}>CC0 1.0</a>. Die Schrift der Abbildungen ist Kalam unter der <a href={ofl}>SIL
+      Open Font License 1.1</a>. Die Quellen liegen auf <a href={repo}>GitHub</a>.
+    </p>
+  )
+}
+
+<style>
+  .lt-licence {
+    margin-top: 2rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+    text-align: center;
+  }
+  .lt-licence a {
+    color: inherit;
+  }
+</style>
