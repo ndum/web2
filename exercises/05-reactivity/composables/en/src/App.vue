@@ -1,0 +1,70 @@
+<script setup>
+import { computed, ref } from 'vue'
+
+import items from '../data/items.json'
+
+const query = ref('')
+
+// The ids of the favourite things, gone after every reload
+const favorites = ref([])
+
+function isFavorite(id) {
+  return favorites.value.includes(id)
+}
+
+function toggle(id) {
+  favorites.value = isFavorite(id) ? favorites.value.filter((entry) => entry !== id) : [...favorites.value, id]
+}
+
+const count = computed(() => favorites.value.length)
+
+const visibleItems = computed(() => {
+  const text = query.value.trim().toLowerCase()
+  return items.filter((item) => item.name.toLowerCase().includes(text))
+})
+
+const hits = computed(() => visibleItems.value.length)
+
+const favoriteLabel = computed(() => (count.value === 1 ? '1 favorite' : `${count.value} favorites`))
+const hitLabel = computed(() => (hits.value === 1 ? '1 thing found' : `${hits.value} things found`))
+</script>
+
+<template>
+  <header class="site">
+    <span class="brand">Lorraine Commons</span>
+    <span class="favorites">{{ favoriteLabel }}</span>
+  </header>
+  <h1>Catalog</h1>
+  <div class="search">
+    <label for="search">Search</label>
+    <input id="search" v-model="query" type="search">
+  </div>
+  <p class="hits">{{ hitLabel }}</p>
+  <ul class="catalog">
+    <li v-for="item in visibleItems" :key="item.id">
+      <span class="name">{{ item.name }}</span>
+      <span class="category">{{ item.category }}</span>
+      <button type="button" class="favorite" :aria-pressed="isFavorite(item.id)" @click="toggle(item.id)">Favorite</button>
+    </li>
+  </ul>
+</template>
+
+<style scoped>
+.site {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  align-items: baseline;
+  margin: -1rem -1.5rem 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #1f6b4f;
+  color: #ffffff;
+}
+.brand {
+  font-weight: 700;
+}
+.favorite[aria-pressed='true'] {
+  font-weight: 700;
+  color: #a3341f;
+}
+</style>

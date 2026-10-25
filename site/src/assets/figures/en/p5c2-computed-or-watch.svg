@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-labelledby="p5c2-choice-en-title p5c2-choice-en-desc">
+<title id="p5c2-choice-en-title">computed or watch</title>
+<desc id="p5c2-choice-en-desc">A decision tree with two questions. If a value is derived from other values, such as the number of hits, then computed. Otherwise, if something should happen outside the component, such as storing, the title of the tab or a request to the server, then watch or watchEffect. If the code only reacts to an action, such as a click, then a function for the event.</desc>
+<defs><marker id="p5c2-choice-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="20" width="200" height="56" rx="28"/>
+<text class="fig-sub fig-strong" x="120" y="44" text-anchor="middle">Is a value derived</text>
+<text class="fig-sub fig-strong" x="120" y="62" text-anchor="middle">from other values?</text>
+<rect class="fig-box fig-box-strong" x="330" y="20" width="200" height="56" rx="8"/>
+<text class="fig-code fig-strong" x="430" y="44" text-anchor="middle" style="font-size: 14px">computed</text>
+<text class="fig-sub" x="430" y="63" text-anchor="middle">number of hits</text>
+<path class="fig-arrow" d="M 222 48 L 326 48" marker-end="url(#p5c2-choice-en-head)"/>
+<text class="fig-sub" x="274" y="40" text-anchor="middle">yes</text>
+<path class="fig-arrow" d="M 120 78 L 120 122" marker-end="url(#p5c2-choice-en-head)"/>
+<text class="fig-sub" x="132" y="104">no</text>
+<rect class="fig-box" x="20" y="126" width="200" height="56" rx="28"/>
+<text class="fig-sub fig-strong" x="120" y="150" text-anchor="middle">Should something happen</text>
+<text class="fig-sub fig-strong" x="120" y="168" text-anchor="middle">outside?</text>
+<rect class="fig-box fig-box-strong" x="330" y="126" width="200" height="56" rx="8"/>
+<text class="fig-code fig-strong" x="430" y="150" text-anchor="middle" style="font-size: 14px">watch, watchEffect</text>
+<text class="fig-sub" x="430" y="169" text-anchor="middle">storing, title, server</text>
+<path class="fig-arrow" d="M 222 154 L 326 154" marker-end="url(#p5c2-choice-en-head)"/>
+<text class="fig-sub" x="274" y="146" text-anchor="middle">yes</text>
+<path class="fig-arrow" d="M 120 184 L 120 228" marker-end="url(#p5c2-choice-en-head)"/>
+<text class="fig-sub" x="132" y="210">no</text>
+<rect class="fig-box" x="20" y="232" width="200" height="56" rx="8"/>
+<text class="fig-text" x="120" y="256" text-anchor="middle">function for an event</text>
+<text class="fig-sub" x="120" y="275" text-anchor="middle">click on Reserve</text>
+</svg>

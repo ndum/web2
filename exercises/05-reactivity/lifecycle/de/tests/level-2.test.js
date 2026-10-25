@@ -1,0 +1,51 @@
+import { mount } from '@vue/test-utils'
+import { nextTick } from 'vue'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+
+import App from '../src/App.vue'
+
+let wrapper
+
+afterEach(() => {
+  wrapper?.unmount()
+  document.body.innerHTML = ''
+  vi.restoreAllMocks()
+})
+
+async function openDialog() {
+  wrapper = mount(App, { attachTo: document.body })
+  await wrapper.findAll('.details')[0].trigger('click')
+  expect(document.querySelector('[role="dialog"]')).not.toBeNull()
+}
+
+function press(key) {
+  document.body.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true }))
+  return nextTick()
+}
+
+describe('Vertiefung, Escape schliesst den Dialog', () => {
+  it('schliesst den Dialog mit Escape', async () => {
+    await openDialog()
+    await press('Escape')
+    expect(document.querySelector('[role="dialog"]')).toBeNull()
+  })
+
+  it('lässt den Dialog bei anderen Tasten offen', async () => {
+    await openDialog()
+    await press('Enter')
+    expect(document.querySelector('[role="dialog"]')).not.toBeNull()
+    await press('Escape')
+    expect(document.querySelector('[role="dialog"]')).toBeNull()
+  })
+
+  it('meldet den Listener auf window beim Schliessen wieder ab', async () => {
+    const add = vi.spyOn(window, 'addEventListener')
+    const remove = vi.spyOn(window, 'removeEventListener')
+    await openDialog()
+    const call = add.mock.calls.find(([type]) => type === 'keydown')
+    expect(call, 'Kein Listener für keydown auf window').toBeDefined()
+    document.querySelector('[role="dialog"] button').click()
+    await nextTick()
+    expect(remove).toHaveBeenCalledWith('keydown', call[1])
+  })
+})
