@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" role="img" aria-labelledby="p8c1-layers-de-title p8c1-layers-de-desc">
+<title id="p8c1-layers-de-title">Die Schichten der App</title>
+<desc id="p8c1-layers-de-desc">Vier Ebenen von oben nach unten, die Pfeile zeigen, wer wen importiert. Zuoberst setzen main.js, App.vue und der Router die App zusammen und importieren die Features. Die Features enthalten Seiten, eigene Komponenten und Stores und importieren gemeinsame Bausteine und die Schicht für die API. Gemeinsame Bausteine in components, composables und utils kennen kein Feature. Nur die Schicht für die API in src/api spricht mit fetch mit dem Server. Kein Pfeil zeigt nach oben.</desc>
+<defs><marker id="p8c1-layers-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="175" y="20" width="250" height="50" rx="6"/>
+<text class="fig-text" x="189" y="41" style="font-size: 14px">App und Router</text>
+<text class="fig-sub" x="189" y="59">main.js, App.vue, router</text>
+<rect class="fig-box fig-box-strong" x="175" y="120" width="250" height="50" rx="6"/>
+<text class="fig-text" x="189" y="141" style="font-size: 14px">Features</text>
+<text class="fig-sub" x="189" y="159">Seiten, eigene Komponenten, Stores</text>
+<rect class="fig-box" x="40" y="220" width="250" height="50" rx="6"/>
+<text class="fig-text" x="54" y="241" style="font-size: 14px">Gemeinsame Bausteine</text>
+<text class="fig-sub" x="54" y="259">components, composables, utils</text>
+<rect class="fig-box fig-box-strong" x="310" y="220" width="250" height="50" rx="6"/>
+<text class="fig-text" x="324" y="241" style="font-size: 14px">Schicht für die API</text>
+<text class="fig-sub" x="324" y="259">src/api</text>
+<rect class="fig-box" x="310" y="320" width="250" height="50" rx="6"/>
+<text class="fig-text" x="324" y="341" style="font-size: 14px">Server</text>
+<text class="fig-sub" x="324" y="359">Kurs-API oder Attrappe</text>
+<path class="fig-arrow" d="M 300 72 L 300 116" marker-end="url(#p8c1-layers-de-head)"/>
+<text class="fig-sub" x="310" y="100">importiert</text>
+<path class="fig-arrow" d="M 260 172 L 165 216" marker-end="url(#p8c1-layers-de-head)"/>
+<path class="fig-arrow" d="M 340 172 L 435 216" marker-end="url(#p8c1-layers-de-head)"/>
+<text class="fig-sub" x="300" y="200" text-anchor="middle">importiert</text>
+<path class="fig-arrow" d="M 435 272 L 435 316" marker-end="url(#p8c1-layers-de-head)" stroke-dasharray="6 5"/>
+<text class="fig-code" x="445" y="300">fetch</text>
+<text class="fig-sub fig-strong" x="40" y="350">Kein Pfeil zeigt nach oben.</text>
+</svg>

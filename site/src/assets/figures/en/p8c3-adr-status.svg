@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 250" role="img" aria-labelledby="p8c3-status-en-title p8c3-status-en-desc">
+<title id="p8c3-status-en-title">The status of an architecture decision</title>
+<desc id="p8c3-status-en-desc">A state diagram. A decision starts as proposed and is accepted or rejected. An accepted decision can later become deprecated or be superseded by a new decision that points to it. No decision is deleted, it keeps its number and stays in the index.</desc>
+<defs><marker id="p8c3-status-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="90" width="190" height="40" rx="20"/>
+<text class="fig-text" x="115" y="115" text-anchor="middle" style="font-size: 14px">Proposed</text>
+<rect class="fig-box fig-box-strong" x="270" y="20" width="190" height="40" rx="20"/>
+<text class="fig-text" x="365" y="45" text-anchor="middle" style="font-size: 14px">Accepted</text>
+<rect class="fig-box" x="270" y="160" width="190" height="40" rx="20"/>
+<text class="fig-text" x="365" y="185" text-anchor="middle" style="font-size: 14px">Rejected</text>
+<rect class="fig-box" x="520" y="20" width="190" height="40" rx="20"/>
+<text class="fig-text" x="615" y="45" text-anchor="middle" style="font-size: 14px">Deprecated</text>
+<rect class="fig-box" x="520" y="90" width="190" height="40" rx="20"/>
+<text class="fig-text" x="615" y="115" text-anchor="middle" style="font-size: 14px">Superseded by ADR n</text>
+<path class="fig-arrow" d="M 212 102 L 266 40" marker-end="url(#p8c3-status-en-head)"/>
+<path class="fig-arrow" d="M 212 118 L 266 180" marker-end="url(#p8c3-status-en-head)"/>
+<path class="fig-arrow" d="M 462 40 L 516 40" marker-end="url(#p8c3-status-en-head)"/>
+<path class="fig-arrow" d="M 462 54 L 516 110" marker-end="url(#p8c3-status-en-head)"/>
+<text class="fig-sub fig-strong" x="270" y="234">No decision is deleted, the number stays.</text>
+</svg>
