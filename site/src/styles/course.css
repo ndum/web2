@@ -189,17 +189,21 @@ vue-playground > [hidden] {
 /* Figures generated as SVG by figures/*.mjs and inlined by remark-inline-figures */
 .lt-figure {
   margin-block: 1.5rem;
+  /* On a narrow screen a figure keeps its minimum width and scrolls sideways, so its labels stay
+     readable */
+  overflow-x: auto;
 }
 .lt-figure svg {
   display: block;
   width: 100%;
+  min-width: 32rem;
   max-width: 42rem;
   height: auto;
 }
 .fig .fig-paper {
   fill: var(--sl-color-bg);
 }
-/* Lines that look drawn by hand, drawn by figures/sketch.mjs (E-226) */
+/* Lines that look drawn by hand, drawn by figures/sketch.mjs */
 .fig .fig-line {
   fill: none;
   stroke: var(--sl-color-gray-2);
