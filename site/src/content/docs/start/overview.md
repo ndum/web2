@@ -22,9 +22,9 @@ Nach diesem Kapitel kannst du
 
 ## Der Kurs im Überblick
 
-Das Modul dauert rund 50 Lektionen. In den Teilen 0 bis 7 lernst du, was eine Single Page Application ausmacht und wie du eine mit Vue baust. Danach folgt eine [praktische Prüfung](../../exam/), und in den letzten 20 Lektionen setzt du ein eigenes Projekt um. Teil 8 begleitet dich dabei mit Kapiteln zu Architektur, Tests, Barrierefreiheit und Deployment, jeweils dann, wenn dein Projekt sie braucht.
+In den Teilen 0 bis 7 lernst du, was eine Single Page Application ausmacht und wie du eine mit Vue baust. Danach folgt eine [praktische Prüfung](../../exam/), und zum Schluss setzt du ein eigenes Projekt um. Teil 8 begleitet dich dabei mit Kapiteln zu Architektur, Tests, Barrierefreiheit und Deployment, jeweils dann, wenn dein Projekt sie braucht. Wie Prüfung und Projekt bewertet werden, steht unter [Leistungsbeurteilung](../../assessment/).
 
-![Der Kurs im Überblick. Ein Balken zeigt die 50 Lektionen des Moduls. Die Teile 0 bis 7 füllen die Lektionen 1 bis 28, die Prüfung liegt in den Lektionen 29 und 30, das Projekt mit Teil 8 nimmt die Lektionen 31 bis 50 ein. Unter dem Balken stehen die Namen der Teile.](../../../assets/figures/de/p0c1-course-map.svg)
+![Der Kurs im Überblick. Ein Balken zeigt die Reihenfolge des Moduls. Auf die Teile 0 bis 7 folgen die Prüfung und das Projekt mit Teil 8. Unter dem Balken stehen die Namen der Teile.](../../../assets/figures/de/p0c1-course-map.svg)
 
 Neben den Teilen gibt es die [JS-Werkstatt](../../js/) mit zehn Einheiten zu den Grundlagen von JavaScript. Der [Einstiegstest](../entry-test/) zeigt dir, welche davon du auffrischen solltest. [Wahlthemen](../../optional/overview/) wie TypeScript, ein eigenes Backend oder End-to-End-Tests bearbeitest du selbständig, wenn dein Projekt sie braucht.
 

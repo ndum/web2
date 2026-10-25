@@ -22,9 +22,9 @@ After this chapter you can
 
 ## The course at a glance
 
-The module takes about 50 lessons. In parts 0 to 7 you learn what makes a single page application and how to build one with Vue. A [practical exam](../../exam/) follows, and in the last 20 lessons you build a project of your own. Part 8 accompanies the project with chapters on architecture, testing, accessibility and deployment, each arriving when your project needs it.
+In parts 0 to 7 you learn what makes a single page application and how to build one with Vue. A [practical exam](../../exam/) follows, and at the end you build a project of your own. Part 8 accompanies the project with chapters on architecture, testing, accessibility and deployment, each arriving when your project needs it. The [assessment](../../assessment/) page explains how the exam and the project are graded.
 
-![The course at a glance. A bar shows the 50 lessons of the module. Parts 0 to 7 fill lessons 1 to 28, the exam takes lessons 29 and 30, and the project with part 8 takes lessons 31 to 50. The names of the parts are listed below the bar.](../../../../assets/figures/en/p0c1-course-map.svg)
+![The course at a glance. A bar shows the order of the module. Parts 0 to 7 come first, followed by the exam and the project with part 8. The names of the parts are listed below the bar.](../../../../assets/figures/en/p0c1-course-map.svg)
 
 Next to the parts there is the [JS workshop](../../js/) with ten units on the basics of JavaScript. The [entry test](../entry-test/) shows you which of them to refresh. You work through [optional topics](../../optional/overview/) such as TypeScript, a backend of your own or end-to-end tests on your own when your project needs them.
 
