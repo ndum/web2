@@ -1,5 +1,5 @@
 // Builds the demo of the case app into the built site, in both languages, below the base path of
-// the site. The preview of a pull request sets SITE_BASE, the published site uses /web2/.
+// the site. The preview of a pull request sets SITE_BASE, the published site uses /.
 // Run it after the build of the site, which empties site/dist.
 import { spawnSync } from 'node:child_process'
 import { existsSync } from 'node:fs'
@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url'
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const CASE = join(ROOT, 'case', '08-architecture')
 const SITE = join(ROOT, 'site', 'dist')
-const base = process.env.SITE_BASE ?? '/web2/'
+const base = process.env.SITE_BASE ?? '/'
 
 if (!existsSync(SITE)) {
   console.error('Build the site first, site/dist is missing.')
