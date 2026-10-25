@@ -29,6 +29,9 @@ jobs:
         run: node scripts/localize.mjs --check
       - name: Scripts behave as intended
         run: node --test "scripts/*.test.mjs"
+      - name: The course API answers as documented
+        working-directory: api
+        run: npm test
       - name: Playground examples compile
         working-directory: site
         run: node --test "tests/*.test.mjs"
@@ -47,6 +50,7 @@ jobs:
           node figures/components.mjs
           node figures/reactivity.mjs
           node figures/routing.mjs
+          node figures/state.mjs
           git diff --exit-code
 
   text:
