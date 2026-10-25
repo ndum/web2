@@ -12,8 +12,9 @@ async function atTheSameTime() {
   return Promise.all([request('[%Dinge|things%]', 200), request('[%Mitglieder|members%]', 200)])
 }
 
-// Rounded down to 100 milliseconds, timers never fire early
-const elapsed = (start) => Math.floor((Date.now() - start) / 100) * 100
+// Rounded down to 200 milliseconds, the step of the timers. Timers never fire early, and a busy
+// computer may start them up to 199 milliseconds late without changing the output
+const elapsed = (start) => Math.floor((Date.now() - start) / 200) * 200
 
 let start = Date.now()
 console.log(await oneAfterTheOther(), elapsed(start))
