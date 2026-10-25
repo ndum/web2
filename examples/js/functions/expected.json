@@ -1,0 +1,16 @@
+{
+  "de": {
+    "closure.mjs": "R-1\nR-2\nL-1 R-3\n",
+    "defaults.mjs": "CHF 20.00\nEUR 12.50\n3\n",
+    "solution-1.mjs": "false true false\n",
+    "solution-2.mjs": "3\n1\n",
+    "solution-3.mjs": "3\n1\n"
+  },
+  "en": {
+    "closure.mjs": "R-1\nR-2\nL-1 R-3\n",
+    "defaults.mjs": "CHF 20.00\nEUR 12.50\n3\n",
+    "solution-1.mjs": "false true false\n",
+    "solution-2.mjs": "3\n1\n",
+    "solution-3.mjs": "3\n1\n"
+  }
+}

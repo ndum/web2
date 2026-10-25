@@ -39,8 +39,10 @@ export default defineConfig({
       },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/ndum/web2' }],
       sidebar: [
+        { label: 'Start', translations: { en: 'Getting started' }, items: [{ autogenerate: { directory: 'start' } }] },
         { label: 'Komponenten', translations: { en: 'Components' }, items: [{ autogenerate: { directory: 'components' } }] },
         { label: 'Projekt', translations: { en: 'Project' }, items: [{ autogenerate: { directory: 'project' } }] },
+        { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, items: [{ autogenerate: { directory: 'js' } }] },
       ],
       disable404Route: true,
       customCss: ['./src/styles/course.css'],

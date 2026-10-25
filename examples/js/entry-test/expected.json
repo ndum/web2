@@ -1,0 +1,32 @@
+{
+  "de": {
+    "q01.mjs": "object\n",
+    "q02.mjs": "20 0\n",
+    "q03.mjs": "50\n",
+    "q04.mjs": "3\n",
+    "q05.mjs": "unbekannt null\n",
+    "q06.mjs": "50\n",
+    "q07.mjs": "Zelt Beamer\n",
+    "q08.mjs": "RACL\n",
+    "q09.mjs": "TypeError\n",
+    "q10.mjs": "a\nb\nc\n",
+    "q11.html": "Leiter\n",
+    "q12.mjs": "{\"name\":\"Zelt\"}\n",
+    "q13.mjs": "CHF 20.00\n"
+  },
+  "en": {
+    "q01.mjs": "object\n",
+    "q02.mjs": "20 0\n",
+    "q03.mjs": "50\n",
+    "q04.mjs": "3\n",
+    "q05.mjs": "unknown null\n",
+    "q06.mjs": "50\n",
+    "q07.mjs": "Tent Projector\n",
+    "q08.mjs": "RACL\n",
+    "q09.mjs": "TypeError\n",
+    "q10.mjs": "a\nb\nc\n",
+    "q11.html": "Ladder\n",
+    "q12.mjs": "{\"name\":\"Tent\"}\n",
+    "q13.mjs": "CHF 20.00\n"
+  }
+}

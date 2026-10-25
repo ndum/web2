@@ -1,0 +1,16 @@
+<!doctype html>
+<ul id="catalog">
+  <li>[%Bohrmaschine|Drill%]</li>
+  <li>[%Zelt|Tent%]</li>
+</ul>
+<script>
+  const list = document.querySelector('#catalog')
+  list.addEventListener('click', (event) => {
+    const entry = event.target.closest('li')
+    if (!entry) return
+    entry.classList.toggle('favorite')
+    console.log(entry.textContent, entry.classList.contains('favorite'))
+  })
+  list.querySelector('li').click()
+  list.querySelector('li').click()
+</script>

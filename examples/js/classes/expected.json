@@ -1,0 +1,16 @@
+{
+  "de": {
+    "reservation.mjs": "R-1: Zelt, 3 Tage\n3 undefined\n",
+    "solution-1.mjs": "true false\n",
+    "solution-2.mjs": "true Leiter 21\n",
+    "solution-3.mjs": "Willkommen bei Lorraine Commons\n",
+    "this.mjs": "1\nTypeError\n2\n"
+  },
+  "en": {
+    "reservation.mjs": "R-1: Tent, 3 days\n3 undefined\n",
+    "solution-1.mjs": "true false\n",
+    "solution-2.mjs": "true Ladder 21\n",
+    "solution-3.mjs": "Welcome to Lorraine Commons\n",
+    "this.mjs": "1\nTypeError\n2\n"
+  }
+}

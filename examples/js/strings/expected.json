@@ -1,0 +1,18 @@
+{
+  "de": {
+    "search.mjs": "Stichsäge\n",
+    "solution-1.mjs": "\"Velo-Anhänger\" 13 true\n",
+    "solution-2.mjs": "Zelt............ CHF  50.00\nLeiter.......... CHF  20.00\n",
+    "solution-3.mjs": "Stichsäge Werkzeug 25\n",
+    "sorting.mjs": "[ 'Bohrmaschine', 'Zelt', 'Äxte' ]\n[ 'Äxte', 'Bohrmaschine', 'Zelt' ]\n",
+    "template.mjs": "Zelt für vier Personen, 3 Tage, Pfand CHF 50.00\n007 RACLETTE\n[ 'Bohrmaschine', 'Werkzeug', '20' ]\n"
+  },
+  "en": {
+    "search.mjs": "Jigsaw\n",
+    "solution-1.mjs": "\"Bike trailer\" 12 true\n",
+    "solution-2.mjs": "Tent............ CHF  50.00\nLadder.......... CHF  20.00\n",
+    "solution-3.mjs": "Jigsaw Tools 25\n",
+    "sorting.mjs": "[ 'Drill', 'axe', 'tent' ]\n[ 'axe', 'Drill', 'tent' ]\n",
+    "template.mjs": "Tent for four, 3 days, deposit CHF 50.00\n007 RACLETTE\n[ 'Drill', 'Tools', '20' ]\n"
+  }
+}

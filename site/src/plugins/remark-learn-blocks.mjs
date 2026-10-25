@@ -12,7 +12,11 @@
  *   ::tab{label="Template"}           starts a tab panel (leaf directive, no closing line)
  *   :::
  *   ::code{file="exercises/.../{lang}/src/App.vue" lines="3-9"}
- *                                     embeds a tested file of the repository, {lang} becomes de or en
+ *                                     embeds a tested file of the repository, {lang} becomes de or en,
+ *                                     .mjs and .html files below examples/js/ get a run button
+ *                                     (src/scripts/code-runner.js) unless the directive says run="false"
+ *   :::quiz                           a test whose answers are checked in the browser (src/scripts/quiz.js)
+ *   ::::question{answer="object|'object'" unit="variables"}
  *   ::playground{dir="examples/04-components/props-card"}
  *                                     the files of examples/.../de or .../en as code tabs that open
  *                                     in the Vue playground (src/scripts/vue-playground.js)
@@ -38,6 +42,8 @@ const DEFAULT_LABELS = {
     optional: 'optional',
     tabs: 'Code-Variante',
     files: 'Dateien',
+    quiz: 'Test',
+    question: 'Frage',
   },
   en: {
     assignment: 'Assignment',
@@ -49,6 +55,8 @@ const DEFAULT_LABELS = {
     optional: 'optional',
     tabs: 'Code variant',
     files: 'Files',
+    quiz: 'Test',
+    question: 'Question',
   },
 };
 
@@ -66,6 +74,8 @@ const CODE_LANGUAGES = {
 };
 /** Folders of the repository whose files a page may embed. */
 const EMBED_ROOTS = ['examples', 'exercises', 'case'];
+/** Embedded files that get a run button: JavaScript modules and HTML pages of the JS workshop. */
+const RUNNABLE = /^examples\/js\/.+\.(mjs|html)$/;
 
 /**
  * @param {{ root?: string, defaultLang?: string, labels?: Record<string, Record<string, string>> }} [options]
@@ -84,16 +94,23 @@ export default function remarkLearnBlocks(options = {}) {
       if (node.type === 'containerDirective') {
         if (node.name === 'tabs') return void transformTabs(node, file, t);
         if (node.name === 'solution') return void transformSolution(node, t);
+        if (node.name === 'quiz') return void transformQuiz(node, file, t, `lt-box-${++boxCount}`);
+        // transformQuiz already turned the questions of a quiz into boxes
+        if (node.name === 'question') {
+          if (!node.data?.hName) file.fail('"question" is only valid directly inside "quiz".', node);
+          return;
+        }
         if (BOXES.has(node.name)) return void transformBox(node, t, `lt-box-${++boxCount}`);
         if (STARLIGHT_ASIDES.has(node.name)) return;
         file.fail(
           `Unknown directive ":::${node.name}". Known: assignment, goals, deepdive, exercise, selfcheck, solution, ` +
-            `tabs (and Starlight's note, tip, caution, danger).`,
+            `tabs, quiz (and Starlight's note, tip, caution, danger).`,
           node,
         );
       }
       if (node.type === 'leafDirective' && node.name === 'code') {
-        embedCode(node, file, root, lang);
+        const runner = embedCode(node, file, root, lang);
+        if (runner && parent && index !== undefined) parent.children[index] = runner;
         return;
       }
       if (node.type === 'leafDirective' && node.name === 'playground') {
@@ -195,15 +212,63 @@ function readText(absolute) {
   return readFileSync(absolute, 'utf8').replace(/\r\n/g, '\n').replace(/\n+$/, '');
 }
 
-/** Replaces ::code{file="..."} by a code block with the content of a tested file. */
+/**
+ * Replaces ::code{file="..."} by a code block with the content of a tested file. Returns an <lt-run>
+ * wrapper around the block for runnable files, which the caller puts in place of the node, because
+ * the rendered code block splits the code into lines.
+ */
 function embedCode(node, file, root, lang) {
   const { path, absolute } = repoPath(node.attributes?.file, node, file, root, lang, 'code');
   const name = path.split('/').at(-1);
   const value = pickLines(readText(absolute), node.attributes?.lines, node, file);
-  Object.assign(node, { type: 'code', lang: CODE_LANGUAGES[extname(name)] ?? 'text', meta: `title="${name}"`, value });
+  const runnable = RUNNABLE.test(path) && !node.attributes?.lines && node.attributes?.run !== 'false';
+  const codeLang = CODE_LANGUAGES[extname(name)] ?? 'text';
+  Object.assign(node, { type: 'code', lang: codeLang, meta: `title="${name}"`, value });
   delete node.name;
   delete node.attributes;
   delete node.children;
+  if (!runnable) return null;
+  return {
+    type: 'ltRun',
+    data: { hName: 'lt-run', hProperties: { dataLang: codeLang === 'html' ? 'html' : 'js', dataFile: name, dataCode: value } },
+    children: [node],
+  };
+}
+
+/**
+ * :::quiz holds ::::question blocks. Each question becomes a numbered box that carries its answers
+ * and the slug of its workshop unit, so quiz.js can check typed answers and list units to repeat.
+ */
+function transformQuiz(node, file, t, id) {
+  const label = takeLabel(node);
+  let number = 0;
+  for (const child of node.children) {
+    if (child.type !== 'containerDirective' || child.name !== 'question') {
+      file.fail('Inside ":::quiz" only "::::question{answer=... unit=...}" blocks are allowed.', child);
+    }
+    const answer = child.attributes?.answer;
+    if (!answer || answer.trim() === '') file.fail('A question needs an answer, alternatives separated by |, e.g. answer="object".', child);
+    if (!child.attributes?.unit) file.fail('A question needs the slug of its workshop unit, e.g. unit="variables".', child);
+    number += 1;
+    const titleId = `${id}-q${number}`;
+    child.data = {
+      hName: 'div',
+      hProperties: {
+        className: ['lt-box', 'lt-question'],
+        role: 'group',
+        ariaLabelledBy: titleId,
+        dataAnswer: answer,
+        dataUnit: child.attributes.unit,
+      },
+    };
+    child.children.unshift({
+      type: 'ltTitle',
+      data: { hName: 'p', hProperties: { className: ['lt-box-title'], id: titleId } },
+      children: titleChildren(`${t.question} ${number}`, takeLabel(child)),
+    });
+  }
+  if (number === 0) file.fail(':::quiz needs at least one ::::question.', node);
+  node.data = { hName: 'lt-quiz', hProperties: { dataLabel: label ? plainText(label) : t.quiz } };
 }
 
 /** Files of an example folder, App.vue first, then the others by path. */

@@ -1,0 +1,13 @@
+<!doctype html>
+<h1>Catalog</h1>
+<ul id="catalog"></ul>
+<script>
+  const names = ['Drill', 'Tent', 'Ladder']
+  const list = document.querySelector('#catalog')
+  for (const name of names) {
+    const entry = document.createElement('li')
+    entry.textContent = name
+    list.append(entry)
+  }
+  console.log(list.children.length)
+</script>

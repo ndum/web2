@@ -1,0 +1,23 @@
+<!doctype html>
+<button id="reserve">[%Reservieren|Reserve%]</button>
+<p id="count">0</p>
+<ul id="catalog">
+  <li data-id="1">[%Bohrmaschine|Drill%]</li>
+  <li data-id="2">[%Zelt|Tent%]</li>
+</ul>
+<script>
+  let reservations = 0
+  document.querySelector('#reserve').addEventListener('click', () => {
+    reservations += 1
+    document.querySelector('#count').textContent = String(reservations)
+  })
+
+  // One listener on the list handles clicks on every entry, also on entries added later
+  document.querySelector('#catalog').addEventListener('click', (event) => {
+    const entry = event.target.closest('li')
+    if (entry) console.log('[%Gewählt|Chosen%]', entry.dataset.id, entry.textContent)
+  })
+
+  document.querySelector('#reserve').click()
+  document.querySelector('li[data-id="2"]').click()
+</script>

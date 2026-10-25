@@ -1,0 +1,12 @@
+<!doctype html>
+<ul id="catalog"></ul>
+<script>
+  const list = document.querySelector('#catalog')
+  for (const name of ['Tent', 'Ladder']) {
+    const entry = document.createElement('li')
+    entry.textContent = name
+    list.append(entry)
+  }
+  list.addEventListener('click', (event) => console.log(event.target.textContent))
+  list.lastElementChild.click()
+</script>

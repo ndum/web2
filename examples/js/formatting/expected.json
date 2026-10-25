@@ -1,0 +1,18 @@
+{
+  "de": {
+    "dates.mjs": "12.11.2026\nDonnerstag, 12. November\ngestern in 3 Tagen\n",
+    "money.mjs": "CHF 20.00\nCHF 1'234.50\n35%\n",
+    "solution-1.mjs": "CHF 20.00\nCHF 50.00\nCHF 12.50\n",
+    "solution-2.mjs": "Mittwoch, 17:00\n",
+    "solution-3.mjs": "Zelt, Äxte und Bohrmaschine\n1'234'567.891\n",
+    "timezones.mjs": "12.11.2026 12.11.2026 11.11.2026\n"
+  },
+  "en": {
+    "dates.mjs": "11/12/2026\nThursday, November 12\nyesterday in 3 days\n",
+    "money.mjs": "CHF 20.00\nCHF 1'234.50\n35%\n",
+    "solution-1.mjs": "CHF 20.00\nCHF 50.00\nCHF 12.50\n",
+    "solution-2.mjs": "Wednesday 5:00 PM\n",
+    "solution-3.mjs": "tent, Drill, and axe\n1'234'567.891\n",
+    "timezones.mjs": "11/12/2026 11/12/2026 11/11/2026\n"
+  }
+}
