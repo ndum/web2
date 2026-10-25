@@ -67,7 +67,10 @@ const CODE_LANGUAGES = {
   '.vue': 'vue',
   '.js': 'js',
   '.mjs': 'js',
+  '.jsx': 'jsx',
+  '.ts': 'ts',
   '.json': 'json',
+  '.webmanifest': 'json',
   '.html': 'html',
   '.css': 'css',
   '.txt': 'text',
@@ -75,7 +78,7 @@ const CODE_LANGUAGES = {
   '.yml': 'yaml',
 };
 /** Folders of the repository whose files a page may embed. */
-const EMBED_ROOTS = ['examples', 'exercises', 'case'];
+const EMBED_ROOTS = ['examples', 'exercises', 'case', 'optional', 'api'];
 /** Embedded files that get a run button: JavaScript modules and HTML pages of the examples. */
 const RUNNABLE = /^examples\/.+\.(mjs|html)$/;
 

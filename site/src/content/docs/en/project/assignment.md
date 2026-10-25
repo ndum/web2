@@ -102,7 +102,7 @@ The grade follows linearly from the points, grade = points / 100 × 5 + 1. Bonus
 | Documentation | AI declaration | 3 | every tool comes with its purpose, the parts it touched and your own checks |
 | Documentation | Reflection | 3 | the reflection names concrete experiences from the project |
 
-Bonus points are given for your own backend (4), authentication (2), a CI/CD pipeline (1), end-to-end tests (1), TypeScript throughout (1) and a progressive web app that works offline (1).
+Bonus points are given for [your own backend](../../optional/backend/) (4), [authentication](../../optional/authentication/) (2), a [CI/CD pipeline](../../architecture/build-and-deployment/) (1), [end-to-end tests](../../optional/end-to-end-tests/) (1), [TypeScript](../../optional/typescript/) throughout (1) and a [progressive web app that works offline](../../optional/pwa/) (1).
 
 ## As a pair
 
