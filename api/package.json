@@ -1,0 +1,15 @@
+{
+  "name": "web2-course-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The course API of WEB2, a small REST API for the library of things of Lorraine Commons",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node server.js --reset",
+    "test": "node --test"
+  }
+}
