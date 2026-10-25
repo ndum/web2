@@ -1,0 +1,13 @@
+[
+  { "id": "L-1", "itemId": 2, "name": "Tent for four", "until": "2026-11-12" },
+  { "id": "L-2", "itemId": 4, "name": "Beer bench set", "until": "2026-11-03" },
+  { "id": "L-3", "itemId": 9, "name": "Bike trailer", "until": "2026-11-12" },
+  { "id": "L-4", "itemId": 11, "name": "Cordless screwdriver", "until": "2026-11-05" },
+  { "id": "L-5", "itemId": 16, "name": "Tile cutter", "until": "2026-11-07" },
+  { "id": "L-6", "itemId": 23, "name": "Pressure washer", "until": "2026-11-04" },
+  { "id": "L-7", "itemId": 32, "name": "Stand mixer", "until": "2026-11-08" },
+  { "id": "L-8", "itemId": 40, "name": "Cool box", "until": "2026-11-07" },
+  { "id": "L-9", "itemId": 44, "name": "Stroller", "until": "2026-11-10" },
+  { "id": "L-10", "itemId": 54, "name": "Speaker", "until": "2026-11-07" },
+  { "id": "L-11", "itemId": 55, "name": "Party tent", "until": "2026-11-14" }
+]
