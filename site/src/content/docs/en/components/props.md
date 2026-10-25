@@ -6,7 +6,7 @@ sidebar:
 ---
 
 :::assignment
-Martina Hostettler wrote after the board meeting. Members at the counter keep asking whether the drill is in, and in the catalog of the app every thing looks the same.
+Martina Hostettler wrote after the board meeting. Members at the counter keep asking whether the drill is in, and since the catalog is made of cards, every card shows the same thing.
 
 > As a member, I want to see every thing in the catalog as a card with its name, category and availability, so that I can tell at a glance what I can borrow.
 
@@ -216,5 +216,5 @@ In its template `ItemList` writes the prop as `available-from`. Vue treats it as
 ::::
 
 :::assignment
-Martina Hostettler likes the cards and already has her next wish. Members should be able to reserve a thing right on its card. The button for that lives in `ItemCard`, but the list of reservations belongs to the catalog. Props carry data downward only, the way back up needs events. That is what the next chapter is about.
+Martina Hostettler likes the cards and already has her next wish. Members should be able to reserve a thing right on its card. The button for that lives in `ItemCard`, but `App` decides on the pages of the app. Props carry data downward only, the way back up needs events. That is what the next chapter is about.
 :::

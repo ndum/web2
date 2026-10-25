@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 282" role="img" aria-labelledby="p4c4-slots-en-title p4c4-slots-en-desc">
+<title id="p4c4-slots-en-title">Content fills the slots of a component</title>
+<desc id="p4c4-slots-en-desc">On the left the template of the parent component with BaseDialog. It fills the slot title with the title, the default slot with the text of the request and the slot actions with a button. On the right the template of BaseDialog with the three places slot name title, slot and slot name actions. Arrows connect each piece of content with its slot.</desc>
+<defs><marker id="p4c4-slots-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-text" x="20" y="30">App.vue fills the slots</text>
+<text class="fig-text" x="390" y="30">BaseDialog.vue shows them</text>
+<rect class="fig-box" x="20" y="42" width="290" height="232" rx="8"/>
+<rect class="fig-box" x="390" y="42" width="270" height="232" rx="8"/>
+<text class="fig-code" x="32" y="66" xml:space="preserve">&lt;BaseDialog&gt;</text>
+<text class="fig-code" x="32" y="90" xml:space="preserve">  &lt;template #title&gt;</text>
+<text class="fig-code fig-strong" x="32" y="114" xml:space="preserve">    Check the request</text>
+<text class="fig-code" x="32" y="138" xml:space="preserve">  &lt;/template&gt;</text>
+<text class="fig-code fig-strong" x="32" y="162" xml:space="preserve">  Drill, Nov 18 to 21</text>
+<text class="fig-code" x="32" y="186" xml:space="preserve">  &lt;template #actions&gt;</text>
+<text class="fig-code fig-strong" x="32" y="210" xml:space="preserve">    &lt;button&gt;Confirm&lt;/button&gt;</text>
+<text class="fig-code" x="32" y="234" xml:space="preserve">  &lt;/template&gt;</text>
+<text class="fig-code" x="32" y="258" xml:space="preserve">&lt;/BaseDialog&gt;</text>
+<text class="fig-code" x="402" y="66" xml:space="preserve">&lt;div role="dialog"&gt;</text>
+<text class="fig-code" x="402" y="90" xml:space="preserve">  &lt;h2&gt;</text>
+<text class="fig-code fig-strong" x="402" y="114" xml:space="preserve">    &lt;slot name="title" /&gt;</text>
+<text class="fig-code" x="402" y="138" xml:space="preserve">  &lt;/h2&gt;</text>
+<text class="fig-code fig-strong" x="402" y="162" xml:space="preserve">  &lt;slot /&gt;</text>
+<text class="fig-code" x="402" y="186" xml:space="preserve">  &lt;div class="actions"&gt;</text>
+<text class="fig-code fig-strong" x="402" y="210" xml:space="preserve">    &lt;slot name="actions" /&gt;</text>
+<text class="fig-code" x="402" y="234" xml:space="preserve">  &lt;/div&gt;</text>
+<text class="fig-code" x="402" y="258" xml:space="preserve">&lt;/div&gt;</text>
+<path class="fig-arrow" d="M 300 110 L 396 110" marker-end="url(#p4c4-slots-en-head)"/>
+<path class="fig-arrow" d="M 300 158 L 396 158" marker-end="url(#p4c4-slots-en-head)"/>
+<path class="fig-arrow" d="M 300 206 L 396 206" marker-end="url(#p4c4-slots-en-head)"/>
+</svg>

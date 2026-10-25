@@ -1,0 +1,21 @@
+<script setup>
+import { provide, readonly, ref } from 'vue'
+
+import AppHeader from '@/components/AppHeader.vue'
+import ItemPage from '@/components/ItemPage.vue'
+import { memberKey } from '@/keys.js'
+import items from '../data/items.json'
+
+// The test member until the login of part 6
+const member = ref({ number: 'M-117', name: 'Martina Hostettler' })
+
+// Every component below App can inject the member, readonly keeps the changes in App
+provide(memberKey, readonly(member))
+</script>
+
+<template>
+  <AppHeader />
+  <main>
+    <ItemPage :item="items[0]" />
+  </main>
+</template>

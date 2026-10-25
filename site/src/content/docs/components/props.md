@@ -6,7 +6,7 @@ sidebar:
 ---
 
 :::assignment
-Martina Hostettler hat nach der Vorstandssitzung geschrieben. Am Tresen fragen Mitglieder immer wieder, ob die Bohrmaschine gerade da ist, und im Katalog der App sehen alle Dinge gleich aus.
+Martina Hostettler hat nach der Vorstandssitzung geschrieben. Am Tresen fragen Mitglieder immer wieder, ob die Bohrmaschine gerade da ist, und seit der Katalog aus Karten besteht, zeigt jede Karte dasselbe Ding.
 
 > Als Mitglied möchte ich im Katalog jedes Ding als Karte mit Name, Kategorie und Verfügbarkeit sehen, damit ich auf einen Blick weiss, was ich ausleihen kann.
 
@@ -216,5 +216,5 @@ Im Template schreibt `ItemList` die Prop als `available-from`. Vue setzt diese S
 ::::
 
 :::assignment
-Martina Hostettler gefallen die Karten, und sie hat gleich den nächsten Wunsch. Mitglieder sollen ein Ding direkt auf der Karte reservieren können. Der Knopf dafür sitzt in `ItemCard`, die Liste der Reservationen gehört aber in den Katalog. Props tragen Daten nur nach unten, für den Weg zurück nach oben braucht es Events. Darum geht es im nächsten Kapitel.
+Martina Hostettler gefallen die Karten, und sie hat gleich den nächsten Wunsch. Mitglieder sollen ein Ding direkt auf der Karte reservieren können. Der Knopf dafür sitzt in `ItemCard`, über die Seiten der App entscheidet aber `App`. Props tragen Daten nur nach unten, für den Weg zurück nach oben braucht es Events. Darum geht es im nächsten Kapitel.
 :::
