@@ -1,11 +1,11 @@
 /**
- * Draws the figures in the style of a sketch book (E-226). The figure scripts build their SVG
+ * Draws the figures in the style of a sketch book. The figure scripts build their SVG
  * with rectangles and paths as before, and sketch() turns them into lines that look drawn by
  * hand, two strokes per line with a slight bend, and open arrowheads drawn at the end of an
  * arrow. An emphasized box gets hatching, inside when it holds no text, such as a bar, and as
  * a shadow beside it when it holds text, so the hatching never runs behind a label. A random generator seeded with the name of the
  * figure keeps every run identical, so CI can check that the figures are reproducible.
- * The handwriting font of the labels comes from course.css (E-231).
+ * The handwriting font of the labels comes from course.css.
  */
 
 const HATCH_GAP = 7;

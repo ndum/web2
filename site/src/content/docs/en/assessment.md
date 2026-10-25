@@ -10,6 +10,8 @@ Your module grade is made up of two pieces of work, a practical exam after part 
 | [Exam](../exam/) | 40 percent | competences 1 to 7 from parts 0 to 7 |
 | [Project](../project/assignment/) | 60 percent | your own single page application with documentation, code, product and screencast |
 
+The module grade is the weighted average of the exam grade and the project grade, rounded to tenths.
+
 ## Exam
 
 The exam is practical, lasts 60 minutes and is open book. The [exam](../exam/) page lists the competences, topics and learning goals it covers and what it leaves out. Your teacher tells you which other aids are allowed and how the exam will run.

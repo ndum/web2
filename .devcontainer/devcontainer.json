@@ -1,0 +1,17 @@
+// Opens the course repo in GitHub Codespaces with Node.js 26 and the Vue extension, for laptops
+// on which students can't install anything
+{
+  "name": "WEB2",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:26",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Vue.volar"]
+    }
+  },
+  "forwardPorts": [5173, 4173, 3000],
+  "portsAttributes": {
+    "5173": { "label": "Vite dev server" },
+    "4173": { "label": "Vite preview" },
+    "3000": { "label": "Course API" }
+  }
+}

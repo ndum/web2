@@ -60,6 +60,10 @@ Für das Projekt brauchst du ein Konto auf [GitHub](https://github.com/). Das Ku
 git clone https://github.com/ndum/web2.git
 ```
 
+## Ohne Installation in Codespaces
+
+Wenn du auf deinem Laptop nichts installieren darfst, arbeitest du im Browser mit GitHub Codespaces. Ein Codespace ist ein Computer in der Cloud mit Visual Studio Code im Browser. Das Kursrepo bringt eine Konfiguration mit, die Node.js 26 und die Erweiterung für Vue bereitstellt. Öffne dazu das [Kursrepo auf GitHub](https://github.com/ndum/web2), klicke auf «Code», wähle den Reiter «Codespaces» und erstelle einen Codespace auf `main`. Im Terminal des Codespace arbeitest du danach wie lokal, etwa mit `npm install` und `npm test`. Startest du `npm run dev`, öffnet Codespaces die Seite unter einer eigenen Adresse. GitHub gibt jedem Konto ein monatliches Kontingent für Codespaces, halte einen Codespace deshalb an, wenn du ihn nicht brauchst.
+
 ## Die DevTools des Browsers
 
 Jeder aktuelle Browser hat Entwicklerwerkzeuge eingebaut, du öffnest sie mit F12. Für den Kurs brauchst du vor allem drei Bereiche. Die Konsole zeigt Ausgaben und Fehlermeldungen von JavaScript. Unter «Elemente» oder «Inspektor» siehst du das HTML, das gerade angezeigt wird. Der Bereich «Netzwerk» listet jede Anfrage an einen Server. Für Vue gibt es zusätzlich die Vue DevTools, die du in Teil 3 kennenlernst.

@@ -26,7 +26,7 @@ In den Teilen 0 bis 7 lernst du, was eine Single Page Application ausmacht und w
 
 ![Der Kurs im Überblick. Ein Balken zeigt die Reihenfolge des Moduls. Auf die Teile 0 bis 7 folgen die Prüfung und das Projekt mit Teil 8. Unter dem Balken stehen die Namen der Teile.](../../../assets/figures/de/p0c1-course-map.svg)
 
-Neben den Teilen gibt es die [JS-Werkstatt](../../js/) mit zehn Einheiten zu den Grundlagen von JavaScript. Der [Einstiegstest](../entry-test/) zeigt dir, welche davon du auffrischen solltest. [Wahlthemen](../../optional/overview/) wie TypeScript, ein eigenes Backend oder End-to-End-Tests bearbeitest du selbständig, wenn dein Projekt sie braucht.
+Neben den Teilen gibt es die [JS-Werkstatt](../../js/) mit zehn Einheiten zu den Grundlagen von JavaScript. Der [Einstiegstest](../entry-test/) zeigt dir, welche davon du auffrischen solltest. [Wahlthemen](../../optional/overview/) wie TypeScript, ein eigenes Backend oder End-to-End-Tests bearbeitest du selbständig, wenn dein Projekt sie braucht. Fachbegriffe schlägst du im [Glossar](../../glossary/) nach.
 
 ## So arbeitest du
 

@@ -14,7 +14,7 @@ import { sketch } from './sketch.mjs';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // The blocks of the course in their order. The course pages name no lessons, the teacher sets the
-// timing in class (E-229), so the widths only make room for the labels.
+// timing in class, so the widths only make room for the labels.
 const BLOCKS = [
   { key: '0', width: 46 },
   { key: '1', width: 46 },

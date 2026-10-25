@@ -60,6 +60,10 @@ For the project you need an account on [GitHub](https://github.com/). You downlo
 git clone https://github.com/ndum/web2.git
 ```
 
+## Without installation in Codespaces
+
+If you can't install anything on your laptop, you can work in the browser with GitHub Codespaces. A codespace is a computer in the cloud with Visual Studio Code in the browser. The course repo brings a configuration that sets up Node.js 26 and the Vue extension. Open the [course repo on GitHub](https://github.com/ndum/web2), click "Code", choose the "Codespaces" tab and create a codespace on `main`. In the terminal of the codespace you then work as you would locally, with `npm install` and `npm test`. When you start `npm run dev`, Codespaces opens the page under an address of its own. GitHub gives every account a monthly allowance for Codespaces, so stop a codespace when you don't need it.
+
 ## The browser DevTools
 
 Every current browser has developer tools built in, and you open them with F12. For the course you mainly need three areas. The console shows the output and error messages of JavaScript. Under "Elements" or "Inspector" you see the HTML that is currently displayed. The "Network" area lists every request to a server. For Vue there are also the Vue DevTools, which you get to know in part 3.

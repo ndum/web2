@@ -67,13 +67,17 @@ export default defineConfig({
         { label: 'Projekt', translations: { en: 'Project' }, collapsed: true, items: [{ autogenerate: { directory: 'project' } }] },
         { label: 'Wahlthemen', translations: { en: 'Optional topics' }, collapsed: true, items: [{ autogenerate: { directory: 'optional' } }] },
         { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, collapsed: true, items: [{ autogenerate: { directory: 'js' } }] },
+        { slug: 'glossary' },
       ],
       disable404Route: true,
-      // Kalam is the handwriting font of the figures (E-231), served by the site itself
+      // Numbers of parts and chapters in the navigation
+      routeMiddleware: './src/route-data.js',
+      // Kalam is the handwriting font of the figures, served by the site itself
       customCss: ['@fontsource/kalam/400.css', '@fontsource/kalam/700.css', './src/styles/course.css'],
       components: {
         Head: './src/components/Head.astro',
         Pagination: './src/components/Pagination.astro',
+        Footer: './src/components/Footer.astro',
       },
     }),
   ],
