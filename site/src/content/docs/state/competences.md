@@ -28,7 +28,7 @@ Mit diesem Raster schätzt du ein, ob du für die Prüfung und das Projekt berei
 | eine Anmeldung nach dem Neuladen erfragen | Erkläre, warum der Guard nach dem Neuladen auf die Kurs-API wartet. | [Persistenz](../persistence/#die-anmeldung-nach-dem-neuladen) |
 | Daten mit einer Server-State-Bibliothek laden (Exkurs) | Lade den Katalog mit `useQuery` und erkläre, wozu der Schlüssel dient. | [Server-State-Bibliotheken](../server-state/#abfragen-mit-usequery) |
 
-Mit Teil 7 ist der Stoff der Prüfung komplett. Für das Projekt und für Teil 8 brauchst du vor allem Komponenten, den Router, Stores und Daten von einer API. Die letzte Zeile gehört zum Exkurs und ist freiwillig.
+Mit Teil 7 ist der Stoff der [Prüfung](../../exam/) komplett. Für das Projekt und für Teil 8 brauchst du vor allem Komponenten, den Router, Stores und Daten von einer API. Die letzte Zeile gehört zum Exkurs und ist freiwillig.
 
 ## Die App nach Teil 7
 
