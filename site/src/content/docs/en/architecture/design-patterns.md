@@ -33,7 +33,7 @@ A design pattern describes a proven solution to a problem that keeps coming up w
 
 ## The observer in reactivity
 
-The observer pattern makes sure that all dependent objects find out automatically when an object changes. That's exactly what Vue's reactivity does. According to the [Vue documentation](https://vuejs.org/guide/extras/reactivity-in-depth.html), Vue keeps track of which effects read a reactive value and runs them again after a change. Every component renders inside such an effect, and a `watch` is an observer you write yourself. The Exkurs 1.5 built a small system of this kind with a proxy.
+The observer pattern makes sure that all dependent objects find out automatically when an object changes. That's exactly what Vue's reactivity does. According to the [Vue documentation](https://vuejs.org/guide/extras/reactivity-in-depth.html), Vue keeps track of which effects read a reactive value and runs them again after a change. Every component renders inside such an effect, and a `watch` is an observer you write yourself. The deep dive 1.5 built a small system of this kind with a proxy.
 
 ## Presentational and container components
 

@@ -1,6 +1,6 @@
 # [%Aufgaben zu Server-State-Bibliotheken|Exercises on server state libraries%]
 
-[%Die Aufgaben stehen im Kurs im Exkurs «Server-State-Bibliotheken». So startest du das Projekt und die Tests:|The exercises are in the course, in the Exkurs on server state libraries. This is how you start the project and the tests:%]
+[%Die Aufgaben stehen im Kurs im Exkurs «Server-State-Bibliotheken». So startest du das Projekt und die Tests:|The exercises are in the course, in the deep dive on server state libraries. This is how you start the project and the tests:%]
 
 ```bash
 npm install

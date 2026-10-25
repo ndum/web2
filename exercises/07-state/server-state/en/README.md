@@ -1,6 +1,6 @@
 # Exercises on server state libraries
 
-The exercises are in the course, in the Exkurs on server state libraries. This is how you start the project and the tests:
+The exercises are in the course, in the deep dive on server state libraries. This is how you start the project and the tests:
 
 ```bash
 npm install
