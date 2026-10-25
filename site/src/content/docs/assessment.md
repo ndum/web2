@@ -10,6 +10,8 @@ Deine Modulnote setzt sich aus zwei Leistungen zusammen, einer praktischen Prüf
 | [Prüfung](../exam/) | 40 Prozent | die Kompetenzen 1 bis 7 aus den Teilen 0 bis 7 |
 | [Projekt](../project/assignment/) | 60 Prozent | deine eigene Single Page Application mit Dokumentation, Code, Produkt und Screencast |
 
+Die Modulnote ist der gewichtete Durchschnitt der Noten von Prüfung und Projekt und wird auf Zehntel gerundet.
+
 ## Prüfung
 
 Die Prüfung ist praktisch, dauert 60 Minuten und ist Open Book. Welche Kompetenzen, Themen und Lernziele dazugehören und was nicht geprüft wird, steht auf der Seite [Prüfung](../exam/). Welche Hilfsmittel darüber hinaus erlaubt sind und wie die Prüfung abläuft, sagt dir deine Lehrperson.
