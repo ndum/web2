@@ -45,6 +45,7 @@ jobs:
           node figures/spa.mjs
           node figures/vue.mjs
           node figures/components.mjs
+          node figures/reactivity.mjs
           git diff --exit-code
 
   text:
