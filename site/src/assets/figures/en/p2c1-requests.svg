@@ -1,41 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 342" role="img" aria-labelledby="p2c1-requests-en-title p2c1-requests-en-desc">
 <title id="p2c1-requests-en-title">Requests of a multi-page website and of an SPA</title>
 <desc id="p2c1-requests-en-desc">On the left a multi-page website, on the right a single page application, each in three steps. When the catalog opens, the multi-page website loads a whole page, the SPA an almost empty page, its JavaScript and the data as JSON. On a click on the projector and on going back to the catalog, the multi-page website loads a whole page each time, while the SPA sends no request and its JavaScript shows the thing and the catalog by itself.</desc>
-<defs><marker id="p2c1-requests-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
 <text class="fig-text" x="20" y="28">Multi-page website (MPA)</text>
 <text class="fig-text" x="350" y="28">Single page application (SPA)</text>
 <text class="fig-sub" x="20" y="64">1. Open the catalog</text>
-<rect class="fig-box fig-box-strong" x="20" y="74" width="130" height="26" rx="6"/>
+<path class="fig-hatch" d="M 24.6 85.1 L 30.6 77.9 M 24.1 92 L 38.6 78.5 M 23.6 98.7 L 44.7 78.4 M 25.7 104.5 L 52.1 78.7 M 32.5 104.5 L 58.8 77.8 M 39.9 103.8 L 66.2 77.7 M 47.6 104.7 L 72.9 78 M 54.2 104 L 80.5 78.3 M 61.3 103.9 L 86.4 78.3 M 68 104.1 L 93.4 77.6 M 74.9 103.6 L 101.7 77.6 M 81.6 104 L 108.2 78.3 M 88.9 103.3 L 115.5 77.2 M 96.2 104.4 L 122.8 78.8 M 103.5 104.1 L 129.3 77.5 M 109.6 103.4 L 136.7 77.8 M 116.2 104.2 L 142.8 77.4 M 123.9 103.3 L 149.5 77.2 M 131.2 103.2 L 154.7 81.4 M 138 103.9 L 153.2 88.5 M 145.6 104.6 L 154.4 95.5"/><rect class="fig-paper" x="20" y="74" width="130" height="26"/><path class="fig-line fig-line-strong" d="M 22.3 74.5 Q 86.2 74.6 148.9 73.1 Q 148.9 86.5 149.6 99.8 Q 85.2 100.8 20.3 100.2 Q 20.5 87 20.7 73.9 Q 23.3 74.3 27 74.1 M 21.3 73.5 Q 85.6 73.3 149.6 73.1 Q 149.1 86 150.4 99 Q 85.1 100.4 19.7 101.2 Q 20 86.7 19.5 72.8 Q 21.9 73.1 25.2 72.9"/>
 <text class="fig-code" x="30" y="91">GET /catalog</text>
-<path class="fig-arrow" d="M 154 87 L 180 87" marker-end="url(#p2c1-requests-en-head)"/>
+<path class="fig-arrow" d="M 154.3 87.4 Q 167.3 87.2 180 87.2 M 153.6 87.4 Q 167.5 86.6 180 86.5"/><path class="fig-arrow" d="M 180 87 Q 176.1 89.2 171.8 92 M 180 87 Q 176 84.2 170.8 82.5"/>
 <text class="fig-sub" x="188" y="91">whole page</text>
 <text class="fig-sub" x="350" y="64">1. Open the catalog</text>
-<rect class="fig-box fig-box-strong" x="350" y="74" width="130" height="26" rx="6"/>
+<path class="fig-hatch" d="M 354 84.7 L 360.7 78.2 M 354.2 91.7 L 368.6 78 M 353.7 99 L 374.5 77.6 M 356.3 103.7 L 381.2 77.5 M 363.7 104 L 388.9 78.2 M 370.3 103.7 L 395.6 78.7 M 377.1 103.5 L 403 78.1 M 383.9 103.3 L 410.4 78.2 M 391.3 104.6 L 417.5 77.6 M 397.5 103.3 L 423.6 77.3 M 404.5 103.4 L 431.2 77.9 M 411.4 103.6 L 437.6 78.2 M 419.5 104.7 L 445.5 77.3 M 426.7 104.5 L 451.8 78.4 M 433.4 103.7 L 458.6 77.2 M 440.6 103.5 L 466.7 77.4 M 446.7 104.1 L 472.9 78.4 M 453.2 104.2 L 480.1 78.2 M 460.7 104 L 484.4 80.4 M 468.2 103.8 L 484.6 88.6 M 475.7 104 L 484.4 94.5"/><rect class="fig-paper" x="350" y="74" width="130" height="26"/><path class="fig-line fig-line-strong" d="M 351.1 73.6 Q 415.8 73.8 480.3 74 Q 479.8 87.7 479.4 100.5 Q 414 100.3 348.9 100.6 Q 350.2 87.4 349.6 73.5 Q 352.1 73.4 353.7 72.3 M 350.7 73.5 Q 415.5 72.4 480.6 73.2 Q 480.6 86.4 479.5 99.6 Q 414.5 98.5 349.6 100.6 Q 349.8 87.8 349.5 74.2 Q 352.5 74.7 355.4 74.8"/>
 <text class="fig-code" x="360" y="91">GET /</text>
-<path class="fig-arrow" d="M 484 87 L 510 87" marker-end="url(#p2c1-requests-en-head)"/>
+<path class="fig-arrow" d="M 483.5 86.6 Q 497.3 87.4 509.5 87.4 M 484.5 86.9 Q 496.7 87.1 510.4 87.1"/><path class="fig-arrow" d="M 510 87 Q 506.5 89.1 502.5 91.2 M 510 87 Q 506.7 84.9 502.6 83.4"/>
 <text class="fig-sub" x="518" y="91">almost empty page</text>
-<rect class="fig-box fig-box-strong" x="350" y="108" width="130" height="26" rx="6"/>
+<path class="fig-hatch" d="M 353.2 118.8 L 361.1 112.8 M 354.5 125.5 L 368 111.3 M 353.6 133.1 L 375.7 112.2 M 355.5 138.6 L 382.1 111.7 M 362.9 137.8 L 388.2 111.9 M 370.3 138.4 L 396 111.9 M 376.7 138.7 L 402.5 112.8 M 383.7 137.6 L 410.6 111.4 M 391.3 137.2 L 416.4 111.6 M 398.6 137.6 L 423.3 111.7 M 405.1 138.4 L 431.3 112.2 M 412.3 138.2 L 438 112.3 M 418.9 138 L 445.5 111.8 M 425.5 138.7 L 452.6 112.5 M 433.3 137.7 L 459.7 112.7 M 440 138.2 L 465.7 111.7 M 447.1 138.5 L 473.3 112.7 M 454.7 138.7 L 480.5 111.9 M 460.4 137.6 L 483.7 115.6 M 468.1 138.1 L 483.8 121.3 M 475.4 137.3 L 484.6 129.2"/><rect class="fig-paper" x="350" y="108" width="130" height="26"/><path class="fig-line fig-line-strong" d="M 353.3 107.8 Q 417.5 107.4 480.5 107.6 Q 480 120.3 479.2 133.6 Q 415.2 133 350.6 134.2 Q 350 120.8 350.4 107.7 Q 354.7 107.6 358.3 108.1 M 351.1 107.6 Q 415.4 105.6 480.7 108.1 Q 479.4 120.6 479.9 133.1 Q 414.3 135.1 349.3 134.6 Q 349.7 120.5 349.7 107.5 Q 351.6 107.9 354.6 107.6"/>
 <text class="fig-code" x="360" y="125">GET /main.js</text>
-<path class="fig-arrow" d="M 484 121 L 510 121" marker-end="url(#p2c1-requests-en-head)"/>
+<path class="fig-arrow" d="M 483.9 120.7 Q 497.4 120.8 509.6 121 M 483.7 121.4 Q 496.9 121 509.6 121.5"/><path class="fig-arrow" d="M 510 121 Q 505.4 123 501.9 126.2 M 510 121 Q 505.9 119.1 501.2 116.5"/>
 <text class="fig-sub" x="518" y="125">JavaScript</text>
-<rect class="fig-box fig-box-strong" x="350" y="142" width="130" height="26" rx="6"/>
+<path class="fig-hatch" d="M 353.5 153.5 L 361.7 146.1 M 354.3 160.2 L 368.6 145.7 M 354 166.8 L 375.1 145.7 M 356.3 171.3 L 381.5 146.4 M 363.3 171.7 L 389.6 145.4 M 370.8 172.6 L 395.9 146 M 377.1 171.9 L 403.7 146.7 M 384.4 171.6 L 410.5 146.2 M 391.7 171.6 L 417.7 145.5 M 397.6 171.3 L 423.4 145.3 M 404.9 172.3 L 431.7 145.8 M 411.2 172.7 L 438.3 145.2 M 418.5 171.9 L 445.7 146.5 M 426.1 171.9 L 451.7 146.3 M 433.3 172.2 L 459.8 146.2 M 439.4 171.5 L 465.6 146.2 M 447.5 172.2 L 472.4 145.8 M 453.5 172.1 L 480.5 145.7 M 460.8 172.6 L 483.6 149 M 468.2 171.8 L 484.7 156.6 M 474.4 172.1 L 483.6 163.6"/><rect class="fig-paper" x="350" y="142" width="130" height="26"/><path class="fig-line fig-line-strong" d="M 351.7 142.1 Q 415.8 141.2 479.1 141.4 Q 479.3 155.5 479.9 168.2 Q 414.5 166.1 349.9 168.6 Q 349.7 155.6 348.6 141.5 Q 352.5 141.5 354.8 142.5 M 352.3 141.4 Q 416.1 140.4 479.2 141.7 Q 479.4 155.3 478.9 168.4 Q 415.3 167.5 350.9 167.6 Q 349.7 154.6 349.7 141.8 Q 352.4 142.2 354.4 141.9"/>
 <text class="fig-code" x="360" y="159">GET /items</text>
-<path class="fig-arrow" d="M 484 155 L 510 155" marker-end="url(#p2c1-requests-en-head)"/>
+<path class="fig-arrow" d="M 483.6 155.2 Q 496.8 155 509.6 154.7 M 483.6 155.4 Q 496.9 155 509.5 154.8"/><path class="fig-arrow" d="M 510 155 Q 506.1 158 500.8 159.8 M 510 155 Q 506.4 152.6 502.6 151"/>
 <text class="fig-sub" x="518" y="159">data as JSON</text>
 <text class="fig-sub" x="20" y="206">2. Click the projector</text>
-<rect class="fig-box fig-box-strong" x="20" y="216" width="130" height="26" rx="6"/>
+<path class="fig-hatch" d="M 24.1 226.6 L 31.2 220.3 M 23.3 234.5 L 37.5 219.5 M 24.3 240.6 L 45.6 220.5 M 25.9 246.1 L 52.8 219.3 M 32.6 246.1 L 58.4 220.3 M 39.6 245.9 L 66.1 220.2 M 47 245.3 L 73.6 220 M 53.3 245.3 L 80.7 219.4 M 60.4 246.4 L 86.2 220 M 68.4 246.2 L 94.1 220.7 M 75.7 245.7 L 101.6 220 M 82.3 246.4 L 107.8 219.2 M 89.4 246.5 L 115.7 220.6 M 96.1 245.4 L 122.7 219.2 M 102.7 245.4 L 128.6 219.2 M 109.2 246.3 L 135.5 219.3 M 117.6 245.8 L 143.2 220.4 M 124.1 246.8 L 149.5 220.3 M 130.4 246.1 L 153.6 222.9 M 138.3 246.1 L 154.5 229.5 M 145.7 246.1 L 154.1 237.1"/><rect class="fig-paper" x="20" y="216" width="130" height="26"/><path class="fig-line fig-line-strong" d="M 21.7 216.1 Q 86.1 216.6 150.4 215.6 Q 151.2 228.4 150 240.6 Q 85.2 239.6 21 242.3 Q 21.1 228.8 19.2 215.6 Q 22.4 215.9 25.5 215.8 M 22.9 216.8 Q 86.1 214.4 149.7 216.5 Q 149.6 229.7 149.5 242.5 Q 85 242.4 21 243.1 Q 20.3 229.5 20.9 216.7 Q 23.6 217.2 27 217.5"/>
 <text class="fig-code" x="30" y="233">GET /things/6</text>
-<path class="fig-arrow" d="M 154 229 L 180 229" marker-end="url(#p2c1-requests-en-head)"/>
+<path class="fig-arrow" d="M 153.7 229 Q 167.4 228.6 179.8 228.7 M 154.6 229.4 Q 167.2 228.8 180.4 228.6"/><path class="fig-arrow" d="M 180 229 Q 175.9 231.3 172.2 233.8 M 180 229 Q 175.9 227.7 172.5 225"/>
 <text class="fig-sub" x="188" y="233">whole page</text>
 <text class="fig-sub" x="350" y="206">2. Click the projector</text>
-<rect class="fig-box" x="350" y="216" width="300" height="26" rx="6" stroke-dasharray="5 4"/>
+<rect class="fig-paper" x="350" y="216" width="300" height="26"/><path class="fig-line" d="M 352.1 214.4 Q 501 216.9 651.3 216.5 Q 650.8 229.5 648.7 242.3 Q 499.7 243.2 349 242.2 Q 350.4 228.1 349.7 215.3 Q 353.1 214.6 354.7 214.8" stroke-dasharray="5 4"/>
 <text class="fig-sub fig-note" x="360" y="233">no request, JavaScript shows the thing</text>
 <text class="fig-sub" x="20" y="280">3. Back to the catalog</text>
-<rect class="fig-box fig-box-strong" x="20" y="290" width="130" height="26" rx="6"/>
+<path class="fig-hatch" d="M 24.1 300.7 L 31.5 293.5 M 24.6 308.5 L 37.3 293.3 M 24.1 315.3 L 44.5 294.5 M 26.2 319.7 L 51.8 293.4 M 32.6 320.3 L 59.4 293.6 M 40.6 319.3 L 66.3 293.7 M 47.1 320.6 L 72.3 293.7 M 53.9 320.2 L 79.5 294.3 M 61 319.7 L 87.7 294.1 M 68.4 320.7 L 93.5 293.2 M 75.5 319.3 L 100.5 293.8 M 82 320 L 108.6 293.8 M 88.6 320.5 L 115 293.8 M 96.4 319.6 L 121.6 293.9 M 103.6 320.1 L 129.8 294.6 M 110.8 319.9 L 136.1 294.3 M 116.9 320.1 L 142.5 293.5 M 124.3 319.7 L 149.7 294.4 M 131.2 320.5 L 153.9 297.5 M 137.7 319.8 L 154 303.2 M 145.5 320.4 L 153.3 311.7"/><rect class="fig-paper" x="20" y="290" width="130" height="26"/><path class="fig-line fig-line-strong" d="M 23.2 290.3 Q 87.3 288.9 150.6 290 Q 150.7 303.9 150.8 316.9 Q 85.7 318.5 20.7 316.6 Q 21.5 302.5 20.8 289.5 Q 23 289.5 24.3 289.1 M 22.2 288.6 Q 86.3 289.2 150.2 290.9 Q 150.7 303 150.6 316.1 Q 85.2 314.8 20.3 316.5 Q 21.5 302.2 21 289.7 Q 23 288.4 26 289.1"/>
 <text class="fig-code" x="30" y="307">GET /catalog</text>
-<path class="fig-arrow" d="M 154 303 L 180 303" marker-end="url(#p2c1-requests-en-head)"/>
+<path class="fig-arrow" d="M 154.4 302.4 Q 167.1 303.8 180.2 303.2 M 154.3 303.3 Q 166.9 303 179.6 302.6"/><path class="fig-arrow" d="M 180 303 Q 176.1 304.8 172.3 307.8 M 180 303 Q 175.9 300 171.7 298.1"/>
 <text class="fig-sub" x="188" y="307">whole page</text>
 <text class="fig-sub" x="350" y="280">3. Back to the catalog</text>
-<rect class="fig-box" x="350" y="290" width="300" height="26" rx="6" stroke-dasharray="5 4"/>
+<rect class="fig-paper" x="350" y="290" width="300" height="26"/><path class="fig-line" d="M 353.2 290.1 Q 501.9 292.3 651 290.8 Q 650.2 303 650.1 314.9 Q 500.6 316 351.1 315.2 Q 351.7 302.8 351.2 289.6 Q 354.8 289.4 357.6 288.8" stroke-dasharray="5 4"/>
 <text class="fig-sub fig-note" x="360" y="307">no request, JavaScript shows the catalog</text>
 </svg>

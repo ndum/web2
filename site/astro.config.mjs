@@ -69,7 +69,8 @@ export default defineConfig({
         { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, collapsed: true, items: [{ autogenerate: { directory: 'js' } }] },
       ],
       disable404Route: true,
-      customCss: ['./src/styles/course.css'],
+      // Kalam is the handwriting font of the figures (E-231), served by the site itself
+      customCss: ['@fontsource/kalam/400.css', '@fontsource/kalam/700.css', './src/styles/course.css'],
       components: {
         Head: './src/components/Head.astro',
         Pagination: './src/components/Pagination.astro',

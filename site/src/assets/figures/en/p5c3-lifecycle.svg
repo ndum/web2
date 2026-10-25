@@ -1,28 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 364" role="img" aria-labelledby="p5c3-lifecycle-en-title p5c3-lifecycle-en-desc">
 <title id="p5c3-lifecycle-en-title">The lifecycle of a component</title>
 <desc id="p5c3-lifecycle-en-desc">A timeline from top to bottom. First setup runs, then onBeforeMount, then onMounted, from here on the component is in the DOM. Every change of the state is followed by onBeforeUpdate and onUpdated, an arrow leads from onUpdated back to onBeforeUpdate. When the component disappears, onBeforeUnmount and onUnmounted follow. On the right, next to setup it says that the state is created there and there is no DOM yet, next to onMounted that focus, measuring and listeners belong there, next to the two update hooks that they run on every change, and next to onUnmounted that listeners and timers are cleaned up there.</desc>
-<defs><marker id="p5c3-lifecycle-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
-<rect class="fig-box" x="70" y="20" width="170" height="34" rx="6"/>
+<rect class="fig-paper" x="70" y="20" width="170" height="34"/><path class="fig-line" d="M 72.4 20 Q 156.6 19.2 240.4 19.3 Q 240.1 36.7 238.8 54.7 Q 154.6 57 70.8 54.5 Q 70.2 37.2 70.7 20.3 Q 74.1 19.9 77.3 20.8 M 72.1 20.7 Q 155.5 18.4 240.4 19.5 Q 239.9 36.3 240.3 54 Q 155.3 53.4 69.8 53.5 Q 70.6 36.9 70.6 21.2 Q 74.2 20.1 77.2 20.6"/>
 <text class="fig-code" x="155" y="42" text-anchor="middle" style="font-size: 13px">setup</text>
-<path class="fig-arrow" d="M 155 56 L 155 68" marker-end="url(#p5c3-lifecycle-en-head)"/>
-<rect class="fig-box" x="70" y="70" width="170" height="34" rx="6"/>
+<path class="fig-arrow" d="M 155.4 55.7 Q 154.9 61.5 155.2 68.1 M 154.8 55.8 Q 154.7 62.3 155.1 68.4"/><path class="fig-arrow" d="M 155 68 Q 153.4 64.7 151.1 61 M 155 68 Q 157.5 63.9 158.6 60.2"/>
+<rect class="fig-paper" x="70" y="70" width="170" height="34"/><path class="fig-line" d="M 70.4 70.5 Q 154.3 69 239.1 69.7 Q 238.6 86.5 239.5 103.7 Q 153.8 101.8 69.7 105.4 Q 69.5 87.8 69.5 70 Q 72.9 70.1 76.7 71 M 72.9 71.5 Q 156.6 68.7 239.8 69.1 Q 238.4 86.6 239.6 104.9 Q 154.7 103.4 70.1 104.2 Q 70 87.6 70.9 70.9 Q 72 71.2 74.2 70.7"/>
 <text class="fig-code" x="155" y="92" text-anchor="middle" style="font-size: 13px">onBeforeMount</text>
-<path class="fig-arrow" d="M 155 106 L 155 118" marker-end="url(#p5c3-lifecycle-en-head)"/>
-<rect class="fig-box fig-box-strong" x="70" y="120" width="170" height="34" rx="6"/>
+<path class="fig-arrow" d="M 154.7 106.4 Q 155.5 111.9 154.7 118.2 M 155.5 105.8 Q 155.1 112.4 155.4 118.2"/><path class="fig-arrow" d="M 155 118 Q 153.1 114.1 151.6 109.8 M 155 118 Q 157.2 114 159.9 109.6"/>
+<path class="fig-hatch" d="M 77.7 134.2 L 84.5 127.2 M 76.7 140.7 L 90.6 126.6 M 77.7 148 L 98.4 126.2 M 76.7 154.5 L 105.6 126.7 M 77.6 161.5 L 111.3 127.6 M 84.2 160.6 L 119.2 127.4 M 91.5 160.6 L 126.1 126.6 M 99.7 161 L 133 127.5 M 105.3 161.3 L 140 126.2 M 112.5 161.4 L 147.7 127 M 119.4 161.3 L 154.2 127.3 M 127.2 161.6 L 161.1 127.2 M 133.4 160.9 L 168.4 127.7 M 141.2 161.5 L 174.5 126.8 M 147.7 160.4 L 181.5 126.6 M 155.5 160.5 L 188.3 127.6 M 162.2 161.2 L 196.7 126.9 M 169.4 161.3 L 202.6 127.5 M 175.5 161.7 L 210.1 127.1 M 183.2 160.6 L 217.4 127.1 M 189.8 160.7 L 224.7 127.6 M 196.3 161.1 L 230.7 126.4 M 204.4 161.4 L 238.1 127 M 211.4 160.5 L 245.4 126.2 M 217.8 160.5 L 247.3 132.4 M 224.2 161.1 L 246.6 138.3 M 231.5 161.4 L 246.2 146.3 M 238.3 161.5 L 247.7 153.4"/><rect class="fig-paper" x="70" y="120" width="170" height="34"/><path class="fig-line fig-line-strong" d="M 72.1 119.2 Q 156.5 120.3 240.3 118.8 Q 240 136.1 239.9 154.8 Q 155.3 153.6 70.2 153.1 Q 70.7 136 69.6 120.3 Q 73.1 119.7 75.9 120.4 M 71 120.2 Q 154.7 121.4 239.3 119.7 Q 239 136.5 238.7 153.5 Q 155.2 154.1 70.7 154.4 Q 70 136.8 68.9 119.2 Q 72.6 119.1 74.9 118.8"/>
 <text class="fig-code" x="155" y="142" text-anchor="middle" style="font-size: 13px">onMounted</text>
-<path class="fig-arrow" d="M 155 156 L 155 168" marker-end="url(#p5c3-lifecycle-en-head)"/>
-<rect class="fig-box" x="70" y="170" width="170" height="34" rx="6" stroke-dasharray="5 4"/>
+<path class="fig-arrow" d="M 155 155.6 Q 155.3 162.5 154.8 167.7 M 155.2 155.8 Q 155.4 162 154.5 167.5"/><path class="fig-arrow" d="M 155 168 Q 152.7 164.4 151.3 160.8 M 155 168 Q 157.2 163.9 160.8 159.3"/>
+<rect class="fig-paper" x="70" y="170" width="170" height="34"/><path class="fig-line" d="M 72 169.8 Q 156.1 169.9 239.2 168.5 Q 239.3 186.3 239.7 203.6 Q 154.6 204.6 68.7 202.9 Q 70 186.7 70.1 168.9 Q 72.2 169.4 75.4 168.8" stroke-dasharray="5 4"/>
 <text class="fig-code" x="155" y="192" text-anchor="middle" style="font-size: 13px">onBeforeUpdate</text>
-<path class="fig-arrow" d="M 155 206 L 155 218" marker-end="url(#p5c3-lifecycle-en-head)"/>
-<rect class="fig-box" x="70" y="220" width="170" height="34" rx="6" stroke-dasharray="5 4"/>
+<path class="fig-arrow" d="M 155.5 206.2 Q 155.9 212.5 154.8 218.2 M 154.5 206.1 Q 154.8 212.1 155.4 218.4"/><path class="fig-arrow" d="M 155 218 Q 152.2 214.3 150.5 209.5 M 155 218 Q 156.8 214.2 159.6 211.2"/>
+<rect class="fig-paper" x="70" y="220" width="170" height="34"/><path class="fig-line" d="M 71.8 219.6 Q 155.4 221.7 239.9 220 Q 239.1 237.1 239.5 254.2 Q 153.8 253.4 69.2 254.7 Q 69.2 237.8 69.3 219.9 Q 72.9 219.3 76.7 219.4" stroke-dasharray="5 4"/>
 <text class="fig-code" x="155" y="242" text-anchor="middle" style="font-size: 13px">onUpdated</text>
-<path class="fig-arrow" d="M 155 256 L 155 268" marker-end="url(#p5c3-lifecycle-en-head)"/>
-<rect class="fig-box" x="70" y="270" width="170" height="34" rx="6"/>
+<path class="fig-arrow" d="M 155.2 256.5 Q 154.5 261.6 154.7 268.5 M 155 256.6 Q 154.9 262.6 155 268.5"/><path class="fig-arrow" d="M 155 268 Q 151.9 263.5 150.2 258.8 M 155 268 Q 156.8 263.8 158.9 259.8"/>
+<rect class="fig-paper" x="70" y="270" width="170" height="34"/><path class="fig-line" d="M 71.1 270.2 Q 155.5 269.9 239.1 269 Q 239.5 286.7 240 303.1 Q 155.7 305.4 71.4 303.5 Q 69 287.1 69.5 270.7 Q 71.1 269.6 73.2 270 M 71.1 269.5 Q 154.6 268.3 239.5 270.6 Q 239.2 287.5 239.7 305.4 Q 154.9 303.9 70.1 304.1 Q 70.3 286.6 69.9 269.6 Q 73.4 268.6 76 269.2"/>
 <text class="fig-code" x="155" y="292" text-anchor="middle" style="font-size: 13px">onBeforeUnmount</text>
-<path class="fig-arrow" d="M 155 306 L 155 318" marker-end="url(#p5c3-lifecycle-en-head)"/>
-<rect class="fig-box fig-box-strong" x="70" y="320" width="170" height="34" rx="6"/>
+<path class="fig-arrow" d="M 154.9 306.6 Q 154.8 311.8 154.8 317.5 M 155 306.4 Q 155.2 311.8 155.3 317.8"/><path class="fig-arrow" d="M 155 318 Q 153.2 314.6 151.6 310.1 M 155 318 Q 156.9 313.6 159.6 309.6"/>
+<path class="fig-hatch" d="M 76.5 334.3 L 84.1 327 M 77.3 340.4 L 90.6 327.5 M 76.8 347.4 L 98.1 326.7 M 76.6 355.5 L 104.4 326.3 M 77.6 361.5 L 112 326.9 M 85.7 360.4 L 118.4 326.2 M 92.2 361.2 L 125.4 326.4 M 99.5 360.5 L 132.4 327.7 M 106.7 360.8 L 140.6 326.3 M 112.3 360.5 L 147.2 327.2 M 120.2 360.4 L 154.5 326.3 M 127.5 360.7 L 161.7 326.9 M 134.5 361.6 L 167.5 327.4 M 140.4 361 L 175.1 327 M 148.6 361.4 L 182.7 326.4 M 155 360.8 L 188.8 326.9 M 161.9 360.2 L 196.5 326.3 M 169.5 360.6 L 202.2 327.3 M 176.5 360.6 L 210.2 326.7 M 182.4 360.5 L 217.4 327.5 M 189.4 361.5 L 223.2 326.3 M 196.9 361 L 230.7 326.7 M 203.8 360.7 L 238.2 327.4 M 211.4 360.9 L 244.8 326.3 M 218.6 361.6 L 246.5 332 M 225.1 361.7 L 247.5 339.6 M 231.8 361 L 247.6 346.3 M 239.6 360.2 L 246.5 353.4"/><rect class="fig-paper" x="70" y="320" width="170" height="34"/><path class="fig-line fig-line-strong" d="M 71.4 320 Q 155.5 320.6 239.3 319.3 Q 241 336.6 240.8 353.6 Q 154.9 353.9 69.2 354.2 Q 69.9 337.6 69.9 319.3 Q 72.6 319.6 76.5 318.5 M 72 319.4 Q 156.1 319.6 241.1 321.1 Q 240.1 337.3 239.8 354.2 Q 155.7 354.3 71.1 353.7 Q 69.4 336.6 70.1 319.5 Q 72.5 318.6 74 318.5"/>
 <text class="fig-code" x="155" y="342" text-anchor="middle" style="font-size: 13px">onUnmounted</text>
-<path class="fig-arrow" d="M 68 237 C 20 237, 20 187, 64 187" marker-end="url(#p5c3-lifecycle-en-head)"/>
+<path class="fig-arrow" d="M 67.8 236.7 C 20.5 238.8, 19.1 187.9, 64.4 187.4 M 68.3 236.6 C 21.7 238.2, 18.4 185.4, 64.3 187.1"/><path class="fig-arrow" d="M 64 187 Q 60.3 189.2 56.6 191 M 64 187 Q 60.6 184.4 57.1 182.4"/>
 <text class="fig-sub" x="264" y="34">create state,</text>
 <text class="fig-sub" x="264" y="51">no DOM yet</text>
 <text class="fig-sub" x="264" y="134">DOM is there, focus,</text>

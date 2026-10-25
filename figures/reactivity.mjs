@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const TEXT = {
@@ -224,7 +226,7 @@ function lifecycle(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p5c1-dependencies.svg'), dependencies(lang));
-  writeFileSync(join(folder, 'p5c2-computed-or-watch.svg'), choice(lang));
-  writeFileSync(join(folder, 'p5c3-lifecycle.svg'), lifecycle(lang));
+  writeFileSync(join(folder, 'p5c1-dependencies.svg'), sketch(dependencies(lang), 'p5c1-dependencies'));
+  writeFileSync(join(folder, 'p5c2-computed-or-watch.svg'), sketch(choice(lang), 'p5c2-computed-or-watch'));
+  writeFileSync(join(folder, 'p5c3-lifecycle.svg'), sketch(lifecycle(lang), 'p5c3-lifecycle'));
 }

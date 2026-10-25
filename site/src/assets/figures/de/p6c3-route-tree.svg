@@ -1,50 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 486" role="img" aria-labelledby="p6c3-tree-de-title p6c3-tree-de-desc">
 <title id="p6c3-tree-de-title">Die Routen der Fallbeispiel-App</title>
 <desc id="p6c3-tree-de-desc">Ein Baum mit App und ihrer RouterView oben. Darunter die Routen / mit CatalogView, /items/:id mit ItemView, /favorites mit FavoritesView, /association mit AssociationView, /login mit LoginView, /team mit TeamLayout und die Catch-all-Route mit NotFoundView. TeamLayout hat eine eigene RouterView mit den Kindrouten für die Ausleihen und die Rückgaben. Neben /team steht, dass der Bereich nur für das Team ist und erst bei Bedarf geladen wird, neben der Catch-all-Route, dass sie alle anderen Adressen fängt.</desc>
-<defs><marker id="p6c3-tree-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
-<rect class="fig-box fig-box-strong" x="20" y="16" width="190" height="40" rx="6"/>
+<path class="fig-hatch" d="M 27.1 30.6 L 33.8 23.2 M 26.8 36.9 L 40.7 23.7 M 27.7 44.5 L 47.7 23.3 M 26.3 51.3 L 55.4 23.6 M 26.4 57.8 L 61.3 22.5 M 29.3 63.1 L 69 22.4 M 35.6 62.2 L 76.2 23.6 M 42.7 62.8 L 83.5 23.5 M 49.7 63.1 L 90.4 22.3 M 57.5 63.6 L 96.3 22.4 M 64.8 62.8 L 103.5 23.3 M 70.8 63.5 L 111.6 23.3 M 78 63.5 L 117.7 23.2 M 85 63.2 L 125.3 22.3 M 91.6 62.7 L 132 23.5 M 98.5 62.4 L 139 22.4 M 105.3 63 L 145.7 22.9 M 112.4 62.9 L 153.3 23.1 M 120.4 62.7 L 160.5 23.4 M 126.8 62.4 L 167 23.1 M 133.4 62.5 L 174.5 23.6 M 140.7 62.6 L 180.8 23.7 M 147.3 62.7 L 187.8 23.4 M 154.5 62.3 L 195.1 22.7 M 161.5 62.8 L 201.9 22.5 M 168.7 63 L 209.5 23.7 M 175.2 63.2 L 215.3 23.7 M 182.6 62.9 L 216.3 29.7 M 189.5 63.1 L 217.4 36.3 M 196.4 62.9 L 217.7 43.7 M 203.3 63 L 217.7 50.4 M 211.1 62.5 L 217.1 56.7"/><rect class="fig-paper" x="20" y="16" width="190" height="40"/><path class="fig-line fig-line-strong" d="M 22.1 14.6 Q 116.4 16.9 210.7 15.3 Q 210.4 35.3 209.4 55.1 Q 115.3 57.4 20.4 55.8 Q 20.5 35.5 19.8 15.5 Q 22.5 15.4 23.9 16 M 21.5 16.3 Q 116 17.4 209.6 16.3 Q 211.2 36.5 210.1 56.2 Q 114.4 57.1 19.1 56.8 Q 20.4 36.8 19 16.3 Q 22.6 16.7 27.1 16.9"/>
 <text class="fig-text" x="36" y="42">App</text>
 <text class="fig-code" x="194" y="41" text-anchor="end">RouterView</text>
-<rect class="fig-box" x="76" y="68" width="250" height="38" rx="6"/>
+<rect class="fig-paper" x="76" y="68" width="250" height="38"/><path class="fig-line" d="M 77.4 67.8 Q 202.4 66.6 326.1 68 Q 326.5 87.4 326.4 106.3 Q 201.1 104.7 74.7 104.9 Q 75 86.6 75.8 67.9 Q 79.4 68.4 83.4 69.2 M 77.4 67.2 Q 201.8 67.6 326.5 66.9 Q 325.3 86.4 325.3 106.3 Q 201.3 104.5 76.8 105.2 Q 76.9 86.8 75.5 67.6 Q 78.1 67.9 80.1 67.7"/>
 <text class="fig-code fig-strong" x="88" y="92" style="font-size: 13px">/</text>
 <text class="fig-sub" x="314" y="92" text-anchor="end">CatalogView</text>
-<path class="fig-arrow" d="M 44 87 L 74 87"/>
-<rect class="fig-box" x="76" y="114" width="250" height="38" rx="6"/>
+<path class="fig-arrow" d="M 43.6 87.1 Q 59.1 86.4 73.6 86.9 M 43.7 87.4 Q 58.5 87.2 73.9 87.3"/>
+<rect class="fig-paper" x="76" y="114" width="250" height="38"/><path class="fig-line" d="M 76.8 114.4 Q 201.6 112 325.8 113.1 Q 326 133 326.6 151.7 Q 201.5 153.3 75.8 152.2 Q 75.2 132.6 75.7 114 Q 79.3 114.9 82.1 114.3 M 78.1 113 Q 202.3 112.6 326.1 114.6 Q 327.7 133.3 326.5 152 Q 201.2 150.5 76.5 152.5 Q 76.1 132.6 76.3 113.3 Q 78.6 113.8 82.3 113.7"/>
 <text class="fig-code fig-strong" x="88" y="138" style="font-size: 13px">/items/:id(\d+)</text>
 <text class="fig-sub" x="314" y="138" text-anchor="end">ItemView</text>
-<path class="fig-arrow" d="M 44 133 L 74 133"/>
-<rect class="fig-box" x="76" y="160" width="250" height="38" rx="6"/>
+<path class="fig-arrow" d="M 43.9 132.7 Q 58.9 132.9 74.1 133.2 M 43.9 133.5 Q 58.8 132.4 74.2 133"/>
+<rect class="fig-paper" x="76" y="160" width="250" height="38"/><path class="fig-line" d="M 78.2 160.4 Q 202.2 160.1 325.5 159 Q 327 179.5 325.8 199 Q 201.1 196.6 77.1 197.1 Q 77 178.3 75.6 159.6 Q 78.4 159.5 82 159.5 M 77.6 159.1 Q 201.8 161.3 326.6 159.4 Q 327.1 178.6 326.7 197.9 Q 201.2 196.6 76.2 197.5 Q 76.4 179 76 160.2 Q 78.9 160 80.7 161.2"/>
 <text class="fig-code fig-strong" x="88" y="184" style="font-size: 13px">/favorites</text>
 <text class="fig-sub" x="314" y="184" text-anchor="end">FavoritesView</text>
-<path class="fig-arrow" d="M 44 179 L 74 179"/>
-<rect class="fig-box" x="76" y="206" width="250" height="38" rx="6"/>
+<path class="fig-arrow" d="M 43.6 178.7 Q 59.2 178.1 73.9 178.9 M 43.9 179.6 Q 59.6 178.7 73.5 179.2"/>
+<rect class="fig-paper" x="76" y="206" width="250" height="38"/><path class="fig-line" d="M 77.1 204.8 Q 201.7 206.7 325.9 205 Q 325.6 224.8 326.8 243.5 Q 201.3 244.7 74.7 244.3 Q 75.9 224.9 75.1 205.1 Q 77.5 205.8 80.5 206.2 M 77 207.7 Q 201 206.2 325.7 205.6 Q 326.5 224.7 325.9 244.3 Q 200.7 245.2 75.7 244.1 Q 74.8 224.9 75.7 207.1 Q 78 205.9 82 206"/>
 <text class="fig-code fig-strong" x="88" y="230" style="font-size: 13px">/association</text>
 <text class="fig-sub" x="314" y="230" text-anchor="end">AssociationView</text>
-<path class="fig-arrow" d="M 44 225 L 74 225"/>
-<rect class="fig-box" x="76" y="252" width="250" height="38" rx="6"/>
+<path class="fig-arrow" d="M 44.5 224.9 Q 58.9 226 74.3 225.5 M 43.8 225.2 Q 59.2 225.2 74.1 225.3"/>
+<rect class="fig-paper" x="76" y="252" width="250" height="38"/><path class="fig-line" d="M 77.2 251.9 Q 201.9 253.8 326.3 251.6 Q 325.9 270.6 326.3 289.6 Q 200.9 291.8 75.5 291.3 Q 75 271.8 75.1 252.4 Q 79.2 251.7 82.2 251.7 M 78.6 252.4 Q 201.5 251.2 325.6 251.5 Q 326.6 271.2 326.5 290.9 Q 201.9 289.9 76.6 289.7 Q 76.7 270.5 75.6 251.8 Q 77.7 251.2 80.4 250.9"/>
 <text class="fig-code fig-strong" x="88" y="276" style="font-size: 13px">/login</text>
 <text class="fig-sub" x="314" y="276" text-anchor="end">LoginView</text>
-<path class="fig-arrow" d="M 44 271 L 74 271"/>
-<rect class="fig-box fig-box-strong" x="76" y="298" width="250" height="38" rx="6" stroke-dasharray="5 4"/>
+<path class="fig-arrow" d="M 44.3 270.6 Q 59.3 270.1 73.8 271.2 M 43.5 271.5 Q 59.1 270.6 73.8 271"/>
+<path class="fig-hatch" d="M 83.3 312.2 L 89.3 304.4 M 82.2 319.7 L 97.6 304.8 M 83.6 325.8 L 103.9 304.8 M 83.6 332.4 L 110.7 305.1 M 82.4 340 L 118.6 304.5 M 86.8 342.4 L 125.6 304.9 M 93.8 343.5 L 132 304.7 M 100.9 343.5 L 139.3 305.6 M 107.5 342.8 L 146.1 305.8 M 115.5 343.1 L 152.6 305.5 M 121.9 343.4 L 159.3 305.4 M 128.5 343 L 167.4 305.6 M 135.8 342.9 L 174.3 305.1 M 142.5 343.2 L 181.3 304.6 M 150.2 342.6 L 187.2 305.4 M 156.9 343.3 L 194.6 305.8 M 164.1 343.3 L 202.5 305.4 M 170.2 343.7 L 208.7 304.7 M 178.1 343.6 L 216.8 305.2 M 185.1 343 L 222.8 304.5 M 192 343.6 L 229.2 305.4 M 199.3 343.3 L 236.5 305.4 M 205.3 343.6 L 244.7 305 M 212.6 342.3 L 250.8 305.1 M 219.3 343.6 L 257.4 305.5 M 227.7 343.2 L 265.7 304.6 M 234.2 342.7 L 271.2 305.3 M 241.6 343.1 L 279.4 304.8 M 248.8 342.6 L 285.6 305.5 M 255.3 343.7 L 292.8 304.7 M 261.3 342.7 L 300 304.8 M 269.4 343.8 L 306.9 304.2 M 276.6 342.8 L 314.6 305.4 M 283.6 342.2 L 320.6 304.9 M 289.7 343.7 L 327.3 305.3 M 296.9 343.6 L 332.3 307 M 303.5 343.6 L 332.8 314.5 M 310.8 342.7 L 332.7 321.4 M 317.9 343.3 L 333.4 328.1 M 325.5 342.5 L 333.5 334.6"/><rect class="fig-paper" x="76" y="298" width="250" height="38"/><path class="fig-line fig-line-strong" d="M 79.9 296.4 Q 202.7 295.5 326.4 297.9 Q 325.3 316.5 326.1 335.1 Q 201.1 336.5 76.8 336.2 Q 76.5 316.5 76.6 296.6 Q 80.6 297.4 83.9 297.2" stroke-dasharray="5 4"/>
 <text class="fig-code fig-strong" x="88" y="322" style="font-size: 13px">/team</text>
 <text class="fig-sub" x="314" y="322" text-anchor="end">TeamLayout</text>
-<path class="fig-arrow" d="M 44 317 L 74 317"/>
+<path class="fig-arrow" d="M 44.3 317.3 Q 59.4 317 74.1 316.6 M 44.4 316.7 Q 58.9 317.2 74.3 317"/>
 <text class="fig-sub fig-note" x="340" y="322">nur Team, lädt bei Bedarf</text>
-<rect class="fig-box" x="110" y="344" width="216" height="38" rx="6" stroke-dasharray="5 4"/>
+<rect class="fig-paper" x="110" y="344" width="216" height="38"/><path class="fig-line" d="M 113.5 344.4 Q 220.4 343.9 326.4 345.1 Q 324.8 364.3 325.6 383.1 Q 218.3 383.6 110.2 381.5 Q 110.9 363.3 110.4 344.3 Q 113.7 345.2 117.1 345.5" stroke-dasharray="5 4"/>
 <text class="fig-code fig-strong" x="122" y="368" style="font-size: 13px">''</text>
 <text class="fig-sub" x="314" y="368" text-anchor="end">TeamLoansView</text>
-<path class="fig-arrow" d="M 92 363 L 108 363"/>
+<path class="fig-arrow" d="M 91.8 363.3 Q 100.2 363.7 108 362.9 M 92.4 362.8 Q 100 362.3 108.2 362.7"/>
 <text class="fig-sub fig-note" x="340" y="368">Ausleihen</text>
-<rect class="fig-box" x="110" y="390" width="216" height="38" rx="6" stroke-dasharray="5 4"/>
+<rect class="fig-paper" x="110" y="390" width="216" height="38"/><path class="fig-line" d="M 111.3 389 Q 218 388.9 324.7 390.1 Q 325.1 410 325 429 Q 217.8 428.9 111 427.4 Q 110.2 408.6 110 389 Q 113.8 389.4 116.7 390.3" stroke-dasharray="5 4"/>
 <text class="fig-code fig-strong" x="122" y="414" style="font-size: 13px">returns</text>
 <text class="fig-sub" x="314" y="414" text-anchor="end">TeamReturnsView</text>
-<path class="fig-arrow" d="M 92 409 L 108 409"/>
+<path class="fig-arrow" d="M 92 409.4 Q 100.2 409.6 108.5 409.2 M 91.9 409.5 Q 99.9 409.5 107.9 408.5"/>
 <text class="fig-sub fig-note" x="340" y="414">Rückgaben</text>
-<rect class="fig-box" x="76" y="436" width="250" height="38" rx="6"/>
+<rect class="fig-paper" x="76" y="436" width="250" height="38"/><path class="fig-line" d="M 79.6 436.4 Q 202.9 434.5 325.7 435.3 Q 326.2 455.2 325.8 474.5 Q 200.8 472.9 75.3 474.3 Q 75.6 454.7 77.1 435.9 Q 79.7 435.6 81.3 436.1 M 78 437 Q 202.8 434.2 327.1 435 Q 326.3 455.3 325.8 474.3 Q 200.1 476.9 75.8 474.9 Q 76.4 455.4 76.8 437.1 Q 79.3 436.9 82.9 437.5"/>
 <text class="fig-code fig-strong" x="88" y="460" style="font-size: 13px">/:pathMatch(.*)*</text>
 <text class="fig-sub" x="314" y="460" text-anchor="end">NotFoundView</text>
-<path class="fig-arrow" d="M 44 455 L 74 455"/>
+<path class="fig-arrow" d="M 44.6 454.7 Q 58.9 455 73.9 454.9 M 43.6 455.3 Q 58.5 454.6 73.6 455.4"/>
 <text class="fig-sub fig-note" x="340" y="460">alle anderen Adressen</text>
-<path class="fig-arrow" d="M 44 58 L 44 455"/>
-<path class="fig-arrow" d="M 92 338 L 92 409"/>
+<path class="fig-arrow" d="M 44.4 58.3 Q 42.8 256.2 43.7 454.9 M 44.1 57.8 Q 43.7 257 44.2 454.5"/>
+<path class="fig-arrow" d="M 91.9 338.2 Q 92.2 373 92.3 408.9 M 91.9 338.5 Q 91.9 373.3 91.9 408.9"/>
 </svg>

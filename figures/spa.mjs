@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const TEXT = {
@@ -186,6 +188,6 @@ function renderLoop(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p2c1-requests.svg'), requests(lang));
-  writeFileSync(join(folder, 'p2c2-render-loop.svg'), renderLoop(lang));
+  writeFileSync(join(folder, 'p2c1-requests.svg'), sketch(requests(lang), 'p2c1-requests'));
+  writeFileSync(join(folder, 'p2c2-render-loop.svg'), sketch(renderLoop(lang), 'p2c2-render-loop'));
 }
