@@ -1,0 +1,16 @@
+<script setup>
+// Everything declared here can be used in the template
+const association = 'Lorraine Commons'
+const itemCount = 60
+</script>
+
+<template>
+  <h1>{{ association }}</h1>
+  <p>Library of things in the Lorraine quarter with {{ itemCount }} things in the catalog</p>
+</template>
+
+<style scoped>
+h1 {
+  color: #1f6b4f;
+}
+</style>

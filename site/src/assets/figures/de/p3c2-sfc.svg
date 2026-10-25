@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 424" role="img" aria-labelledby="p3c2-sfc-de-title p3c2-sfc-de-desc">
+<title id="p3c2-sfc-de-title">Der Weg einer Single File Component bis auf die Seite</title>
+<desc id="p3c2-sfc-de-desc">Links die Datei App.vue mit drei Blöcken, template für den Aufbau, script setup für Zustand und Logik, style scoped für das Aussehen. Vite übersetzt die Datei mit dem Plugin für Vue in CSS und ein JavaScript-Modul mit einer Render-Funktion. main.js importiert das Modul, erzeugt mit createApp die App und hängt sie mit mount in das Element mit der id app in index.html ein.</desc>
+<defs><marker id="p3c2-sfc-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="20" width="250" height="250" rx="10"/>
+<text class="fig-text" x="40" y="48">App.vue</text>
+<rect class="fig-box fig-box-strong" x="36" y="64" width="218" height="54" rx="6"/>
+<text class="fig-code" x="48" y="86">&lt;template&gt;</text>
+<text class="fig-sub" x="48" y="106">Aufbau mit HTML und Vue-Syntax</text>
+<rect class="fig-box fig-box-strong" x="36" y="130" width="218" height="54" rx="6"/>
+<text class="fig-code" x="48" y="152">&lt;script setup&gt;</text>
+<text class="fig-sub" x="48" y="172">Zustand und Logik in JavaScript</text>
+<rect class="fig-box fig-box-strong" x="36" y="196" width="218" height="54" rx="6"/>
+<text class="fig-code" x="48" y="218">&lt;style scoped&gt;</text>
+<text class="fig-sub" x="48" y="238">CSS nur für diese Komponente</text>
+<rect class="fig-box" x="310" y="114" width="150" height="60" rx="8"/>
+<text class="fig-text" x="385" y="140" text-anchor="middle">Vite</text>
+<text class="fig-sub" x="385" y="159" text-anchor="middle">mit @vitejs/plugin-vue</text>
+<path class="fig-arrow" d="M 272 144 L 306 144" marker-end="url(#p3c2-sfc-de-head)"/>
+<rect class="fig-box" x="500" y="20" width="160" height="60" rx="8"/>
+<text class="fig-text" x="580" y="46" text-anchor="middle">CSS</text>
+<text class="fig-sub" x="580" y="65" text-anchor="middle">Regeln mit data-v-Attribut</text>
+<rect class="fig-box" x="500" y="120" width="160" height="60" rx="8"/>
+<text class="fig-text" x="580" y="146" text-anchor="middle">JavaScript-Modul</text>
+<text class="fig-sub" x="580" y="165" text-anchor="middle">mit Render-Funktion</text>
+<path class="fig-arrow" d="M 462 132 L 496 62" marker-end="url(#p3c2-sfc-de-head)"/>
+<path class="fig-arrow" d="M 462 150 L 496 150" marker-end="url(#p3c2-sfc-de-head)"/>
+<rect class="fig-box" x="410" y="240" width="250" height="60" rx="8"/>
+<text class="fig-text" x="535" y="266" text-anchor="middle">main.js</text>
+<text class="fig-code" x="535" y="285" text-anchor="middle">createApp(App).mount('#app')</text>
+<path class="fig-arrow" d="M 580 182 L 580 236" marker-end="url(#p3c2-sfc-de-head)"/>
+<rect class="fig-label-bg" x="542" y="201" width="76" height="18" rx="3"/>
+<text class="fig-sub" x="580" y="214" text-anchor="middle">importiert</text>
+<rect class="fig-box" x="410" y="350" width="250" height="60" rx="8"/>
+<text class="fig-text" x="535" y="376" text-anchor="middle">index.html</text>
+<text class="fig-code" x="535" y="395" text-anchor="middle">&lt;div id="app"&gt;&lt;/div&gt;</text>
+<path class="fig-arrow" d="M 535 302 L 535 346" marker-end="url(#p3c2-sfc-de-head)"/>
+<rect class="fig-label-bg" x="500.3" y="317" width="69.4" height="18" rx="3"/>
+<text class="fig-sub" x="535" y="330" text-anchor="middle">hängt ein</text>
+</svg>

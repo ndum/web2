@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 342" role="img" aria-labelledby="p3c1-surveys-de-title p3c1-surveys-de-desc">
+<title id="p3c1-surveys-de-title">Verbreitung und Zufriedenheit von React, Vue und Angular</title>
+<desc id="p3c1-surveys-de-desc">Zwei Balkendiagramme mit einer Skala von 0 bis 100 Prozent. Oben die Umfrage von Stack Overflow 2026, Anteil der Antworten zu Web-Frameworks, die das Framework verwenden: React 41,5, Vue.js 17,2, Angular 16,0 Prozent. Unten State of JS 2025, Anteil der Nutzenden, die das Framework wieder verwenden würden: React 72, Vue.js 84, Angular 48 Prozent.</desc>
+<defs><marker id="p3c1-surveys-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-text" x="20" y="26">Stack Overflow 2026, verwendet</text>
+<text class="fig-sub" x="20" y="46">Anteil der 10'281 Antworten zu Web-Frameworks</text>
+<text class="fig-sub" x="110" y="76" text-anchor="end">React</text>
+<rect class="fig-box fig-box-strong" x="120" y="60" width="190.89999999999998" height="22" rx="3"/>
+<text class="fig-sub fig-strong" x="318.9" y="76">41,5 %</text>
+<text class="fig-sub" x="110" y="106" text-anchor="end">Vue.js</text>
+<rect class="fig-box fig-box-strong" x="120" y="90" width="79.11999999999999" height="22" rx="3"/>
+<text class="fig-sub fig-strong" x="207.12" y="106">17,2 %</text>
+<text class="fig-sub" x="110" y="136" text-anchor="end">Angular</text>
+<rect class="fig-box fig-box-strong" x="120" y="120" width="73.6" height="22" rx="3"/>
+<text class="fig-sub fig-strong" x="201.6" y="136">16,0 %</text>
+<path class="fig-arrow" d="M 120 146 L 580 146" stroke-width="1"/>
+<path class="fig-arrow" d="M 120 142 L 120 150" stroke-width="1"/>
+<text class="fig-sub" x="120" y="164" text-anchor="middle">0 %</text>
+<path class="fig-arrow" d="M 350 142 L 350 150" stroke-width="1"/>
+<text class="fig-sub" x="350" y="164" text-anchor="middle">50 %</text>
+<path class="fig-arrow" d="M 580 142 L 580 150" stroke-width="1"/>
+<text class="fig-sub" x="580" y="164" text-anchor="middle">100 %</text>
+<text class="fig-text" x="20" y="194">State of JS 2025, würden es wieder verwenden</text>
+<text class="fig-sub" x="20" y="214">Anteil der Nutzenden des jeweiligen Frameworks</text>
+<text class="fig-sub" x="110" y="244" text-anchor="end">React</text>
+<rect class="fig-box fig-box-strong" x="120" y="228" width="331.2" height="22" rx="3"/>
+<text class="fig-sub fig-strong" x="459.2" y="244">72 %</text>
+<text class="fig-sub" x="110" y="274" text-anchor="end">Vue.js</text>
+<rect class="fig-box fig-box-strong" x="120" y="258" width="386.4" height="22" rx="3"/>
+<text class="fig-sub fig-strong" x="514.4" y="274">84 %</text>
+<text class="fig-sub" x="110" y="304" text-anchor="end">Angular</text>
+<rect class="fig-box fig-box-strong" x="120" y="288" width="220.79999999999998" height="22" rx="3"/>
+<text class="fig-sub fig-strong" x="348.79999999999995" y="304">48 %</text>
+<path class="fig-arrow" d="M 120 314 L 580 314" stroke-width="1"/>
+<path class="fig-arrow" d="M 120 310 L 120 318" stroke-width="1"/>
+<text class="fig-sub" x="120" y="332" text-anchor="middle">0 %</text>
+<path class="fig-arrow" d="M 350 310 L 350 318" stroke-width="1"/>
+<text class="fig-sub" x="350" y="332" text-anchor="middle">50 %</text>
+<path class="fig-arrow" d="M 580 310 L 580 318" stroke-width="1"/>
+<text class="fig-sub" x="580" y="332" text-anchor="middle">100 %</text>
+</svg>

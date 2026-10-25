@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #1d1d1d;
+}
+.site {
+  padding: 0.75rem 1.5rem;
+  background: #1f6b4f;
+}
+.brand {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+main {
+  max-width: 48rem;
+  padding: 1rem 1.5rem;
+}
+h1 {
+  margin-top: 0;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+}
+.catalog {
+  padding: 0;
+  list-style: none;
+}
+.catalog li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.category {
+  color: #5f5f5f;
+}
+.on-loan .state {
+  color: #a3341f;
+}
+.fields {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 22rem;
+}
+.error {
+  margin: 0;
+  color: #a3341f;
+}
