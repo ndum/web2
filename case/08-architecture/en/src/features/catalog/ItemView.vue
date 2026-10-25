@@ -86,7 +86,7 @@ async function confirm() {
       <ReservationForm :key="formKey" :item="item" @submit="pending = $event" />
     </template>
     <p v-else class="sign-in-hint">
-      <RouterLink :to="{ name: 'login', query: { redirect: `/items/${id}` } }">Sign in</RouterLink>to request a reservation.
+      <RouterLink :to="{ name: 'login', query: { redirect: `/items/${id}` } }">Sign in</RouterLink> to request a reservation.
     </p>
     <p class="send-error" role="alert">{{ sendError }}</p>
     <p class="request-summary" role="status">{{ summary }}</p>
