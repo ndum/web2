@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 528" role="img" aria-labelledby="p6c4-flow-en-title p6c4-flow-en-desc">
+<title id="p6c4-flow-en-title">The navigation flow</title>
+<desc id="p6c4-flow-en-desc">A sequence from top to bottom. A navigation starts with a RouterLink or router.push. Then onBeforeRouteLeave runs in the page being left, beforeEach for every navigation, beforeEnter only when a route is entered, the components are loaded and beforeResolve runs. After that the navigation is confirmed, afterEach runs and the DOM shows the new page. On the right it says that every guard cancels the navigation with false and redirects to a new navigation with a route.</desc>
+<defs><marker id="p6c4-flow-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="16" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="33" style="font-size: 14px">Navigation starts</text>
+<text class="fig-sub" x="34" y="49">RouterLink, router.push</text>
+<path class="fig-arrow" d="M 155 60 L 155 72" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="74" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="91" style="font-size: 14px">onBeforeRouteLeave</text>
+<text class="fig-sub" x="34" y="107">in the page being left</text>
+<path class="fig-arrow" d="M 155 118 L 155 130" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="132" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="149" style="font-size: 14px">beforeEach</text>
+<text class="fig-sub" x="34" y="165">global, on every navigation</text>
+<path class="fig-arrow" d="M 155 176 L 155 188" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="190" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="207" style="font-size: 14px">beforeEnter</text>
+<text class="fig-sub" x="34" y="223">only when entering the route</text>
+<path class="fig-arrow" d="M 155 234 L 155 246" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box" x="20" y="248" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="265" style="font-size: 14px">Components load</text>
+<text class="fig-sub" x="34" y="281">routes with import()</text>
+<path class="fig-arrow" d="M 155 292 L 155 304" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="306" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="323" style="font-size: 14px">beforeResolve</text>
+<text class="fig-sub" x="34" y="339">global, right before confirming</text>
+<path class="fig-arrow" d="M 155 350 L 155 362" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box" x="20" y="364" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="381" style="font-size: 14px">Navigation confirmed</text>
+<text class="fig-sub" x="34" y="397">the address changes</text>
+<path class="fig-arrow" d="M 155 408 L 155 420" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="422" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="439" style="font-size: 14px">afterEach</text>
+<text class="fig-sub" x="34" y="455">title, focus, stops nothing</text>
+<path class="fig-arrow" d="M 155 466 L 155 478" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box" x="20" y="480" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="497" style="font-size: 14px">DOM updated</text>
+<text class="fig-sub" x="34" y="513">the new page appears</text>
+<path class="fig-arrow" d="M 306 94 L 318 94 L 318 326 L 306 326"/>
+<text class="fig-sub fig-strong" x="328" y="215">Guards</text>
+<path class="fig-arrow" d="M 320 152 L 388 152" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box" x="392" y="128" width="196" height="48" rx="6"/>
+<text class="fig-code fig-strong" x="404" y="148" style="font-size: 13px">return false</text>
+<text class="fig-sub" x="404" y="166">navigation cancelled</text>
+<path class="fig-arrow" d="M 320 268 L 388 268" marker-end="url(#p6c4-flow-en-head)"/>
+<rect class="fig-box" x="392" y="244" width="196" height="48" rx="6"/>
+<text class="fig-code fig-strong" x="404" y="264" style="font-size: 13px">return { name: … }</text>
+<text class="fig-sub" x="404" y="282">redirect, new navigation</text>
+</svg>

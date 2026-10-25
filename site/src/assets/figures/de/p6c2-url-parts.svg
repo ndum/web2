@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551.284 262" role="img" aria-labelledby="p6c2-url-de-title p6c2-url-de-desc">
+<title id="p6c2-url-de-title">Teile einer Adresse</title>
+<desc id="p6c2-url-de-desc">Zwei Adressen, in ihre Teile zerlegt. Oben /items/6, davon ist /items/ der feste Teil der Route /items/:id und 6 der Parameter, den route.params.id als Text liefert. Unten /?q=säge&amp;category=Werkzeug&amp;sort=deposit, davon ist / der Pfad, und die Query besteht aus q, category und sort, die route.query.q, route.query.category und route.query.sort liefern.</desc>
+<defs><marker id="p6c2-url-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box fig-box-strong" x="20" y="30" width="171" height="40" rx="4"/>
+<text class="fig-code fig-strong" x="105.5" y="55" text-anchor="middle" style="font-size: 14px">/items/</text>
+<path class="fig-arrow" d="M 105.5 72 L 105.5 88"/>
+<text class="fig-sub" x="105.5" y="104" text-anchor="middle">fester Teil der Route</text>
+<text class="fig-code" x="105.5" y="122" text-anchor="middle">/items/:id</text>
+<rect class="fig-box fig-box-strong" x="197" y="30" width="179.316" height="40" rx="4"/>
+<text class="fig-code fig-strong" x="286.658" y="55" text-anchor="middle" style="font-size: 14px">6</text>
+<path class="fig-arrow" d="M 286.658 72 L 286.658 88"/>
+<text class="fig-sub" x="286.658" y="104" text-anchor="middle">Parameter</text>
+<text class="fig-code" x="286.658" y="122" text-anchor="middle">route.params.id = '6'</text>
+<rect class="fig-box fig-box-strong" x="20" y="150" width="52" height="40" rx="4"/>
+<text class="fig-code fig-strong" x="46" y="175" text-anchor="middle" style="font-size: 14px">/</text>
+<path class="fig-arrow" d="M 46 192 L 46 208"/>
+<text class="fig-sub" x="46" y="224" text-anchor="middle">Pfad</text>
+<rect class="fig-box fig-box-strong" x="78" y="150" width="120.148" height="40" rx="4"/>
+<text class="fig-code fig-strong" x="138.074" y="175" text-anchor="middle" style="font-size: 14px">?q=säge</text>
+<path class="fig-arrow" d="M 138.074 192 L 138.074 208"/>
+<text class="fig-sub" x="138.074" y="224" text-anchor="middle">Query</text>
+<text class="fig-code" x="138.074" y="242" text-anchor="middle">route.query.q</text>
+<rect class="fig-box fig-box-strong" x="204.148" y="150" width="178.79999999999998" height="40" rx="4"/>
+<text class="fig-code fig-strong" x="293.548" y="175" text-anchor="middle" style="font-size: 14px">&amp;category=Werkzeug</text>
+<path class="fig-arrow" d="M 293.548 192 L 293.548 208"/>
+<text class="fig-sub" x="293.548" y="224" text-anchor="middle">Query</text>
+<text class="fig-code" x="293.548" y="242" text-anchor="middle">route.query.category</text>
+<rect class="fig-box fig-box-strong" x="388.948" y="150" width="142.336" height="40" rx="4"/>
+<text class="fig-code fig-strong" x="460.116" y="175" text-anchor="middle" style="font-size: 14px">&amp;sort=deposit</text>
+<path class="fig-arrow" d="M 460.116 192 L 460.116 208"/>
+<text class="fig-sub" x="460.116" y="224" text-anchor="middle">Query</text>
+<text class="fig-code" x="460.116" y="242" text-anchor="middle">route.query.sort</text>
+</svg>

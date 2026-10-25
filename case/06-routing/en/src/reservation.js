@@ -1,0 +1,50 @@
+import { formatDate } from './format.js'
+
+// Wednesday and Saturday, the days the shop is open, as numbers of getUTCDay
+const OPENING_DAYS = [3, 6]
+// A loan lasts at most seven days
+const MAX_DAYS = 7
+
+// Today in the time zone of the browser, in the form 2026-11-18 that date fields use
+export function today(now = new Date()) {
+  const month = String(now.getMonth() + 1).padStart(2, '0')
+  const day = String(now.getDate()).padStart(2, '0')
+  return `${now.getFullYear()}-${month}-${day}`
+}
+
+export function isOpeningDay(date) {
+  return OPENING_DAYS.includes(new Date(date).getUTCDay())
+}
+
+// Days from one date to another, both in the form 2026-11-18
+export function daysBetween(from, to) {
+  return (Date.parse(to) - Date.parse(from)) / 86_400_000
+}
+
+// Checks a reservation request for a thing and returns one message per field with a problem,
+// an empty object means the request is valid. Dates in the form 2026-11-18 compare like dates.
+export function validateRequest({ member, from, to }, item, currentDay = today()) {
+  const errors = {}
+  if (!/^M-\d{3}$/.test(member)) {
+    errors.member = 'The member number looks like M-117.'
+  }
+  if (from === '') {
+    errors.from = 'Choose the first day.'
+  } else if (from < currentDay) {
+    errors.from = 'The first day is in the past.'
+  } else if (item.availableFrom !== null && from < item.availableFrom) {
+    errors.from = `The thing is back only from ${formatDate(item.availableFrom)}.`
+  } else if (!isOpeningDay(from)) {
+    errors.from = 'You can pick things up on Wednesday or Saturday.'
+  }
+  if (to === '') {
+    errors.to = 'Choose the last day.'
+  } else if (from !== '' && to < from) {
+    errors.to = 'The last day is before the first.'
+  } else if (from !== '' && daysBetween(from, to) > MAX_DAYS) {
+    errors.to = 'A loan lasts at most seven days.'
+  } else if (!isOpeningDay(to)) {
+    errors.to = 'You can bring things back on Wednesday or Saturday.'
+  }
+  return errors
+}

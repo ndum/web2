@@ -1,0 +1,21 @@
+<script setup>
+import { computed, inject } from 'vue'
+
+import { formatDate } from '@/format.js'
+import { catalogKey } from '@/keys.js'
+
+const { items } = inject(catalogKey)
+
+// The things on loan, the next one to come back first
+const loans = computed(() =>
+  items.value.filter((item) => item.availableFrom !== null).toSorted((a, b) => a.availableFrom.localeCompare(b.availableFrom)),
+)
+</script>
+
+<template>
+  <h2>[%Ausleihen|Loans%]</h2>
+  <ul v-if="loans.length > 0" class="loans">
+    <li v-for="item in loans" :key="item.id">{{ item.name }}, [%zurück ab|back from%] {{ formatDate(item.availableFrom) }}</li>
+  </ul>
+  <p v-else>[%Zurzeit ist nichts ausgeliehen.|Nothing is on loan right now.%]</p>
+</template>
