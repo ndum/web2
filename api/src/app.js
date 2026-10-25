@@ -49,14 +49,18 @@ async function readJson(request, text) {
   if (!(request.headers['content-type'] ?? '').startsWith('application/json')) {
     throw new HttpError(415, { error: text.jsonOnly })
   }
-  let body = ''
+  // The body arrives in pieces of bytes, and a character such as ü can be split between two of
+  // them. The pieces are joined first and read as UTF-8 once.
+  const chunks = []
+  let size = 0
   for await (const chunk of request) {
-    body += chunk
-    if (body.length > MAX_BODY) throw new HttpError(413, { error: text.invalidJson })
+    size += chunk.length
+    if (size > MAX_BODY) throw new HttpError(413, { error: text.invalidJson })
+    chunks.push(chunk)
   }
   let parsed
   try {
-    parsed = JSON.parse(body)
+    parsed = JSON.parse(Buffer.concat(chunks).toString('utf8'))
   } catch {
     throw new HttpError(400, { error: text.invalidJson })
   }
