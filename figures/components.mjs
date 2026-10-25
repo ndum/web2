@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const TEXT = {
@@ -398,9 +400,9 @@ function provideInject(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p4c2-props-flow.svg'), propsFlow(lang));
-  writeFileSync(join(folder, 'p4c1-component-tree.svg'), componentTree(lang));
-  writeFileSync(join(folder, 'p4c3-props-events.svg'), propsEvents(lang));
-  writeFileSync(join(folder, 'p4c4-slots.svg'), slots(lang));
-  writeFileSync(join(folder, 'p4c5-provide-inject.svg'), provideInject(lang));
+  writeFileSync(join(folder, 'p4c2-props-flow.svg'), sketch(propsFlow(lang), 'p4c2-props-flow'));
+  writeFileSync(join(folder, 'p4c1-component-tree.svg'), sketch(componentTree(lang), 'p4c1-component-tree'));
+  writeFileSync(join(folder, 'p4c3-props-events.svg'), sketch(propsEvents(lang), 'p4c3-props-events'));
+  writeFileSync(join(folder, 'p4c4-slots.svg'), sketch(slots(lang), 'p4c4-slots'));
+  writeFileSync(join(folder, 'p4c5-provide-inject.svg'), sketch(provideInject(lang), 'p4c5-provide-inject'));
 }

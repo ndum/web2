@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 282" role="img" aria-labelledby="p4c4-slots-en-title p4c4-slots-en-desc">
 <title id="p4c4-slots-en-title">Content fills the slots of a component</title>
 <desc id="p4c4-slots-en-desc">On the left the template of the parent component with BaseDialog. It fills the slot title with the title, the default slot with the text of the request and the slot actions with a button. On the right the template of BaseDialog with the three places slot name title, slot and slot name actions. Arrows connect each piece of content with its slot.</desc>
-<defs><marker id="p4c4-slots-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
 <text class="fig-text" x="20" y="30">App.vue fills the slots</text>
 <text class="fig-text" x="390" y="30">BaseDialog.vue shows them</text>
-<rect class="fig-box" x="20" y="42" width="290" height="232" rx="8"/>
-<rect class="fig-box" x="390" y="42" width="270" height="232" rx="8"/>
+<rect class="fig-paper" x="20" y="42" width="290" height="232"/><path class="fig-line" d="M 22.3 40.9 Q 166.6 41.2 309.9 41.8 Q 310.9 158 309.8 273.5 Q 164.5 274.6 19.6 274.9 Q 22.1 158.4 20.5 41.5 Q 22.7 40.9 24.9 40.8 M 20.9 42.3 Q 165.6 43.2 309.3 42 Q 311.8 158.2 309.9 274.3 Q 165.7 274.3 20.3 274.4 Q 21.5 158.2 19 42.5 Q 22.7 42.4 26.8 42.8"/>
+<rect class="fig-paper" x="390" y="42" width="270" height="232"/><path class="fig-line" d="M 392.5 42.9 Q 526.1 43.2 660.3 42 Q 659.9 157.5 660.1 273.2 Q 525.2 272.3 390.5 273.9 Q 393 157.9 390.7 43.3 Q 393.6 43.4 397.2 43.6 M 391.5 41.4 Q 525.9 43.3 661.1 42.9 Q 660.3 157.8 660.3 272.7 Q 524.4 273.9 389.2 273.9 Q 390.9 158.2 390.9 42 Q 394 42.8 397.1 42.8"/>
 <text class="fig-code" x="32" y="66" xml:space="preserve">&lt;BaseDialog&gt;</text>
 <text class="fig-code" x="32" y="90" xml:space="preserve">  &lt;template #title&gt;</text>
 <text class="fig-code fig-strong" x="32" y="114" xml:space="preserve">    Check the request</text>
@@ -24,7 +23,7 @@
 <text class="fig-code fig-strong" x="402" y="210" xml:space="preserve">    &lt;slot name="actions" /&gt;</text>
 <text class="fig-code" x="402" y="234" xml:space="preserve">  &lt;/div&gt;</text>
 <text class="fig-code" x="402" y="258" xml:space="preserve">&lt;/div&gt;</text>
-<path class="fig-arrow" d="M 300 110 L 396 110" marker-end="url(#p4c4-slots-en-head)"/>
-<path class="fig-arrow" d="M 300 158 L 396 158" marker-end="url(#p4c4-slots-en-head)"/>
-<path class="fig-arrow" d="M 300 206 L 396 206" marker-end="url(#p4c4-slots-en-head)"/>
+<path class="fig-arrow" d="M 299.9 110.6 Q 348.5 110.3 395.6 110.3 M 299.4 109.8 Q 348.2 109.1 396.2 110.5"/><path class="fig-arrow" d="M 396 110 Q 391.9 112.1 388.3 114.2 M 396 110 Q 392.3 108.2 387.9 105.7"/>
+<path class="fig-arrow" d="M 299.6 157.7 Q 347.6 159.8 395.7 157.9 M 299.8 158.4 Q 348.4 158.3 396.4 157.5"/><path class="fig-arrow" d="M 396 158 Q 391.1 160 386.7 162.6 M 396 158 Q 391.3 156.1 386.7 154.1"/>
+<path class="fig-arrow" d="M 299.8 205.6 Q 348.1 206.9 395.9 206 M 300.1 206.4 Q 347.8 207 396.2 205.6"/><path class="fig-arrow" d="M 396 206 Q 392.6 208.1 388.9 209.1 M 396 206 Q 391.7 203 387.8 200.3"/>
 </svg>

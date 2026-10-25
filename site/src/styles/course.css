@@ -196,32 +196,42 @@ vue-playground > [hidden] {
   max-width: 42rem;
   height: auto;
 }
-.fig .fig-box {
-  fill: var(--sl-color-gray-6);
-  stroke: var(--sl-color-gray-4);
-  stroke-width: 1.5;
+.fig .fig-paper {
+  fill: var(--sl-color-bg);
 }
-.fig .fig-box-strong {
-  fill: var(--sl-color-accent-low);
+/* Lines that look drawn by hand, drawn by figures/sketch.mjs (E-226) */
+.fig .fig-line {
+  fill: none;
+  stroke: var(--sl-color-gray-2);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.fig .fig-line-strong {
+  stroke: var(--sl-color-white);
+  stroke-width: 1.6;
+}
+.fig .fig-hatch {
+  fill: none;
   stroke: var(--sl-color-accent);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  opacity: 0.6;
 }
 .fig .fig-text {
   fill: var(--sl-color-white);
-  font-family: var(--sl-font, sans-serif);
+  font-family: 'Kalam', cursive;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .fig .fig-sub {
   fill: var(--sl-color-gray-2);
-  font-family: var(--sl-font, sans-serif);
+  font-family: 'Kalam', cursive;
   font-size: 13px;
-}
-.fig .fig-note {
-  font-style: italic;
 }
 .fig .fig-strong {
   fill: var(--sl-color-white);
-  font-weight: 600;
+  font-weight: 700;
 }
 .fig .fig-code {
   fill: var(--sl-color-gray-2);
@@ -231,13 +241,12 @@ vue-playground > [hidden] {
 .fig .fig-arrow {
   fill: none;
   stroke: var(--sl-color-accent);
-  stroke-width: 2;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .fig .fig-label-bg {
   fill: var(--sl-color-bg);
-}
-.fig .fig-arrowhead {
-  fill: var(--sl-color-accent);
 }
 /* Run button and editor for embedded JavaScript and HTML: <lt-run> from code-runner.js */
 lt-run {

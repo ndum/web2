@@ -24,8 +24,8 @@ The chapters follow one app. Lorraine Commons, a fictional association in the Lo
 
 ## Status
 
-The course is in development and not yet published. The site will be at https://ndum.github.io/web2/.
+All parts of the course, the exam page and the optional topics are published at https://ndum.github.io/web2/.
 
 ## License
 
-Text and figures are licensed under CC BY-SA 4.0, code under the MIT License and the course's own datasets under CC0 1.0. The license texts are in [LICENSES](LICENSES).
+Text and figures are licensed under CC BY-SA 4.0, code under the MIT License and the course's own datasets under CC0 1.0. The license texts are in [LICENSES](LICENSES). The figures use the handwriting font Kalam by the Indian Type Foundry under the SIL Open Font License 1.1, which the site serves from the package `@fontsource/kalam`.

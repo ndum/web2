@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const TEXT = {
@@ -308,8 +310,8 @@ function deployFlow(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p8c1-folders.svg'), folders(lang));
-  writeFileSync(join(folder, 'p8c1-layers.svg'), layers(lang));
-  writeFileSync(join(folder, 'p8c3-adr-status.svg'), adrStatus(lang));
-  writeFileSync(join(folder, 'p8c6-deploy-flow.svg'), deployFlow(lang));
+  writeFileSync(join(folder, 'p8c1-folders.svg'), sketch(folders(lang), 'p8c1-folders'));
+  writeFileSync(join(folder, 'p8c1-layers.svg'), sketch(layers(lang), 'p8c1-layers'));
+  writeFileSync(join(folder, 'p8c3-adr-status.svg'), sketch(adrStatus(lang), 'p8c3-adr-status'));
+  writeFileSync(join(folder, 'p8c6-deploy-flow.svg'), sketch(deployFlow(lang), 'p8c6-deploy-flow'));
 }

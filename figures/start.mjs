@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // The blocks of the course in their order. The course pages name no lessons, the teacher sets the
@@ -107,5 +109,5 @@ function courseMap(lang) {
 for (const lang of Object.keys(TEXT)) {
   const target = join(ROOT, 'site', 'src', 'assets', 'figures', lang, 'p0c1-course-map.svg');
   mkdirSync(dirname(target), { recursive: true });
-  writeFileSync(target, courseMap(lang));
+  writeFileSync(target, sketch(courseMap(lang), 'p0c1-course-map'));
 }

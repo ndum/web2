@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const TEXT = {
@@ -257,7 +259,7 @@ function guardFlow(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p6c2-url-parts.svg'), urlParts(lang));
-  writeFileSync(join(folder, 'p6c3-route-tree.svg'), routeTree(lang));
-  writeFileSync(join(folder, 'p6c4-guard-flow.svg'), guardFlow(lang));
+  writeFileSync(join(folder, 'p6c2-url-parts.svg'), sketch(urlParts(lang), 'p6c2-url-parts'));
+  writeFileSync(join(folder, 'p6c3-route-tree.svg'), sketch(routeTree(lang), 'p6c3-route-tree'));
+  writeFileSync(join(folder, 'p6c4-guard-flow.svg'), sketch(guardFlow(lang), 'p6c4-guard-flow'));
 }

@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Survey numbers of raw/notes/2026-10-24-research-vue-ecosystem.md, in percent
@@ -331,8 +333,8 @@ function computedValues(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p3c1-surveys.svg'), surveys(lang));
-  writeFileSync(join(folder, 'p3c2-sfc.svg'), sfc(lang));
-  writeFileSync(join(folder, 'p3c3-directive.svg'), directive(lang));
-  writeFileSync(join(folder, 'p3c4-computed.svg'), computedValues(lang));
+  writeFileSync(join(folder, 'p3c1-surveys.svg'), sketch(surveys(lang), 'p3c1-surveys'));
+  writeFileSync(join(folder, 'p3c2-sfc.svg'), sketch(sfc(lang), 'p3c2-sfc'));
+  writeFileSync(join(folder, 'p3c3-directive.svg'), sketch(directive(lang), 'p3c3-directive'));
+  writeFileSync(join(folder, 'p3c4-computed.svg'), sketch(computedValues(lang), 'p3c4-computed'));
 }

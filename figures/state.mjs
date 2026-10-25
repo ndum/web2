@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sketch } from './sketch.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const TEXT = {
@@ -258,7 +260,7 @@ function storageLifetime(lang) {
 for (const lang of Object.keys(TEXT)) {
   const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
   mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p7c1-state-decision.svg'), decisionTree(lang));
-  writeFileSync(join(folder, 'p7c3-request-path.svg'), requestPath(lang));
-  writeFileSync(join(folder, 'p7c4-storage-lifetime.svg'), storageLifetime(lang));
+  writeFileSync(join(folder, 'p7c1-state-decision.svg'), sketch(decisionTree(lang), 'p7c1-state-decision'));
+  writeFileSync(join(folder, 'p7c3-request-path.svg'), sketch(requestPath(lang), 'p7c3-request-path'));
+  writeFileSync(join(folder, 'p7c4-storage-lifetime.svg'), sketch(storageLifetime(lang), 'p7c4-storage-lifetime'));
 }

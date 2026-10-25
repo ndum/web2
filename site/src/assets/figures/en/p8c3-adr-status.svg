@@ -1,20 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 250" role="img" aria-labelledby="p8c3-status-en-title p8c3-status-en-desc">
 <title id="p8c3-status-en-title">The status of an architecture decision</title>
 <desc id="p8c3-status-en-desc">A state diagram. A decision starts as proposed and is accepted or rejected. An accepted decision can later become deprecated or be superseded by a new decision that points to it. No decision is deleted, it keeps its number and stays in the index.</desc>
-<defs><marker id="p8c3-status-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
-<rect class="fig-box" x="20" y="90" width="190" height="40" rx="20"/>
+<rect class="fig-paper" x="20" y="90" width="190" height="40"/><path class="fig-line" d="M 22.7 90 Q 116.2 87.8 208.9 90.1 Q 209.4 110.1 210.8 129.2 Q 115.7 130.9 21.1 131 Q 19.7 110.1 20.3 89.9 Q 23.8 89.7 28.2 90.4 M 21.6 89.7 Q 116.1 90.8 210.4 90.4 Q 209.6 109.9 210.6 129.2 Q 115.4 128.2 19.5 131.3 Q 19 110.5 19.7 89.9 Q 23.9 90.4 27.5 90.3"/>
 <text class="fig-text" x="115" y="115" text-anchor="middle" style="font-size: 14px">Proposed</text>
-<rect class="fig-box fig-box-strong" x="270" y="20" width="190" height="40" rx="20"/>
+<path class="fig-hatch" d="M 277.6 33.9 L 284.8 27.1 M 277.2 41.5 L 290.5 26.9 M 276.7 47.6 L 297.8 26.6 M 276.2 55.3 L 304.5 27.6 M 276.9 62.6 L 312 26.2 M 278.3 67.2 L 319 27.8 M 286.8 66.7 L 325.5 26.6 M 293.7 67.2 L 332.4 27.1 M 300.4 66.2 L 339.2 26.7 M 306.8 66.5 L 347.6 26.7 M 314.3 66.6 L 354.6 26.3 M 321.4 67.4 L 361.5 26.8 M 327.6 67.1 L 368.8 26.7 M 334.9 66.7 L 374.5 26.8 M 342.8 66.2 L 381.4 26.8 M 348.8 67.8 L 389.8 27.4 M 355.5 66.8 L 395.3 26.5 M 362.8 66.3 L 403.8 26.5 M 369.8 66.9 L 410 27.2 M 376.3 67.3 L 416.9 26.6 M 384.7 67.4 L 424.6 27.1 M 390.7 67.1 L 430.7 26.5 M 397.9 67.6 L 438.6 27.5 M 404.7 67.4 L 444.7 27.1 M 412.8 66.5 L 451.4 26.7 M 419.4 66.8 L 459.6 26.9 M 425.3 66.8 L 466.2 26.8 M 433.4 67.4 L 467.5 32.9 M 440.1 66.5 L 467 39.3 M 446.4 66.6 L 466.8 47 M 454.5 67.6 L 466.8 54 M 461.5 67.5 L 467 60.8"/><rect class="fig-paper" x="270" y="20" width="190" height="40"/><path class="fig-line fig-line-strong" d="M 272.7 20 Q 366.1 19.1 460.3 20 Q 458.8 39.8 459.7 60.1 Q 364.7 61.8 270.5 59.3 Q 270.9 39.7 270.2 20.2 Q 274.2 20.3 277.9 20.4 M 272 20.1 Q 365.4 22.9 459 20.6 Q 459.7 40.6 460.9 60.7 Q 366 59.8 270.7 60.2 Q 270.1 40 269.4 20.6 Q 271.1 19.8 274 19.4"/>
 <text class="fig-text" x="365" y="45" text-anchor="middle" style="font-size: 14px">Accepted</text>
-<rect class="fig-box" x="270" y="160" width="190" height="40" rx="20"/>
+<rect class="fig-paper" x="270" y="160" width="190" height="40"/><path class="fig-line" d="M 272.3 159.1 Q 366.8 158.6 460.6 160.4 Q 459.8 180 459.3 199.8 Q 364.9 202.5 270.8 200.1 Q 269.5 180.1 269.8 159.8 Q 272.4 159.1 274.5 158.9 M 271.7 158.6 Q 365.9 158.8 461.4 161.2 Q 459.4 180.2 459.7 200.4 Q 365 201.6 270.8 200.5 Q 271.1 179.5 270.1 159.6 Q 272.9 159.1 275.1 159.3"/>
 <text class="fig-text" x="365" y="185" text-anchor="middle" style="font-size: 14px">Rejected</text>
-<rect class="fig-box" x="520" y="20" width="190" height="40" rx="20"/>
+<rect class="fig-paper" x="520" y="20" width="190" height="40"/><path class="fig-line" d="M 521.9 21.6 Q 616.4 21.2 710.4 20.3 Q 709.6 40.1 709.3 59.9 Q 614.5 58.4 519.4 60.6 Q 519.8 40.9 519.6 21 Q 522 20.5 524.3 20 M 521.8 20.2 Q 616 19.2 711.5 19.3 Q 710.8 38.8 710.5 59.2 Q 614.3 58.8 519.1 59.4 Q 518.6 39.6 519.9 20.3 Q 524.3 19.7 527.4 19.4"/>
 <text class="fig-text" x="615" y="45" text-anchor="middle" style="font-size: 14px">Deprecated</text>
-<rect class="fig-box" x="520" y="90" width="190" height="40" rx="20"/>
+<rect class="fig-paper" x="520" y="90" width="190" height="40"/><path class="fig-line" d="M 520.3 90.2 Q 614.9 91.3 709.4 91 Q 709.5 110.2 710.7 130.7 Q 615.4 130.3 519.3 130.5 Q 518.7 111 519.2 90.3 Q 521 90 523.6 89.4 M 523 89 Q 616 87.9 709.4 90.3 Q 709 110.3 710.8 130.6 Q 615.6 129.6 519.6 129.9 Q 518.9 109.2 520.7 89.7 Q 523.7 89.7 527.5 90.2"/>
 <text class="fig-text" x="615" y="115" text-anchor="middle" style="font-size: 14px">Superseded by ADR n</text>
-<path class="fig-arrow" d="M 212 102 L 266 40" marker-end="url(#p8c3-status-en-head)"/>
-<path class="fig-arrow" d="M 212 118 L 266 180" marker-end="url(#p8c3-status-en-head)"/>
-<path class="fig-arrow" d="M 462 40 L 516 40" marker-end="url(#p8c3-status-en-head)"/>
-<path class="fig-arrow" d="M 462 54 L 516 110" marker-end="url(#p8c3-status-en-head)"/>
+<path class="fig-arrow" d="M 212 102 Q 238.2 71.3 266 40.1 M 212.6 102.1 Q 239.7 71.3 265.9 40.3"/><path class="fig-arrow" d="M 266 40 Q 265.2 44.8 263.4 49.1 M 266 40 Q 261.5 41.6 257.2 42.9"/>
+<path class="fig-arrow" d="M 212 118.2 Q 240 149.8 266.2 180.3 M 211.5 117.9 Q 238.8 149.2 266.1 179.9"/><path class="fig-arrow" d="M 266 180 Q 262.1 178.9 258.4 177.2 M 266 180 Q 264.6 175.8 263.4 170.5"/>
+<path class="fig-arrow" d="M 462 39.6 Q 488.9 41.8 515.5 40 M 462.3 40.2 Q 489.2 39.6 515.9 39.8"/><path class="fig-arrow" d="M 516 40 Q 512.2 42.9 508.2 45.6 M 516 40 Q 511.5 37 506.9 35.3"/>
+<path class="fig-arrow" d="M 462.2 53.9 Q 488.3 81.4 515.7 109.6 M 462.4 54.5 Q 489.9 82.6 516.4 109.8"/><path class="fig-arrow" d="M 516 110 Q 512.6 107.9 507.8 106.6 M 516 110 Q 515 104.8 514.5 99.8"/>
 <text class="fig-sub fig-strong" x="270" y="234">No decision is deleted, the number stays.</text>
 </svg>
