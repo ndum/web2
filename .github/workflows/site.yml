@@ -9,10 +9,12 @@ on:
 permissions:
   contents: read
 
-# Every job writes to the gh-pages branch, so they run one after the other
+# Every job writes to the gh-pages branch, so they run one after the other. With queue: max a new
+# run waits behind the others instead of cancelling the one that already waits
 concurrency:
   group: gh-pages
   cancel-in-progress: false
+  queue: max
 
 jobs:
   preview:
