@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 486" role="img" aria-labelledby="p6c3-tree-en-title p6c3-tree-en-desc">
+<title id="p6c3-tree-en-title">The routes of the case app</title>
+<desc id="p6c3-tree-en-desc">A tree with App and its RouterView at the top. Below it the routes / with CatalogView, /items/:id with ItemView, /favorites with FavoritesView, /association with AssociationView, /login with LoginView, /team with TeamLayout and the catch-all route with NotFoundView. TeamLayout has a RouterView of its own with the child routes for loans and returns. Next to /team it says that the area is for the team only and is loaded on demand, next to the catch-all route that it catches every other address.</desc>
+<defs><marker id="p6c3-tree-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box fig-box-strong" x="20" y="16" width="190" height="40" rx="6"/>
+<text class="fig-text" x="36" y="42">App</text>
+<text class="fig-code" x="194" y="41" text-anchor="end">RouterView</text>
+<rect class="fig-box" x="76" y="68" width="250" height="38" rx="6"/>
+<text class="fig-code fig-strong" x="88" y="92" style="font-size: 13px">/</text>
+<text class="fig-sub" x="314" y="92" text-anchor="end">CatalogView</text>
+<path class="fig-arrow" d="M 44 87 L 74 87"/>
+<rect class="fig-box" x="76" y="114" width="250" height="38" rx="6"/>
+<text class="fig-code fig-strong" x="88" y="138" style="font-size: 13px">/items/:id(\d+)</text>
+<text class="fig-sub" x="314" y="138" text-anchor="end">ItemView</text>
+<path class="fig-arrow" d="M 44 133 L 74 133"/>
+<rect class="fig-box" x="76" y="160" width="250" height="38" rx="6"/>
+<text class="fig-code fig-strong" x="88" y="184" style="font-size: 13px">/favorites</text>
+<text class="fig-sub" x="314" y="184" text-anchor="end">FavoritesView</text>
+<path class="fig-arrow" d="M 44 179 L 74 179"/>
+<rect class="fig-box" x="76" y="206" width="250" height="38" rx="6"/>
+<text class="fig-code fig-strong" x="88" y="230" style="font-size: 13px">/association</text>
+<text class="fig-sub" x="314" y="230" text-anchor="end">AssociationView</text>
+<path class="fig-arrow" d="M 44 225 L 74 225"/>
+<rect class="fig-box" x="76" y="252" width="250" height="38" rx="6"/>
+<text class="fig-code fig-strong" x="88" y="276" style="font-size: 13px">/login</text>
+<text class="fig-sub" x="314" y="276" text-anchor="end">LoginView</text>
+<path class="fig-arrow" d="M 44 271 L 74 271"/>
+<rect class="fig-box fig-box-strong" x="76" y="298" width="250" height="38" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-code fig-strong" x="88" y="322" style="font-size: 13px">/team</text>
+<text class="fig-sub" x="314" y="322" text-anchor="end">TeamLayout</text>
+<path class="fig-arrow" d="M 44 317 L 74 317"/>
+<text class="fig-sub fig-note" x="340" y="322">team only, loaded on demand</text>
+<rect class="fig-box" x="110" y="344" width="216" height="38" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-code fig-strong" x="122" y="368" style="font-size: 13px">''</text>
+<text class="fig-sub" x="314" y="368" text-anchor="end">TeamLoansView</text>
+<path class="fig-arrow" d="M 92 363 L 108 363"/>
+<text class="fig-sub fig-note" x="340" y="368">loans</text>
+<rect class="fig-box" x="110" y="390" width="216" height="38" rx="6" stroke-dasharray="5 4"/>
+<text class="fig-code fig-strong" x="122" y="414" style="font-size: 13px">returns</text>
+<text class="fig-sub" x="314" y="414" text-anchor="end">TeamReturnsView</text>
+<path class="fig-arrow" d="M 92 409 L 108 409"/>
+<text class="fig-sub fig-note" x="340" y="414">returns</text>
+<rect class="fig-box" x="76" y="436" width="250" height="38" rx="6"/>
+<text class="fig-code fig-strong" x="88" y="460" style="font-size: 13px">/:pathMatch(.*)*</text>
+<text class="fig-sub" x="314" y="460" text-anchor="end">NotFoundView</text>
+<path class="fig-arrow" d="M 44 455 L 74 455"/>
+<text class="fig-sub fig-note" x="340" y="460">every other address</text>
+<path class="fig-arrow" d="M 44 58 L 44 455"/>
+<path class="fig-arrow" d="M 92 338 L 92 409"/>
+</svg>

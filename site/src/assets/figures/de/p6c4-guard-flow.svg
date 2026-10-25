@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 528" role="img" aria-labelledby="p6c4-flow-de-title p6c4-flow-de-desc">
+<title id="p6c4-flow-de-title">Der Ablauf einer Navigation</title>
+<desc id="p6c4-flow-de-desc">Eine Folge von oben nach unten. Eine Navigation beginnt mit einem RouterLink oder router.push. Dann laufen onBeforeRouteLeave in der Seite, die man verlässt, beforeEach für jede Navigation, beforeEnter nur beim Betreten einer Route, das Laden der Komponenten und beforeResolve. Danach ist die Navigation bestätigt, afterEach läuft, und das DOM zeigt die neue Seite. Rechts steht, dass jeder Guard mit false die Navigation abbricht und mit einer Route auf eine neue Navigation umleitet.</desc>
+<defs><marker id="p6c4-flow-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="16" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="33" style="font-size: 14px">Navigation beginnt</text>
+<text class="fig-sub" x="34" y="49">RouterLink, router.push</text>
+<path class="fig-arrow" d="M 155 60 L 155 72" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="74" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="91" style="font-size: 14px">onBeforeRouteLeave</text>
+<text class="fig-sub" x="34" y="107">in der Seite, die man verlässt</text>
+<path class="fig-arrow" d="M 155 118 L 155 130" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="132" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="149" style="font-size: 14px">beforeEach</text>
+<text class="fig-sub" x="34" y="165">global, bei jeder Navigation</text>
+<path class="fig-arrow" d="M 155 176 L 155 188" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="190" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="207" style="font-size: 14px">beforeEnter</text>
+<text class="fig-sub" x="34" y="223">nur beim Betreten der Route</text>
+<path class="fig-arrow" d="M 155 234 L 155 246" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box" x="20" y="248" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="265" style="font-size: 14px">Komponenten laden</text>
+<text class="fig-sub" x="34" y="281">Routen mit import()</text>
+<path class="fig-arrow" d="M 155 292 L 155 304" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="306" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="323" style="font-size: 14px">beforeResolve</text>
+<text class="fig-sub" x="34" y="339">global, kurz vor dem Bestätigen</text>
+<path class="fig-arrow" d="M 155 350 L 155 362" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box" x="20" y="364" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="381" style="font-size: 14px">Navigation bestätigt</text>
+<text class="fig-sub" x="34" y="397">die Adresse ändert sich</text>
+<path class="fig-arrow" d="M 155 408 L 155 420" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box fig-box-strong" x="20" y="422" width="270" height="42" rx="6"/>
+<text class="fig-code fig-strong" x="34" y="439" style="font-size: 14px">afterEach</text>
+<text class="fig-sub" x="34" y="455">Titel, Fokus, hält nichts mehr auf</text>
+<path class="fig-arrow" d="M 155 466 L 155 478" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box" x="20" y="480" width="270" height="42" rx="6"/>
+<text class="fig-text" x="34" y="497" style="font-size: 14px">DOM aktualisiert</text>
+<text class="fig-sub" x="34" y="513">die neue Seite erscheint</text>
+<path class="fig-arrow" d="M 306 94 L 318 94 L 318 326 L 306 326"/>
+<text class="fig-sub fig-strong" x="328" y="215">Guards</text>
+<path class="fig-arrow" d="M 320 152 L 388 152" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box" x="392" y="128" width="196" height="48" rx="6"/>
+<text class="fig-code fig-strong" x="404" y="148" style="font-size: 13px">return false</text>
+<text class="fig-sub" x="404" y="166">Navigation abgebrochen</text>
+<path class="fig-arrow" d="M 320 268 L 388 268" marker-end="url(#p6c4-flow-de-head)"/>
+<rect class="fig-box" x="392" y="244" width="196" height="48" rx="6"/>
+<text class="fig-code fig-strong" x="404" y="264" style="font-size: 13px">return { name: … }</text>
+<text class="fig-sub" x="404" y="282">Umleitung, neue Navigation</text>
+</svg>

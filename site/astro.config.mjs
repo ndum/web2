@@ -49,6 +49,7 @@ export default defineConfig({
           translations: { en: 'Reactivity and composables' },
           items: [{ autogenerate: { directory: 'reactivity' } }],
         },
+        { label: 'Routing', translations: { en: 'Routing' }, items: [{ autogenerate: { directory: 'routing' } }] },
         { label: 'Projekt', translations: { en: 'Project' }, items: [{ autogenerate: { directory: 'project' } }] },
         { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, items: [{ autogenerate: { directory: 'js' } }] },
       ],
