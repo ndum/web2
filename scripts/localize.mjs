@@ -15,8 +15,9 @@ import { fileURLToPath } from 'node:url';
 export const LANGUAGES = ['de', 'en'];
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SKIPPED_DIRS = new Set(['node_modules', '.git', '.wiki', 'alt', 'dist', 'coverage', '.vite', '.astro']);
-const TEXT_EXTENSIONS = new Set(['.vue', '.js', '.mjs', '.cjs', '.json', '.html', '.css', '.md', '.txt', '.svg', '.yaml', '.yml']);
+// Installed and built files, and the reports that Playwright writes after a run
+const SKIPPED_DIRS = new Set(['node_modules', '.git', '.wiki', 'alt', 'dist', 'coverage', '.vite', '.astro', 'test-results', 'playwright-report', 'blob-report']);
+const TEXT_EXTENSIONS = new Set(['.vue', '.js', '.mjs', '.cjs', '.jsx', '.ts', '.json', '.webmanifest', '.html', '.css', '.md', '.txt', '.svg', '.yaml', '.yml']);
 const TEXT_NAMES = new Set(['.gitignore', '.editorconfig', '.env.example']);
 // [% and %] never occur in JavaScript, Vue templates, CSS or JSON, unlike [[ and ]] in nested arrays
 const PAIR = /\[%([^%|]*)\|([^%|]*)%\]/g;
@@ -34,7 +35,7 @@ export function localize(text, lang) {
   return result;
 }
 
-function isText(path) {
+export function isText(path) {
   const name = path.split(/[\\/]/).at(-1);
   return TEXT_NAMES.has(name) || TEXT_EXTENSIONS.has(extname(name));
 }

@@ -58,6 +58,7 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'architecture' } }],
         },
         { label: 'Projekt', translations: { en: 'Project' }, items: [{ autogenerate: { directory: 'project' } }] },
+        { label: 'Wahlthemen', translations: { en: 'Optional topics' }, items: [{ autogenerate: { directory: 'optional' } }] },
         { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, items: [{ autogenerate: { directory: 'js' } }] },
       ],
       disable404Route: true,

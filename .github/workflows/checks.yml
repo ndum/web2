@@ -35,12 +35,16 @@ jobs:
       - name: Playground examples compile
         working-directory: site
         run: node --test "tests/*.test.mjs"
-      - name: Solutions, the setup project and the case app pass their tests
-        run: pnpm --filter "./exercises/*/*/solution/*" --filter "./exercises/00-start/setup/*" --filter "./case/*/*" run test
+      - name: Solutions, the setup project, the case app and the optional examples pass their tests
+        run: pnpm --filter "./exercises/*/*/solution/*" --filter "./exercises/00-start/setup/*" --filter "./case/*/*" --filter "./optional/*/*" run test
       - name: Examples of the JS workshop print what is recorded
         run: node scripts/run_examples.mjs
-      - name: Exercise projects and the case app build
-        run: pnpm --filter "./exercises/**" --filter "./case/*/*" run build
+      - name: Exercise projects, the case app and the optional examples build
+        run: pnpm --filter "./exercises/**" --filter "./case/*/*" --filter "./optional/*/*" run build
+      - name: The end-to-end example runs in Chromium against the demo of the case app
+        run: |
+          pnpm --dir optional/end-to-end/de exec playwright install --with-deps --only-shell chromium
+          pnpm --filter "./optional/end-to-end/*" run test:e2e
       - name: Figures are reproducible
         run: |
           node figures/start.mjs

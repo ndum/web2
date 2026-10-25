@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { mkdtempSync, rmSync } from 'node:fs'
-import { createServer } from 'node:http'
+import { createServer, request as sendRequest } from 'node:http'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -35,6 +35,23 @@ function call(path, { method = 'GET', body, cookie, origin, contentType = 'appli
 async function signIn(number, lang = 'de') {
   const response = await call(`/${lang}/session`, { method: 'POST', body: { number } })
   return response.headers.get('set-cookie').split(';')[0]
+}
+
+// Sends a JSON body in two pieces, split in the middle of the first character that needs two bytes
+function sendInTwoPieces(path, body, cookie) {
+  const bytes = Buffer.from(JSON.stringify(body))
+  const middle = bytes.findIndex((byte) => byte >= 0xc0) + 1
+  return new Promise((resolve, reject) => {
+    const headers = { 'Content-Type': 'application/json', 'Content-Length': bytes.length, Cookie: cookie }
+    const outgoing = sendRequest(`${base}${path}`, { method: 'POST', headers }, async (response) => {
+      let text = ''
+      for await (const chunk of response) text += chunk
+      resolve({ status: response.statusCode, body: JSON.parse(text) })
+    })
+    outgoing.on('error', reject)
+    outgoing.write(bytes.subarray(0, middle))
+    setTimeout(() => outgoing.end(bytes.subarray(middle)), 50)
+  })
 }
 
 describe('course API', () => {
@@ -116,6 +133,13 @@ describe('course API', () => {
     assert.deepEqual(own.map((request) => request.id), ['R-1'])
     const other = await (await call('/de/reservations', { cookie: await signIn('M-117') })).json()
     assert.deepEqual(other, [])
+  })
+
+  it('reads a character that arrives split over two pieces of the body', async () => {
+    const cookie = await signIn('M-204')
+    const sent = await sendInTwoPieces('/de/reservations', { itemId: 6, from: '2026-11-04', to: '2026-11-07', note: 'Für den Vereinsabend' }, cookie)
+    assert.equal(sent.status, 201)
+    assert.equal(sent.body.note, 'Für den Vereinsabend')
   })
 
   it('needs a login for requests', async () => {

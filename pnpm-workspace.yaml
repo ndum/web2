@@ -9,6 +9,8 @@ packages:
   - exercises/*/*/en
   - exercises/*/*/solution/de
   - exercises/*/*/solution/en
+  - optional/*/de
+  - optional/*/en
 
 # Never install a version published less than 7 days ago (minutes), transitive packages included.
 minimumReleaseAge: 10080

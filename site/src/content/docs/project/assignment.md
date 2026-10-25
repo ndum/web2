@@ -102,7 +102,7 @@ Die Note berechnet sich linear aus den Punkten, Note = Punkte / 100 × 5 + 1. Mi
 | Dokumentation | KI-Deklaration | 3 | für jedes Werkzeug Zweck, betroffene Teile und eigene Prüfung genannt sind |
 | Dokumentation | Reflexion | 3 | die Reflexion konkrete Erfahrungen aus dem Projekt nennt |
 
-Bonuspunkte gibt es für ein eigenes Backend (4), eine Authentifizierung (2), eine CI/CD-Pipeline (1), End-to-End-Tests (1), durchgehend TypeScript (1) und eine PWA mit Offline-Betrieb (1).
+Bonuspunkte gibt es für ein [eigenes Backend](../../optional/backend/) (4), eine [Authentifizierung](../../optional/authentication/) (2), eine [CI/CD-Pipeline](../../architecture/build-and-deployment/) (1), [End-to-End-Tests](../../optional/end-to-end-tests/) (1), durchgehend [TypeScript](../../optional/typescript/) (1) und eine [PWA mit Offline-Betrieb](../../optional/pwa/) (1).
 
 ## Im Zweierteam
 
