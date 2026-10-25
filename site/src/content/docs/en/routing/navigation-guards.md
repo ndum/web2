@@ -48,7 +48,7 @@ Without a login, a click on "Team" leads to `/login?redirect=/team`. The guard p
 
 ## The login as a stand-in
 
-A real login needs a server that checks passwords, and that comes in part 7. Until then, the running case app has a stand-in in `src/auth.js`. It knows two members, Martina Hostettler with the number M-117 and a team account, and member M-204 without one. Signing in only takes the member number, and the code contains no passwords. The module keeps the state itself, and the login is gone after a reload.
+A server has to check a login, and that comes in part 7. Until then, the running case app has a stand-in in `src/auth.js`. It knows two members, Martina Hostettler with the number M-117 and a team account, and member M-204 without one. Signing in only takes the member number, and the code contains no passwords. The module keeps the state itself, and the login is gone after a reload.
 
 A guard in the browser protects no data. It makes sure that members don't end up on pages that aren't meant for them by accident. Anyone who changes the code in the browser gets past it. According to the [OWASP Top 10:2025](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/), access control only works in code on a server that an attacker can't modify. The server therefore has to protect the data of the team.
 
