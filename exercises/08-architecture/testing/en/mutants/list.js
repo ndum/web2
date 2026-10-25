@@ -1,0 +1,13 @@
+// Each mutant replaces one file of src with a copy that contains a small mistake.
+// scripts/check.mjs runs the tests of a level once against each of its mutants.
+export const MUTANTS = [
+  { id: 'rules-1', level: 1, replaces: '@/rules.js', file: 'rules-1.js', description: 'A loan of eight days counts as valid.' },
+  { id: 'rules-2', level: 1, replaces: '@/rules.js', file: 'rules-2.js', description: 'A first day in the past counts as valid.' },
+  { id: 'rules-3', level: 1, replaces: '@/rules.js', file: 'rules-3.js', description: 'A last day before the first counts as valid.' },
+  { id: 'form-1', level: 2, replaces: '@/components/RequestForm.vue', file: 'RequestForm-1.vue', description: 'The form also sends a request with mistakes.' },
+  { id: 'form-2', level: 2, replaces: '@/components/RequestForm.vue', file: 'RequestForm-2.vue', description: 'The form shows no message.' },
+  { id: 'form-3', level: 2, replaces: '@/components/RequestForm.vue', file: 'RequestForm-3.vue', description: 'The form shows messages before it was sent for the first time.' },
+  { id: 'store-1', level: 3, replaces: '@/stores/requests.js', file: 'requests-1.js', description: 'The request goes to the API without the header Content-Type.' },
+  { id: 'store-2', level: 3, replaces: '@/stores/requests.js', file: 'requests-2.js', description: 'A refusal of the API ends up in the list.' },
+  { id: 'store-3', level: 3, replaces: '@/stores/requests.js', file: 'requests-3.js', description: 'The request goes to a wrong address.' },
+]
