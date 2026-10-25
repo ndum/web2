@@ -24,7 +24,7 @@ The chapters follow one app. Lorraine Commons, a fictional association in the Lo
 
 ## Status
 
-All parts of the course, the exam page and the optional topics are published at https://ndum.github.io/web2/.
+All parts of the course, the exam page and the optional topics are published at https://web2.ndum.ch/.
 
 ## License
 
