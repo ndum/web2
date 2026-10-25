@@ -7,19 +7,68 @@ const format = (value, top) => {
   }
   if (Array.isArray(value)) return value.length ? '[ ' + value.map((item) => format(item, false)).join(', ') + ' ]' : '[]';
   if (value instanceof Error) return String(value);
+  // Whether a promise is settled cannot be read synchronously, Node would show its state
+  if (value instanceof Promise) return 'Promise {}';
   const entries = Object.entries(value).map(([key, item]) => key + ': ' + format(item, false));
   return entries.length ? '{ ' + entries.join(', ') + ' }' : '{}';
 };`,h=`${m}
 const send = (kind, text, line) => postMessage({ kind, text, line });
 console.log = console.info = (...values) => send('out', values.map((value) => format(value, true)).join(' '));
 console.error = console.warn = (...values) => send('err', values.map((value) => format(value, true)).join(' '));
+const describe = (error) => (error && error.name ? error.name + ': ' + error.message : String(error));
+const lineOf = (error) => {
+  const place = /:(\\d+):\\d+\\)?\\s*$/m.exec(String(error && error.stack));
+  return place ? Number(place[1]) : null;
+};
+const nativeSetTimeout = self.setTimeout.bind(self);
+const nativeClearTimeout = self.clearTimeout.bind(self);
+const nativeSetInterval = self.setInterval.bind(self);
+const nativeClearInterval = self.clearInterval.bind(self);
+const timers = new Set();
+let settle = () => {};
+// Looks again after the pending microtasks, a callback may have started the next timer
+const check = () => nativeSetTimeout(() => timers.size === 0 && settle(), 0);
+self.setTimeout = (callback, delay, ...args) => {
+  const id = nativeSetTimeout(() => {
+    timers.delete(id);
+    try {
+      callback(...args);
+    } finally {
+      check();
+    }
+  }, delay);
+  timers.add(id);
+  return id;
+};
+self.clearTimeout = (id) => {
+  timers.delete(id);
+  nativeClearTimeout(id);
+  check();
+};
+self.setInterval = (callback, delay, ...args) => {
+  const id = nativeSetInterval(callback, delay, ...args);
+  timers.add(id);
+  return id;
+};
+self.clearInterval = (id) => {
+  timers.delete(id);
+  nativeClearInterval(id);
+  check();
+};
+self.addEventListener('unhandledrejection', (event) => {
+  event.preventDefault();
+  send('error', describe(event.reason), lineOf(event.reason));
+});
 self.onmessage = async ({ data }) => {
   const url = URL.createObjectURL(new Blob([data.code], { type: 'text/javascript' }));
   try {
     await import(url);
+    await new Promise((resolve) => {
+      settle = resolve;
+      check();
+    });
   } catch (error) {
-    const place = /:(\\d+):\\d+\\)?\\s*$/m.exec(String(error && error.stack));
-    send('error', error && error.name ? error.name + ': ' + error.message : String(error), place ? Number(place[1]) : null);
+    send('error', describe(error), lineOf(error));
   } finally {
     URL.revokeObjectURL(url);
     send('done');
