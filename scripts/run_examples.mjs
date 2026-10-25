@@ -1,7 +1,8 @@
 /**
- * Runs every JavaScript example and solution of the JS workshop in Node and compares what it
- * prints with the recorded output in examples/js/<unit>/expected.json, so the code on the pages
+ * Runs every JavaScript example and solution below examples/ in Node and compares what it prints
+ * with the recorded output in examples/<group>/<chapter>/expected.json, so the code on the pages
  * always prints what the text says. HTML examples run in happy-dom with their console captured.
+ * Folders without .mjs or .html files, such as the Vue examples for the playground, are skipped.
  *
  *   node scripts/run_examples.mjs            check, exit 1 on any difference or error
  *   node scripts/run_examples.mjs --update   record the current outputs
@@ -12,7 +13,7 @@ import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const JS = join(ROOT, 'examples', 'js');
+const EXAMPLES = join(ROOT, 'examples');
 const LANGUAGES = ['de', 'en'];
 
 // Learners run the examples in Switzerland, dates are printed in that time zone
@@ -43,6 +44,9 @@ export async function runPage(path) {
   return { output: lines.map((line) => `${line}\n`).join(''), problem: errors.length > 0 ? errors.join(' | ') : null };
 }
 
+// Node prints a long array or object over several lines, the run button always on one line
+const MULTI_LINE_VALUE = /^ {2,}('|[A-Za-z_$][\w$]*: )/m;
+
 function examples(dir) {
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
@@ -50,13 +54,20 @@ function examples(dir) {
     .sort();
 }
 
+const folders = (dir) => readdirSync(dir).sort().filter((name) => statSync(join(dir, name)).isDirectory());
+
+/** Every examples/<group>/<chapter> folder whose language variants hold runnable files */
+function chapters() {
+  return folders(EXAMPLES)
+    .flatMap((group) => folders(join(EXAMPLES, group)).map((chapter) => join(EXAMPLES, group, chapter)))
+    .filter((dir) => LANGUAGES.some((lang) => examples(join(dir, lang)).length > 0));
+}
+
 async function main() {
   const update = process.argv.includes('--update');
   const problems = [];
   let count = 0;
-  for (const unit of readdirSync(JS).sort()) {
-    const unitDir = join(JS, unit);
-    if (!statSync(unitDir).isDirectory()) continue;
+  for (const unitDir of chapters()) {
     const expectedPath = join(unitDir, 'expected.json');
     const expected = existsSync(expectedPath) ? JSON.parse(readFileSync(expectedPath, 'utf8')) : {};
     const recorded = {};
@@ -69,6 +80,7 @@ async function main() {
         count += 1;
         recorded[lang][name] = output;
         if (problem) problems.push(`${shown} failed, ${problem}`);
+        else if (MULTI_LINE_VALUE.test(output)) problems.push(`${shown} prints a value over several lines, the run button would show one line, log something shorter`);
         else if (!update && expected[lang]?.[name] !== output) problems.push(`${shown} prints something else than recorded`);
       }
     }

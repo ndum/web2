@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-labelledby="p1c2-references-en-title p1c2-references-en-desc">
+<title id="p1c2-references-en-title">Two variables, one object</title>
+<desc id="p1c2-references-en-desc">On the left are the variables tent, sameTent and copy, on the right two objects in memory. An arrow leads from tent and one from sameTent to the same object, in which availableFrom equals 2026-11-14. An arrow leads from copy to a second object, which was made with the spread operator and in which availableFrom is still null.</desc>
+<defs><marker id="p1c2-references-en-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-sub" x="20" y="26">Variables</text>
+<text class="fig-sub" x="330" y="26">Objects in memory</text>
+<rect class="fig-box" x="20" y="44" width="150" height="40" rx="8"/>
+<text class="fig-code" x="34" y="69">const tent</text>
+<path class="fig-arrow" d="M 170 64 C 250 64, 250 84, 326 84" marker-end="url(#p1c2-references-en-head)"/>
+<rect class="fig-box" x="20" y="104" width="150" height="40" rx="8"/>
+<text class="fig-code" x="34" y="129">const sameTent</text>
+<path class="fig-arrow" d="M 170 124 C 250 124, 250 108, 326 108" marker-end="url(#p1c2-references-en-head)"/>
+<rect class="fig-box" x="20" y="200" width="150" height="40" rx="8"/>
+<text class="fig-code" x="34" y="225">const copy</text>
+<path class="fig-arrow" d="M 170 220 C 250 220, 250 228, 326 228" marker-end="url(#p1c2-references-en-head)"/>
+<rect class="fig-box fig-box-strong" x="330" y="58" width="330" height="76" rx="10"/>
+<text class="fig-code" x="346" y="88">name: 'Tent for four'</text>
+<text class="fig-code" x="346" y="112">availableFrom: '2026-11-14'</text>
+<text class="fig-sub fig-note" x="330" y="154">tent and sameTent point to the same object</text>
+<rect class="fig-box" x="330" y="190" width="330" height="76" rx="10"/>
+<text class="fig-code" x="346" y="220">name: 'Tent for four'</text>
+<text class="fig-code" x="346" y="244">availableFrom: null</text>
+<text class="fig-sub fig-note" x="330" y="286">copy points to a copy made with { ...tent }</text>
+</svg>

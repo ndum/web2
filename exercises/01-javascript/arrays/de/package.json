@@ -1,0 +1,13 @@
+{
+  "name": "web2-arrays-aufgabe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "overview": "node src/overview.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}

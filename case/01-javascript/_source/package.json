@@ -1,0 +1,14 @@
+{
+  "name": "[%web2-fallbeispiel-teil-1|web2-case-part-1%]",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "node server.js",
+    "start": "node src/main.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-labelledby="p1c2-references-de-title p1c2-references-de-desc">
+<title id="p1c2-references-de-title">Zwei Variablen, ein Objekt</title>
+<desc id="p1c2-references-de-desc">Links stehen die Variablen tent, sameTent und copy, rechts zwei Objekte im Speicher. Von tent und von sameTent führt je ein Pfeil zum selben Objekt, in dem availableFrom gleich 2026-11-14 steht. Von copy führt ein Pfeil zu einem zweiten Objekt, das mit dem Spread-Operator entstanden ist und in dem availableFrom noch null ist.</desc>
+<defs><marker id="p1c2-references-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<text class="fig-sub" x="20" y="26">Variablen</text>
+<text class="fig-sub" x="330" y="26">Objekte im Speicher</text>
+<rect class="fig-box" x="20" y="44" width="150" height="40" rx="8"/>
+<text class="fig-code" x="34" y="69">const tent</text>
+<path class="fig-arrow" d="M 170 64 C 250 64, 250 84, 326 84" marker-end="url(#p1c2-references-de-head)"/>
+<rect class="fig-box" x="20" y="104" width="150" height="40" rx="8"/>
+<text class="fig-code" x="34" y="129">const sameTent</text>
+<path class="fig-arrow" d="M 170 124 C 250 124, 250 108, 326 108" marker-end="url(#p1c2-references-de-head)"/>
+<rect class="fig-box" x="20" y="200" width="150" height="40" rx="8"/>
+<text class="fig-code" x="34" y="225">const copy</text>
+<path class="fig-arrow" d="M 170 220 C 250 220, 250 228, 326 228" marker-end="url(#p1c2-references-de-head)"/>
+<rect class="fig-box fig-box-strong" x="330" y="58" width="330" height="76" rx="10"/>
+<text class="fig-code" x="346" y="88">name: 'Zelt für vier Personen'</text>
+<text class="fig-code" x="346" y="112">availableFrom: '2026-11-14'</text>
+<text class="fig-sub fig-note" x="330" y="154">tent und sameTent zeigen auf dasselbe Objekt</text>
+<rect class="fig-box" x="330" y="190" width="330" height="76" rx="10"/>
+<text class="fig-code" x="346" y="220">name: 'Zelt für vier Personen'</text>
+<text class="fig-code" x="346" y="244">availableFrom: null</text>
+<text class="fig-sub fig-note" x="330" y="286">copy zeigt auf eine Kopie, entstanden mit { ...tent }</text>
+</svg>

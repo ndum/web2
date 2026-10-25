@@ -1,0 +1,18 @@
+{
+  "de": {
+    "bug.mjs": "2026-11-14 true\n2 2\n",
+    "compare.mjs": "false true\nfalse true\ntrue\n",
+    "copies.mjs": "null 3\n3 2\n",
+    "params.mjs": "2026-11-14 Bohrmaschine\n",
+    "references.mjs": "3 4\n2026-11-14 true\n",
+    "update.mjs": "null 2026-11-14\nfalse true false\n"
+  },
+  "en": {
+    "bug.mjs": "2026-11-14 true\n2 2\n",
+    "compare.mjs": "false true\nfalse true\ntrue\n",
+    "copies.mjs": "null 3\n3 2\n",
+    "params.mjs": "2026-11-14 Drill\n",
+    "references.mjs": "3 4\n2026-11-14 true\n",
+    "update.mjs": "null 2026-11-14\nfalse true false\n"
+  }
+}

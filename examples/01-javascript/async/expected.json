@@ -1,0 +1,20 @@
+{
+  "de": {
+    "abort.mjs": "AbortError\nTimeoutError\n",
+    "await.mjs": "[ 'Dinge', 'Mitglieder' ] 400\n[ 'Dinge', 'Mitglieder' ] 200\n",
+    "fetch.mjs": "true 200\n2 Beamer\nfalse 404\n",
+    "loading.html": "2 Dinge geladen\n",
+    "order.mjs": "1 Das Programm startet\n2 Das Programm ist durch\n3 Promise\n4 Timer\n",
+    "promise.mjs": "Server nicht erreichbar\nKatalog geladen\nfertig\n",
+    "states.mjs": "loading\nsuccess 2 null\nloading\nerror 0 Der Katalog konnte nicht geladen werden.\n"
+  },
+  "en": {
+    "abort.mjs": "AbortError\nTimeoutError\n",
+    "await.mjs": "[ 'things', 'members' ] 400\n[ 'things', 'members' ] 200\n",
+    "fetch.mjs": "true 200\n2 Projector\nfalse 404\n",
+    "loading.html": "2 things loaded\n",
+    "order.mjs": "1 The program starts\n2 The program is through\n3 Promise\n4 Timer\n",
+    "promise.mjs": "Server unreachable\nCatalog loaded\ndone\n",
+    "states.mjs": "loading\nsuccess 2 null\nloading\nerror 0 The catalog could not be loaded.\n"
+  }
+}

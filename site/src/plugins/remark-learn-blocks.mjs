@@ -13,7 +13,7 @@
  *   :::
  *   ::code{file="exercises/.../{lang}/src/App.vue" lines="3-9"}
  *                                     embeds a tested file of the repository, {lang} becomes de or en,
- *                                     .mjs and .html files below examples/js/ get a run button
+ *                                     .mjs and .html files below examples/ get a run button
  *                                     (src/scripts/code-runner.js) unless the directive says run="false"
  *   :::quiz                           a test whose answers are checked in the browser (src/scripts/quiz.js)
  *   ::::question{answer="object|'object'" unit="variables"}
@@ -74,8 +74,8 @@ const CODE_LANGUAGES = {
 };
 /** Folders of the repository whose files a page may embed. */
 const EMBED_ROOTS = ['examples', 'exercises', 'case'];
-/** Embedded files that get a run button: JavaScript modules and HTML pages of the JS workshop. */
-const RUNNABLE = /^examples\/js\/.+\.(mjs|html)$/;
+/** Embedded files that get a run button: JavaScript modules and HTML pages of the examples. */
+const RUNNABLE = /^examples\/.+\.(mjs|html)$/;
 
 /**
  * @param {{ root?: string, defaultLang?: string, labels?: Record<string, Record<string, string>> }} [options]

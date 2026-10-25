@@ -1,0 +1,17 @@
+const item = { name: 'Tent', availableFrom: null }
+
+const watched = new Proxy(item, {
+  get(target, key) {
+    console.log(`read ${String(key)}`)
+    return target[key]
+  },
+  set(target, key, value) {
+    console.log(`written ${String(key)} = ${value}`)
+    target[key] = value
+    return true
+  },
+})
+
+watched.availableFrom = '2026-11-14'
+console.log(watched.name)
+console.log(item.availableFrom)

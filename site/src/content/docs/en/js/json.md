@@ -55,7 +55,7 @@ The copy made with `structuredClone` has an array `parts` of its own, so `push` 
 ## Exercises
 
 ::::exercise[Getting started]
-Read the JSON text `'{"id": 7, "name": "Projector", "deposit": 80, "available": false}'` with `JSON.parse`. Print the name, half the deposit and "free" or "on loan", depending on what `available` says.
+Read the JSON text `'{"id": 6, "name": "Projector", "deposit": 80, "available": false}'` with `JSON.parse`. Print the name, half the deposit and "free" or "on loan", depending on what `available` says.
 
 :::solution[Solution]
 ::code{file="examples/js/json/{lang}/solution-1.mjs"}
