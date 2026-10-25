@@ -44,6 +44,11 @@ export default defineConfig({
         { label: 'SPA-Grundlagen', translations: { en: 'SPA basics' }, items: [{ autogenerate: { directory: 'spa' } }] },
         { label: 'Einstieg in Vue', translations: { en: 'Getting started with Vue' }, items: [{ autogenerate: { directory: 'vue' } }] },
         { label: 'Komponenten', translations: { en: 'Components' }, items: [{ autogenerate: { directory: 'components' } }] },
+        {
+          label: 'Reaktivität und Composables',
+          translations: { en: 'Reactivity and composables' },
+          items: [{ autogenerate: { directory: 'reactivity' } }],
+        },
         { label: 'Projekt', translations: { en: 'Project' }, items: [{ autogenerate: { directory: 'project' } }] },
         { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, items: [{ autogenerate: { directory: 'js' } }] },
       ],

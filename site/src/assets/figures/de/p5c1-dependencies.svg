@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 228" role="img" aria-labelledby="p5c1-deps-de-title p5c1-deps-de-desc">
+<title id="p5c1-deps-de-title">Abhängigkeiten verfolgen und auslösen</title>
+<desc id="p5c1-deps-de-desc">Drei Kästchen in einer Reihe, das Ref favorites, der berechnete Wert favoriteCount und die Render-Funktion von AppHeader, dazu rechts die Seite mit dem Text 3 Favoriten. Oben zeigen Pfeile, wer wen liest, die Render-Funktion liest favoriteCount, favoriteCount liest favorites. Vue merkt sich dabei jede Abhängigkeit. Unten zeigen Pfeile, was eine Änderung auslöst. push ändert favorites, Vue markiert favoriteCount als veraltet und lässt die Render-Funktion neu laufen, die Seite zeigt den neuen Wert.</desc>
+<defs><marker id="p5c1-deps-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box fig-box-strong" x="20" y="90" width="140" height="58" rx="8"/>
+<text class="fig-code fig-strong" x="90" y="115" text-anchor="middle" style="font-size: 14px">favorites</text>
+<text class="fig-sub" x="90" y="134" text-anchor="middle">ref</text>
+<rect class="fig-box fig-box-strong" x="190" y="90" width="140" height="58" rx="8"/>
+<text class="fig-code fig-strong" x="260" y="115" text-anchor="middle" style="font-size: 14px">favoriteCount</text>
+<text class="fig-sub" x="260" y="134" text-anchor="middle">computed</text>
+<rect class="fig-box fig-box-strong" x="360" y="90" width="140" height="58" rx="8"/>
+<text class="fig-code fig-strong" x="430" y="115" text-anchor="middle" style="font-size: 14px">render()</text>
+<text class="fig-sub" x="430" y="134" text-anchor="middle">AppHeader</text>
+<rect class="fig-box" x="530" y="90" width="140" height="58" rx="8"/>
+<text class="fig-text" x="600" y="115" text-anchor="middle">Seite</text>
+<text class="fig-sub" x="600" y="134" text-anchor="middle">3 Favoriten</text>
+<path class="fig-arrow" d="M 210 86 C 200 50, 170 50, 150 86" marker-end="url(#p5c1-deps-de-head)"/>
+<path class="fig-arrow" d="M 380 86 C 370 50, 340 50, 320 86" marker-end="url(#p5c1-deps-de-head)"/>
+<text class="fig-sub" x="275" y="40" text-anchor="middle">liest, Vue merkt es sich</text>
+<path class="fig-arrow" d="M 140 152 C 155 190, 185 190, 210 152" marker-end="url(#p5c1-deps-de-head)"/>
+<path class="fig-arrow" d="M 310 152 C 325 190, 355 190, 380 152" marker-end="url(#p5c1-deps-de-head)"/>
+<path class="fig-arrow" d="M 480 152 C 495 190, 525 190, 550 152" marker-end="url(#p5c1-deps-de-head)"/>
+<text class="fig-sub" x="345" y="214" text-anchor="middle">Änderung, Vue löst neu aus</text>
+<text class="fig-code" x="90" y="186" text-anchor="middle">favorites.value.push(3)</text>
+</svg>

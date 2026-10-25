@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-labelledby="p5c2-choice-de-title p5c2-choice-de-desc">
+<title id="p5c2-choice-de-title">computed oder watch</title>
+<desc id="p5c2-choice-de-desc">Ein Entscheidungsbaum mit zwei Fragen. Entsteht ein Wert aus anderen Werten, wie die Zahl der Treffer, dann computed. Soll sonst etwas ausserhalb der Komponente passieren, wie Speichern, der Titel des Tabs oder eine Anfrage an den Server, dann watch oder watchEffect. Reagiert der Code nur auf eine Handlung, wie einen Klick, dann eine Funktion für das Event.</desc>
+<defs><marker id="p5c2-choice-de-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>
+<rect class="fig-box" x="20" y="20" width="200" height="56" rx="28"/>
+<text class="fig-sub fig-strong" x="120" y="44" text-anchor="middle">Entsteht ein Wert</text>
+<text class="fig-sub fig-strong" x="120" y="62" text-anchor="middle">aus anderen Werten?</text>
+<rect class="fig-box fig-box-strong" x="330" y="20" width="200" height="56" rx="8"/>
+<text class="fig-code fig-strong" x="430" y="44" text-anchor="middle" style="font-size: 14px">computed</text>
+<text class="fig-sub" x="430" y="63" text-anchor="middle">Zahl der Treffer</text>
+<path class="fig-arrow" d="M 222 48 L 326 48" marker-end="url(#p5c2-choice-de-head)"/>
+<text class="fig-sub" x="274" y="40" text-anchor="middle">ja</text>
+<path class="fig-arrow" d="M 120 78 L 120 122" marker-end="url(#p5c2-choice-de-head)"/>
+<text class="fig-sub" x="132" y="104">nein</text>
+<rect class="fig-box" x="20" y="126" width="200" height="56" rx="28"/>
+<text class="fig-sub fig-strong" x="120" y="150" text-anchor="middle">Soll ausserhalb etwas</text>
+<text class="fig-sub fig-strong" x="120" y="168" text-anchor="middle">passieren?</text>
+<rect class="fig-box fig-box-strong" x="330" y="126" width="200" height="56" rx="8"/>
+<text class="fig-code fig-strong" x="430" y="150" text-anchor="middle" style="font-size: 14px">watch, watchEffect</text>
+<text class="fig-sub" x="430" y="169" text-anchor="middle">Speichern, Titel, Server</text>
+<path class="fig-arrow" d="M 222 154 L 326 154" marker-end="url(#p5c2-choice-de-head)"/>
+<text class="fig-sub" x="274" y="146" text-anchor="middle">ja</text>
+<path class="fig-arrow" d="M 120 184 L 120 228" marker-end="url(#p5c2-choice-de-head)"/>
+<text class="fig-sub" x="132" y="210">nein</text>
+<rect class="fig-box" x="20" y="232" width="200" height="56" rx="8"/>
+<text class="fig-text" x="120" y="256" text-anchor="middle">Funktion für ein Event</text>
+<text class="fig-sub" x="120" y="275" text-anchor="middle">Klick auf Reservieren</text>
+</svg>
