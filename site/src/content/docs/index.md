@@ -1,8 +1,9 @@
 ---
-title: WEB2
+title: Single Page Applications mit Vue
 description: Single Page Applications mit Vue, ein Kurs für Studierende der höheren Fachschule Informatik im Schwerpunkt Applikationsentwicklung.
 template: splash
 hero:
+  title: WEB2
   tagline: Single Page Applications mit Vue
   actions:
     - text: Zum Kursüberblick

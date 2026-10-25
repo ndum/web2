@@ -1,8 +1,9 @@
 ---
-title: WEB2
+title: Single Page Applications with Vue
 description: Single page applications with Vue, a course for students of computer science at higher vocational schools in the specialization application development.
 template: splash
 hero:
+  title: WEB2
   tagline: Single Page Applications with Vue
   actions:
     - text: Go to the course overview
