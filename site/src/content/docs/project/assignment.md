@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-Im zweiten Teil des Moduls baust du eine eigene Single Page Application. Die Idee wählst du selbst und das Framework auch. Das Projekt zählt 60 Prozent der Modulnote.
+Im zweiten Teil des Moduls baust du eine eigene Single Page Application. Die Idee wählst du selbst und das Framework auch. Wie das Projekt in die Modulnote eingeht, steht unter [Leistungsbeurteilung](../../assessment/).
 
 ## Rahmen
 

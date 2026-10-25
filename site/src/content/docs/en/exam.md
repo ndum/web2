@@ -3,7 +3,7 @@ title: Exam
 description: Frame, competences, subject areas and learning goals of the practical exam after part 7.
 ---
 
-After part 7 you take a practical exam in lessons 29 and 30. It lasts 60 minutes and is open book, which means you may use your own notes and materials. The exam counts for 40 percent of the module grade and the [project](../project/assignment/) for the other 60 percent. There is no practice exam. This page describes the competences the exam covers and the topics and learning goals that go with them. Your teacher tells you which other aids are allowed and how the exam will run.
+After part 7 you take a practical exam. It lasts 60 minutes and is open book, which means you may use your own notes and materials. There is no practice exam. The [assessment](../assessment/) page explains how the exam and the [project](../project/assignment/) count toward the module grade. This page describes the competences the exam covers and the topics and learning goals that go with them. Your teacher tells you which other aids are allowed and how the exam will run.
 
 ## Competences
 
@@ -123,6 +123,6 @@ Every part ends with a competence grid. Solve its check tasks without looking an
 - [Competence grid for part 6](../routing/competences/)
 - [Competence grid for part 7](../state/competences/)
 
-The folder `case` in the course repo holds the state of the case app after every part. There you can see what the assignments of Martina Hostettler look like as finished code. In lesson 29 there is time for your questions before the exam, so bring the ones the grids raised.
+The folder `case` in the course repo holds the state of the case app after every part. There you can see what the assignments of Martina Hostettler look like as finished code. Before the exam there is time for your questions, so bring the ones the grids raised.
 
 Since you may use your own materials, it pays to keep them in order. File your solutions to the exercise projects and your notes so that you find them quickly. Looking things up helps with details, but 60 minutes leaves no time to learn a topic from scratch.

@@ -3,7 +3,7 @@ title: Prüfung
 description: Rahmen, Kompetenzen, Themengebiete und Lernziele der praktischen Prüfung nach Teil 7.
 ---
 
-Nach Teil 7 schreibst du in den Lektionen 29 und 30 eine praktische Prüfung. Sie dauert 60 Minuten und ist Open Book, du darfst also deine Unterlagen verwenden. Die Prüfung zählt 40 Prozent der Modulnote, das [Projekt](../project/assignment/) die übrigen 60 Prozent. Eine Übungsprüfung gibt es nicht. Diese Seite beschreibt, welche Kompetenzen die Prüfung abdeckt und welche Themen und Lernziele dazugehören. Welche Hilfsmittel darüber hinaus erlaubt sind und wie die Prüfung abläuft, sagt dir deine Lehrperson.
+Nach Teil 7 schreibst du eine praktische Prüfung. Sie dauert 60 Minuten und ist Open Book, du darfst also deine Unterlagen verwenden. Eine Übungsprüfung gibt es nicht. Wie die Prüfung und das [Projekt](../project/assignment/) in die Modulnote eingehen, steht unter [Leistungsbeurteilung](../assessment/). Diese Seite beschreibt, welche Kompetenzen die Prüfung abdeckt und welche Themen und Lernziele dazugehören. Welche Hilfsmittel darüber hinaus erlaubt sind und wie die Prüfung abläuft, sagt dir deine Lehrperson.
 
 ## Kompetenzen
 
@@ -123,6 +123,6 @@ Am Ende jedes Teils steht ein Kompetenzraster. Löse seine Prüfaufgaben, ohne n
 - [Kompetenzraster für Teil 6](../routing/competences/)
 - [Kompetenzraster für Teil 7](../state/competences/)
 
-Im Kursrepo liegt im Ordner `case` der Stand der Fallbeispiel-App nach jedem Teil. Dort siehst du, wie die Aufträge von Martina Hostettler als fertiger Code aussehen. In Lektion 29 bleibt vor der Prüfung Zeit für deine Fragen, bring sie aus den Rastern mit.
+Im Kursrepo liegt im Ordner `case` der Stand der Fallbeispiel-App nach jedem Teil. Dort siehst du, wie die Aufträge von Martina Hostettler als fertiger Code aussehen. Vor der Prüfung bleibt Zeit für deine Fragen, bring sie aus den Rastern mit.
 
 Weil du deine Unterlagen verwenden darfst, lohnt sich Ordnung. Leg deine Lösungen der Übungsprojekte und deine Notizen so ab, dass du sie schnell findest. Nachschlagen hilft bei Details, in 60 Minuten bleibt aber keine Zeit, ein Thema neu zu lernen.

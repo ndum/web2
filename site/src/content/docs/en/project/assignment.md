@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-In the second part of the module you build a single page application of your own. You choose the idea and the framework. The project counts for 60 percent of the module grade.
+In the second part of the module you build a single page application of your own. You choose the idea and the framework. The [assessment](../../assessment/) page explains how the project counts toward the module grade.
 
 ## Frame
 
