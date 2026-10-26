@@ -7,8 +7,8 @@ Deine Modulnote setzt sich aus zwei Leistungen zusammen, einer praktischen Prüf
 
 | Leistung | Gewicht | Was bewertet wird |
 |---|---|---|
-| [Prüfung](../exam/) | 40 Prozent | die Kompetenzen 1 bis 7 aus den Teilen 0 bis 7 |
-| [Projekt](../project/assignment/) | 60 Prozent | deine eigene Single Page Application mit Dokumentation, Code, Produkt und Screencast |
+| [Prüfung](../exam/) | 40 % | die Kompetenzen 1 bis 7 aus den Teilen 0 bis 7 |
+| [Projekt](../project/assignment/) | 60 % | deine eigene Single Page Application mit Dokumentation, Code, Produkt und Screencast |
 
 Die Modulnote ist der gewichtete Durchschnitt der Noten von Prüfung und Projekt und wird auf Zehntel gerundet.
 

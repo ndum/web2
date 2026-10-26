@@ -108,7 +108,7 @@ Part 7 belongs to competences 6 and 7.
 
 ## Not part of the exam
 
-The exam leaves out the two deep dives [Proxies and getters](../javascript/proxies/) and [Server state libraries](../state/server-state/), the [optional topics](../optional/overview/) and part 8. The [JS workshop](../js/) is not a subject area of its own, but you need its basics in every task.
+The exam leaves out the five deep dives, the chapters [Proxies and getters](../javascript/proxies/) and [Server state libraries](../state/server-state/) and the boxes [Destructuring props](../components/props/#deep-dive-destructuring-props), [Dynamic components and KeepAlive](../components/provide-and-inject/#deep-dive-dynamic-components-and-keepalive) and [File-based routing](../routing/vue-router/#deep-dive-file-based-routing). It also leaves out the [optional topics](../optional/overview/) and part 8. The [JS workshop](../js/) is not a subject area of its own, but you need its basics in every task.
 
 ## Preparation
 

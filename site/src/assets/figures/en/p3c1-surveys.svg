@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 342" role="img" aria-labelledby="p3c1-surveys-en-title p3c1-surveys-en-desc">
 <title id="p3c1-surveys-en-title">Usage and satisfaction of React, Vue and Angular</title>
-<desc id="p3c1-surveys-en-desc">Two bar charts on a scale from 0 to 100 percent. At the top the Stack Overflow survey of 2026, share of the answers on web frameworks that use the framework: React 41.5, Vue.js 17.2, Angular 16.0 percent. At the bottom State of JS 2025, share of the users who would use the framework again: React 72, Vue.js 84, Angular 48 percent.</desc>
+<desc id="p3c1-surveys-en-desc">Two bar charts on a scale from 0 to 100%. At the top the Stack Overflow survey of 2026, share of the answers on web frameworks that use the framework: React 41.5, Vue.js 17.2, Angular 16.0%. At the bottom State of JS 2025, share of the users who would use the framework again: React 72, Vue.js 84, Angular 48%.</desc>
 <text class="fig-text" x="20" y="26">Stack Overflow 2026, used</text>
 <text class="fig-sub" x="20" y="46">share of the 10,281 answers on web frameworks</text>
 <text class="fig-sub" x="110" y="76" text-anchor="end">React</text>

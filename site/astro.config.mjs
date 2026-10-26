@@ -40,13 +40,8 @@ export default defineConfig({
       },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/ndum/web2' }],
       sidebar: [
+        // The parts 0 to 8 come first and without a gap, the blocks without numbers follow them
         { label: 'Start', translations: { en: 'Getting started' }, collapsed: true, items: [{ autogenerate: { directory: 'start' } }] },
-        {
-          label: 'Leistungsbeurteilung',
-          translations: { en: 'Assessment' },
-          collapsed: true,
-          items: [{ slug: 'assessment', label: 'Übersicht', translations: { en: 'Overview' } }, { slug: 'exam' }],
-        },
         { label: 'JavaScript für SPAs', translations: { en: 'JavaScript for SPAs' }, collapsed: true, items: [{ autogenerate: { directory: 'javascript' } }] },
         { label: 'SPA-Grundlagen', translations: { en: 'SPA basics' }, collapsed: true, items: [{ autogenerate: { directory: 'spa' } }] },
         { label: 'Einstieg in Vue', translations: { en: 'Getting started with Vue' }, collapsed: true, items: [{ autogenerate: { directory: 'vue' } }] },
@@ -65,10 +60,26 @@ export default defineConfig({
           collapsed: true,
           items: [{ autogenerate: { directory: 'architecture' } }],
         },
-        { label: 'Projekt', translations: { en: 'Project' }, collapsed: true, items: [{ autogenerate: { directory: 'project' } }] },
-        { label: 'Wahlthemen', translations: { en: 'Optional topics' }, collapsed: true, items: [{ autogenerate: { directory: 'optional' } }] },
-        { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, collapsed: true, items: [{ autogenerate: { directory: 'js' } }] },
-        { slug: 'glossary' },
+        {
+          label: 'Leistungsbeurteilung',
+          translations: { en: 'Assessment' },
+          collapsed: true,
+          items: [
+            { slug: 'assessment', label: 'Übersicht', translations: { en: 'Overview' } },
+            { slug: 'exam' },
+            { autogenerate: { directory: 'project' } },
+          ],
+        },
+        {
+          label: 'Nachschlagen',
+          translations: { en: 'Reference' },
+          collapsed: true,
+          items: [
+            { label: 'JS-Werkstatt', translations: { en: 'JS workshop' }, collapsed: true, items: [{ autogenerate: { directory: 'js' } }] },
+            { label: 'Wahlthemen', translations: { en: 'Optional topics' }, collapsed: true, items: [{ autogenerate: { directory: 'optional' } }] },
+            { slug: 'glossary' },
+          ],
+        },
       ],
       disable404Route: true,
       // Numbers of parts and chapters in the navigation

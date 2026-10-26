@@ -7,8 +7,8 @@ Your module grade is made up of two pieces of work, a practical exam after part 
 
 | Piece of work | Weight | What is assessed |
 |---|---|---|
-| [Exam](../exam/) | 40 percent | competences 1 to 7 from parts 0 to 7 |
-| [Project](../project/assignment/) | 60 percent | your own single page application with documentation, code, product and screencast |
+| [Exam](../exam/) | 40% | competences 1 to 7 from parts 0 to 7 |
+| [Project](../project/assignment/) | 60% | your own single page application with documentation, code, product and screencast |
 
 The module grade is the weighted average of the exam grade and the project grade, rounded to tenths.
 

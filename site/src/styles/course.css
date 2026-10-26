@@ -39,6 +39,13 @@
   font-weight: 600;
   color: var(--sl-color-white);
 }
+/* The title of a deep dive is a heading for the table of contents, but looks like the other titles.
+   Starlight sets the size of a heading on the wrapper of its anchor link as well. */
+.lt-box .sl-heading-wrapper:has(> .lt-box-title),
+.lt-box h3.lt-box-title {
+  font-size: inherit;
+  line-height: inherit;
+}
 .lt-box-kind {
   display: block;
   font-size: var(--sl-text-xs);

@@ -2,7 +2,7 @@
 title: Project ideas
 description: Directions for a project idea of your own from clubs, schools, hobbies and small businesses, what makes an idea viable and why rebuilt tutorial apps aren't approved.
 sidebar:
-  order: 3
+  order: 2
 ---
 
 You pick the idea for your project yourself. That's easiest when you know people who could use an app and whom you can ask a question. This page gives directions, not finished assignments, and your teacher approves the idea together with the sketch.
