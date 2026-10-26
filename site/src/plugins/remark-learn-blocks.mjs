@@ -156,17 +156,30 @@ function titleChildren(kindWord, label) {
   return label ? [kind, { type: 'text', value: ' ' }, ...label] : [kind];
 }
 
-function transformBox(node, t, id) {
+/** An id from the words of a title, lower case with hyphens, as the ids of Markdown headings */
+function slugOf(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\p{L}\p{N}\s-]/gu, '')
+    .replace(/\s+/g, '-');
+}
+
+function transformBox(node, t, boxId) {
   const kind = node.name;
   const label = takeLabel(node);
   const word = kind === 'deepdive' ? `${t.deepdive} (${t.optional})` : t[kind];
+  // A deep dive with a title is a heading, so it shows in the table of contents of the page and
+  // learners see the optional parts of a chapter before they read it
+  const heading = kind === 'deepdive' && label !== null;
+  const id = heading ? slugOf(`${t.deepdive} ${plainText(label)}`) : boxId;
   node.data = {
     hName: 'div',
     hProperties: { className: ['lt-box', `lt-${kind}`], role: 'group', ariaLabelledBy: id },
   };
   node.children.unshift({
     type: 'ltTitle',
-    data: { hName: 'p', hProperties: { className: ['lt-box-title'], id } },
+    data: { hName: heading ? 'h3' : 'p', hProperties: { className: ['lt-box-title'], id } },
     children: titleChildren(word, label),
   });
 }

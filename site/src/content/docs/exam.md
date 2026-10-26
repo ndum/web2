@@ -108,7 +108,7 @@ Teil 7 gehört zu den Kompetenzen 6 und 7.
 
 ## Nicht Teil der Prüfung
 
-Nicht zur Prüfung gehören die beiden Exkurse [Proxy und Getter](../javascript/proxies/) und [Server-State-Bibliotheken](../state/server-state/), die [Wahlthemen](../optional/overview/) und Teil 8. Die [JS-Werkstatt](../js/) ist kein eigenes Themengebiet, ihre Grundlagen brauchst du aber in jeder Aufgabe.
+Nicht zur Prüfung gehören die fünf Exkurse, die Kapitel [Proxy und Getter](../javascript/proxies/) und [Server-State-Bibliotheken](../state/server-state/) und die Kästen [Props destrukturieren](../components/props/#exkurs-props-destrukturieren), [Dynamische Komponenten und KeepAlive](../components/provide-and-inject/#exkurs-dynamische-komponenten-und-keepalive) und [Dateibasiertes Routing](../routing/vue-router/#exkurs-dateibasiertes-routing). Auch die [Wahlthemen](../optional/overview/) und Teil 8 gehören nicht dazu. Die [JS-Werkstatt](../js/) ist kein eigenes Themengebiet, ihre Grundlagen brauchst du aber in jeder Aufgabe.
 
 ## Vorbereitung
 
