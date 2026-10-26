@@ -2,7 +2,7 @@
 title: README template
 description: A template for the project sketch and the documentation in the README with the parts the project assignment asks for, the AI declaration and an example of an architecture decision.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 The README is the documentation of your project, and the project sketch is its first version. This template contains the parts the [project assignment](../assignment/) asks for. Copy it into the file `README.md` of your repository and replace the hints in brackets.

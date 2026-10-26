@@ -2,7 +2,7 @@
 title: README-Vorlage
 description: Eine Vorlage für die Projektskizze und die Dokumentation im README mit den Teilen des Projektauftrags, der KI-Deklaration und einem Beispiel für einen Architekturentscheid.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 Das README ist die Dokumentation deines Projekts, und die Projektskizze ist seine erste Fassung. Diese Vorlage enthält die Teile, die der [Projektauftrag](../assignment/) verlangt. Kopiere sie in die Datei `README.md` deines Repositorys und ersetze die Hinweise in den Klammern.

@@ -2,7 +2,7 @@
 title: Projektideen
 description: Richtungen für eine eigene Projektidee aus Vereinen, Schulen, Hobbys und kleinen Betrieben, was eine Idee tragfähig macht und warum nachgebaute Tutorial-Apps nicht freigegeben werden.
 sidebar:
-  order: 3
+  order: 2
 ---
 
 Die Idee für dein Projekt wählst du selbst. Am leichtesten fällt das, wenn du Leute kennst, die eine App brauchen könnten, und ihnen eine Frage stellen kannst. Diese Seite gibt Richtungen, keine fertigen Aufträge, und deine Lehrperson gibt die Idee mit der Skizze frei.
