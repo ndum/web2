@@ -33,9 +33,9 @@ const TEXT = {
     surveys: {
       title: 'Verbreitung und Zufriedenheit von React, Vue und Angular',
       desc:
-        'Zwei Balkendiagramme mit einer Skala von 0 bis 100 Prozent. ' +
-        'Oben die Umfrage von Stack Overflow 2026, Anteil der Antworten zu Web-Frameworks, die das Framework verwenden: React 41,5, Vue.js 17,2, Angular 16,0 Prozent. ' +
-        'Unten State of JS 2025, Anteil der Nutzenden, die das Framework wieder verwenden würden: React 72, Vue.js 84, Angular 48 Prozent.',
+        'Zwei Balkendiagramme mit einer Skala von 0 bis 100 %. ' +
+        'Oben die Umfrage von Stack Overflow 2026, Anteil der Antworten zu Web-Frameworks, die das Framework verwenden: React 41,5, Vue.js 17,2, Angular 16,0 %. ' +
+        'Unten State of JS 2025, Anteil der Nutzenden, die das Framework wieder verwenden würden: React 72, Vue.js 84, Angular 48 %.',
       panels: [
         ['Stack Overflow 2026, verwendet', "Anteil der 10'281 Antworten zu Web-Frameworks"],
         ['State of JS 2025, würden es wieder verwenden', 'Anteil der Nutzenden des jeweiligen Frameworks'],
@@ -96,9 +96,9 @@ const TEXT = {
     surveys: {
       title: 'Usage and satisfaction of React, Vue and Angular',
       desc:
-        'Two bar charts on a scale from 0 to 100 percent. ' +
-        'At the top the Stack Overflow survey of 2026, share of the answers on web frameworks that use the framework: React 41.5, Vue.js 17.2, Angular 16.0 percent. ' +
-        'At the bottom State of JS 2025, share of the users who would use the framework again: React 72, Vue.js 84, Angular 48 percent.',
+        'Two bar charts on a scale from 0 to 100%. ' +
+        'At the top the Stack Overflow survey of 2026, share of the answers on web frameworks that use the framework: React 41.5, Vue.js 17.2, Angular 16.0%. ' +
+        'At the bottom State of JS 2025, share of the users who would use the framework again: React 72, Vue.js 84, Angular 48%.',
       panels: [
         ['Stack Overflow 2026, used', 'share of the 10,281 answers on web frameworks'],
         ['State of JS 2025, would use again', 'share of the users of each framework'],
