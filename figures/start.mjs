@@ -1,41 +1,18 @@
 /**
  * Figures of part 0, start. Writes one SVG per language into site/src/assets/figures/<lang>/.
- * Colours come from classes that site/src/styles/course.css maps to the theme variables of the
- * site, so the inlined figures follow light and dark mode.
  *
  *   node figures/start.mjs
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { sketch } from './sketch.mjs';
-
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-
-// The blocks of the course in their order. The course pages name no lessons, the teacher sets the
-// timing in class, so the widths only make room for the labels.
-const BLOCKS = [
-  { key: '0', width: 46 },
-  { key: '1', width: 46 },
-  { key: '2', width: 46 },
-  { key: '3', width: 46 },
-  { key: '4', width: 46 },
-  { key: '5', width: 46 },
-  { key: '6', width: 46 },
-  { key: '7', width: 46 },
-  { key: 'exam', width: 92 },
-  { key: 'project', width: 220 },
-];
+import { badge, figure, heading, save, tile, WIDTH } from './diagram.mjs';
 
 const TEXT = {
   de: {
     title: 'Der Kurs im Überblick',
     desc:
-      'Ein waagrechter Balken zeigt die Reihenfolge des Moduls. Auf die Teile 0 bis 7 folgen die Prüfung ' +
-      'und das Projekt mit Teil 8. Unter dem Balken stehen die Namen der Teile.',
+      'Eine Reihe von Karten zeigt die Reihenfolge des Moduls von links nach rechts. Auf die Teile 0 bis 7 ' +
+      'folgen die Prüfung und das Projekt mit Teil 8. Darunter stehen die Namen der Teile.',
     exam: 'Prüfung',
-    project: 'Projekt mit Teil 8',
+    project: ['Projekt', 'mit Teil 8'],
     parts: [
       'Start',
       'JavaScript für SPAs',
@@ -50,10 +27,10 @@ const TEXT = {
   en: {
     title: 'The course at a glance',
     desc:
-      'A horizontal bar shows the order of the module. Parts 0 to 7 come first, followed by the exam ' +
-      'and the project with part 8. The names of the parts are listed below the bar.',
+      'A row of cards shows the order of the module from left to right. Parts 0 to 7 come first, followed by ' +
+      'the exam and the project with part 8. The names of the parts are listed below.',
     exam: 'Exam',
-    project: 'Project with part 8',
+    project: ['Project', 'with part 8'],
     parts: [
       'Getting started',
       'JavaScript for SPAs',
@@ -67,47 +44,31 @@ const TEXT = {
   },
 };
 
-const escape = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// The course pages name no lessons, the teacher sets the timing in class, so the cards only keep
+// the order and leave the room to the labels
+const TOP = 20;
+const CARD_H = 48;
+const PART_W = 40;
+const PART_STEP = 48;
 
 function courseMap(lang) {
   const t = TEXT[lang];
   const id = `p0c1-map-${lang}`;
-  const left = 20;
-  const top = 20;
-  const height = 44;
-  const parts = [];
+  const body = [];
+  t.parts.forEach((_, index) => body.push(tile(16 + index * PART_STEP, TOP, PART_W, CARD_H, String(index))));
+  const examX = 16 + t.parts.length * PART_STEP + 4;
+  body.push(tile(examX, TOP, 96, CARD_H, t.exam, '', { accent: true }));
+  body.push(tile(examX + 108, TOP, WIDTH - 16 - (examX + 108), CARD_H, ...t.project));
 
-  let x = left;
-  for (const block of BLOCKS) {
-    const w = block.width;
-    const strong = block.key === 'exam';
-    parts.push(`<rect class="fig-box${strong ? ' fig-box-strong' : ''}" x="${x + 1}" y="${top}" width="${w - 2}" height="${height}" rx="4"/>`);
-    const label = block.key === 'project' ? t.project : block.key === 'exam' ? t.exam : block.key;
-    parts.push(`<text class="fig-text" x="${x + w / 2}" y="${top + 28}" text-anchor="middle">${escape(label)}</text>`);
-    x += w;
-  }
-
-  // Names of the parts in two columns
+  // The names of the parts in two columns, each with the number of its card
+  const rows = 4;
   t.parts.forEach((name, index) => {
-    const column = index < 4 ? 0 : 1;
-    const row = index % 4;
-    const x = left + column * 340;
-    const y = 100 + row * 22;
-    parts.push(`<text class="fig-sub" x="${x}" y="${y}"><tspan class="fig-strong">${index}</tspan>  ${escape(name)}</text>`);
+    const x = 16 + Math.floor(index / rows) * 332;
+    const y = TOP + CARD_H + 36 + (index % rows) * 26;
+    body.push(badge(x + 10, y - 4, String(index)), heading(x + 28, y, name));
   });
-
-  return [
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 184" role="img" aria-labelledby="${id}-title ${id}-desc">`,
-    `<title id="${id}-title">${escape(t.title)}</title>`,
-    `<desc id="${id}-desc">${escape(t.desc)}</desc>`,
-    ...parts,
-    '</svg>',
-    '',
-  ].join('\n');
+  const height = TOP + CARD_H + 36 + (rows - 1) * 26 + 22;
+  return figure({ id, width: WIDTH, height, title: t.title, desc: t.desc, body });
 }
 
-for (const lang of Object.keys(TEXT)) {
-  const target = join(ROOT, 'site', 'src', 'assets', 'figures', lang, 'p0c1-course-map.svg');
-  mkdirSync(dirname(target), { recursive: true });
-  writeFileSync(target, sketch(courseMap(lang), 'p0c1-course-map'));
-}
+for (const lang of Object.keys(TEXT)) save(lang, 'p0c1-course-map', courseMap(lang));

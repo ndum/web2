@@ -1,265 +1,351 @@
 /**
  * Figures of part 6, routing. Writes one SVG per language into site/src/assets/figures/<lang>/.
- * Colours come from classes that site/src/styles/course.css maps to the theme variables of the
- * site, so the inlined figures follow light and dark mode.
  *
  *   node figures/routing.mjs
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { sketch } from './sketch.mjs';
-
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+import {
+  arrow,
+  band,
+  figure,
+  fitted,
+  heading,
+  ICON_SPACE,
+  label,
+  labelWidth,
+  line,
+  measure,
+  note,
+  PADDING,
+  placeholder,
+  room,
+  save,
+  SIZE,
+  tag,
+  tagWidth,
+  tile,
+  WIDTH,
+} from './diagram.mjs';
 
 const TEXT = {
   de: {
     url: {
       title: 'Teile einer Adresse',
       desc:
-        'Zwei Adressen, in ihre Teile zerlegt. Oben /items/6, davon ist /items/ der feste Teil der Route /items/:id und 6 der Parameter, den route.params.id als Text liefert. ' +
-        'Unten /?q=säge&category=Werkzeug&sort=deposit, davon ist / der Pfad, und die Query besteht aus q, category und sort, die route.query.q, route.query.category und route.query.sort liefern.',
-      first: [
-        ['/items/', 'fester Teil der Route', '/items/:id'],
-        ['6', 'Parameter', "route.params.id = '6'"],
-      ],
-      second: [
-        ['/', 'Pfad', ''],
-        ['?q=säge', 'Query', 'route.query.q'],
-        ['&category=Werkzeug', 'Query', 'route.query.category'],
-        ['&sort=deposit', 'Query', 'route.query.sort'],
-      ],
+        'Zwei Adressen in zwei Bändern, in ihre Teile zerlegt. Unter jedem Teil steht eine Klammer mit seinem Namen. ' +
+        'Oben /items/6, davon ist /items/ der feste Teil der Route /items/:id und 6 der Parameter, den route.params.id als Text liefert. ' +
+        'Unten /?q=säge&category=Werkzeug&sort=deposit, davon ist / der Pfad, und die Query besteht aus q, category und sort, ' +
+        'die route.query.q, route.query.category und route.query.sort liefern.',
+      first: {
+        label: 'Adresse mit Parameter',
+        parts: [
+          ['/items/', 'fester Teil der Route', '/items/:id', ''],
+          ['6', 'Parameter', "route.params.id = '6'", 'accent'],
+        ],
+      },
+      second: {
+        label: 'Adresse mit Query',
+        parts: [
+          ['/', 'Pfad', '', ''],
+          ['?q=säge', 'Query', 'route.query.q', 'violet'],
+          ['&category=Werkzeug', 'Query', 'route.query.category', 'violet'],
+          ['&sort=deposit', 'Query', 'route.query.sort', 'violet'],
+        ],
+      },
     },
     tree: {
       title: 'Die Routen der Fallbeispiel-App',
       desc:
-        'Ein Baum mit App und ihrer RouterView oben. Darunter die Routen / mit CatalogView, /items/:id mit ItemView, /favorites mit FavoritesView, /association mit AssociationView, ' +
-        '/login mit LoginView, /team mit TeamLayout und die Catch-all-Route mit NotFoundView. TeamLayout hat eine eigene RouterView mit den Kindrouten für die Ausleihen und die Rückgaben. ' +
-        'Neben /team steht, dass der Bereich nur für das Team ist und erst bei Bedarf geladen wird, neben der Catch-all-Route, dass sie alle anderen Adressen fängt.',
+        'Ein Baum mit App und ihrer RouterView oben. Darunter hängen die Routen / mit CatalogView, /items/:id mit ItemView, /favorites ' +
+        'mit FavoritesView, ' +
+        '/association mit AssociationView, /login mit LoginView, die Catch-all-Route mit NotFoundView und /team mit TeamLayout. ' +
+        'TeamLayout hat eine eigene RouterView mit den Kindrouten für die Ausleihen und die Rückgaben. ' +
+        'Die Karte von /team trägt die Marke nur Team, die drei Karten des Teams sind gestrichelt, weil sie erst bei Bedarf laden, ' +
+        'und neben der Catch-all-Route steht, dass sie alle anderen Adressen fängt.',
       root: ['App', 'RouterView'],
       routes: [
-        ['/', 'CatalogView', ''],
-        ['/items/:id(\\d+)', 'ItemView', ''],
-        ['/favorites', 'FavoritesView', ''],
-        ['/association', 'AssociationView', ''],
-        ['/login', 'LoginView', ''],
-        ['/team', 'TeamLayout', 'nur Team, lädt bei Bedarf'],
-        ["''", 'TeamLoansView', 'Ausleihen'],
-        ['returns', 'TeamReturnsView', 'Rückgaben'],
-        ['/:pathMatch(.*)*', 'NotFoundView', 'alle anderen Adressen'],
+        ['CatalogView', '/'],
+        ['ItemView', '/items/:id(\\d+)'],
+        ['FavoritesView', '/favorites'],
+        ['AssociationView', '/association'],
+        ['LoginView', '/login'],
+        ['NotFoundView', '/:pathMatch(.*)*'],
       ],
+      team: ['TeamLayout', '/team', 'nur Team'],
+      children: [
+        ['TeamLoansView', "''", 'Ausleihen'],
+        ['TeamReturnsView', 'returns', 'Rückgaben'],
+      ],
+      lazy: 'gestrichelt, lädt erst bei Bedarf',
+      catchAll: 'fängt alle anderen Adressen',
     },
     flow: {
       title: 'Der Ablauf einer Navigation',
       desc:
-        'Eine Folge von oben nach unten. Eine Navigation beginnt mit einem RouterLink oder router.push. Dann laufen onBeforeRouteLeave in der Seite, die man verlässt, beforeEach für jede Navigation, ' +
-        'beforeEnter nur beim Betreten einer Route, das Laden der Komponenten und beforeResolve. Danach ist die Navigation bestätigt, afterEach läuft, und das DOM zeigt die neue Seite. ' +
-        'Rechts steht, dass jeder Guard mit false die Navigation abbricht und mit einer Route auf eine neue Navigation umleitet.',
-      steps: [
-        ['Navigation beginnt', 'RouterLink, router.push', false],
-        ['onBeforeRouteLeave', 'in der Seite, die man verlässt', true],
-        ['beforeEach', 'global, bei jeder Navigation', true],
-        ['beforeEnter', 'nur beim Betreten der Route', true],
-        ['Komponenten laden', 'Routen mit import()', false],
-        ['beforeResolve', 'global, kurz vor dem Bestätigen', true],
-        ['Navigation bestätigt', 'die Adresse ändert sich', false],
-        ['afterEach', 'Titel, Fokus, hält nichts mehr auf', true],
-        ['DOM aktualisiert', 'die neue Seite erscheint', false],
-      ],
+        'Eine Folge von oben nach unten in zwei Bändern. Eine Navigation beginnt mit einem RouterLink oder router.push. ' +
+        'Im Band der Guards laufen onBeforeRouteLeave in der Seite, die man verlässt, beforeEach für jede Navigation, ' +
+        'beforeEnter nur beim Betreten einer Route, das Laden der Komponenten und beforeResolve. ' +
+        'Im zweiten Band ist die Navigation bestätigt, afterEach läuft, und das DOM zeigt die neue Seite. ' +
+        'Rechts führen Pfeile von einer Klammer um die Guards zu zwei Karten. Jeder Guard bricht die Navigation mit false ab und ' +
+        'leitet mit einer Route auf eine neue Navigation um.',
+      start: ['Navigation beginnt', 'RouterLink, router.push'],
       guards: 'Guards',
-      cancel: ['return false', 'Navigation abgebrochen'],
-      redirect: ['return { name: … }', 'Umleitung, neue Navigation'],
+      guardSteps: [
+        ['onBeforeRouteLeave', 'in der Seite, die man verlässt', 'shield'],
+        ['beforeEach', 'global, bei jeder Navigation', 'shield'],
+        ['beforeEnter', 'nur beim Betreten der Route', 'shield'],
+        ['Komponenten laden', 'Routen mit import()', 'code'],
+        ['beforeResolve', 'global, kurz vor dem Bestätigen', 'shield'],
+      ],
+      confirmed: 'Bestätigt',
+      confirmedSteps: [
+        ['Navigation bestätigt', 'die Adresse ändert sich', 'check'],
+        ['afterEach', 'Titel, Fokus, hält nichts mehr auf', 'flag'],
+        ['DOM aktualisiert', 'die neue Seite erscheint', 'browser'],
+      ],
+      cancel: ['Navigation abgebrochen', 'return false'],
+      redirect: ['Umleitung, neue Navigation', 'return { name: … }'],
     },
   },
   en: {
     url: {
       title: 'Parts of an address',
       desc:
-        'Two addresses taken apart. At the top /items/6, where /items/ is the fixed part of the route /items/:id and 6 is the param that route.params.id returns as a string. ' +
-        'At the bottom /?q=saw&category=Tools&sort=deposit, where / is the path, and the query consists of q, category and sort, returned by route.query.q, route.query.category and route.query.sort.',
-      first: [
-        ['/items/', 'fixed part of the route', '/items/:id'],
-        ['6', 'param', "route.params.id = '6'"],
-      ],
-      second: [
-        ['/', 'path', ''],
-        ['?q=saw', 'query', 'route.query.q'],
-        ['&category=Tools', 'query', 'route.query.category'],
-        ['&sort=deposit', 'query', 'route.query.sort'],
-      ],
+        'Two addresses in two bands, taken apart. Below each part a bracket carries its name. ' +
+        'At the top /items/6, where /items/ is the fixed part of the route /items/:id and 6 is the param that route.params.id returns ' +
+        'as a string. ' +
+        'At the bottom /?q=saw&category=Tools&sort=deposit, where / is the path, and the query consists of q, category and sort, ' +
+        'returned by route.query.q, route.query.category and route.query.sort.',
+      first: {
+        label: 'Address with a param',
+        parts: [
+          ['/items/', 'fixed part of the route', '/items/:id', ''],
+          ['6', 'param', "route.params.id = '6'", 'accent'],
+        ],
+      },
+      second: {
+        label: 'Address with a query',
+        parts: [
+          ['/', 'path', '', ''],
+          ['?q=saw', 'query', 'route.query.q', 'violet'],
+          ['&category=Tools', 'query', 'route.query.category', 'violet'],
+          ['&sort=deposit', 'query', 'route.query.sort', 'violet'],
+        ],
+      },
     },
     tree: {
       title: 'The routes of the case app',
       desc:
-        'A tree with App and its RouterView at the top. Below it the routes / with CatalogView, /items/:id with ItemView, /favorites with FavoritesView, /association with AssociationView, ' +
-        '/login with LoginView, /team with TeamLayout and the catch-all route with NotFoundView. TeamLayout has a RouterView of its own with the child routes for loans and returns. ' +
-        'Next to /team it says that the area is for the team only and is loaded on demand, next to the catch-all route that it catches every other address.',
+        'A tree with App and its RouterView at the top. Below it hang the routes / with CatalogView, /items/:id with ItemView, ' +
+        '/favorites with FavoritesView, ' +
+        '/association with AssociationView, /login with LoginView, the catch-all route with NotFoundView and /team with TeamLayout. ' +
+        'TeamLayout has a RouterView of its own with the child routes for loans and returns. ' +
+        'The card of /team carries the tag team only, the three cards of the team are dashed because they load on demand, ' +
+        'and next to the catch-all route it says that it catches every other address.',
       root: ['App', 'RouterView'],
       routes: [
-        ['/', 'CatalogView', ''],
-        ['/items/:id(\\d+)', 'ItemView', ''],
-        ['/favorites', 'FavoritesView', ''],
-        ['/association', 'AssociationView', ''],
-        ['/login', 'LoginView', ''],
-        ['/team', 'TeamLayout', 'team only, loaded on demand'],
-        ["''", 'TeamLoansView', 'loans'],
-        ['returns', 'TeamReturnsView', 'returns'],
-        ['/:pathMatch(.*)*', 'NotFoundView', 'every other address'],
+        ['CatalogView', '/'],
+        ['ItemView', '/items/:id(\\d+)'],
+        ['FavoritesView', '/favorites'],
+        ['AssociationView', '/association'],
+        ['LoginView', '/login'],
+        ['NotFoundView', '/:pathMatch(.*)*'],
       ],
+      team: ['TeamLayout', '/team', 'team only'],
+      children: [
+        ['TeamLoansView', "''", 'loans'],
+        ['TeamReturnsView', 'returns', 'returns'],
+      ],
+      lazy: 'dashed, loads on demand',
+      catchAll: 'catches every other address',
     },
     flow: {
       title: 'The navigation flow',
       desc:
-        'A sequence from top to bottom. A navigation starts with a RouterLink or router.push. Then onBeforeRouteLeave runs in the page being left, beforeEach for every navigation, ' +
-        'beforeEnter only when a route is entered, the components are loaded and beforeResolve runs. After that the navigation is confirmed, afterEach runs and the DOM shows the new page. ' +
-        'On the right it says that every guard cancels the navigation with false and redirects to a new navigation with a route.',
-      steps: [
-        ['Navigation starts', 'RouterLink, router.push', false],
-        ['onBeforeRouteLeave', 'in the page being left', true],
-        ['beforeEach', 'global, on every navigation', true],
-        ['beforeEnter', 'only when entering the route', true],
-        ['Components load', 'routes with import()', false],
-        ['beforeResolve', 'global, right before confirming', true],
-        ['Navigation confirmed', 'the address changes', false],
-        ['afterEach', 'title, focus, stops nothing', true],
-        ['DOM updated', 'the new page appears', false],
-      ],
+        'A sequence from top to bottom in two bands. A navigation starts with a RouterLink or router.push. ' +
+        'In the band of the guards, onBeforeRouteLeave runs in the page being left, beforeEach for every navigation, ' +
+        'beforeEnter only when a route is entered, the components are loaded and beforeResolve runs. ' +
+        'In the second band the navigation is confirmed, afterEach runs and the DOM shows the new page. ' +
+        'On the right, arrows lead from a bracket around the guards to two cards. Every guard cancels the navigation with false and ' +
+        'redirects to a new navigation with a route.',
+      start: ['Navigation starts', 'RouterLink, router.push'],
       guards: 'Guards',
-      cancel: ['return false', 'navigation cancelled'],
-      redirect: ['return { name: … }', 'redirect, new navigation'],
+      guardSteps: [
+        ['onBeforeRouteLeave', 'in the page being left', 'shield'],
+        ['beforeEach', 'global, on every navigation', 'shield'],
+        ['beforeEnter', 'only when entering the route', 'shield'],
+        ['Components load', 'routes with import()', 'code'],
+        ['beforeResolve', 'global, right before confirming', 'shield'],
+      ],
+      confirmed: 'Confirmed',
+      confirmedSteps: [
+        ['Navigation confirmed', 'the address changes', 'check'],
+        ['afterEach', 'title, focus, stops nothing', 'flag'],
+        ['DOM updated', 'the new page appears', 'browser'],
+      ],
+      cancel: ['Navigation cancelled', 'return false'],
+      redirect: ['Redirect, new navigation', 'return { name: … }'],
     },
   },
 };
 
-const escape = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// Width of a text in the monospace font, the address and its parts are set in it
+const mono = (text) => measure(text, SIZE.code, { mono: true });
 
-function svg(id, width, height, t, parts) {
-  return [
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc">`,
-    `<title id="${id}-title">${escape(t.title)}</title>`,
-    `<desc id="${id}-desc">${escape(t.desc)}</desc>`,
-    `<defs><marker id="${id}-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">` +
-      `<path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>`,
-    ...parts,
-    '</svg>',
-    '',
-  ].join('\n');
-}
-
-const arrow = (id, path) => `<path class="fig-arrow" d="${path}" marker-end="url(#${id}-head)"/>`;
-const line = (path) => `<path class="fig-arrow" d="${path}"/>`;
-
-// Widths of monospace text at 14px and of sans-serif text at 13px, generous so the text fits
-const codeWidth = (text) => text.length * 8.6;
-const subWidth = (text) => text.length * 7;
-
-// An address as a row of boxes, one per part, with a label below each box
-function addressRow(id, parts, x, y) {
-  const out = [];
+/**
+ * One address taken apart. Every part sits over a bracket as wide as its column, the name of the
+ * part and the code that reads it follow below, so a long code name gets room of its own.
+ */
+function address(x, y, parts) {
+  const body = [];
   let left = x;
-  for (const [code, label, detail] of parts) {
-    const width = Math.max(codeWidth(code), subWidth(label), detail ? codeWidth(detail) * 0.86 : 0) + 24;
-    out.push(
-      `<rect class="fig-box fig-box-strong" x="${left}" y="${y}" width="${width}" height="40" rx="4"/>`,
-      `<text class="fig-code fig-strong" x="${left + width / 2}" y="${y + 25}" text-anchor="middle" style="font-size: 14px">${escape(code)}</text>`,
-      line(`M ${left + width / 2} ${y + 42} L ${left + width / 2} ${y + 58}`),
-      `<text class="fig-sub" x="${left + width / 2}" y="${y + 74}" text-anchor="middle">${escape(label)}</text>`,
+  for (const [part, name, code, tone] of parts) {
+    const width = Math.ceil(Math.max(mono(part), measure(name, SIZE.small, { bold: true }), code ? mono(code) : 0)) + 20;
+    const centre = left + width / 2;
+    const options = tone === 'accent' ? { accent: true } : tone ? { tone } : {};
+    body.push(
+      note(centre, y, part, 'middle', { code: true }),
+      line([[left + 3, y + 8], [left + 3, y + 14], [left + width - 3, y + 14], [left + width - 3, y + 8]], options),
+      line([[centre, y + 14], [centre, y + 21]], options),
+      heading(centre, y + 36, name, 'middle'),
     );
-    if (detail) {
-      out.push(`<text class="fig-code" x="${left + width / 2}" y="${y + 92}" text-anchor="middle">${escape(detail)}</text>`);
-    }
-    left += width + 6;
+    if (code) body.push(note(centre, y + 52, code, 'middle', { code: true }));
+    left += width + 4;
   }
-  return { parts: out, right: left };
+  return { body, right: left - 4 };
 }
 
 function urlParts(lang) {
   const t = TEXT[lang].url;
   const id = `p6c2-url-${lang}`;
-  const first = addressRow(id, t.first, 20, 30);
-  const second = addressRow(id, t.second, 20, 150);
-  return svg(id, Math.max(first.right, second.right) + 14, 262, t, [...first.parts, ...second.parts]);
+  const body = [];
+  const height = 128;
+  [t.first, t.second].forEach((group, index) => {
+    const top = 16 + index * (height + 16);
+    const parts = address(32, top + 60, group.parts);
+    if (parts.right > WIDTH - 32) throw new Error(`${id}: the parts of the address need ${parts.right} px.`);
+    // The whole address stays readable in one piece beside the name of the band
+    const whole = group.parts.map(([part]) => part).join('');
+    const after = 32 + labelWidth(group.label) + 12;
+    body.push(
+      band(16, top, WIDTH - 32, height, index + 1),
+      label(32, top + 24, group.label, 'start', index ? { tone: 'blue' } : {}),
+      fitted(after, top + 24, whole, WIDTH - 32 - after, 'start', { code: true }),
+      ...parts.body,
+    );
+  });
+  return figure({ id, width: WIDTH, height: 16 + 2 * height + 16 + 16, title: t.title, desc: t.desc, body });
+}
+
+/** A card with an icon and a tag at its right border, the title has to stay clear of the tag */
+function tagged(x, y, w, h, title, sub, text, options) {
+  const tw = tagWidth(text);
+  room(title, w - ICON_SPACE - tw - 2 * PADDING, { size: SIZE.title, bold: true });
+  room(sub, w - ICON_SPACE - tw - 2 * PADDING, { mono: true });
+  return [tile(x, y, w, h, title, sub, { ...options, code: true }), tag(x + w - PADDING - tw, y + h / 2 - 9, text)].join('\n');
 }
 
 function routeTree(lang) {
   const t = TEXT[lang].tree;
   const id = `p6c3-tree-${lang}`;
-  const parts = [];
-  const rowHeight = 46;
-  const top = 16;
-  const boxWidth = 250;
-  // App with its RouterView at the top
-  parts.push(
-    `<rect class="fig-box fig-box-strong" x="20" y="${top}" width="${boxWidth - 60}" height="40" rx="6"/>`,
-    `<text class="fig-text" x="36" y="${top + 26}">${escape(t.root[0])}</text>`,
-    `<text class="fig-code" x="${boxWidth - 56}" y="${top + 25}" text-anchor="end">${escape(t.root[1])}</text>`,
+  const h = 44;
+  const step = h + 12;
+  const root = { x: 16, y: 16, w: 228 };
+  const bus = root.y + h + 20;
+  const first = bus + 16;
+  const left = { trunk: 36, x: 56, w: 248 };
+  const right = { trunk: 332, x: 352, w: WIDTH - 16 - 352 };
+  const child = { trunk: 376, x: 396, w: WIDTH - 16 - 396 };
+  const rowY = (row) => first + row * step;
+  const body = [];
+  // The trunk of App reaches both columns, a branch leads to every card
+  const lastLeft = rowY(t.routes.length - 1) + h / 2;
+  body.push(
+    tile(root.x, root.y, root.w, h, ...t.root, { accent: true, code: true, icon: 'block' }),
+    line([[left.trunk, root.y + h + 1.5], [left.trunk, lastLeft]]),
+    line([[left.trunk, bus], [right.trunk, bus], [right.trunk, rowY(0) + h / 2]]),
   );
-  const trunk = 44;
-  let lastTopLevel = top + 40;
-  t.routes.forEach(([path, component, note], index) => {
-    const child = index === 6 || index === 7;
-    const y = top + (index + 1) * rowHeight + 6;
-    const x = child ? 110 : 76;
-    const width = child ? boxWidth - 34 : boxWidth;
-    const lazy = index === 5 || child;
-    parts.push(
-      `<rect class="fig-box${index === 5 ? ' fig-box-strong' : ''}" x="${x}" y="${y}" width="${width}" height="38" rx="6"${lazy ? ' stroke-dasharray="5 4"' : ''}/>`,
-      `<text class="fig-code fig-strong" x="${x + 12}" y="${y + 24}" style="font-size: 13px">${escape(path)}</text>`,
-      `<text class="fig-sub" x="${x + width - 12}" y="${y + 24}" text-anchor="end">${escape(component)}</text>`,
+  t.routes.forEach(([component, path], row) => {
+    const y = rowY(row);
+    body.push(
+      line([[left.trunk, y + h / 2], [left.x, y + h / 2]]),
+      tile(left.x, y, left.w, h, component, path, { code: true, icon: 'block' }),
     );
-    // Connector from the trunk of the parent
-    const branchX = child ? 92 : trunk;
-    parts.push(line(`M ${branchX} ${y + 19} L ${x - 2} ${y + 19}`));
-    if (!child) lastTopLevel = y + 19;
-    if (note) parts.push(`<text class="fig-sub fig-note" x="${x + width + 14}" y="${y + 24}">${escape(note)}</text>`);
   });
-  // Trunks, one from App down to the last route, one from TeamLayout to its children
-  parts.push(line(`M ${trunk} ${top + 42} L ${trunk} ${lastTopLevel}`));
-  const teamY = top + 6 * rowHeight + 6;
-  parts.push(line(`M 92 ${teamY + 40} L 92 ${top + 8 * rowHeight + 6 + 19}`));
-  return svg(id, 560, top + 10 * rowHeight + 10, t, parts);
+  // The catch-all route is the last one, its note stands right of it
+  const catchY = rowY(t.routes.length - 1);
+  body.push(fitted(left.x + left.w + 16, catchY + h / 2 + 4, t.catchAll, WIDTH - 16 - (left.x + left.w + 16) - 8));
+  // The team area with its own RouterView and two children, all of them load on demand, so they are
+  // dashed cards, which the chapter refers to
+  const [teamName, teamPath, teamTag] = t.team;
+  body.push(
+    line([[right.trunk, rowY(0) + h / 2], [right.x, rowY(0) + h / 2]]),
+    tagged(right.x, rowY(0), right.w, h, teamName, teamPath, teamTag, { icon: 'lock', dashed: true }),
+    line([[child.trunk, rowY(0) + h + 1.5], [child.trunk, rowY(2) + h / 2]]),
+  );
+  t.children.forEach(([component, path, text], index) => {
+    const y = rowY(index + 1);
+    body.push(
+      line([[child.trunk, y + h / 2], [child.x, y + h / 2]]),
+      tagged(child.x, y, child.w, h, component, path, text, { icon: 'block', dashed: true }),
+    );
+  });
+  body.push(placeholder(right.x, rowY(3) + 6, right.w, 32, t.lazy));
+  return figure({ id, width: WIDTH, height: rowY(t.routes.length - 1) + h + 18, title: t.title, desc: t.desc, body });
 }
 
 function guardFlow(lang) {
   const t = TEXT[lang].flow;
   const id = `p6c4-flow-${lang}`;
-  const parts = [];
-  const left = 20;
-  const width = 270;
-  const step = 58;
-  const top = 16;
-  t.steps.forEach(([name, sub, guard], index) => {
-    const y = top + index * step;
-    parts.push(
-      `<rect class="fig-box${guard ? ' fig-box-strong' : ''}" x="${left}" y="${y}" width="${width}" height="42" rx="6"/>`,
-      `<text class="${guard ? 'fig-code fig-strong' : 'fig-text'}" x="${left + 14}" y="${y + 17}" style="font-size: 14px">${escape(name)}</text>`,
-      `<text class="fig-sub" x="${left + 14}" y="${y + 33}">${escape(sub)}</text>`,
-    );
-    if (index < t.steps.length - 1) parts.push(arrow(id, `M ${left + width / 2} ${y + 44} L ${left + width / 2} ${y + step - 2}`));
+  const x = 32;
+  const w = 300;
+  const h = 44;
+  const gap = 16;
+  const head = 32;
+  // Every arrow of the flow runs down the middle of the cards, past the names of the bands
+  const centre = x + w / 2;
+  const body = [];
+  const steps = [{ y: 16, card: tile(x, 16, w, h, ...t.start, { icon: 'cursor' }) }];
+  let y = 16 + h + 22;
+  [
+    [t.guards, t.guardSteps, 2],
+    [t.confirmed, t.confirmedSteps, 1],
+  ].forEach(([name, group, level], index) => {
+    room(name.toUpperCase(), centre - 10 - x, { size: SIZE.label, bold: true });
+    const height = head + group.length * h + (group.length - 1) * gap + 12;
+    body.push(band(16, y, WIDTH - 32, height, level), label(x, y + 22, name, 'start', index === 0 ? { tone: 'blue' } : {}));
+    group.forEach(([title, sub, icon], row) => {
+      const top = y + head + row * (h + gap);
+      // Loading the components is a step of its own between the guards, not a guard
+      const options = { icon, ...(icon === 'code' ? { tone: 'violet' } : {}) };
+      steps.push({ y: top, card: tile(x, top, w, h, title, sub, options) });
+    });
+    y += height + 14;
   });
-  // The guards between leave and resolve can stop or redirect the navigation
-  const from = top + step + 20;
-  const to = top + 5 * step + 20;
-  const bracketX = left + width + 16;
-  parts.push(
-    line(`M ${bracketX} ${from} L ${bracketX + 12} ${from} L ${bracketX + 12} ${to} L ${bracketX} ${to}`),
-    `<text class="fig-sub fig-strong" x="${bracketX + 22}" y="${top + 3 * step + 25}">${escape(t.guards)}</text>`,
+  steps.slice(1).forEach((current, index) => {
+    body.push(arrow(id, [[centre, steps[index].y + h + 1.5], [centre, current.y - 4]]));
+  });
+  // A bracket on the right of the guards, every one of them can stop or redirect the navigation
+  const guardTop = steps[1].y + h / 2;
+  const guardBottom = steps[5].y + h / 2;
+  const bracket = x + w + 18;
+  const middle = (guardTop + guardBottom) / 2;
+  const outX = 412;
+  const outW = WIDTH - 32 - outX;
+  const cancelY = middle - 10 - h;
+  const redirectY = middle + 10;
+  body.push(
+    line([[x + w + 8, guardTop], [bracket, guardTop], [bracket, guardBottom], [x + w + 8, guardBottom]], { accent: true }),
+    arrow(id, [[bracket, cancelY + h / 2], [outX - 4, cancelY + h / 2]], { accent: true }),
+    arrow(id, [[bracket, redirectY + h / 2], [outX - 4, redirectY + h / 2]], { accent: true }),
+    tile(outX, cancelY, outW, h, ...t.cancel, { code: true, icon: 'cross' }),
+    tile(outX, redirectY, outW, h, ...t.redirect, { code: true, icon: 'signpost' }),
+    ...steps.map((step) => step.card),
   );
-  const outcome = (y, [code, label]) => [
-    arrow(id, `M ${bracketX + 14} ${y} L ${bracketX + 82} ${y}`),
-    `<rect class="fig-box" x="${bracketX + 86}" y="${y - 24}" width="196" height="48" rx="6"/>`,
-    `<text class="fig-code fig-strong" x="${bracketX + 98}" y="${y - 4}" style="font-size: 13px">${escape(code)}</text>`,
-    `<text class="fig-sub" x="${bracketX + 98}" y="${y + 14}">${escape(label)}</text>`,
-  ];
-  parts.push(...outcome(top + 2 * step + 20, t.cancel), ...outcome(top + 4 * step + 20, t.redirect));
-  return svg(id, bracketX + 300, top + t.steps.length * step - 10, t, parts);
+  return figure({ id, width: WIDTH, height: y - 14 + 16, title: t.title, desc: t.desc, body });
 }
 
 for (const lang of Object.keys(TEXT)) {
-  const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
-  mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p6c2-url-parts.svg'), sketch(urlParts(lang), 'p6c2-url-parts'));
-  writeFileSync(join(folder, 'p6c3-route-tree.svg'), sketch(routeTree(lang), 'p6c3-route-tree'));
-  writeFileSync(join(folder, 'p6c4-guard-flow.svg'), sketch(guardFlow(lang), 'p6c4-guard-flow'));
+  save(lang, 'p6c2-url-parts', urlParts(lang));
+  save(lang, 'p6c3-route-tree', routeTree(lang));
+  save(lang, 'p6c4-guard-flow', guardFlow(lang));
 }

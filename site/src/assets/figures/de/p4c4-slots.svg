@@ -1,29 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 282" role="img" aria-labelledby="p4c4-slots-de-title p4c4-slots-de-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 348" role="img" aria-labelledby="p4c4-slots-de-title p4c4-slots-de-desc">
 <title id="p4c4-slots-de-title">Inhalte füllen die Slots einer Komponente</title>
 <desc id="p4c4-slots-de-desc">Links das Template der Elternkomponente mit BaseDialog. Sie füllt den Slot title mit dem Titel, den Standard-Slot mit dem Text der Anfrage und den Slot actions mit einem Knopf. Rechts das Template von BaseDialog mit den drei Stellen slot name title, slot und slot name actions. Pfeile verbinden jeden Inhalt mit seinem Slot.</desc>
-<text class="fig-text" x="20" y="30">App.vue füllt die Slots</text>
-<text class="fig-text" x="390" y="30">BaseDialog.vue zeigt sie an</text>
-<rect class="fig-paper" x="20" y="42" width="290" height="232"/><path class="fig-line" d="M 22.3 40.9 Q 166.6 41.2 309.9 41.8 Q 310.9 158 309.8 273.5 Q 164.5 274.6 19.6 274.9 Q 22.1 158.4 20.5 41.5 Q 22.7 40.9 24.9 40.8 M 20.9 42.3 Q 165.6 43.2 309.3 42 Q 311.8 158.2 309.9 274.3 Q 165.7 274.3 20.3 274.4 Q 21.5 158.2 19 42.5 Q 22.7 42.4 26.8 42.8"/>
-<rect class="fig-paper" x="390" y="42" width="270" height="232"/><path class="fig-line" d="M 392.5 42.9 Q 526.1 43.2 660.3 42 Q 659.9 157.5 660.1 273.2 Q 525.2 272.3 390.5 273.9 Q 393 157.9 390.7 43.3 Q 393.6 43.4 397.2 43.6 M 391.5 41.4 Q 525.9 43.3 661.1 42.9 Q 660.3 157.8 660.3 272.7 Q 524.4 273.9 389.2 273.9 Q 390.9 158.2 390.9 42 Q 394 42.8 397.1 42.8"/>
-<text class="fig-code" x="32" y="66" xml:space="preserve">&lt;BaseDialog&gt;</text>
-<text class="fig-code" x="32" y="90" xml:space="preserve">  &lt;template #title&gt;</text>
-<text class="fig-code fig-strong" x="32" y="114" xml:space="preserve">    Anfrage prüfen</text>
-<text class="fig-code" x="32" y="138" xml:space="preserve">  &lt;/template&gt;</text>
-<text class="fig-code fig-strong" x="32" y="162" xml:space="preserve">  Bohrmaschine, 18. bis 21.11.</text>
-<text class="fig-code" x="32" y="186" xml:space="preserve">  &lt;template #actions&gt;</text>
-<text class="fig-code fig-strong" x="32" y="210" xml:space="preserve">    &lt;button&gt;Bestätigen&lt;/button&gt;</text>
-<text class="fig-code" x="32" y="234" xml:space="preserve">  &lt;/template&gt;</text>
-<text class="fig-code" x="32" y="258" xml:space="preserve">&lt;/BaseDialog&gt;</text>
-<text class="fig-code" x="402" y="66" xml:space="preserve">&lt;div role="dialog"&gt;</text>
-<text class="fig-code" x="402" y="90" xml:space="preserve">  &lt;h2&gt;</text>
-<text class="fig-code fig-strong" x="402" y="114" xml:space="preserve">    &lt;slot name="title" /&gt;</text>
-<text class="fig-code" x="402" y="138" xml:space="preserve">  &lt;/h2&gt;</text>
-<text class="fig-code fig-strong" x="402" y="162" xml:space="preserve">  &lt;slot /&gt;</text>
-<text class="fig-code" x="402" y="186" xml:space="preserve">  &lt;div class="actions"&gt;</text>
-<text class="fig-code fig-strong" x="402" y="210" xml:space="preserve">    &lt;slot name="actions" /&gt;</text>
-<text class="fig-code" x="402" y="234" xml:space="preserve">  &lt;/div&gt;</text>
-<text class="fig-code" x="402" y="258" xml:space="preserve">&lt;/div&gt;</text>
-<path class="fig-arrow" d="M 299.9 110.6 Q 348.5 110.3 395.6 110.3 M 299.4 109.8 Q 348.2 109.1 396.2 110.5"/><path class="fig-arrow" d="M 396 110 Q 391.9 112.1 388.3 114.2 M 396 110 Q 392.3 108.2 387.9 105.7"/>
-<path class="fig-arrow" d="M 299.6 157.7 Q 347.6 159.8 395.7 157.9 M 299.8 158.4 Q 348.4 158.3 396.4 157.5"/><path class="fig-arrow" d="M 396 158 Q 391.1 160 386.7 162.6 M 396 158 Q 391.3 156.1 386.7 154.1"/>
-<path class="fig-arrow" d="M 299.8 205.6 Q 348.1 206.9 395.9 206 M 300.1 206.4 Q 347.8 207 396.2 205.6"/><path class="fig-arrow" d="M 396 206 Q 392.6 208.1 388.9 209.1 M 396 206 Q 391.7 203 387.8 200.3"/>
+<defs><marker id="p4c4-slots-de-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="p4c4-slots-de-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="p4c4-slots-de-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="348" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="300" height="316" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">ELTERNKOMPONENTE</text>
+<text class="d-code" x="300" y="40" text-anchor="end">App.vue</text>
+<text class="d-code" x="32" y="71" text-anchor="start">&lt;BaseDialog&gt;</text>
+<text class="d-code" x="48" y="93" text-anchor="start">&lt;template #title&gt;</text>
+<rect class="d-shadow" x="64" y="105.5" width="236" height="36" rx="10"/>
+<rect class="d-tile" x="64" y="104" width="236" height="36" rx="10"/>
+<text class="d-code" x="182" y="126" text-anchor="middle">Anfrage prüfen</text>
+<text class="d-code" x="48" y="159" text-anchor="start">&lt;/template&gt;</text>
+<rect class="d-shadow" x="48" y="171.5" width="252" height="36" rx="10"/>
+<rect class="d-tile" x="48" y="170" width="252" height="36" rx="10"/>
+<text class="d-code" x="174" y="192" text-anchor="middle">Bohrmaschine, 18. bis 21.11.</text>
+<text class="d-code" x="48" y="225" text-anchor="start">&lt;template #actions&gt;</text>
+<rect class="d-shadow" x="64" y="237.5" width="236" height="36" rx="10"/>
+<rect class="d-tile" x="64" y="236" width="236" height="36" rx="10"/>
+<text class="d-code" x="182" y="258" text-anchor="middle">&lt;button&gt;Bestätigen&lt;/button&gt;</text>
+<text class="d-code" x="48" y="291" text-anchor="start">&lt;/template&gt;</text>
+<text class="d-code" x="32" y="313" text-anchor="start">&lt;/BaseDialog&gt;</text>
+<rect class="d-band d-band-2" x="364" y="16" width="300" height="316" rx="12"/>
+<text class="d-label d-label-blue" x="380" y="40" text-anchor="start">KINDKOMPONENTE</text>
+<text class="d-code" x="648" y="40" text-anchor="end">BaseDialog.vue</text>
+<text class="d-code" x="380" y="71" text-anchor="start">&lt;div role="dialog"&gt;</text>
+<text class="d-code" x="396" y="93" text-anchor="start">&lt;h2&gt;</text>
+<rect class="d-placeholder" x="412" y="104" width="236" height="36" rx="10"/>
+<text class="d-code" x="530" y="126" text-anchor="middle">&lt;slot name="title" /&gt;</text>
+<text class="d-code" x="396" y="159" text-anchor="start">&lt;/h2&gt;</text>
+<rect class="d-placeholder" x="396" y="170" width="252" height="36" rx="10"/>
+<text class="d-code" x="522" y="192" text-anchor="middle">&lt;slot /&gt;</text>
+<text class="d-code" x="396" y="225" text-anchor="start">&lt;div class="actions"&gt;</text>
+<rect class="d-placeholder" x="412" y="236" width="236" height="36" rx="10"/>
+<text class="d-code" x="530" y="258" text-anchor="middle">&lt;slot name="actions" /&gt;</text>
+<text class="d-code" x="396" y="291" text-anchor="start">&lt;/div&gt;</text>
+<text class="d-code" x="380" y="313" text-anchor="start">&lt;/div&gt;</text>
+<path class="d-arrow d-arrow-accent" d="M 300 122 L 408 122" marker-end="url(#p4c4-slots-de-head-accent)"/>
+<path class="d-arrow d-arrow-accent" d="M 300 188 L 392 188" marker-end="url(#p4c4-slots-de-head-accent)"/>
+<path class="d-arrow d-arrow-accent" d="M 300 254 L 408 254" marker-end="url(#p4c4-slots-de-head-accent)"/>
 </svg>

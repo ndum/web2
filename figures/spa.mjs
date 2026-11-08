@@ -1,17 +1,9 @@
 /**
  * Figures of part 2, SPA basics. Writes one SVG per language into site/src/assets/figures/<lang>/.
- * Colours come from classes that site/src/styles/course.css maps to the theme variables of the
- * site, so the inlined figures follow light and dark mode.
  *
  *   node figures/spa.mjs
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { sketch } from './sketch.mjs';
-
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+import { arrow, badge, band, figure, fitted, heading, label, placeholder, save, strip, tile, WIDTH } from './diagram.mjs';
 
 const TEXT = {
   de: {
@@ -23,13 +15,13 @@ const TEXT = {
         'Beim Klick auf den Beamer und beim Zurück zum Katalog lädt die mehrseitige Website jedes Mal eine ganze Seite, ' +
         'die SPA schickt keine Anfrage, ihr JavaScript zeigt das Ding und den Katalog selbst an.',
       columns: ['Mehrseitige Website (MPA)', 'Single Page Application (SPA)'],
-      steps: ['1. Katalog öffnen', '2. Klick auf den Beamer', '3. Zurück zum Katalog'],
-      mpa: [[['GET /katalog', 'ganze Seite']], [['GET /dinge/6', 'ganze Seite']], [['GET /katalog', 'ganze Seite']]],
+      steps: ['Katalog öffnen', 'Klick auf den Beamer', 'Zurück zum Katalog'],
+      mpa: [[['Ganze Seite', 'GET /katalog']], [['Ganze Seite', 'GET /dinge/6']], [['Ganze Seite', 'GET /katalog']]],
       spa: [
         [
-          ['GET /', 'fast leere Seite'],
-          ['GET /main.js', 'JavaScript'],
-          ['GET /items', 'Daten als JSON'],
+          ['Fast leere Seite', 'GET /'],
+          ['JavaScript', 'GET /main.js'],
+          ['Daten als JSON', 'GET /items'],
         ],
         'keine Anfrage, JavaScript zeigt das Ding',
         'keine Anfrage, JavaScript zeigt den Katalog',
@@ -38,7 +30,7 @@ const TEXT = {
     loop: {
       title: 'Der Kreislauf der SPA von Hand',
       desc:
-        'Vier Kästchen bilden einen Kreislauf. Der Zustand ist ein Objekt mit status, items und route. ' +
+        'Vier Karten bilden einen Kreislauf. Der Zustand ist ein Objekt mit status, items und route. ' +
         'Die Funktion render liest den Zustand und schreibt daraus die Seite. Auf der Seite lösen Klicks, Eingaben und hashchange Events aus. ' +
         'Die Handler der Events ändern den Zustand, und der Kreislauf beginnt von vorn. Die Handler ändern die Seite nie direkt.',
       state: ['Zustand', '{ status, items, route }'],
@@ -61,13 +53,13 @@ const TEXT = {
         'On a click on the projector and on going back to the catalog, the multi-page website loads a whole page each time, ' +
         'while the SPA sends no request and its JavaScript shows the thing and the catalog by itself.',
       columns: ['Multi-page website (MPA)', 'Single page application (SPA)'],
-      steps: ['1. Open the catalog', '2. Click the projector', '3. Back to the catalog'],
-      mpa: [[['GET /catalog', 'whole page']], [['GET /things/6', 'whole page']], [['GET /catalog', 'whole page']]],
+      steps: ['Open the catalog', 'Click the projector', 'Back to the catalog'],
+      mpa: [[['Whole page', 'GET /catalog']], [['Whole page', 'GET /things/6']], [['Whole page', 'GET /catalog']]],
       spa: [
         [
-          ['GET /', 'almost empty page'],
-          ['GET /main.js', 'JavaScript'],
-          ['GET /items', 'data as JSON'],
+          ['Almost empty page', 'GET /'],
+          ['JavaScript', 'GET /main.js'],
+          ['Data as JSON', 'GET /items'],
         ],
         'no request, JavaScript shows the thing',
         'no request, JavaScript shows the catalog',
@@ -76,7 +68,7 @@ const TEXT = {
     loop: {
       title: 'The cycle of the SPA by hand',
       desc:
-        'Four boxes form a cycle. The state is an object with status, items and route. ' +
+        'Four cards form a cycle. The state is an object with status, items and route. ' +
         'The function render reads the state and writes the page from it. On the page, clicks, input and hashchange fire events. ' +
         'The event handlers change the state, and the cycle starts again. The handlers never change the page directly.',
       state: ['State', '{ status, items, route }'],
@@ -92,102 +84,80 @@ const TEXT = {
   },
 };
 
-const escape = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// What the first requests of the SPA bring back, a page, its JavaScript and the data
+const ANSWER_ICONS = ['doc', 'code', 'list'];
 
-const marker = (id) =>
-  `<defs><marker id="${id}-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">` +
-  `<path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>`;
-
-function svg(id, width, height, t, parts) {
-  return [
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc">`,
-    `<title id="${id}-title">${escape(t.title)}</title>`,
-    `<desc id="${id}-desc">${escape(t.desc)}</desc>`,
-    marker(id),
-    ...parts,
-    '</svg>',
-    '',
-  ].join('\n');
-}
-
-// A label on a patch of page background, so an arrow can pass behind it
-function label(x, y, text) {
-  const width = text.length * 6.6 + 10;
-  return [
-    `<rect class="fig-label-bg" x="${x - width / 2}" y="${y - 13}" width="${width}" height="18" rx="3"/>`,
-    `<text class="fig-sub" x="${x}" y="${y}" text-anchor="middle">${escape(text)}</text>`,
-  ];
-}
+const CARD_H = 44;
+const CARD_GAP = 8;
+const STEP_HEAD = 26;
+const STEP_GAP = 16;
 
 function requests(lang) {
   const t = TEXT[lang].requests;
   const id = `p2c1-requests-${lang}`;
-  const columns = [20, 350];
-  const parts = t.columns.map((name, index) => `<text class="fig-text" x="${columns[index]}" y="28">${escape(name)}</text>`);
-  // Every step starts at the same height in both columns, the tallest column sets it
-  const heights = t.mpa.map((mpaStep, index) => 26 + Math.max(mpaStep.length, Array.isArray(t.spa[index]) ? t.spa[index].length : 1) * 34);
-  let y = 52;
+  const columns = [16, 348].map((x) => ({ x, w: 316 }));
+  const cards = (step) => Math.max(t.mpa[step].length, Array.isArray(t.spa[step]) ? t.spa[step].length : 1);
+  // Every step starts at the same height in both columns, the column with more cards sets it
+  const tops = [];
+  let y = 56;
+  t.steps.forEach((_, step) => {
+    tops.push(y);
+    y += STEP_HEAD + cards(step) * CARD_H + (cards(step) - 1) * CARD_GAP + STEP_GAP;
+  });
+  const bottom = y - STEP_GAP + 16;
+  const body = [];
+  columns.forEach((c, column) => {
+    body.push(band(c.x, 16, c.w, bottom - 16, column + 1));
+    body.push(label(c.x + 16, 40, t.columns[column], 'start', column ? { tone: 'blue' } : {}));
+  });
   t.steps.forEach((step, index) => {
-    columns.forEach((x, column) => {
-      parts.push(`<text class="fig-sub" x="${x}" y="${y + 12}">${escape(step)}</text>`);
+    columns.forEach((c, column) => {
+      const top = tops[index];
+      body.push(badge(c.x + 26, top + 8, String(index + 1), { accent: column === 1 && index === 0 }), heading(c.x + 44, top + 12, step));
       const content = column === 0 ? t.mpa[index] : t.spa[index];
       if (typeof content === 'string') {
-        parts.push(
-          `<rect class="fig-box" x="${x}" y="${y + 22}" width="300" height="26" rx="6" stroke-dasharray="5 4"/>`,
-          `<text class="fig-sub fig-note" x="${x + 10}" y="${y + 39}">${escape(content)}</text>`,
-        );
+        body.push(placeholder(c.x + 16, top + STEP_HEAD, c.w - 32, CARD_H, content));
         return;
       }
-      content.forEach(([request, answer], row) => {
-        const top = y + 22 + row * 34;
-        parts.push(
-          `<rect class="fig-box fig-box-strong" x="${x}" y="${top}" width="130" height="26" rx="6"/>`,
-          `<text class="fig-code" x="${x + 10}" y="${top + 17}">${escape(request)}</text>`,
-          `<path class="fig-arrow" d="M ${x + 134} ${top + 13} L ${x + 160} ${top + 13}" marker-end="url(#${id}-head)"/>`,
-          `<text class="fig-sub" x="${x + 168}" y="${top + 17}">${escape(answer)}</text>`,
-        );
+      content.forEach(([answer, request], row) => {
+        const icon = column === 0 ? 'doc' : ANSWER_ICONS[row];
+        body.push(tile(c.x + 16, top + STEP_HEAD + row * (CARD_H + CARD_GAP), c.w - 32, CARD_H, answer, request, { code: true, icon }));
       });
     });
-    y += heights[index] + 14;
   });
-  return svg(id, 680, y, t, parts);
+  return figure({ id, width: WIDTH, height: bottom + 16, title: t.title, desc: t.desc, body });
 }
 
 function renderLoop(lang) {
   const t = TEXT[lang].loop;
   const id = `p2c2-loop-${lang}`;
-  const boxes = [
-    { x: 60, y: 40, content: t.state, strong: true },
-    { x: 420, y: 40, content: t.render },
-    { x: 420, y: 200, content: t.page },
-    { x: 60, y: 200, content: t.event },
+  const w = 220;
+  const h = 56;
+  const left = 56;
+  const right = WIDTH - 56 - w;
+  const top = 32;
+  const lower = 176;
+  // The four corners of the cycle, the arrows run clockwise between them
+  const body = [
+    arrow(id, [[left + w, top + h / 2], [right - 4, top + h / 2]]),
+    fitted(WIDTH / 2, top + h / 2 - 8, t.reads, right - left - w - 16, 'middle'),
+    arrow(id, [[right + w / 2, top + h + 1.5], [right + w / 2, lower - 4]]),
+    fitted(right + w / 2 + 10, (top + h + lower) / 2 + 4, t.writes, 100),
+    arrow(id, [[right, lower + h / 2], [left + w + 4, lower + h / 2]]),
+    fitted(WIDTH / 2, lower + h / 2 - 8, t.fires, right - left - w - 16, 'middle'),
+    // The handlers change the state, the one way the page changes
+    arrow(id, [[left + w / 2, lower], [left + w / 2, top + h + 5.5]], { accent: true }),
+    fitted(left + w / 2 + 10, (top + h + lower) / 2 + 4, t.changes, 100),
+    tile(left, top, w, h, ...t.state, { accent: true, code: true, icon: 'database' }),
+    tile(right, top, w, h, ...t.render, { icon: 'code' }),
+    tile(right, lower, w, h, ...t.page, { icon: 'browser' }),
+    tile(left, lower, w, h, ...t.event, { icon: 'bolt' }),
+    strip(left, lower + h + 28, WIDTH - 2 * left, 30, t.note),
   ];
-  const parts = [];
-  for (const box of boxes) {
-    const [name, sub] = box.content;
-    parts.push(
-      `<rect class="fig-box${box.strong ? ' fig-box-strong' : ''}" x="${box.x}" y="${box.y}" width="200" height="64" rx="10"/>`,
-      `<text class="fig-text" x="${box.x + 100}" y="${box.y + 28}" text-anchor="middle">${escape(name)}</text>`,
-      `<text class="${box === boxes[0] ? 'fig-code' : 'fig-sub'}" x="${box.x + 100}" y="${box.y + 50}" text-anchor="middle">${escape(sub)}</text>`,
-    );
-  }
-  parts.push(
-    `<path class="fig-arrow" d="M 262 72 L 416 72" marker-end="url(#${id}-head)"/>`,
-    ...label(340, 66, t.reads),
-    `<path class="fig-arrow" d="M 520 106 L 520 196" marker-end="url(#${id}-head)"/>`,
-    ...label(520, 156, t.writes),
-    `<path class="fig-arrow" d="M 418 232 L 264 232" marker-end="url(#${id}-head)"/>`,
-    ...label(340, 226, t.fires),
-    `<path class="fig-arrow" d="M 160 198 L 160 108" marker-end="url(#${id}-head)"/>`,
-    ...label(160, 156, t.changes),
-    `<text class="fig-sub fig-note" x="340" y="296" text-anchor="middle">${escape(t.note)}</text>`,
-  );
-  return svg(id, 680, 310, t, parts);
+  return figure({ id, width: WIDTH, height: lower + h + 28 + 30 + 20, title: t.title, desc: t.desc, body });
 }
 
 for (const lang of Object.keys(TEXT)) {
-  const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
-  mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p2c1-requests.svg'), sketch(requests(lang), 'p2c1-requests'));
-  writeFileSync(join(folder, 'p2c2-render-loop.svg'), sketch(renderLoop(lang), 'p2c2-render-loop'));
+  save(lang, 'p2c1-requests', requests(lang));
+  save(lang, 'p2c2-render-loop', renderLoop(lang));
 }

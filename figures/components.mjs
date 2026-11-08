@@ -1,134 +1,84 @@
 /**
  * Figures of part 4, components. Writes one SVG per language into site/src/assets/figures/<lang>/.
- * Colours come from classes that site/src/styles/course.css maps to the theme variables of the
- * site, so the inlined figures follow light and dark mode.
  *
  *   node figures/components.mjs
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { sketch } from './sketch.mjs';
-
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+import {
+  arrow,
+  band,
+  figure,
+  fitted,
+  heading,
+  label,
+  labelWidth,
+  line,
+  measure,
+  note,
+  PADDING,
+  placeholder,
+  room,
+  save,
+  SIZE,
+  strip,
+  tile,
+  WIDTH,
+} from './diagram.mjs';
 
 const TEXT = {
-  de: {
-    title: 'Props fliessen von der Eltern- zur Kindkomponente',
-    desc:
-      'Oben steht die Komponente App mit dem Katalog. Drei Pfeile führen nach unten zu drei Karten der Komponente ItemCard. ' +
-      'An jedem Pfeil stehen die Props, die App übergibt, zum Beispiel name gleich Bohrmaschine und category gleich Werkzeug. ' +
-      'Jede Karte zeigt nur, was sie bekommen hat. Ein Pfeil zurück nach oben fehlt, die Daten fliessen nur von oben nach unten.',
-    parent: 'App.vue',
-    parentSub: 'besitzt die Daten',
-    cards: [
-      ['Bohrmaschine', 'Werkzeug'],
-      ['Zelt für vier', 'Camping'],
-      ['Raclette-Ofen', 'Küche'],
-    ],
-    child: 'ItemCard.vue',
-    flow: 'Props, nur nach unten',
-  },
-  en: {
-    title: 'Props flow from the parent to the child component',
-    desc:
-      'At the top is the component App with the catalog. Three arrows lead down to three cards of the component ItemCard. ' +
-      'Each arrow carries the props App passes, for example name equals Drill and category equals Tools. ' +
-      'Each card shows only what it received. There is no arrow back up, the data flow only downward.',
-    parent: 'App.vue',
-    parentSub: 'owns the data',
-    cards: [
-      ['Drill', 'Tools'],
-      ['Tent for four', 'Camping'],
-      ['Raclette oven', 'Kitchen'],
-    ],
-    child: 'ItemCard.vue',
-    flow: 'props, downward only',
-  },
-};
-
-const escape = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-function propsFlow(lang) {
-  const t = TEXT[lang];
-  const id = `p4c2-flow-${lang}`;
-  const width = 680;
-  const parent = { x: 250, y: 20, w: 180, h: 64 };
-  const cards = t.cards.map((card, i) => ({ x: 20 + i * 225, y: 210, w: 190, h: 86, card }));
-  const parts = [];
-
-  parts.push(
-    `<rect class="fig-box fig-box-strong" x="${parent.x}" y="${parent.y}" width="${parent.w}" height="${parent.h}" rx="10"/>`,
-    `<text class="fig-text" x="${parent.x + parent.w / 2}" y="${parent.y + 28}" text-anchor="middle">${escape(t.parent)}</text>`,
-    `<text class="fig-sub" x="${parent.x + parent.w / 2}" y="${parent.y + 50}" text-anchor="middle">${escape(t.parentSub)}</text>`,
-  );
-
-  for (const card of cards) {
-    const startX = parent.x + parent.w / 2;
-    const startY = parent.y + parent.h;
-    const endX = card.x + card.w / 2;
-    const endY = card.y - 6;
-    parts.push(`<path class="fig-arrow" d="M ${startX} ${startY} C ${startX} ${startY + 60}, ${endX} ${endY - 70}, ${endX} ${endY}" marker-end="url(#${id}-head)"/>`);
-    const [name, category] = card.card;
-    // The labels sit on a patch of page background, so the arrow passes behind them
-    const lines = [`name="${name}"`, `category="${category}"`];
-    const labelWidth = Math.max(...lines.map((line) => line.length)) * 7.3 + 10;
-    parts.push(
-      `<rect class="fig-label-bg" x="${endX - labelWidth / 2}" y="${card.y - 52}" width="${labelWidth}" height="36" rx="4"/>`,
-      `<text class="fig-code" x="${endX}" y="${card.y - 38}" text-anchor="middle">${escape(lines[0])}</text>`,
-      `<text class="fig-code" x="${endX}" y="${card.y - 22}" text-anchor="middle">${escape(lines[1])}</text>`,
-      `<rect class="fig-box" x="${card.x}" y="${card.y}" width="${card.w}" height="${card.h}" rx="10"/>`,
-      `<text class="fig-sub" x="${card.x + 12}" y="${card.y + 20}">${escape(t.child)}</text>`,
-      `<text class="fig-text" x="${card.x + 12}" y="${card.y + 48}">${escape(name)}</text>`,
-      `<text class="fig-sub" x="${card.x + 12}" y="${card.y + 70}">${escape(category)}</text>`,
-    );
-  }
-  parts.push(`<text class="fig-sub fig-note" x="${width - 20}" y="${parent.y + 38}" text-anchor="end">${escape(t.flow)}</text>`);
-
-  return [
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 316" role="img" aria-labelledby="${id}-title ${id}-desc">`,
-    `<title id="${id}-title">${escape(t.title)}</title>`,
-    `<desc id="${id}-desc">${escape(t.desc)}</desc>`,
-    `<defs><marker id="${id}-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">` +
-      `<path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>`,
-    ...parts,
-    '</svg>',
-    '',
-  ].join('\n');
-}
-
-const MORE = {
   de: {
     tree: {
       title: 'Der Baum der Komponenten aus dem Entwurf',
       desc:
-        'Links ein Entwurf der Seite mit dem Katalog. Der Kopf heisst AppHeader, das Suchfeld SearchBar, die Auswahl der Kategorie CategoryFilter, ' +
-        'die Liste ItemList mit einer ItemCard für jedes Ding und der Fuss AppFooter. Rechts der Baum der ganzen App. ' +
-        'App enthält AppHeader, CatalogView, ItemView und AppFooter. CatalogView enthält SearchBar, CategoryFilter und ItemList mit ItemCard, ' +
-        'ItemView enthält ReservationForm und BaseDialog, AppFooter enthält OpeningHours. App besitzt Katalog, Favoriten, Suchtext und Kategorie, ReservationForm die Anfrage.',
-      wireframe: { brand: 'Lorraine Commons', search: 'Suchen', category: 'Kategorie', cards: ['Bohrmaschine', 'Zelt für vier', 'Raclette-Ofen'], footer: 'Öffnungszeiten' },
-      owns: ['besitzt Katalog, Favoriten,', 'Suchtext und Kategorie'],
+        'Links ein Entwurf der Seite mit dem Katalog. Der Kopf heisst AppHeader, das Suchfeld SearchBar, ' +
+        'die Auswahl der Kategorie CategoryFilter, die Liste ItemList mit einer ItemCard für jedes Ding und der Fuss AppFooter. ' +
+        'Rechts der Baum der ganzen App. App enthält AppHeader, CatalogView, ItemView und AppFooter. ' +
+        'CatalogView enthält SearchBar, CategoryFilter und ItemList mit ItemCard, ItemView enthält ReservationForm und BaseDialog, ' +
+        'AppFooter enthält OpeningHours. App besitzt Katalog, Favoriten, Suchtext und Kategorie, ReservationForm die Anfrage.',
+      wireframe: 'Entwurf des Katalogs',
+      tree: 'Baum der Komponenten',
+      brand: 'Lorraine Commons',
+      search: 'Suchen',
+      category: 'Kategorie',
+      items: ['Bohrmaschine', 'Zelt für vier', 'Raclette-Ofen'],
+      footer: 'Öffnungszeiten',
+      owns: 'besitzt Katalog, Favoriten, Suchtext und Kategorie',
       formOwns: 'besitzt die Anfrage',
+    },
+    flow: {
+      title: 'Props fliessen von der Eltern- zur Kindkomponente',
+      desc:
+        'Oben steht die Komponente App, der die Daten gehören. Drei Pfeile führen nach unten zu drei Karten der Komponente ItemCard. ' +
+        'An jedem Pfeil stehen die Props, die App übergibt, zum Beispiel name gleich Bohrmaschine und category gleich Werkzeug. ' +
+        'Jede Karte zeigt nur, was sie bekommen hat. Ein Pfeil zurück nach oben fehlt, die Daten fliessen nur von oben nach unten.',
+      owns: 'besitzt die Daten',
+      cards: [
+        ['Bohrmaschine', 'Werkzeug'],
+        ['Zelt für vier', 'Camping'],
+        ['Raclette-Ofen', 'Küche'],
+      ],
+      rule: 'Props fliessen nur nach unten, nie zurück nach oben.',
     },
     events: {
       title: 'Props nach unten, Events nach oben',
       desc:
-        'Oben steht App. Links darunter ItemCard, App gibt ihr mit Props den Namen und die Verfügbarkeit, die Karte meldet mit dem Event reserve die id zurück. ' +
-        'Rechts darunter SearchBar, App gibt ihr den Wert modelValue, das Suchfeld meldet Änderungen mit dem Event update:modelValue. v-model verbindet beides.',
-      parentSub: 'besitzt die Daten',
+        'Oben steht App. Links darunter ItemCard, App gibt ihr mit Props den Namen und die Verfügbarkeit, ' +
+        'die Karte meldet mit dem Event reserve die id zurück. Rechts darunter SearchBar, App gibt ihr den Wert modelValue, ' +
+        'das Suchfeld meldet Änderungen mit dem Event update:modelValue. v-model verbindet beides.',
+      owns: 'besitzt die Daten',
       props: 'Props',
       events: 'Events',
       model: 'v-model verbindet beide Richtungen',
-      note: 'Daten fliessen nach unten, Meldungen nach oben.',
+      rule: 'Daten fliessen nach unten, Meldungen nach oben.',
     },
     slots: {
       title: 'Inhalte füllen die Slots einer Komponente',
       desc:
-        'Links das Template der Elternkomponente mit BaseDialog. Sie füllt den Slot title mit dem Titel, den Standard-Slot mit dem Text der Anfrage und den Slot actions mit einem Knopf. ' +
-        'Rechts das Template von BaseDialog mit den drei Stellen slot name title, slot und slot name actions. Pfeile verbinden jeden Inhalt mit seinem Slot.',
-      parent: 'App.vue füllt die Slots',
-      child: 'BaseDialog.vue zeigt sie an',
+        'Links das Template der Elternkomponente mit BaseDialog. Sie füllt den Slot title mit dem Titel, ' +
+        'den Standard-Slot mit dem Text der Anfrage und den Slot actions mit einem Knopf. ' +
+        'Rechts das Template von BaseDialog mit den drei Stellen slot name title, slot und slot name actions. ' +
+        'Pfeile verbinden jeden Inhalt mit seinem Slot.',
+      parent: 'Elternkomponente',
+      child: 'Kindkomponente',
       heading: 'Anfrage prüfen',
       body: 'Bohrmaschine, 18. bis 21.11.',
       button: 'Bestätigen',
@@ -136,45 +86,69 @@ const MORE = {
     provide: {
       title: 'Props durchreichen oder provide und inject',
       desc:
-        'Links reicht App das Mitglied als Prop an ItemView weiter und ItemView an ReservationForm, obwohl ItemView es selbst nicht braucht. ' +
+        'Links reicht App das Mitglied als Prop an ItemView weiter und ItemView an ReservationForm, ' +
+        'obwohl ItemView es selbst nicht braucht. ' +
         'Rechts stellt App das Mitglied mit provide bereit, und ReservationForm holt es mit inject, ohne dass ItemView davon weiss.',
       drilling: 'Props durchreichen',
       injecting: 'provide und inject',
       notNeeded: 'braucht member nicht',
-      provides: "provide(memberKey, member)",
-      injects: "inject(memberKey)",
     },
   },
   en: {
     tree: {
       title: 'The tree of components drawn from a wireframe',
       desc:
-        'On the left a wireframe of the catalog page. The header is AppHeader, the search field SearchBar, the category select CategoryFilter, ' +
-        'the list ItemList with an ItemCard for every thing and the footer AppFooter. On the right the tree of the whole app. ' +
-        'App contains AppHeader, CatalogView, ItemView and AppFooter. CatalogView contains SearchBar, CategoryFilter and ItemList with ItemCard, ' +
-        'ItemView contains ReservationForm and BaseDialog, AppFooter contains OpeningHours. App owns catalog, favorites, search text and category, ReservationForm the request.',
-      wireframe: { brand: 'Lorraine Commons', search: 'Search', category: 'Category', cards: ['Drill', 'Tent for four', 'Raclette oven'], footer: 'Opening hours' },
-      owns: ['owns catalog, favorites,', 'search text and category'],
+        'On the left a wireframe of the catalog page. The header is AppHeader, the search field SearchBar, ' +
+        'the category select CategoryFilter, the list ItemList with an ItemCard for every thing and the footer AppFooter. ' +
+        'On the right the tree of the whole app. App contains AppHeader, CatalogView, ItemView and AppFooter. ' +
+        'CatalogView contains SearchBar, CategoryFilter and ItemList with ItemCard, ItemView contains ReservationForm and BaseDialog, ' +
+        'AppFooter contains OpeningHours. App owns catalog, favorites, search text and category, ReservationForm the request.',
+      wireframe: 'Catalog wireframe',
+      tree: 'Component tree',
+      brand: 'Lorraine Commons',
+      search: 'Search',
+      category: 'Category',
+      items: ['Drill', 'Tent for four', 'Raclette oven'],
+      footer: 'Opening hours',
+      owns: 'owns catalog, favorites, search text and category',
       formOwns: 'owns the request',
+    },
+    flow: {
+      title: 'Props flow from the parent to the child component',
+      desc:
+        'At the top is the component App, which owns the data. Three arrows lead down to three cards of the component ItemCard. ' +
+        'Each arrow carries the props App passes, for example name equals Drill and category equals Tools. ' +
+        'Each card shows only what it received. There is no arrow back up, the data flow only downward.',
+      owns: 'owns the data',
+      cards: [
+        ['Drill', 'Tools'],
+        ['Tent for four', 'Camping'],
+        ['Raclette oven', 'Kitchen'],
+      ],
+      rule: 'Props flow only downward, never back up.',
     },
     events: {
       title: 'Props down, events up',
       desc:
-        'App is at the top. Below it on the left is ItemCard, App gives it the name and the availability through props, and the card reports the id back with the event reserve. ' +
-        'Below it on the right is SearchBar, App gives it the value modelValue, and the search field reports changes with the event update:modelValue. v-model connects both.',
-      parentSub: 'owns the data',
-      props: 'props',
-      events: 'events',
+        'App is at the top. Below it on the left is ItemCard, App gives it the name and the availability through props, ' +
+        'and the card reports the id back with the event reserve. ' +
+        'Below it on the right is SearchBar, App gives it the value modelValue, ' +
+        'and the search field reports changes with the event update:modelValue. v-model connects both.',
+      owns: 'owns the data',
+      props: 'Props',
+      events: 'Events',
       model: 'v-model connects both directions',
-      note: 'Data flow down, messages flow up.',
+      rule: 'Data flow down, messages flow up.',
     },
     slots: {
       title: 'Content fills the slots of a component',
       desc:
-        'On the left the template of the parent component with BaseDialog. It fills the slot title with the title, the default slot with the text of the request and the slot actions with a button. ' +
-        'On the right the template of BaseDialog with the three places slot name title, slot and slot name actions. Arrows connect each piece of content with its slot.',
-      parent: 'App.vue fills the slots',
-      child: 'BaseDialog.vue shows them',
+        'On the left the template of the parent component with BaseDialog. It fills the slot title with the title, ' +
+        'the default slot with the text of the request and the slot actions with a button. ' +
+        'On the right the template of BaseDialog with the three places slot name title, slot and slot name actions. ' +
+        'Arrows connect each piece of content with its slot.',
+      parent: 'Parent component',
+      child: 'Child component',
       heading: 'Check the request',
       body: 'Drill, Nov 18 to 21',
       button: 'Confirm',
@@ -182,227 +156,315 @@ const MORE = {
     provide: {
       title: 'Passing props down or provide and inject',
       desc:
-        'On the left, App passes the member as a prop to ItemView, and ItemView passes it on to ReservationForm, although ItemView does not need it itself. ' +
+        'On the left, App passes the member as a prop to ItemView, and ItemView passes it on to ReservationForm, ' +
+        'although ItemView does not need it itself. ' +
         'On the right, App provides the member with provide, and ReservationForm gets it with inject, without ItemView knowing about it.',
-      drilling: 'passing props down',
+      drilling: 'Passing props down',
       injecting: 'provide and inject',
       notNeeded: 'does not need member',
-      provides: "provide(memberKey, member)",
-      injects: "inject(memberKey)",
     },
   },
 };
 
-function svg(id, width, height, t, parts) {
+/** A card with one centred line of code, for template content that moves into a slot */
+function codeCard(x, y, w, h, text) {
+  room(text, w - 2 * PADDING, { mono: true });
   return [
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc">`,
-    `<title id="${id}-title">${escape(t.title)}</title>`,
-    `<desc id="${id}-desc">${escape(t.desc)}</desc>`,
-    `<defs><marker id="${id}-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">` +
-      `<path class="fig-arrowhead" d="M 0 0 L 10 5 L 0 10 z"/></marker></defs>`,
-    ...parts,
-    '</svg>',
-    '',
+    `<rect class="d-shadow" x="${x}" y="${y + 1.5}" width="${w}" height="${h}" rx="10"/>`,
+    `<rect class="d-tile" x="${x}" y="${y}" width="${w}" height="${h}" rx="10"/>`,
+    note(x + w / 2, y + h / 2 + 4, text, 'middle', { code: true }),
   ].join('\n');
 }
 
-const arrow = (id, path) => `<path class="fig-arrow" d="${path}" marker-end="url(#${id}-head)"/>`;
-
-// A label on a patch of page background, so an arrow can pass behind it
-function label(x, y, text, code = false) {
-  const width = text.length * (code ? 7.3 : 6.6) + 10;
-  return [
-    `<rect class="fig-label-bg" x="${x - width / 2}" y="${y - 13}" width="${width}" height="18" rx="3"/>`,
-    `<text class="${code ? 'fig-code' : 'fig-sub'}" x="${x}" y="${y}" text-anchor="middle">${escape(text)}</text>`,
-  ];
+/** The label of a band with a file name at its right end, both on the first line of the band */
+function bandHead(x, w, text, file, options = {}) {
+  const needed = labelWidth(text) + 16 + measure(file, SIZE.code, { mono: true });
+  if (needed > w - 32) throw new Error(`"${text}" and "${file}" need about ${Math.ceil(needed)} px but have only ${w - 32} px.`);
+  return [label(x + 16, 40, text, 'start', options), note(x + w - 16, 40, file, 'end', { code: true })].join('\n');
 }
 
+// The components of the case app with their depth in the tree, in the order of the indented tree
+const TREE = [
+  ['App', 0],
+  ['AppHeader', 1],
+  ['CatalogView', 1],
+  ['SearchBar', 2],
+  ['CategoryFilter', 2],
+  ['ItemList', 2],
+  ['ItemCard', 3],
+  ['ItemView', 1],
+  ['ReservationForm', 2],
+  ['BaseDialog', 2],
+  ['AppFooter', 1],
+  ['OpeningHours', 2],
+];
+
+const TOP = 56;
+const ROW_H = 30;
+const OWNER_H = 44;
+const ROW_GAP = 6;
+const INDENT = 28;
+const NODE_W = 160;
+const WIRE_W = 264;
+const WIRE_H = 56;
+
 function componentTree(lang) {
-  const t = MORE[lang].tree;
-  const w = t.wireframe;
+  const t = TEXT[lang].tree;
   const id = `p4c1-tree-${lang}`;
-  const parts = [
-    // The wireframe of the catalog page, each part labelled with its component
-    `<rect class="fig-box" x="20" y="20" width="300" height="340" rx="8"/>`,
-    `<rect class="fig-box fig-box-strong" x="30" y="30" width="280" height="36" rx="4"/>`,
-    `<text class="fig-sub fig-strong" x="42" y="53">${escape(w.brand)}</text>`,
-    `<text class="fig-code" x="302" y="53" text-anchor="end">AppHeader</text>`,
-    `<rect class="fig-box" x="40" y="80" width="150" height="28" rx="4"/>`,
-    `<text class="fig-sub" x="50" y="99">${escape(w.search)}</text>`,
-    `<text class="fig-code" x="184" y="99" text-anchor="end">SearchBar</text>`,
-    `<rect class="fig-box" x="198" y="80" width="112" height="28" rx="4"/>`,
-    `<text class="fig-code" x="254" y="99" text-anchor="middle">CategoryFilter</text>`,
-    `<rect class="fig-box" x="36" y="120" width="278" height="176" rx="4" stroke-dasharray="5 4"/>`,
-    `<text class="fig-code" x="46" y="138">ItemList</text>`,
+  const wire = { x: 16, w: WIRE_W };
+  const tree = { x: 16 + WIRE_W + 16, w: WIDTH - 16 - (16 + WIRE_W + 16) };
+  const end = tree.x + tree.w - 16;
+
+  // The two components that own state get a second line that names it, App spans the band as the root
+  const owns = { App: t.owns, ReservationForm: t.formOwns };
+  let top = TOP;
+  const rows = TREE.map(([name, depth]) => {
+    const x = tree.x + 16 + depth * INDENT;
+    const row = { name, depth, x, y: top, w: depth ? NODE_W : end - x, h: owns[name] ? OWNER_H : ROW_H };
+    top += row.h + ROW_GAP;
+    return row;
+  });
+  const contentH = top - ROW_GAP - TOP;
+  const bandH = contentH + 56;
+  const body = [
+    band(wire.x, 16, wire.w, bandH, 1),
+    label(wire.x + 16, 40, t.wireframe),
+    band(tree.x, 16, tree.w, bandH, 2),
+    label(tree.x + 16, 40, t.tree, 'start', { tone: 'blue' }),
   ];
-  w.cards.forEach((name, index) => {
-    const top = 148 + index * 48;
-    parts.push(
-      `<rect class="fig-box" x="46" y="${top}" width="258" height="40" rx="4"/>`,
-      `<text class="fig-sub fig-strong" x="58" y="${top + 25}">${escape(name)}</text>`,
-      `<text class="fig-code" x="296" y="${top + 25}" text-anchor="end">ItemCard</text>`,
+
+  // The wireframe of the catalog page, every part shows what the page shows and the component that draws it
+  const inner = wire.x + 16;
+  const innerW = wire.w - 32;
+  const gap = 16;
+  const filterW = 124;
+  let y = TOP;
+  body.push(tile(inner, y, innerW, WIRE_H, t.brand, 'AppHeader', { code: true }));
+  y += WIRE_H + gap;
+  body.push(tile(inner, y, innerW - filterW - 8, WIRE_H, t.search, 'SearchBar', { code: true }));
+  body.push(tile(inner + innerW - filterW, y, filterW, WIRE_H, t.category, 'CategoryFilter', { code: true }));
+  y += WIRE_H + gap;
+  // The list takes the height the tree leaves, so both bands end on the same line
+  const listH = contentH - 3 * (WIRE_H + gap);
+  const itemGap = (listH - 32 - 14 - t.items.length * WIRE_H) / (t.items.length - 1);
+  body.push(band(inner, y, innerW, listH, 4), fitted(inner + 12, y + 21, 'ItemList', innerW - 24, 'start', { code: true }));
+  t.items.forEach((name, index) => {
+    body.push(tile(inner + 12, y + 32 + index * (WIRE_H + itemGap), innerW - 24, WIRE_H, name, 'ItemCard', { code: true }));
+  });
+  y += listH + gap;
+  body.push(tile(inner, y, innerW, WIRE_H, t.footer, 'AppFooter', { code: true }));
+
+  // The indented tree, each line runs from a parent down to its children
+  const parents = rows.map((row, index) => {
+    let parent = index - 1;
+    while (parent >= 0 && rows[parent].depth >= row.depth) parent--;
+    return parent;
+  });
+  rows.forEach((row, index) => {
+    const children = rows.filter((_, child) => parents[child] === index);
+    if (!children.length) return;
+    const trunk = row.x + INDENT / 2;
+    const last = children[children.length - 1];
+    // The lines start and end under the cards, the cards drawn later cover their ends
+    body.push(line([[trunk, row.y + row.h / 2], [trunk, last.y + last.h / 2], [last.x + 8, last.y + last.h / 2]]));
+    children.slice(0, -1).forEach((child) => body.push(line([[trunk, child.y + child.h / 2], [child.x + 8, child.y + child.h / 2]])));
+  });
+  for (const row of rows) {
+    body.push(tile(row.x, row.y, row.w, row.h, row.name, owns[row.name] ?? '', { icon: owns[row.name] ? 'database' : '' }));
+  }
+  return figure({ id, width: WIDTH, height: 16 + bandH + 16, title: t.title, desc: t.desc, body });
+}
+
+function propsFlow(lang) {
+  const t = TEXT[lang].flow;
+  const id = `p4c2-flow-${lang}`;
+  const parent = { x: 220, y: 16, w: 240, h: 52 };
+  const bus = parent.y + parent.h + 24;
+  const cardY = bus + 64;
+  const cardW = 200;
+  const cardH = 52;
+  const cards = t.cards.map(([name, category], index) => ({ x: 16 + index * (cardW + 24), name, category }));
+  const from = parent.x + parent.w / 2;
+  const mid = (bus + cardY) / 2;
+  const body = [];
+  cards.forEach((card, index) => {
+    // The arrow lands above the icon of the card, its props start where the text of the card starts
+    const drop = card.x + 21;
+    const limit = index < cards.length - 1 ? cards[index + 1].x + 21 - 10 : WIDTH - 16;
+    body.push(
+      arrow(id, [[from, parent.y + parent.h + 1.5], [from, bus], [drop, bus], [drop, cardY - 4]], { accent: true }),
+      fitted(card.x + 40, mid - 3, `name="${card.name}"`, limit - card.x - 40, 'start', { code: true }),
+      fitted(card.x + 40, mid + 13, `category="${card.category}"`, limit - card.x - 40, 'start', { code: true }),
     );
   });
-  parts.push(
-    `<rect class="fig-box fig-box-strong" x="30" y="312" width="280" height="36" rx="4"/>`,
-    `<text class="fig-sub" x="42" y="335">${escape(w.footer)}</text>`,
-    `<text class="fig-code" x="302" y="335" text-anchor="end">AppFooter</text>`,
-  );
-  // The tree of the whole app, one line per component, indented by depth
-  const tree = [
-    ['App', 0],
-    ['AppHeader', 1],
-    ['CatalogView', 1],
-    ['SearchBar', 2],
-    ['CategoryFilter', 2],
-    ['ItemList', 2],
-    ['ItemCard', 3],
-    ['ItemView', 1],
-    ['ReservationForm', 2],
-    ['BaseDialog', 2],
-    ['AppFooter', 1],
-    ['OpeningHours', 2],
-  ];
-  const left = 360;
-  const step = 26;
-  const top = 44;
-  tree.forEach(([name, depth], index) => {
-    const x = left + depth * 26;
-    const y = top + index * step;
-    if (depth > 0) {
-      // Find the parent line, the last line above with a smaller depth
-      let parent = index - 1;
-      while (tree[parent][1] >= depth) parent--;
-      const parentX = left + tree[parent][1] * 26 + 6;
-      const parentY = top + parent * step + 5;
-      parts.push(`<path class="fig-arrow" d="M ${parentX} ${parentY} L ${parentX} ${y - 4} L ${x - 4} ${y - 4}" stroke-width="1.5"/>`);
-    }
-    parts.push(`<text class="fig-code${depth === 0 ? ' fig-strong' : ''}" x="${x}" y="${y}" style="font-size: 13px">${escape(name)}</text>`);
-  });
-  parts.push(
-    `<text class="fig-sub fig-note" x="${left + 52}" y="${top - 4}">${escape(t.owns[0])}</text>`,
-    `<text class="fig-sub fig-note" x="${left + 52}" y="${top + 12}">${escape(t.owns[1])}</text>`,
-    `<text class="fig-sub fig-note" x="${left + 52 + 130}" y="${top + 8 * step}">${escape(t.formOwns)}</text>`,
-  );
-  return svg(id, 680, 370, t, parts);
+  body.push(tile(parent.x, parent.y, parent.w, parent.h, 'App.vue', t.owns, { icon: 'database' }));
+  cards.forEach((card) => body.push(tile(card.x, cardY, cardW, cardH, 'ItemCard.vue', `${card.name}, ${card.category}`, { icon: 'box' })));
+  const stripY = cardY + cardH + 24;
+  body.push(strip(16, stripY, WIDTH - 32, 30, t.rule));
+  return figure({ id, width: WIDTH, height: stripY + 30 + 16, title: t.title, desc: t.desc, body });
 }
 
 function propsEvents(lang) {
-  const t = MORE[lang].events;
+  const t = TEXT[lang].events;
   const id = `p4c3-events-${lang}`;
-  const parts = [
-    `<rect class="fig-box fig-box-strong" x="60" y="20" width="600" height="54" rx="10"/>`,
-    `<text class="fig-text" x="360" y="44" text-anchor="middle">App.vue</text>`,
-    `<text class="fig-sub" x="360" y="64" text-anchor="middle">${escape(t.parentSub)}</text>`,
-  ];
+  const parent = { x: 16, y: 16, w: WIDTH - 32, h: 52 };
+  const childY = parent.y + parent.h + 92;
+  const cardW = 316;
+  const cardH = 52;
   const children = [
-    { x: 110, name: 'ItemCard.vue', down: ':name, :available', up: '@reserve(id)', note: t.note },
-    { x: 420, name: 'SearchBar.vue', down: 'modelValue', up: 'update:modelValue', note: t.model },
+    { x: 16, name: 'ItemCard.vue', sub: '', icon: 'box', down: ':name, :available', up: '@reserve(id)' },
+    { x: WIDTH - 16 - cardW, name: 'SearchBar.vue', sub: t.model, icon: 'search', down: 'modelValue', up: 'update:modelValue' },
   ];
+  const mid = (parent.y + parent.h + childY) / 2;
+  const body = [];
   for (const child of children) {
-    const down = child.x + 55;
-    const up = child.x + 135;
-    parts.push(
-      `<rect class="fig-box" x="${child.x}" y="200" width="190" height="52" rx="10"/>`,
-      `<text class="fig-text" x="${child.x + 95}" y="231" text-anchor="middle">${escape(child.name)}</text>`,
-      // Props go down on the left, events come up on the right
-      arrow(id, `M ${down} 76 L ${down} 196`),
-      arrow(id, `M ${up} 198 L ${up} 78`),
-      `<text class="fig-sub fig-strong" x="${down - 7}" y="126" text-anchor="end">${escape(t.props)}</text>`,
-      `<text class="fig-code" x="${down - 7}" y="144" text-anchor="end">${escape(child.down)}</text>`,
-      `<text class="fig-sub fig-strong" x="${up + 7}" y="126">${escape(t.events)}</text>`,
-      `<text class="fig-code" x="${up + 7}" y="144">${escape(child.up)}</text>`,
-      `<text class="fig-sub fig-note" x="${child.x + 95}" y="278" text-anchor="middle">${escape(child.note)}</text>`,
+    // Props come down above the icon of the card and events go up from its middle, each label to the right of its arrow
+    const down = child.x + 21;
+    const up = child.x + 176;
+    const text = child.x + 40;
+    room(t.props, up - 10 - text, { size: SIZE.small, bold: true });
+    room(t.events, child.x + cardW - up - 10, { size: SIZE.small, bold: true });
+    body.push(
+      arrow(id, [[down, parent.y + parent.h + 1.5], [down, childY - 4]], { accent: true }),
+      heading(text, mid - 3, t.props),
+      fitted(text, mid + 13, child.down, up - 10 - text, 'start', { code: true }),
+      arrow(id, [[up, childY], [up, parent.y + parent.h + 5.5]], { tone: 'violet' }),
+      heading(up + 10, mid - 3, t.events),
+      fitted(up + 10, mid + 13, child.up, child.x + cardW - up - 10, 'start', { code: true }),
     );
   }
-  return svg(id, 720, 292, t, parts);
+  body.push(tile(parent.x, parent.y, parent.w, parent.h, 'App.vue', t.owns, { icon: 'database' }));
+  children.forEach((child) => body.push(tile(child.x, childY, cardW, cardH, child.name, child.sub, { icon: child.icon })));
+  const stripY = childY + cardH + 24;
+  body.push(strip(16, stripY, WIDTH - 32, 30, t.rule));
+  return figure({ id, width: WIDTH, height: stripY + 30 + 16, title: t.title, desc: t.desc, body });
 }
 
+// Both templates line by line, each line of content in the parent faces the slot it fills
+const CODE_ROW = 22;
+const BOX_ROW = 44;
+const STEP = 16;
+
 function slots(lang) {
-  const t = MORE[lang].slots;
+  const t = TEXT[lang].slots;
   const id = `p4c4-slots-${lang}`;
-  const parent = [
-    '<BaseDialog>',
-    '  <template #title>',
-    `    ${t.heading}`,
-    '  </template>',
-    `  ${t.body}`,
-    '  <template #actions>',
-    `    <button>${t.button}</button>`,
-    '  </template>',
-    '</BaseDialog>',
+  const columns = [
+    {
+      x: 16,
+      level: 1,
+      head: t.parent,
+      file: 'App.vue',
+      rows: [
+        [0, 'code', '<BaseDialog>'],
+        [1, 'code', '<template #title>'],
+        [2, 'fill', t.heading],
+        [1, 'code', '</template>'],
+        [1, 'fill', t.body],
+        [1, 'code', '<template #actions>'],
+        [2, 'fill', `<button>${t.button}</button>`],
+        [1, 'code', '</template>'],
+        [0, 'code', '</BaseDialog>'],
+      ],
+    },
+    {
+      x: 364,
+      level: 2,
+      head: t.child,
+      file: 'BaseDialog.vue',
+      rows: [
+        [0, 'code', '<div role="dialog">'],
+        [1, 'code', '<h2>'],
+        [2, 'slot', '<slot name="title" />'],
+        [1, 'code', '</h2>'],
+        [1, 'slot', '<slot />'],
+        [1, 'code', '<div class="actions">'],
+        [2, 'slot', '<slot name="actions" />'],
+        [1, 'code', '</div>'],
+        [0, 'code', '</div>'],
+      ],
+    },
   ];
-  const child = ['<div role="dialog">', '  <h2>', '    <slot name="title" />', '  </h2>', '  <slot />', '  <div class="actions">', '    <slot name="actions" />', '  </div>', '</div>'];
-  const top = 66;
-  const step = 24;
-  const parts = [
-    `<text class="fig-text" x="20" y="30">${escape(t.parent)}</text>`,
-    `<text class="fig-text" x="390" y="30">${escape(t.child)}</text>`,
-    `<rect class="fig-box" x="20" y="42" width="290" height="${parent.length * step + 16}" rx="8"/>`,
-    `<rect class="fig-box" x="390" y="42" width="270" height="${child.length * step + 16}" rx="8"/>`,
-  ];
-  parent.forEach((line, index) => {
-    const filled = index === 2 || index === 4 || index === 6;
-    parts.push(`<text class="fig-code${filled ? ' fig-strong' : ''}" x="32" y="${top + index * step}" xml:space="preserve">${escape(line)}</text>`);
-  });
-  child.forEach((line, index) => {
-    const outlet = index === 2 || index === 4 || index === 6;
-    parts.push(`<text class="fig-code${outlet ? ' fig-strong' : ''}" x="402" y="${top + index * step}" xml:space="preserve">${escape(line)}</text>`);
-  });
-  for (const index of [2, 4, 6]) {
-    const y = top + index * step - 4;
-    parts.push(arrow(id, `M 300 ${y} L 396 ${y}`));
+  const w = 300;
+  const tops = [];
+  let y = TOP;
+  for (const [, kind] of columns[0].rows) {
+    tops.push(y);
+    y += kind === 'code' ? CODE_ROW : BOX_ROW;
   }
-  return svg(id, 680, 66 + parent.length * step, t, parts);
+  const bottom = y + 12;
+  const body = [];
+  const fills = [];
+  const outlets = [];
+  columns.forEach((column, index) => {
+    const end = column.x + w - 16;
+    body.push(band(column.x, 16, w, bottom - 16, column.level));
+    body.push(bandHead(column.x, w, column.head, column.file, index ? { tone: 'blue' } : {}));
+    column.rows.forEach(([depth, kind, text], row) => {
+      const x = column.x + 16 + depth * STEP;
+      if (kind === 'code') body.push(fitted(x, tops[row] + 15, text, end - x, 'start', { code: true }));
+      if (kind === 'fill') {
+        body.push(codeCard(x, tops[row] + 4, end - x, BOX_ROW - 8, text));
+        fills.push({ x: end, y: tops[row] + BOX_ROW / 2 });
+      }
+      if (kind === 'slot') {
+        body.push(placeholder(x, tops[row] + 4, end - x, BOX_ROW - 8, text, { code: true }));
+        outlets.push({ x, y: tops[row] + BOX_ROW / 2 });
+      }
+    });
+  });
+  fills.forEach((fill, index) => body.push(arrow(id, [[fill.x, fill.y], [outlets[index].x - 4, outlets[index].y]], { accent: true })));
+  return figure({ id, width: WIDTH, height: bottom + 16, title: t.title, desc: t.desc, body });
 }
 
 function provideInject(lang) {
-  const t = MORE[lang].provide;
+  const t = TEXT[lang].provide;
   const id = `p4c5-provide-${lang}`;
-  const parts = [];
-  const columns = [
-    { x: 30, heading: t.drilling, drilling: true },
-    { x: 370, heading: t.injecting, drilling: false },
-  ];
-  for (const column of columns) {
-    const boxes = [
-      { name: 'App.vue', y: 50 },
-      { name: 'ItemView.vue', y: 150 },
-      { name: 'ReservationForm.vue', y: 250 },
-    ];
-    parts.push(`<text class="fig-text" x="${column.x}" y="30">${escape(column.heading)}</text>`);
-    boxes.forEach((box, index) => {
-      const strong = index !== 1;
-      parts.push(
-        `<rect class="fig-box${strong ? ' fig-box-strong' : ''}" x="${column.x}" y="${box.y}" width="190" height="50" rx="8"/>`,
-        `<text class="fig-text" x="${column.x + 95}" y="${box.y + 30}" text-anchor="middle">${escape(box.name)}</text>`,
-      );
-    });
-    if (column.drilling) {
-      parts.push(
-        arrow(id, `M ${column.x + 95} 102 L ${column.x + 95} 146`),
-        ...label(column.x + 95, 130, ':member', true),
-        arrow(id, `M ${column.x + 95} 202 L ${column.x + 95} 246`),
-        ...label(column.x + 95, 230, ':member', true),
-        `<text class="fig-sub fig-note" x="${column.x + 200}" y="180">${escape(t.notNeeded)}</text>`,
-      );
-    } else {
-      parts.push(
-        `<text class="fig-code" x="${column.x}" y="118">${escape(t.provides)}</text>`,
-        arrow(id, `M ${column.x + 200} 76 C ${column.x + 290} 120, ${column.x + 290} 230, ${column.x + 196} 272`),
-        `<text class="fig-code" x="${column.x}" y="322">${escape(t.injects)}</text>`,
-      );
-    }
+  const w = 316;
+  const cardW = 236;
+  const cardH = 52;
+  const rows = [0, 1, 2].map((index) => TOP + index * (cardH + 40));
+  const bottom = rows[2] + cardH + 16;
+  const body = [];
+
+  // With props every component on the way takes the member and hands it on
+  const left = { x: 16, card: 32 };
+  body.push(band(left.x, 16, w, bottom - 16, 1), label(left.x + 16, 40, t.drilling));
+  const centre = left.card + cardW / 2;
+  for (const index of [0, 1]) {
+    const from = rows[index] + cardH;
+    const to = rows[index + 1];
+    body.push(
+      arrow(id, [[centre, from + 1.5], [centre, to - 4]]),
+      fitted(centre + 10, (from + to) / 2 + 4, ':member', left.x + w - 16 - centre - 10, 'start', { code: true }),
+    );
   }
-  return svg(id, 680, 336, t, parts);
+  body.push(
+    tile(left.card, rows[0], cardW, cardH, 'App.vue', '', { icon: 'block' }),
+    tile(left.card, rows[1], cardW, cardH, 'ItemView.vue', t.notNeeded, { icon: 'block' }),
+    tile(left.card, rows[2], cardW, cardH, 'ReservationForm.vue', '', { icon: 'block' }),
+  );
+
+  // With provide and inject the member passes ItemView by, the plain lines only show the tree
+  const right = { x: 348, card: 364 };
+  body.push(band(right.x, 16, w, bottom - 16, 2), label(right.x + 16, 40, t.injecting, 'start', { tone: 'blue' }));
+  const middle = right.card + cardW / 2;
+  for (const index of [0, 1]) body.push(line([[middle, rows[index] + cardH], [middle, rows[index + 1]]]));
+  const edge = right.card + cardW;
+  const bend = edge + 28;
+  const [provided, injected] = [rows[0] + cardH / 2, rows[2] + cardH / 2];
+  body.push(arrow(id, [[edge, provided], [bend, provided], [bend, injected], [edge + 4, injected]], { accent: true }));
+  body.push(
+    tile(right.card, rows[0], cardW, cardH, 'App.vue', 'provide(memberKey, member)', { code: true, icon: 'plug' }),
+    tile(right.card, rows[1], cardW, cardH, 'ItemView.vue', '', { icon: 'block' }),
+    tile(right.card, rows[2], cardW, cardH, 'ReservationForm.vue', 'inject(memberKey)', { code: true, icon: 'plug' }),
+  );
+  return figure({ id, width: WIDTH, height: bottom + 16, title: t.title, desc: t.desc, body });
 }
 
 for (const lang of Object.keys(TEXT)) {
-  const folder = join(ROOT, 'site', 'src', 'assets', 'figures', lang);
-  mkdirSync(folder, { recursive: true });
-  writeFileSync(join(folder, 'p4c2-props-flow.svg'), sketch(propsFlow(lang), 'p4c2-props-flow'));
-  writeFileSync(join(folder, 'p4c1-component-tree.svg'), sketch(componentTree(lang), 'p4c1-component-tree'));
-  writeFileSync(join(folder, 'p4c3-props-events.svg'), sketch(propsEvents(lang), 'p4c3-props-events'));
-  writeFileSync(join(folder, 'p4c4-slots.svg'), sketch(slots(lang), 'p4c4-slots'));
-  writeFileSync(join(folder, 'p4c5-provide-inject.svg'), sketch(provideInject(lang), 'p4c5-provide-inject'));
+  save(lang, 'p4c1-component-tree', componentTree(lang));
+  save(lang, 'p4c2-props-flow', propsFlow(lang));
+  save(lang, 'p4c3-props-events', propsEvents(lang));
+  save(lang, 'p4c4-slots', slots(lang));
+  save(lang, 'p4c5-provide-inject', provideInject(lang));
 }
