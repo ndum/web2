@@ -10,7 +10,6 @@ const repo = 'https://github.com/ndum/web2';
 const ccBySa = english ? 'https://creativecommons.org/licenses/by-sa/4.0/' : 'https://creativecommons.org/licenses/by-sa/4.0/deed.de';
 const cc0 = english ? 'https://creativecommons.org/publicdomain/zero/1.0/' : 'https://creativecommons.org/publicdomain/zero/1.0/deed.de';
 const mit = `${repo}/blob/main/LICENSES/MIT.txt`;
-const ofl = 'https://openfontlicense.org/';
 // The date of the commit as the language writes it, 26. Oktober 2026 or October 26, 2026
 const day = commit.date
   ? new Intl.DateTimeFormat(english ? 'en-US' : 'de-CH', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(
@@ -24,14 +23,12 @@ const day = commit.date
   english ? (
     <p class="lt-licence">
       Text and figures are licensed under <a href={ccBySa}>CC BY-SA 4.0</a>, the code under the <a href={mit}>MIT License</a> and
-      the course data under <a href={cc0}>CC0 1.0</a>. The figures use the font Kalam under the <a href={ofl}>SIL Open
-      Font License 1.1</a>. The sources are on <a href={repo}>GitHub</a>.
+      the course data under <a href={cc0}>CC0 1.0</a>. The sources are on <a href={repo}>GitHub</a>.
     </p>
   ) : (
     <p class="lt-licence">
       Texte und Abbildungen stehen unter <a href={ccBySa}>CC BY-SA 4.0</a>, der Code unter der <a href={mit}>MIT-Lizenz</a> und
-      die Daten des Kurses unter <a href={cc0}>CC0 1.0</a>. Die Schrift der Abbildungen ist Kalam unter der <a href={ofl}>SIL
-      Open Font License 1.1</a>. Die Quellen liegen auf <a href={repo}>GitHub</a>.
+      die Daten des Kurses unter <a href={cc0}>CC0 1.0</a>. Die Quellen liegen auf <a href={repo}>GitHub</a>.
     </p>
   )
 }

@@ -70,4 +70,4 @@ Mistakes and suggestions are welcome as [issues](https://github.com/ndum/web2/is
 
 ## License
 
-Text and figures are licensed under CC BY-SA 4.0, code under the MIT License and the course's own datasets under CC0 1.0. The license texts are in [LICENSES](LICENSES). The figures use the handwriting font Kalam by the Indian Type Foundry under the SIL Open Font License 1.1, which the site serves from the package `@fontsource/kalam`.
+Text and figures are licensed under CC BY-SA 4.0, code under the MIT License and the course's own datasets under CC0 1.0. The license texts are in [LICENSES](LICENSES).
