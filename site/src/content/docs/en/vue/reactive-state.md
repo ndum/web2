@@ -60,7 +60,7 @@ Many values can be calculated from others, such as the number of things that are
 
 The search field is bound to the ref `query` with `v-model`. `v-model` keeps field and ref in step in both directions, and the chapter on forms shows what's behind it. When someone types into the search field, `query` changes. Vue recalculates `visibleItems` and renders the list. `availableCount` only depends on `items` and stays as it is.
 
-![Dependencies of the computed values in the catalog. On the left are the data items and the refs query and onlyAvailable. The computed value visibleItems reads all three, availableCount reads only items. The template shows the list from visibleItems and the number from availableCount. When query changes, Vue recalculates only visibleItems.](../../../../assets/figures/en/p3c4-computed.svg)
+![Dependencies of the computed values in the catalog. On the left are the data items and the refs query and onlyAvailable. The computed value visibleItems reads all three, availableCount reads only items. The template shows the list from visibleItems and the number from availableCount. When query changes, Vue recalculates only visibleItems and updates the list.](../../../../assets/figures/en/p3c4-computed.svg)
 
 A computed value is a ref you only read. In the script you write `visibleItems.value`, in the template `visibleItems`. The function inside should only calculate and return a value. Loading data, changing other refs or waiting for something doesn't belong there, that's what event handlers and `watch` from part 5 are for.
 

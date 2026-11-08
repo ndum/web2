@@ -43,7 +43,7 @@ A page frame needs several places, the header, the content and the footer. For t
 
 `PageLayout` defines how header, content and footer are arranged. The pages only decide what goes in them. If the association changes the frame later, one file changes, not every page.
 
-![Content fills the slots of a component. On the left the template of the parent component with BaseDialog. It fills the slot title with the title, the default slot with the text of the request and the slot actions with a button. On the right the template of BaseDialog with the three places for the title, the content and the buttons. Arrows connect each piece of content with its slot.](../../../../assets/figures/en/p4c4-slots.svg)
+![Content fills the slots of a component. On the left the template of the parent component with BaseDialog. It fills the slot title with the title, the default slot with the text of the request and the slot actions with a button. On the right the template of BaseDialog with the three places slot name title, slot and slot name actions. Arrows connect each piece of content with its slot.](../../../../assets/figures/en/p4c4-slots.svg)
 
 ## A dialog with slots
 

@@ -41,7 +41,7 @@ All three cards show the drill. The catalog is not to blame. `ItemCard` has the 
 
 A component with props works like a function with parameters. The function states which values it expects, and whoever calls it supplies them. For `ItemCard` these are the name and the category. The parent component, `App.vue` here, owns the data and hands them over when it uses the card.
 
-![Props flow from the parent to the child component. At the top is App.vue, the component that owns the data. Three arrows lead down to three cards of the component ItemCard, each arrow carries the props passed down, for example name equals Drill and category equals Tools. There is no arrow back up.](../../../../assets/figures/en/p4c2-props-flow.svg)
+![Props flow from the parent to the child component. At the top is the component App, which owns the data. Three arrows lead down to three cards of the component ItemCard. Each arrow carries the props App passes, for example name equals Drill and category equals Tools. Each card shows only what it received. There is no arrow back up, the data flow only downward.](../../../../assets/figures/en/p4c2-props-flow.svg)
 
 In `<script setup>` you declare props with `defineProps`. You pass an object in which every key is a prop and the value describes what that prop expects.
 

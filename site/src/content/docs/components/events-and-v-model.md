@@ -38,7 +38,7 @@ Props tragen Daten von der Elternkomponente zum Kind. Für den Weg zurück löst
 
 `emit('reserve', id)` löst das Event `reserve` aus und gibt die id als Daten mit. `App` hört mit `@reserve="reserve"` zu, wie bei einem Klick auf ein HTML-Element, und die Funktion `reserve` bekommt die id als Argument. Anders als Events im DOM steigen die Events einer Komponente nicht weiter nach oben. Nur die direkte Elternkomponente kann zuhören.
 
-![Props nach unten, Events nach oben. Oben steht App. Links darunter ItemCard, App gibt ihr mit Props den Namen und die Verfügbarkeit, die Karte meldet mit dem Event reserve die id zurück. Rechts darunter SearchBar, App gibt ihr den Wert modelValue, das Suchfeld meldet Änderungen mit dem Event update:modelValue. v-model verbindet beides.](../../../assets/figures/de/p4c3-props-events.svg)
+![Props nach unten, Events nach oben. Oben steht App. Links darunter ItemCard, App gibt ihr mit Props den Namen und die Verfügbarkeit, die Karte meldet mit dem Event reserve die id zurück. Rechts darunter SearchBar, App gibt ihr den Wert modelValue, das Suchfeld meldet Änderungen mit dem Event update\:modelValue. v-model verbindet beides.](../../../assets/figures/de/p4c3-props-events.svg)
 
 Ein Event heisst nach dem, was passiert ist, etwa `reserve` oder `toggleFavorite`, nicht nach dem, was die Elternkomponente damit tun soll. Im Script schreibst du die Namen in camelCase, im Template der Elternkomponente meist in kebab-case, `@toggle-favorite`. Vue setzt beide Schreibweisen gleich, wie bei Props.
 

@@ -35,7 +35,7 @@ Ein Doppelpunkt macht aus einem Teil des Pfads einen Parameter. Die Route `/item
 
 Die Zeile über der Überschrift zeigt den Wert mit Anführungszeichen, denn Parameter kommen immer als Text an. Die Nummern der Dinge sind dagegen Zahlen, darum wandelt `Number()` den Parameter vor dem Vergleich um. Ein Link zur Seite eines Dings nennt die Route mit ihrem Namen und gibt den Parameter dazu, `{ name: 'item', params: { id: 6 } }`.
 
-![Teile einer Adresse. Oben /items/6, davon ist /items/ der feste Teil der Route /items/:id und 6 der Parameter, den route.params.id als Text liefert. Unten /?q=säge&category=Werkzeug&sort=deposit, davon ist / der Pfad, und die Query besteht aus q, category und sort, die route.query.q, route.query.category und route.query.sort liefern.](../../../assets/figures/de/p6c2-url-parts.svg)
+![Teile einer Adresse. Zwei Adressen in zwei Bändern, in ihre Teile zerlegt. Unter jedem Teil steht eine Klammer mit seinem Namen. Oben /items/6, davon ist /items/ der feste Teil der Route /items/\:id und 6 der Parameter, den route.params.id als Text liefert. Unten /?q=säge&category=Werkzeug&sort=deposit, davon ist / der Pfad, und die Query besteht aus q, category und sort, die route.query.q, route.query.category und route.query.sort liefern.](../../../assets/figures/de/p6c2-url-parts.svg)
 
 ## Parameter als Props
 

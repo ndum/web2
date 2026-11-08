@@ -39,9 +39,9 @@ Die Kindroute mit dem leeren Pfad `''` gehört zur Adresse `/team` selbst und is
 
 Die Elternkomponente eines Bereichs ist sein Layout. `TeamLayout` hat die Überschrift und die Navigation, die alle Seiten des Teams teilen, und eine `RouterView` für die Seite, die gerade dran ist. Wechselt jemand von den Ausleihen zu den Rückgaben, bleibt das Layout stehen, und nur der Inhalt darin wechselt.
 
-![Die Routen der Fallbeispiel-App als Baum. Oben App mit ihrer RouterView, darunter die Routen / mit CatalogView, /items/:id mit ItemView, /favorites mit FavoritesView, /association mit AssociationView, /login mit LoginView, /team mit TeamLayout und die Catch-all-Route mit NotFoundView. TeamLayout hat eine eigene RouterView mit den Kindrouten für die Ausleihen und die Rückgaben. Neben /team steht, dass der Bereich nur für das Team ist und erst bei Bedarf lädt, neben der Catch-all-Route, dass sie alle anderen Adressen fängt.](../../../assets/figures/de/p6c3-route-tree.svg)
+![Die Routen der Fallbeispiel-App. Ein Baum mit App und ihrer RouterView oben. Darunter hängen die Routen / mit CatalogView, /items/\:id mit ItemView, /favorites mit FavoritesView, /association mit AssociationView, /login mit LoginView, die Catch-all-Route mit NotFoundView und /team mit TeamLayout. TeamLayout hat eine eigene RouterView mit den Kindrouten für die Ausleihen und die Rückgaben. Die Karte von /team trägt die Marke nur Team, die drei Karten des Teams sind gestrichelt, weil sie erst bei Bedarf laden, und neben der Catch-all-Route steht, dass sie alle anderen Adressen fängt.](../../../assets/figures/de/p6c3-route-tree.svg)
 
-Die Abbildung zeigt alle Routen der Fallbeispiel-App nach diesem Teil. Die gestrichelten Kästchen laden erst bei Bedarf, und für den Bereich des Teams braucht es eine Anmeldung. Beides kommt in den nächsten zwei Kapiteln.
+Die Abbildung zeigt alle Routen der Fallbeispiel-App nach diesem Teil. Die gestrichelten Karten laden erst bei Bedarf, und für den Bereich des Teams braucht es eine Anmeldung. Beides kommt in den nächsten zwei Kapiteln.
 
 ## Aktive und genau aktive Links
 

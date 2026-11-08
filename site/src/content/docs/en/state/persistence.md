@@ -69,7 +69,7 @@ Every script of the page can read what's in the browser's storage. The [HTML5 Se
 
 That's why the course API keeps the login in a cookie with `HttpOnly`. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie), JavaScript can't read such a cookie, but `fetch` still sends it. Without an expiry date it's a session cookie, which ends when the browser closes. Many browsers restore tabs on the next start, and such cookies along with them. `SameSite=Strict` sends the cookie only with requests from the same site.
 
-![Four bars across six events, load page, reload, second tab, close tab, close browser and open browser. A store in memory lasts until the reload. sessionStorage survives the reload, belongs to this tab only and ends when it closes. A cookie without expiry applies to all tabs and ends when the browser closes. localStorage applies to all tabs and is still there after the next start.](../../../../assets/figures/en/p7c4-storage-lifetime.svg)
+![How long data stays in the browser. Four bars above a timeline with six numbered events, load page, reload, second tab, close tab, close browser and open browser. A store in memory lasts until the reload. sessionStorage survives the reload, belongs to this tab only and ends when it closes. A cookie without expiry applies to all tabs and ends when the browser closes. localStorage applies to all tabs and is still there after the next start.](../../../../assets/figures/en/p7c4-storage-lifetime.svg)
 
 ## The login after a reload
 

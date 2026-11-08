@@ -35,7 +35,7 @@ A colon turns part of the path into a param. The route `/items/:id` matches `/it
 
 The line above the heading shows the value in quotes, because params always arrive as strings. The numbers of the things are numbers, though, so `Number()` converts the param before the comparison. A link to the page of a thing names the route and adds the param, `{ name: 'item', params: { id: 6 } }`.
 
-![Parts of an address. At the top /items/6, where /items/ is the fixed part of the route /items/:id and 6 is the param, which route.params.id returns as a string. At the bottom /?q=saw&category=Tools&sort=deposit, where / is the path and the query consists of q, category and sort, which route.query.q, route.query.category and route.query.sort return.](../../../../assets/figures/en/p6c2-url-parts.svg)
+![Parts of an address. Two addresses in two bands, taken apart. Below each part a bracket carries its name. At the top /items/6, where /items/ is the fixed part of the route /items/\:id and 6 is the param that route.params.id returns as a string. At the bottom /?q=saw&category=Tools&sort=deposit, where / is the path, and the query consists of q, category and sort, returned by route.query.q, route.query.category and route.query.sort.](../../../../assets/figures/en/p6c2-url-parts.svg)
 
 ## Params as props
 

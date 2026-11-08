@@ -60,7 +60,7 @@ Viele Werte lassen sich aus anderen berechnen, die Zahl der Dinge, die da sind, 
 
 Das Suchfeld ist mit `v-model` an das Ref `query` gebunden. `v-model` hält Feld und Ref in beide Richtungen im Takt, das Kapitel «Formulare» zeigt, was dahintersteckt. Tippt jemand ins Suchfeld, ändert sich `query`. Vue rechnet `visibleItems` neu und rendert die Liste. `availableCount` hängt nur von `items` ab und bleibt, wie es ist.
 
-![Abhängigkeiten der berechneten Werte im Katalog. Links stehen die Daten items und die Refs query und onlyAvailable. Der berechnete Wert visibleItems liest alle drei, availableCount liest nur items. Das Template zeigt die Liste aus visibleItems und die Zahl aus availableCount. Ändert sich query, rechnet Vue nur visibleItems neu.](../../../assets/figures/de/p3c4-computed.svg)
+![Abhängigkeiten der berechneten Werte im Katalog. Links stehen die Daten items und die Refs query und onlyAvailable. Der berechnete Wert visibleItems liest alle drei, availableCount liest nur items. Das Template zeigt die Liste aus visibleItems und die Zahl aus availableCount. Ändert sich query, rechnet Vue nur visibleItems neu und aktualisiert die Liste.](../../../assets/figures/de/p3c4-computed.svg)
 
 Ein berechneter Wert ist ein Ref, den du nur liest. Im Script schreibst du `visibleItems.value`, im Template `visibleItems`. Die Funktion darin soll nur rechnen und einen Wert zurückgeben. Daten laden, andere Refs ändern oder auf etwas warten gehört nicht hinein, dafür gibt es Funktionen für Events und `watch` aus Teil 5.
 

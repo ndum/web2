@@ -43,7 +43,7 @@ Ein Seitenrahmen braucht mehrere Stellen, den Kopf, den Inhalt und den Fuss. Daf
 
 `PageLayout` legt fest, wie Kopf, Inhalt und Fuss angeordnet sind. Die Seiten bestimmen nur, was darin steht. Ändert der Verein später den Rahmen, ändert sich eine Datei, nicht jede Seite.
 
-![Inhalte füllen die Slots einer Komponente. Links das Template der Elternkomponente mit BaseDialog. Sie füllt den Slot title mit dem Titel, den Standard-Slot mit dem Text der Anfrage und den Slot actions mit einem Knopf. Rechts das Template von BaseDialog mit den drei Stellen für den Titel, den Inhalt und die Knöpfe. Pfeile verbinden jeden Inhalt mit seinem Slot.](../../../assets/figures/de/p4c4-slots.svg)
+![Inhalte füllen die Slots einer Komponente. Links das Template der Elternkomponente mit BaseDialog. Sie füllt den Slot title mit dem Titel, den Standard-Slot mit dem Text der Anfrage und den Slot actions mit einem Knopf. Rechts das Template von BaseDialog mit den drei Stellen slot name title, slot und slot name actions. Pfeile verbinden jeden Inhalt mit seinem Slot.](../../../assets/figures/de/p4c4-slots.svg)
 
 ## Ein Dialog mit Slots
 

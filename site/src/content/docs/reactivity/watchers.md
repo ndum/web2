@@ -89,7 +89,7 @@ Watcher, die du direkt in `<script setup>` anlegst, beendet Vue mit ihrer Kompon
 
 ## Die Wahl zwischen computed und watch
 
-![Entscheidung zwischen computed und watch. Entsteht ein Wert aus anderen Werten, wie die Zahl der Treffer, dann computed. Soll sonst etwas ausserhalb der Komponente passieren, wie Speichern, der Titel des Tabs oder eine Anfrage an den Server, dann watch oder watchEffect. Reagiert der Code nur auf eine Handlung wie einen Klick, dann eine Funktion für das Event.](../../../assets/figures/de/p5c2-computed-or-watch.svg)
+![computed oder watch. Ein Entscheidungsbaum mit zwei Fragen als Karten. Entsteht ein Wert aus anderen Werten, wie die Zahl der Treffer, dann computed. Soll sonst etwas ausserhalb der Komponente passieren, wie Speichern, der Titel des Tabs oder eine Anfrage an den Server, dann watch oder watchEffect. Reagiert der Code nur auf eine Handlung, wie einen Klick, dann eine Funktion für das Event.](../../../assets/figures/de/p5c2-computed-or-watch.svg)
 
 Die Abbildung fasst die Wahl in zwei Fragen. Ein Watcher, der aus anderen Refs einen Wert berechnet und in ein eigenes Ref schreibt, ist fast immer ein versteckter berechneter Wert. Er kann aus dem Takt geraten, etwa wenn er ohne `immediate` den Startwert verpasst. Die Pause bei der Suche ist eine Ausnahme. Das Ref, nach dem die Liste filtert, hängt nicht nur vom Suchtext ab, sondern auch von der Zeit, und Zeit kann `computed` nicht beobachten.
 

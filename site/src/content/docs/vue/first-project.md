@@ -90,7 +90,7 @@ Der Block `<script setup>` läuft einmal, wenn Vue die Komponente erzeugt. Alles
 
 Ein Browser kann mit einer Datei `.vue` nichts anfangen. Vite übersetzt sie mit dem Plugin für Vue in ein JavaScript-Modul. Aus dem Template wird dabei eine Render-Funktion, die die Elemente der Seite erzeugt, und aus dem Style gewöhnliches CSS.
 
-![Der Weg einer Single File Component bis auf die Seite. Links die Datei App.vue mit den Blöcken template, script setup und style scoped. Vite übersetzt sie mit dem Plugin für Vue in CSS und ein JavaScript-Modul mit einer Render-Funktion. main.js importiert das Modul, erzeugt mit createApp die App und hängt sie mit mount in das Element mit der id app in index.html ein.](../../../assets/figures/de/p3c2-sfc.svg)
+![Der Weg einer Single File Component bis auf die Seite. Oben die Datei App.vue mit drei Blöcken nebeneinander, template für den Aufbau, script setup für Zustand und Logik und style scoped für das Aussehen. Darunter übersetzt Vite die Datei mit dem Plugin für Vue in ein JavaScript-Modul mit einer Render-Funktion und in CSS. main.js importiert das Modul, erzeugt mit createApp die App und hängt sie mit mount in das Element mit der id app in index.html ein.](../../../assets/figures/de/p3c2-sfc.svg)
 
 ## createApp und mount
 

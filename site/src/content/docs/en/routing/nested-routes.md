@@ -39,9 +39,9 @@ The child route with the empty path `''` belongs to the address `/team` itself a
 
 The parent component of an area is its layout. `TeamLayout` has the heading and the navigation that all pages of the team share, plus a `RouterView` for the page that's currently showing. When someone switches from the loans to the returns, the layout stays in place, and only the content inside it changes.
 
-![The routes of the case app as a tree. At the top App with its RouterView, below it the routes / with CatalogView, /items/:id with ItemView, /favorites with FavoritesView, /association with AssociationView, /login with LoginView, /team with TeamLayout and the catch-all route with NotFoundView. TeamLayout has a RouterView of its own with the child routes for the loans and the returns. Next to /team a note says that the area is for the team only and loads on demand, next to the catch-all route that it catches all other addresses.](../../../../assets/figures/en/p6c3-route-tree.svg)
+![The routes of the case app. A tree with App and its RouterView at the top. Below it hang the routes / with CatalogView, /items/\:id with ItemView, /favorites with FavoritesView, /association with AssociationView, /login with LoginView, the catch-all route with NotFoundView and /team with TeamLayout. TeamLayout has a RouterView of its own with the child routes for loans and returns. The card of /team carries the tag team only, the three cards of the team are dashed because they load on demand, and next to the catch-all route it says that it catches every other address.](../../../../assets/figures/en/p6c3-route-tree.svg)
 
-The figure shows all routes of the running case app after this part. The dashed boxes only load on demand, and the team area needs a login. Both come in the next two chapters.
+The figure shows all routes of the running case app after this part. The dashed cards only load on demand, and the team area needs a login. Both come in the next two chapters.
 
 ## Active and exactly active links
 

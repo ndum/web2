@@ -43,7 +43,7 @@ Der Kontext nennt auch, was gegen Pinia sprach, und die Konsequenzen nennen die 
 
 Jedes ADR bekommt die nächste Nummer, und eine Nummer wird nie ein zweites Mal vergeben. Ein neuer Entscheid beginnt als vorgeschlagen und wird angenommen oder abgelehnt. Ein angenommener Entscheid kann später veralten oder durch einen neuen ersetzt werden.
 
-![Ein Zustandsdiagramm. Ein Entscheid beginnt als vorgeschlagen und wird angenommen oder abgelehnt. Ein angenommener Entscheid kann später veralten oder durch einen neuen Entscheid ersetzt werden, der auf ihn verweist. Gelöscht wird kein Entscheid, er behält seine Nummer und bleibt im Verzeichnis.](../../../assets/figures/de/p8c3-adr-status.svg)
+![Der Status eines Architekturentscheids. Ein Zustandsdiagramm mit den drei Spalten Beginn, Entscheid und Später. Ein Entscheid beginnt als vorgeschlagen und wird angenommen oder abgelehnt. Ein angenommener Entscheid kann später veralten oder durch einen neuen Entscheid ersetzt werden, der auf ihn verweist. Gelöscht wird kein Entscheid, er behält seine Nummer und bleibt im Verzeichnis.](../../../assets/figures/de/p8c3-adr-status.svg)
 
 ## Ein Entscheid ersetzt einen anderen
 

@@ -41,7 +41,7 @@ Alle drei Karten zeigen die Bohrmaschine. Am Katalog liegt das nicht. `ItemCard`
 
 Eine Komponente mit Props funktioniert wie eine Funktion mit Parametern. Die Funktion legt fest, welche Werte sie erwartet, und wer sie aufruft, setzt die Werte ein. Bei `ItemCard` sind das der Name und die Kategorie. Die Elternkomponente, hier `App.vue`, besitzt die Daten und gibt sie beim Einbinden mit.
 
-![Props fliessen von der Eltern- zur Kindkomponente. Oben steht App.vue, die Komponente mit den Daten. Drei Pfeile führen nach unten zu drei Karten der Komponente ItemCard, an jedem Pfeil stehen die übergebenen Props, zum Beispiel name gleich Bohrmaschine und category gleich Werkzeug. Einen Pfeil zurück nach oben gibt es nicht.](../../../assets/figures/de/p4c2-props-flow.svg)
+![Props fliessen von der Eltern- zur Kindkomponente. Oben steht die Komponente App, der die Daten gehören. Drei Pfeile führen nach unten zu drei Karten der Komponente ItemCard. An jedem Pfeil stehen die Props, die App übergibt, zum Beispiel name gleich Bohrmaschine und category gleich Werkzeug. Jede Karte zeigt nur, was sie bekommen hat. Ein Pfeil zurück nach oben fehlt, die Daten fliessen nur von oben nach unten.](../../../assets/figures/de/p4c2-props-flow.svg)
 
 In `<script setup>` deklarierst du Props mit `defineProps`. Du übergibst ein Objekt, in dem jeder Schlüssel eine Prop ist und der Wert beschreibt, was sie erwartet.
 

@@ -34,7 +34,7 @@ In Teil 3 hast du gesehen, dass Vue eine Komponente neu rendert, sobald sich ein
 
 In einer Komponente gibt es mehrere Effekte. Die Render-Funktion, die der Compiler aus dem Template erzeugt, ist einer. Jeder berechnete Wert ist ein weiterer, und die Watcher aus dem nächsten Kapitel gehören auch dazu.
 
-![Abhängigkeiten im Kopf der App. Drei Kästchen in einer Reihe, das Ref favorites, der berechnete Wert favoriteCount und die Render-Funktion von AppHeader, rechts daneben die Seite mit dem Text 3 Favoriten. Oben zeigen Pfeile, wer wen liest, und Vue merkt sich jede dieser Abhängigkeiten. Unten zeigen Pfeile, was die Änderung favorites.value.push(3) auslöst, bis die Seite den neuen Wert zeigt.](../../../assets/figures/de/p5c1-dependencies.svg)
+![Abhängigkeiten verfolgen und auslösen. Vier Karten in einer Reihe, das Ref favorites, der berechnete Wert favoriteCount, die Render-Funktion von AppHeader und die Seite mit dem Text 3 Favoriten. Pfeile über der Reihe zeigen, wer wen liest. Die Render-Funktion liest favoriteCount, favoriteCount liest favorites, und Vue merkt sich jede dieser Abhängigkeiten. Pfeile unter der Reihe zeigen, was die Änderung favorites.value.push(3) auslöst. Vue markiert favoriteCount als veraltet, lässt die Render-Funktion neu laufen, und die Seite zeigt den neuen Wert.](../../../assets/figures/de/p5c1-dependencies.svg)
 
 Die Abbildung zeigt den Zähler der Favoriten. Die Render-Funktion von `AppHeader` liest den berechneten Wert `favoriteCount`, und dieser liest das Ref `favorites`. Vue merkt sich beide Abhängigkeiten. Ergänzt `push` einen Favoriten, markiert Vue `favoriteCount` als veraltet und führt die Render-Funktion erneut aus. Sie liest `favoriteCount`, der jetzt neu rechnet, und die Seite zeigt den neuen Wert.
 

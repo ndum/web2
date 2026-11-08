@@ -34,7 +34,7 @@ In part 3 you saw that Vue renders a component again as soon as a ref changes th
 
 A component has several effects. The render function that the compiler builds from the template is one of them. Every computed value is another one, and the watchers from the next chapter belong to the same family.
 
-![Dependencies in the header of the app. Three boxes in a row, the ref favorites, the computed value favoriteCount and the render function of AppHeader, with the page showing 3 favorites next to them on the right. At the top, arrows show who reads whom, and Vue remembers each of these dependencies. At the bottom, arrows show what the change favorites.value.push(3) triggers until the page shows the new value.](../../../../assets/figures/en/p5c1-dependencies.svg)
+![Tracking and triggering dependencies. Four cards in a row, the ref favorites, the computed value favoriteCount, the render function of AppHeader and the page with the text 3 favorites. Arrows above the row show who reads whom. The render function reads favoriteCount, favoriteCount reads favorites, and Vue remembers each of these dependencies. Arrows below the row show what the change favorites.value.push(3) triggers. Vue marks favoriteCount as stale, runs the render function again, and the page shows the new value.](../../../../assets/figures/en/p5c1-dependencies.svg)
 
 The figure shows the favorites counter. The render function of `AppHeader` reads the computed value `favoriteCount`, which in turn reads the ref `favorites`. Vue records both dependencies. When `push` adds a favorite, Vue marks `favoriteCount` as stale and runs the render function again. The render function reads `favoriteCount`, which now recalculates, and the page shows the new value.
 

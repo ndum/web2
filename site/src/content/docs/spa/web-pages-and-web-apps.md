@@ -34,7 +34,7 @@ Bei einer klassischen Website gehört zu jeder Adresse eine eigene Seite. Klickt
 
 Die Seiten können als Dateien auf dem Server liegen oder bei jeder Anfrage entstehen, etwa mit PHP, Java oder Node. Vieles erledigt der Browser von selbst. Er führt die Liste für den Knopf «Zurück», springt beim Laden an den Anfang der Seite und liest den Titel vor. Eine MPA funktioniert auch ohne JavaScript, und jede Seite hat eine Adresse, die Suchmaschinen und Vorschauen in Chats lesen können.
 
-![Anfragen einer mehrseitigen Website und einer SPA. Links eine mehrseitige Website, rechts eine Single Page Application, jeweils in drei Schritten. Beim Öffnen des Katalogs lädt die mehrseitige Website eine ganze Seite, die SPA eine fast leere Seite, ihr JavaScript und die Daten als JSON. Bei den weiteren Klicks lädt die mehrseitige Website jedes Mal eine ganze Seite, die SPA schickt keine Anfrage.](../../../assets/figures/de/p2c1-requests.svg)
+![Anfragen einer mehrseitigen Website und einer SPA. Links eine mehrseitige Website, rechts eine Single Page Application, jeweils in drei Schritten. Beim Öffnen des Katalogs lädt die mehrseitige Website eine ganze Seite, die SPA eine fast leere Seite, ihr JavaScript und die Daten als JSON. Beim Klick auf den Beamer und beim Zurück zum Katalog lädt die mehrseitige Website jedes Mal eine ganze Seite, die SPA schickt keine Anfrage, ihr JavaScript zeigt das Ding und den Katalog selbst an.](../../../assets/figures/de/p2c1-requests.svg)
 
 ## Die Single Page Application
 

@@ -69,7 +69,7 @@ Was im Speicher des Browsers steht, kann jedes Skript der Seite lesen. Das [HTML
 
 Die Kurs-API hält die Anmeldung deshalb in einem Cookie mit `HttpOnly`. Laut [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) kann JavaScript ein solches Cookie nicht lesen, `fetch` schickt es aber mit. Ohne Ablaufdatum ist es ein Cookie für eine Sitzung, das endet, wenn der Browser schliesst. Viele Browser stellen Tabs beim nächsten Start wieder her und solche Cookies mit ihnen. `SameSite=Strict` schickt das Cookie nur bei Anfragen von derselben Website mit.
 
-![Vier Balken über sechs Ereignisse, Seite laden, neu laden, zweiter Tab, Tab schliessen, Browser schliessen und Browser öffnen. Ein Store im Speicher reicht bis zum Neuladen. sessionStorage bleibt beim Neuladen, gehört nur zu diesem Tab und endet, wenn er sich schliesst. Ein Cookie ohne Ablauf gilt für alle Tabs und endet, wenn der Browser schliesst. localStorage gilt für alle Tabs und ist nach dem nächsten Öffnen noch da.](../../../assets/figures/de/p7c4-storage-lifetime.svg)
+![Wie lange Daten im Browser bleiben. Vier Balken über einem Zeitstrahl mit sechs nummerierten Ereignissen, Seite laden, neu laden, zweiter Tab, Tab schliessen, Browser schliessen und Browser öffnen. Ein Store im Speicher reicht bis zum Neuladen. sessionStorage bleibt beim Neuladen, gehört nur zu diesem Tab und endet, wenn er sich schliesst. Ein Cookie ohne Ablauf gilt für alle Tabs und endet, wenn der Browser schliesst. localStorage gilt für alle Tabs und ist nach dem nächsten Öffnen noch da.](../../../assets/figures/de/p7c4-storage-lifetime.svg)
 
 ## Die Anmeldung nach dem Neuladen
 

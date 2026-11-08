@@ -34,7 +34,7 @@ When you assign a number to a second variable, that variable gets a copy of the 
 
 `copy += 1` changes only `copy`, and `count` stays 3. `sameTent`, on the other hand, isn't a second tent but a second name for the same object. Whatever you change through one name shows up through the other.
 
-![Two variables, one object. On the left are the variables tent, sameTent and copy, on the right two objects in memory. An arrow leads from tent and one from sameTent to the same object, in which availableFrom equals 2026-11-14. An arrow leads from copy to a second object, which was made with the spread operator.](../../../../assets/figures/en/p1c2-references.svg)
+![Two variables, one object. On the left are the variables tent, sameTent and copy, on the right two objects in memory. An arrow leads from tent and one from sameTent to the same object, in which availableFrom equals 2026-11-14. An arrow leads from copy to a second object, which was made with the spread operator and in which availableFrom is still null.](../../../../assets/figures/en/p1c2-references.svg)
 
 All objects behave this way, including arrays, dates and functions. Only primitive values are copied, that is strings, numbers, booleans, `null` and `undefined`.
 

@@ -35,7 +35,7 @@ create-vue sets up a project with folders by the kind of file, `components`, `vi
 
 A feature is a function that members also recognize as part of the app, such as the catalog, the favorites or the requests. Every feature gets a folder in `src/features` with its pages, its own components, its store and its routes. Whoever works on the requests finds almost everything in `src/features/reservations`.
 
-![Two folder trees side by side. On the left the app is sorted by the kind of file, in views, components, stores and composables, and the four files of the requests sit in four different folders. On the right every feature has a folder below features, catalog and reservations with their pages, components, stores and routes. The files of the requests sit together there. Shared building blocks live in components, the layer for the API in api.](../../../../assets/figures/en/p8c1-folders.svg)
+![Folders by kind and by feature. Two folder trees side by side. On the left the app is sorted by the kind of file, in views, components, stores and composables, and the four marked files of the requests sit in four different folders. On the right every feature has a folder below features, catalog and reservations with their pages, components, stores and routes. The files of the requests sit together there in the folder reservations. Shared building blocks live in components, the layer for the API in api.](../../../../assets/figures/en/p8c1-folders.svg)
 
 Both ways are common, and folders by kind are enough for an app with a few pages. Folders by feature pay off once several people work on different functions or a function has many files. Switching is a decision of the kind that chapter 8.3 records.
 
@@ -43,7 +43,7 @@ Both ways are common, and folders by kind are enough for an app with a few pages
 
 Besides its folders, an SPA has layers that take on different jobs. At the top, `main.js`, `App.vue` and the router put the app together. Below them are the features with pages, components and stores. They use shared building blocks and the layer for the API, and only that layer talks to the server.
 
-![Four levels from top to bottom, the arrows show who imports whom. At the top, main.js, App.vue and the router put the app together and import the features. The features hold pages, their own components and stores, and they import shared building blocks and the layer for the API. Shared building blocks in components, composables and utils know no feature. Only the layer for the API in src/api talks to the server with fetch. No arrow points upwards.](../../../../assets/figures/en/p8c1-layers.svg)
+![The layers of the app. Four levels from top to bottom, the arrows show who imports whom. An area groups the three layers of the app, and the server sits below it outside the app. At the top, main.js, App.vue and the router put the app together and import the features. The features hold pages, their own components and stores, and they import shared building blocks and the layer for the API. Shared building blocks in components, composables and utils know no feature. Only the layer for the API in src/api talks to the server with fetch. No arrow points upwards.](../../../../assets/figures/en/p8c1-layers.svg)
 
 Imports only point down. A shared building block like the card of a thing knows no feature, and the layer for the API knows neither pages nor stores. That way every lower layer can change or be tested without knowing the ones above it.
 

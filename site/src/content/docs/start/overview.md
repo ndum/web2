@@ -24,7 +24,7 @@ Nach diesem Kapitel kannst du
 
 In den Teilen 0 bis 7 lernst du, was eine Single Page Application ausmacht und wie du eine mit Vue baust. Danach folgt eine [praktische Prüfung](../../exam/), und zum Schluss setzt du ein eigenes Projekt um. Teil 8 begleitet dich dabei mit Kapiteln zu Architektur, Tests, Barrierefreiheit und Deployment, jeweils dann, wenn dein Projekt sie braucht. Wie Prüfung und Projekt bewertet werden, steht unter [Leistungsbeurteilung](../../assessment/).
 
-![Der Kurs im Überblick. Ein Balken zeigt die Reihenfolge des Moduls. Auf die Teile 0 bis 7 folgen die Prüfung und das Projekt mit Teil 8. Unter dem Balken stehen die Namen der Teile.](../../../assets/figures/de/p0c1-course-map.svg)
+![Der Kurs im Überblick. Eine Reihe von Karten zeigt die Reihenfolge des Moduls von links nach rechts. Auf die Teile 0 bis 7 folgen die Prüfung und das Projekt mit Teil 8. Darunter stehen die Namen der Teile.](../../../assets/figures/de/p0c1-course-map.svg)
 
 Neben den Teilen gibt es die [JS-Werkstatt](../../js/) mit zehn Einheiten zu den Grundlagen von JavaScript. Der [Einstiegstest](../entry-test/) zeigt dir, welche davon du auffrischen solltest. [Wahlthemen](../../optional/overview/) wie TypeScript, ein eigenes Backend oder End-to-End-Tests bearbeitest du selbständig, wenn dein Projekt sie braucht. Fachbegriffe schlägst du im [Glossar](../../glossary/) nach.
 
@@ -32,7 +32,7 @@ Neben den Teilen gibt es die [JS-Werkstatt](../../js/) mit zehn Einheiten zu den
 
 Der Kurs ist für das Selbststudium geschrieben. Du arbeitest im Unterricht mit den Kapiteln, und deine Lehrperson gibt zwischendurch kurze Inputs, beantwortet Fragen und schaut dir über die Schulter. Was du im Unterricht nicht fertig machst, schliesst du zu Hause ab.
 
-Jedes Kapitel folgt derselben Reihenfolge. Es beginnt mit einem Auftrag von Lorraine Commons und den Lernzielen. Dann kommt die Idee, oft mit einer Skizze, und ein Beispiel, das Schritt für Schritt entsteht. Im Abschnitt «Im Code» liest du zuerst Code und sagst voraus, was er tut, bevor du ihn ausführst, untersuchst und veränderst. Danach folgen Aufgaben auf drei Stufen, «Einstieg», «Vertiefung» und «Knobelei», eine Tabelle mit typischen Fehlern, ein Selbstcheck und am Schluss der nächste Auftrag.
+Jedes Kapitel folgt derselben Reihenfolge. Es beginnt mit einem Auftrag von Lorraine Commons und den Lernzielen. Dann kommt die Idee, oft mit einer Abbildung, und ein Beispiel, das Schritt für Schritt entsteht. Im Abschnitt «Im Code» liest du zuerst Code und sagst voraus, was er tut, bevor du ihn ausführst, untersuchst und veränderst. Danach folgen Aufgaben auf drei Stufen, «Einstieg», «Vertiefung» und «Knobelei», eine Tabelle mit typischen Fehlern, ein Selbstcheck und am Schluss der nächste Auftrag.
 
 Zu den Aufgaben gibt es Übungsprojekte mit automatischen Tests. Die Tests zeigen dir, welche Aufgaben erfüllt sind, und zu Beginn schlagen die meisten fehl. Die Lösungen stehen aufklappbar im Kapitel. Öffne sie erst, wenn du es selbst versucht hast, sonst übst du nur das Lesen. Am Ende jedes Teils prüfst du mit einem Kompetenzraster, ob du für den nächsten Teil bereit bist.
 
@@ -89,7 +89,7 @@ Eine gute User Story nennt, wer etwas will, was diese Person will und wozu. Das 
 Öffne das Kapitel [Props](../../components/props/) und finde darin die Teile des Kapitelablaufs. Wo steht der Auftrag, wo die Idee, wo der Abschnitt «Im Code», und welche drei Aufgaben gibt es?
 
 :::solution[Lösung]
-Der Auftrag steht ganz oben, gefolgt von den Lernzielen. Die Idee steht in den Abschnitten «Eine Karte für alle Dinge» und «Props deklarieren», dort auch mit einer Skizze. Der Abschnitt «Im Code» arbeitet mit dem Beispiel zur Verfügbarkeit. Die Aufgaben sind das Pfand («Einstieg»), das Datum, ab dem ein Ding wieder frei ist («Vertiefung»), und eine Komponente für die Liste («Knobelei»). Am Schluss folgen typische Fehler, der Selbstcheck und der nächste Auftrag.
+Der Auftrag steht ganz oben, gefolgt von den Lernzielen. Die Idee steht in den Abschnitten «Eine Karte für alle Dinge» und «Props deklarieren», dort auch mit einer Abbildung. Der Abschnitt «Im Code» arbeitet mit dem Beispiel zur Verfügbarkeit. Die Aufgaben sind das Pfand («Einstieg»), das Datum, ab dem ein Ding wieder frei ist («Vertiefung»), und eine Komponente für die Liste («Knobelei»). Am Schluss folgen typische Fehler, der Selbstcheck und der nächste Auftrag.
 :::
 ::::
 

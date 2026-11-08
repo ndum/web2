@@ -34,7 +34,7 @@ On a classic website, every address has a page of its own. When someone clicks a
 
 The pages can sit on the server as files or be created on every request, for example with PHP, Java or Node. The browser takes care of a lot by itself. It keeps the list for the "Back" button, jumps to the top of the page when it loads and announces the title. An MPA also works without JavaScript, and every page has an address that search engines and previews in chats can read.
 
-![Requests of a multi-page website and of an SPA. On the left a multi-page website, on the right a single page application, each in three steps. When the catalog opens, the multi-page website loads a whole page, the SPA an almost empty page, its JavaScript and the data as JSON. On the following clicks, the multi-page website loads a whole page each time, while the SPA sends no request.](../../../../assets/figures/en/p2c1-requests.svg)
+![Requests of a multi-page website and of an SPA. On the left a multi-page website, on the right a single page application, each in three steps. When the catalog opens, the multi-page website loads a whole page, the SPA an almost empty page, its JavaScript and the data as JSON. On a click on the projector and on going back to the catalog, the multi-page website loads a whole page each time, while the SPA sends no request and its JavaScript shows the thing and the catalog by itself.](../../../../assets/figures/en/p2c1-requests.svg)
 
 ## The single page application
 

@@ -41,7 +41,7 @@ The last paragraph shows the tags of `note` as characters. Vue always inserts in
 
 Interpolation only works in text, not in attributes. You bind an attribute to an expression with the directive `v-bind`, usually in its short form with a colon. `:href="'#/items/' + item.id"` sets the attribute `href` to the result of the expression. Directives are attributes that start with `v-` and tell Vue what to do with an element.
 
-![The parts of a directive. A directive for a click is split into its parts, v-on is the name of the directive, click the argument, prevent a modifier and reserve the value, a JavaScript expression. Below are the shorthands, the at sign replaces v-on and the colon replaces v-bind.](../../../../assets/figures/en/p3c3-directive.svg)
+![The parts of a directive. The directive v-on\:click.prevent="reserve" split into its parts. v-on is the name of the directive, click the argument, prevent a modifier and reserve the value, a JavaScript expression. Below, the shorthands, @click.prevent="reserve" equals v-on\:click.prevent="reserve", and \:href="link" equals v-bind\:href="link".](../../../../assets/figures/en/p3c3-directive.svg)
 
 For attributes that are simply on or off, such as `disabled`, Vue removes the attribute when the expression is `false`. `:disabled="item.availableFrom !== null"` therefore only disables the button for things on loan.
 

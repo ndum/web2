@@ -34,7 +34,7 @@ Weist du eine Zahl einer zweiten Variablen zu, bekommt diese eine Kopie des Wert
 
 `copy += 1` ändert nur `copy`, `count` bleibt 3. `sameTent` ist dagegen kein zweites Zelt, sondern ein zweiter Name für dasselbe Objekt. Was du über den einen Namen änderst, siehst du über den anderen.
 
-![Zwei Variablen, ein Objekt. Links stehen die Variablen tent, sameTent und copy, rechts zwei Objekte im Speicher. Von tent und von sameTent führt je ein Pfeil zum selben Objekt, in dem availableFrom gleich 2026-11-14 steht. Von copy führt ein Pfeil zu einem zweiten Objekt, das mit dem Spread-Operator entstanden ist.](../../../assets/figures/de/p1c2-references.svg)
+![Zwei Variablen, ein Objekt. Links stehen die Variablen tent, sameTent und copy, rechts zwei Objekte im Speicher. Von tent und von sameTent führt je ein Pfeil zum selben Objekt, in dem availableFrom gleich 2026-11-14 steht. Von copy führt ein Pfeil zu einem zweiten Objekt, das mit dem Spread-Operator entstanden ist und in dem availableFrom noch null ist.](../../../assets/figures/de/p1c2-references.svg)
 
 So verhalten sich alle Objekte, also auch Arrays, Datumswerte und Funktionen. Kopiert werden nur die primitiven Werte, Strings, Zahlen, Wahrheitswerte, `null` und `undefined`.
 

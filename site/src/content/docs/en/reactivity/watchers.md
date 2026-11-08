@@ -89,7 +89,7 @@ Watchers that you create directly in `<script setup>` are stopped by Vue togethe
 
 ## Choosing between computed and watch
 
-![Choosing between computed and watch. If a value is derived from other values, such as the number of hits, then computed. Otherwise, if something should happen outside the component, such as storing, the title of the tab or a request to the server, then watch or watchEffect. If the code only reacts to an action such as a click, then a function for the event.](../../../../assets/figures/en/p5c2-computed-or-watch.svg)
+![computed or watch. A decision tree with two questions as cards. If a value is derived from other values, such as the number of hits, then computed. Otherwise, if something should happen outside the component, such as storing, the title of the tab or a request to the server, then watch or watchEffect. If the code only reacts to an action, such as a click, then a function for the event.](../../../../assets/figures/en/p5c2-computed-or-watch.svg)
 
 The figure boils the choice down to two questions. A watcher that derives a value from other refs and writes it into a ref of its own is almost always a computed value in disguise. It can get out of step, for example when it misses the initial value because `immediate` is missing. The pause in the search is an exception. The ref that the list filters by depends not only on the search text but also on time, and `computed` can't observe time.
 

@@ -24,7 +24,7 @@ After this chapter you can
 
 In parts 0 to 7 you learn what makes a single page application and how to build one with Vue. A [practical exam](../../exam/) follows, and at the end you build a project of your own. Part 8 accompanies the project with chapters on architecture, testing, accessibility and deployment, each arriving when your project needs it. The [assessment](../../assessment/) page explains how the exam and the project are graded.
 
-![The course at a glance. A bar shows the order of the module. Parts 0 to 7 come first, followed by the exam and the project with part 8. The names of the parts are listed below the bar.](../../../../assets/figures/en/p0c1-course-map.svg)
+![The course at a glance. A row of cards shows the order of the module from left to right. Parts 0 to 7 come first, followed by the exam and the project with part 8. The names of the parts are listed below.](../../../../assets/figures/en/p0c1-course-map.svg)
 
 Next to the parts there is the [JS workshop](../../js/) with ten units on the basics of JavaScript. The [entry test](../entry-test/) shows you which of them to refresh. You work through [optional topics](../../optional/overview/) such as TypeScript, a backend of your own or end-to-end tests on your own when your project needs them. You can look up terms in the [glossary](../../glossary/).
 
@@ -32,7 +32,7 @@ Next to the parts there is the [JS workshop](../../js/) with ten units on the ba
 
 The course is written for self-study. You work through the chapters in class, and your teacher gives short inputs in between, answers questions and looks over your shoulder. Whatever you don't finish in class, you finish at home.
 
-Every chapter follows the same order. It starts with an assignment from Lorraine Commons and the learning goals. Then comes the idea, often with a sketch, and an example that grows step by step. In the section "In code" you first read code and predict what it does before you run, examine and change it. After that come exercises at three levels, "Getting started", "Going further" and "Challenge", a table of common mistakes, a self-check and finally the next assignment.
+Every chapter follows the same order. It starts with an assignment from Lorraine Commons and the learning goals. Then comes the idea, often with a figure, and an example that grows step by step. In the section "In code" you first read code and predict what it does before you run, examine and change it. After that come exercises at three levels, "Getting started", "Going further" and "Challenge", a table of common mistakes, a self-check and finally the next assignment.
 
 The exercises come with exercise projects that have automated tests. The tests show you which exercises are done, and at the start most of them fail. The solutions are in the chapter, folded away. Open them only after you have tried yourself, otherwise all you practice is reading. At the end of every part a competence grid lets you check whether you are ready for the next one.
 
@@ -89,7 +89,7 @@ A good user story says who wants something, what that person wants and why. The 
 Open the chapter on [props](../../components/props/) and find the parts of the chapter rhythm in it. Where is the assignment, where the idea, where the section "In code", and which three exercises are there?
 
 :::solution[Solution]
-The assignment is at the very top, followed by the learning goals. The idea is in the sections "One card for every thing" and "Declaring props", the latter with a sketch. The section "In code" works with the availability example. The exercises are the deposit ("Getting started"), the date from which a thing is free again ("Going further") and a component for the list ("Challenge"). At the end come common mistakes, the self-check and the next assignment.
+The assignment is at the very top, followed by the learning goals. The idea is in the sections "One card for every thing" and "Declaring props", the latter with a figure. The section "In code" works with the availability example. The exercises are the deposit ("Getting started"), the date from which a thing is free again ("Going further") and a component for the list ("Challenge"). At the end come common mistakes, the self-check and the next assignment.
 :::
 ::::
 

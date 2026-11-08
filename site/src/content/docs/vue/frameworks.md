@@ -56,7 +56,7 @@ React führt bei einer Änderung die ganze Komponentenfunktion erneut aus und ve
 
 Wie verbreitet ein Framework ist, zeigen Umfragen unter Entwicklerinnen und Entwicklern und die Zahl der Downloads.
 
-![Verbreitung und Zufriedenheit von React, Vue und Angular. Zwei Balkendiagramme mit einer Skala von 0 bis 100 %. Oben die Umfrage von Stack Overflow 2026, Anteil der Antworten, die das Framework verwenden, React 41,5, Vue.js 17,2 und Angular 16,0 %. Unten State of JS 2025, Anteil der Nutzenden, die das Framework wieder verwenden würden, React 72, Vue.js 84 und Angular 48 %.](../../../assets/figures/de/p3c1-surveys.svg)
+![Verbreitung und Zufriedenheit von React, Vue und Angular. Zwei Balkendiagramme mit einer Skala von 0 bis 100 %. Oben die Umfrage von Stack Overflow 2026 mit dem Anteil der Antworten zu Web-Frameworks, die das Framework verwenden, React 41,5, Vue.js 17,2 und Angular 16,0 %. Unten State of JS 2025 mit dem Anteil der Nutzenden, die das Framework wieder verwenden würden, React 72, Vue.js 84 und Angular 48 %.](../../../assets/figures/de/p3c1-surveys.svg)
 
 Im [Developer Survey 2026 von Stack Overflow](https://survey.stackoverflow.co/2026/technology/data) beantworteten 10'281 Personen die Frage nach Web-Frameworks. 41,5 % arbeiteten im letzten Jahr ausgiebig mit React, 17,2 % mit Vue und 16,0 % mit Angular. In der [Umfrage von 2025](https://survey.stackoverflow.co/2025/technology) lag React auch bei den Berufsleuten vorn, mit 46,9 % gegenüber 19,8 % für Angular und 18,4 % für Vue.
 

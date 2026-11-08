@@ -41,7 +41,7 @@ Der letzte Absatz zeigt die Tags von `note` als Zeichen. Vue setzt Interpolation
 
 Interpolation funktioniert nur im Text, nicht in Attributen. Ein Attribut bindest du mit der Direktive `v-bind` an einen Ausdruck, meist in der Kurzform mit einem Doppelpunkt. `:href="'#/items/' + item.id"` setzt das Attribut `href` auf das Ergebnis des Ausdrucks. Direktiven sind Attribute, die mit `v-` beginnen und Vue sagen, was es mit einem Element tun soll.
 
-![Die Teile einer Direktive. Eine Direktive für einen Klick ist in Teile zerlegt, v-on ist der Name der Direktive, click das Argument, prevent ein Modifikator und reserve der Wert, ein JavaScript-Ausdruck. Darunter stehen die Kurzformen, das At-Zeichen ersetzt v-on und der Doppelpunkt ersetzt v-bind.](../../../assets/figures/de/p3c3-directive.svg)
+![Die Teile einer Direktive. Die Direktive v-on\:click.prevent="reserve" in Teile zerlegt. v-on ist der Name der Direktive, click das Argument, prevent ein Modifikator und reserve der Wert, ein JavaScript-Ausdruck. Darunter die Kurzformen, @click.prevent="reserve" ist gleich v-on\:click.prevent="reserve", und \:href="link" ist gleich v-bind\:href="link".](../../../assets/figures/de/p3c3-directive.svg)
 
 Bei Attributen wie `disabled`, die nur an oder aus sind, entfernt Vue das Attribut, wenn der Ausdruck `false` ergibt. `:disabled="item.availableFrom !== null"` sperrt den Knopf also nur bei ausgeliehenen Dingen.
 

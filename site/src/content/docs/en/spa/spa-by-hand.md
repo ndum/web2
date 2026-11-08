@@ -38,7 +38,7 @@ An SPA rests on an idea that Vue uses as well. Everything the page shows lives i
 
 The click on the button doesn't change the paragraph, it changes `state.reservations`. Then `render` draws the page anew. Since `render` replaces the button with a new one every time, the listener doesn't sit on the button but on the container. A click rises up through the DOM, and `data-action` says what to do. This pattern is called event delegation, and the unit [The DOM and events](../../js/dom-and-events/) shows it in more detail.
 
-![The cycle of the SPA by hand. Four boxes form a cycle. The state is an object with status, items and route. The function render reads the state and writes the page from it. On the page, clicks, input and hashchange fire events. The event handlers change the state, and the cycle starts again.](../../../../assets/figures/en/p2c2-render-loop.svg)
+![The cycle of the SPA by hand. Four cards form a cycle. The state is an object with status, items and route. The function render reads the state and writes the page from it. On the page, clicks, input and hashchange fire events. The event handlers change the state, and the cycle starts again. The handlers never change the page directly.](../../../../assets/figures/en/p2c2-render-loop.svg)
 
 The cycle has an advantage. What the page shows depends only on the state. Whoever wants to know why something appears on the page looks at the state, not at a long series of changes to the DOM.
 

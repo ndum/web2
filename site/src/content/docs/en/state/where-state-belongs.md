@@ -41,7 +41,7 @@ State is the data that changes while someone works with the app and that the pag
 
 The figure asks its questions in an order that leads to an answer. The address comes first, because whatever someone wants to share or reload has to live there. The server follows, because the app can only ask for data that belongs to others. Only after that does it matter how many components need a value.
 
-![A decision tree with four questions from top to bottom. If an address should keep the value, to share and reload, it goes into the address, as route.params or route.query. If it lives on the server instead, a store fetches it in an action. If only one component needs it, it stays local as a ref in the component. If a few components with a common parent need it, it goes into the parent and travels with props and events. In every other case it belongs in a store with Pinia.](../../../../assets/figures/en/p7c1-state-decision.svg)
+![Where a piece of state belongs. A decision tree with four numbered questions on the left from top to bottom and the places for the state on the right. A yes leads to the place on the right, a no to the next question. If an address should keep the value, to share and reload, it goes into the address, as route.params or route.query. If it lives on the server instead, a store fetches it in an action. If only one component needs it, it stays local as a ref in the component. If a few components with a common parent need it, it goes into the parent and travels with props and events. In every other case it belongs in a store with Pinia.](../../../../assets/figures/en/p7c1-state-decision.svg)
 
 ## Lifting state into the parent
 

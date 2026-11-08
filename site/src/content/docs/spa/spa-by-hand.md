@@ -38,7 +38,7 @@ Eine SPA beruht auf einem Gedanken, den auch Vue verwendet. Alles, was die Seite
 
 Der Klick auf den Knopf ändert nicht den Absatz, sondern `state.reservations`. Danach zeichnet `render` die Seite neu. Weil `render` den Knopf jedes Mal durch einen neuen ersetzt, hängt der Listener nicht am Knopf, sondern am Container. Ein Klick steigt im DOM nach oben, und `data-action` sagt, was zu tun ist. Dieses Muster heisst Event-Delegation, die Einheit [DOM und Events](../../js/dom-and-events/) zeigt es genauer.
 
-![Der Kreislauf der SPA von Hand. Vier Kästchen bilden einen Kreislauf. Der Zustand ist ein Objekt mit status, items und route. Die Funktion render liest den Zustand und schreibt daraus die Seite. Auf der Seite lösen Klicks, Eingaben und hashchange Events aus. Die Handler der Events ändern den Zustand, und der Kreislauf beginnt von vorn.](../../../assets/figures/de/p2c2-render-loop.svg)
+![Der Kreislauf der SPA von Hand. Vier Karten bilden einen Kreislauf. Der Zustand ist ein Objekt mit status, items und route. Die Funktion render liest den Zustand und schreibt daraus die Seite. Auf der Seite lösen Klicks, Eingaben und hashchange Events aus. Die Handler der Events ändern den Zustand, und der Kreislauf beginnt von vorn. Die Handler ändern die Seite nie direkt.](../../../assets/figures/de/p2c2-render-loop.svg)
 
 Der Kreislauf hat einen Vorteil. Was die Seite zeigt, hängt nur vom Zustand ab. Wer wissen will, warum etwas auf der Seite steht, schaut in den Zustand, nicht in eine lange Reihe von Änderungen am DOM.
 
@@ -76,7 +76,7 @@ Die SPA besteht aus ES-Modulen, und der Browser lädt Module nur über HTTP. Dar
 npm run server
 ```
 
-Öffne danach `http://localhost:3000/` im Browser und in den DevTools den Bereich «Netzwerk». Beim Laden erscheinen die Seite, die Module und die Anfrage an `/items`. Ein Klick auf ein Ding löst keine einzige Anfrage aus, wie in der Skizze aus dem Kapitel [Webseiten und Webapps](../web-pages-and-web-apps/).
+Öffne danach `http://localhost:3000/` im Browser und in den DevTools den Bereich «Netzwerk». Beim Laden erscheinen die Seite, die Module und die Anfrage an `/items`. Ein Klick auf ein Ding löst keine einzige Anfrage aus, wie in der Abbildung aus dem Kapitel [Webseiten und Webapps](../web-pages-and-web-apps/).
 
 ## Die Grenzen der Handarbeit
 

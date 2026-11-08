@@ -43,7 +43,7 @@ The context also names what spoke against Pinia, and the consequences name the e
 
 Every ADR gets the next number, and a number is never used twice. A new decision starts out as proposed and is accepted or rejected. An accepted decision can later become deprecated or be superseded by a new one.
 
-![A state diagram. A decision starts as proposed and is accepted or rejected. An accepted decision can later become deprecated or be superseded by a new decision that points to it. No decision is deleted, it keeps its number and stays in the index.](../../../../assets/figures/en/p8c3-adr-status.svg)
+![The status of an architecture decision. A state diagram with the three columns Start, Decision and Later. A decision starts as proposed and is accepted or rejected. An accepted decision can later become deprecated or be superseded by a new decision that points to it. No decision is deleted, it keeps its number and stays in the index.](../../../../assets/figures/en/p8c3-adr-status.svg)
 
 ## A decision supersedes another
 

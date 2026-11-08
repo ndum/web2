@@ -13,7 +13,7 @@ Mit diesem Raster schätzt du ein, ob du für Teil 2 bereit bist. Lies jede Zeil
 | Code mit `export` und `import` auf Module verteilen | Erkläre, warum `node main.mjs` vor der ersten Ausgabe abbricht, wenn in `catalog.mjs` ein `export` fehlt. | [Module und Pakete](../modules/) |
 | ein Projekt mit `package.json` einrichten und Skripte starten | Füge einem Projekt ein Skript hinzu und starte es mit `npm run`. | [Module und Pakete](../modules/#npm-und-packagejson) |
 | Versionsangaben lesen und den Zweck der Lock-Datei erklären | Erkläre den Unterschied zwischen `5.0.5` und `^5.0.5` und sag, ob `package-lock.json` ins Repo gehört. | [Module und Pakete](../modules/#versionen-und-die-lock-datei) |
-| erklären, warum zwei Variablen dasselbe Objekt ändern können | Erkläre den Fehler mit den Zelten an der Skizze mit den zwei Variablen. | [Werte und Referenzen](../values-and-references/) |
+| erklären, warum zwei Variablen dasselbe Objekt ändern können | Erkläre den Fehler mit den Zelten an der Abbildung mit den zwei Variablen. | [Werte und Referenzen](../values-and-references/) |
 | Objekte flach und tief kopieren | Sag, wann `{ ...item }` genügt und wann es `structuredClone` braucht. | [Werte und Referenzen](../values-and-references/#kopien) |
 | Daten ändern, ohne das Original zu verändern | Schreib eine Funktion, die ein Ding in einer neuen Liste als ausgeliehen markiert. | [Werte und Referenzen](../values-and-references/#ändern-ohne-nebenwirkung) |
 | Listen mit `map`, `filter`, `find` und `some` auswerten | Liste die Namen der Dinge auf, die mehr als CHF 40 Pfand kosten und da sind. | [Funktionen und Arrays](../functions-and-arrays/) |
