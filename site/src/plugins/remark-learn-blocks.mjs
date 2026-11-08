@@ -7,6 +7,9 @@
  *   :::deepdive[Title]                optional deep dive
  *   :::exercise[Level]                exercise, the label names the level
  *   :::selfcheck                      self-check questions
+ *   ::::step{n="4"}                   opens a unit of the JS workshop: «Schritt 4 von 10», the strip of
+ *                                     the ten steps and a card on what the counter helper does so far
+ *   :::next                           the card with the next step at the end of a unit of the workshop
  *   :::solution[Optional title]       collapsible <details>, code allowed inside
  *   :::details[Optional title]        collapsed <details> with more on a section, such as a hint
  *                                     before a solution or a source, so a long page shows its core first
@@ -32,6 +35,8 @@ import { extname, join, relative, resolve } from 'node:path';
 
 import { visit } from 'unist-util-visit';
 
+import { WORKSHOP_STEPS } from '../workshop-steps.mjs';
+
 /** UI words per language. The language comes from the folder under content/docs. */
 const DEFAULT_LABELS = {
   de: {
@@ -47,6 +52,11 @@ const DEFAULT_LABELS = {
     files: 'Dateien',
     quiz: 'Test',
     question: 'Frage',
+    step: 'Schritt',
+    of: 'von',
+    steps: 'Die Schritte der JS-Werkstatt',
+    state: 'So weit ist der Tresen-Helfer',
+    next: 'Nächster Schritt',
   },
   en: {
     assignment: 'Assignment',
@@ -61,12 +71,17 @@ const DEFAULT_LABELS = {
     files: 'Files',
     quiz: 'Test',
     question: 'Question',
+    step: 'Step',
+    of: 'of',
+    steps: 'The steps of the JS workshop',
+    state: 'What the counter helper does so far',
+    next: 'Next step',
   },
 };
 
 /** Starlight's own :::note, :::tip, :::caution and :::danger stay untouched. */
 const STARLIGHT_ASIDES = new Set(['note', 'tip', 'caution', 'danger']);
-const BOXES = new Set(['assignment', 'exercise', 'deepdive', 'goals', 'selfcheck']);
+const BOXES = new Set(['assignment', 'exercise', 'deepdive', 'goals', 'selfcheck', 'next']);
 const CODE_LANGUAGES = {
   '.vue': 'vue',
   '.js': 'js',
@@ -104,6 +119,7 @@ export default function remarkLearnBlocks(options = {}) {
         if (node.name === 'tabs') return void transformTabs(node, file, t);
         if (node.name === 'solution') return void transformSolution(node, t);
         if (node.name === 'details') return void transformDetails(node, t);
+        if (node.name === 'step') return void transformStep(node, file, t, lang);
         if (node.name === 'quiz') return void transformQuiz(node, file, t, `lt-box-${++boxCount}`);
         // transformQuiz already turned the questions of a quiz into boxes
         if (node.name === 'question') {
@@ -113,8 +129,8 @@ export default function remarkLearnBlocks(options = {}) {
         if (BOXES.has(node.name)) return void transformBox(node, t, `lt-box-${++boxCount}`);
         if (STARLIGHT_ASIDES.has(node.name)) return;
         file.fail(
-          `Unknown directive ":::${node.name}". Known: assignment, goals, deepdive, exercise, selfcheck, solution, details, ` +
-            `tabs, quiz (and Starlight's note, tip, caution, danger).`,
+          `Unknown directive ":::${node.name}". Known: assignment, goals, deepdive, exercise, selfcheck, step, next, solution, ` +
+            `details, tabs, quiz (and Starlight's note, tip, caution, danger).`,
           node,
         );
       }
@@ -204,6 +220,42 @@ function transformSolution(node, t) {
     // A solution's label already says what it is, so it replaces the kind word
     children: label ?? [{ type: 'text', value: t.solution }],
   });
+}
+
+/**
+ * The head of a unit of the JS workshop. It says which step the unit is, lists all steps as links
+ * with the current one marked, so a learner who comes from the entry test sees where the unit
+ * stands, and puts the content of the directive into a card on the state of the counter helper.
+ */
+function transformStep(node, file, t, lang) {
+  const total = WORKSHOP_STEPS.length;
+  const n = Number(node.attributes?.n);
+  if (!Number.isInteger(n) || n < 1 || n > total) file.fail(`":::step" needs n="1" to n="${total}".`, node);
+  const items = WORKSHOP_STEPS.map((step, index) => {
+    const number = `J${index + 1}`;
+    const name = `${number} ${step[lang]}`;
+    const current = index + 1 === n;
+    const content = current
+      ? { type: 'ltCurrent', data: { hName: 'span', hProperties: { title: name } }, children: [{ type: 'text', value: number }] }
+      : { type: 'link', url: `../${step.slug}/`, title: name, children: [{ type: 'text', value: number }] };
+    return { type: 'ltItem', data: { hName: 'li', hProperties: current ? { ariaCurrent: 'step' } : {} }, children: [content] };
+  });
+  const count = `${t.step} ${n} ${t.of} ${total}`;
+  const card = {
+    type: 'ltState',
+    data: { hName: 'div', hProperties: { className: ['lt-box', 'lt-state'] } },
+    children: [{ type: 'ltTitle', data: { hName: 'p', hProperties: { className: ['lt-box-title'] } }, children: [{ type: 'text', value: t.state }] }, ...node.children],
+  };
+  node.data = { hName: 'section', hProperties: { className: ['lt-step'], ariaLabel: count } };
+  node.children = [
+    { type: 'ltCount', data: { hName: 'p', hProperties: { className: ['lt-step-count'] } }, children: [{ type: 'text', value: count }] },
+    {
+      type: 'ltSteps',
+      data: { hName: 'nav', hProperties: { ariaLabel: t.steps } },
+      children: [{ type: 'ltList', data: { hName: 'ol', hProperties: { className: ['lt-step-strip'] } }, children: items }],
+    },
+    card,
+  ];
 }
 
 /** More on a section stays closed, its title says what the box holds */
