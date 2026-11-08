@@ -59,6 +59,7 @@ pnpm install
 pnpm --filter ./site run dev
 pnpm --filter ./site run build
 node scripts/build_demo.mjs
+python scripts/check_links.py
 python scripts/check_style.py
 python scripts/check_parity.py
 ```
