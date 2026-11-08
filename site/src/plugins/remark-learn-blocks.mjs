@@ -8,6 +8,8 @@
  *   :::exercise[Level]                exercise, the label names the level
  *   :::selfcheck                      self-check questions
  *   :::solution[Optional title]       collapsible <details>, code allowed inside
+ *   :::details[Optional title]        collapsed <details> with more on a section, such as a hint
+ *                                     before a solution or a source, so a long page shows its core first
  *   :::tabs[Optional accessible name]
  *   ::tab{label="Template"}           starts a tab panel (leaf directive, no closing line)
  *   :::
@@ -36,6 +38,7 @@ const DEFAULT_LABELS = {
     assignment: 'Auftrag',
     exercise: 'Aufgabe',
     solution: 'Lösung',
+    details: 'Mehr dazu',
     deepdive: 'Exkurs',
     goals: 'Lernziele',
     selfcheck: 'Selbstcheck',
@@ -49,6 +52,7 @@ const DEFAULT_LABELS = {
     assignment: 'Assignment',
     exercise: 'Exercise',
     solution: 'Solution',
+    details: 'More on this',
     deepdive: 'Deep dive',
     goals: 'Learning goals',
     selfcheck: 'Self-check',
@@ -99,6 +103,7 @@ export default function remarkLearnBlocks(options = {}) {
       if (node.type === 'containerDirective') {
         if (node.name === 'tabs') return void transformTabs(node, file, t);
         if (node.name === 'solution') return void transformSolution(node, t);
+        if (node.name === 'details') return void transformDetails(node, t);
         if (node.name === 'quiz') return void transformQuiz(node, file, t, `lt-box-${++boxCount}`);
         // transformQuiz already turned the questions of a quiz into boxes
         if (node.name === 'question') {
@@ -108,7 +113,7 @@ export default function remarkLearnBlocks(options = {}) {
         if (BOXES.has(node.name)) return void transformBox(node, t, `lt-box-${++boxCount}`);
         if (STARLIGHT_ASIDES.has(node.name)) return;
         file.fail(
-          `Unknown directive ":::${node.name}". Known: assignment, goals, deepdive, exercise, selfcheck, solution, ` +
+          `Unknown directive ":::${node.name}". Known: assignment, goals, deepdive, exercise, selfcheck, solution, details, ` +
             `tabs, quiz (and Starlight's note, tip, caution, danger).`,
           node,
         );
@@ -198,6 +203,17 @@ function transformSolution(node, t) {
     data: { hName: 'summary' },
     // A solution's label already says what it is, so it replaces the kind word
     children: label ?? [{ type: 'text', value: t.solution }],
+  });
+}
+
+/** More on a section stays closed, its title says what the box holds */
+function transformDetails(node, t) {
+  const label = takeLabel(node);
+  node.data = { hName: 'details', hProperties: { className: ['lt-box', 'lt-details'] } };
+  node.children.unshift({
+    type: 'ltTitle',
+    data: { hName: 'summary' },
+    children: label ?? [{ type: 'text', value: t.details }],
   });
 }
 
