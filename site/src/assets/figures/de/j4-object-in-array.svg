@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 338" role="img" aria-labelledby="j4-object-de-title j4-object-de-desc">
+<title id="j4-object-de-title">Ein Ding als Objekt im Array</title>
+<desc id="j4-object-de-desc">Links ein Objekt für den Raclette-Ofen mit den Schlüsseln id, name, deposit und availableFrom und ihren Werten 3, Raclette-Ofen, 30 und null. Ein Pfeil führt in ein Array mit den neun Dingen des Katalogs. Das Objekt steht dort an der dritten Stelle, items[2], nach der Bohrmaschine in items[0] und dem Zelt für vier Personen in items[1]. Die übrigen sechs Dinge stehen in items[3] bis items[8].</desc>
+<defs><marker id="j4-object-de-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j4-object-de-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j4-object-de-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="338" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="248" height="260" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">OBJEKT</text>
+<text class="d-meta" x="96.8528" y="40" text-anchor="start">ein Ding</text>
+<rect class="d-band d-band-2" x="312" y="16" width="352" height="260" rx="12"/>
+<text class="d-label d-label-blue" x="328" y="40" text-anchor="start">ARRAY</text>
+<text class="d-meta" x="384.044" y="40" text-anchor="start">der Katalog mit neun Dingen</text>
+<rect class="d-shadow" x="32" y="115.5" width="216" height="136" rx="10"/>
+<rect class="d-tile d-tile-accent" x="32" y="114" width="216" height="136" rx="10"/>
+<text class="d-code" x="48" y="148" text-anchor="start">id: 3</text>
+<text class="d-code" x="48" y="176" text-anchor="start">name: 'Raclette-Ofen'</text>
+<text class="d-code" x="48" y="204" text-anchor="start">deposit: 30</text>
+<text class="d-code" x="48" y="232" text-anchor="start">availableFrom: null</text>
+<rect class="d-shadow" x="328" y="57.5" width="320" height="44" rx="10"/>
+<rect class="d-tile" x="328" y="56" width="320" height="44" rx="10"/>
+<g class="d-icon" transform="translate(340 69) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="368" y="75" text-anchor="start">Bohrmaschine</text>
+<text class="d-code" x="368" y="91" text-anchor="start">items[0]</text>
+<rect class="d-shadow" x="328" y="109.5" width="320" height="44" rx="10"/>
+<rect class="d-tile" x="328" y="108" width="320" height="44" rx="10"/>
+<g class="d-icon" transform="translate(340 121) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="368" y="127" text-anchor="start">Zelt für vier Personen</text>
+<text class="d-code" x="368" y="143" text-anchor="start">items[1]</text>
+<rect class="d-shadow" x="328" y="161.5" width="320" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="328" y="160" width="320" height="44" rx="10"/>
+<g class="d-icon d-icon-accent" transform="translate(340 173) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="368" y="179" text-anchor="start">Raclette-Ofen</text>
+<text class="d-code" x="368" y="195" text-anchor="start">items[2]</text>
+<rect class="d-placeholder" x="328" y="212" width="320" height="44" rx="10"/>
+<text class="d-sub" x="488" y="238" text-anchor="middle">sechs weitere Dinge in items[3] bis items[8]</text>
+<path class="d-arrow d-arrow-accent" d="M 248 182 L 324 182" marker-end="url(#j4-object-de-head-accent)"/>
+<text class="d-sub" x="288" y="172" text-anchor="middle">ins Array</text>
+<rect class="d-strip" x="16" y="292" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="311" text-anchor="middle">Das Objekt kommt als drittes Element ins Array, an die Stelle items[2].</text>
+</svg>

@@ -1,5 +1,7 @@
-const reservation = { item: { name: 'Projector' }, from: '2026-11-07' }
+const favorites = [3, 6, 8]
 
-const { item: { name }, to = reservation.from, note } = reservation
-console.log(name, to, note)
-console.log(reservation.member?.email ?? 'no e-mail')
+const next = [...favorites]
+next.splice(next.indexOf(6), 1)
+
+console.log(favorites, next)
+console.log(favorites.length, next.length)

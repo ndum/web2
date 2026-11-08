@@ -1,13 +1,8 @@
-const item = {
-  id: 3,
-  name: 'Raclette-Ofen',
-  deposit: 30,
-  tags: ['Küche', 'Winter'],
-}
+const item = { id: 3, name: 'Raclette-Ofen', deposit: 30, availableFrom: null }
+console.log(item.name, item.deposit)
 
-console.log(item.name, item['deposit'], item.tags[1])
+const field = 'availableFrom'
+console.log(field, item[field])
 
-item.available = true
+item.category = 'Küche'
 console.log(Object.keys(item).join(', '))
-
-console.log(item.owner?.name ?? 'Verein')

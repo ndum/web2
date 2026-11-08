@@ -1,12 +1,10 @@
-const tent = { name: '[%Zelt|Tent%]', available: true }
-const sameTent = tent
-sameTent.available = false
-console.log(tent.available)
+const drill = { id: 1, name: '[%Bohrmaschine|Drill%]', deposit: 20, availableFrom: null }
+const items = [drill]
 
-const copy = { ...tent, available: true }
-console.log(tent.available, copy.available)
-console.log({ deposit: 20 } === { deposit: 20 }, tent === sameTent)
+const sameDrill = items[0]
+sameDrill.deposit = 25
+console.log(drill.deposit, items[0].deposit)
 
-const names = ['[%Zelt|Tent%]']
-const more = [...names, '[%Beamer|Projector%]']
-console.log(names.length, more.length)
+const copy = { ...drill, deposit: 20 }
+console.log(copy.deposit, drill.deposit)
+console.log(copy === drill, sameDrill === drill)

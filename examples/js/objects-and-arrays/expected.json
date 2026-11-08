@@ -1,18 +1,20 @@
 {
   "de": {
-    "item.mjs": "Raclette-Ofen 30 Winter\nid, name, deposit, tags, available\nVerein\n",
-    "list.mjs": "3 true 2\nBohrmaschine [ 'Zelt', 'Leiter' ]\nStichsäge 20\n",
-    "references.mjs": "false\nfalse true\nfalse true\n1 2\n",
-    "solution-1.mjs": "Martina (M-117) seit 2024\n",
-    "solution-2.mjs": "2 Zelt + Schlafsack\n",
-    "solution-3.mjs": "Beamer 2026-11-07 undefined\nkeine E-Mail\n"
+    "desk.mjs": "6 von 9 Dingen sind da\nPfand ausgeliehen: 150\n",
+    "destructure.mjs": "Bohrmaschine 2\nZelt für vier Personen 2026-11-12 ohne Kategorie\nVerein\n",
+    "item.mjs": "Raclette-Ofen 30\navailableFrom null\nid, name, deposit, availableFrom, category\n",
+    "references.mjs": "25 25\n20 25\nfalse true\n",
+    "solution-1.mjs": "10 Rasenmäher\n",
+    "solution-2.mjs": "Beamer\nundefined\n",
+    "solution-3.mjs": "[ 3, 6, 8 ] [ 3, 8 ]\n3 2\n"
   },
   "en": {
-    "item.mjs": "Raclette oven 30 winter\nid, name, deposit, tags, available\nassociation\n",
-    "list.mjs": "3 true 2\nDrill [ 'Tent', 'Ladder' ]\nJigsaw 20\n",
-    "references.mjs": "false\nfalse true\nfalse true\n1 2\n",
-    "solution-1.mjs": "Martina (M-117) since 2024\n",
-    "solution-2.mjs": "2 Tent + Sleeping bag\n",
-    "solution-3.mjs": "Projector 2026-11-07 undefined\nno e-mail\n"
+    "desk.mjs": "6 of 9 things are in\nDeposit on loan: 150\n",
+    "destructure.mjs": "Drill 2\nTent for four 2026-11-12 no category\nassociation\n",
+    "item.mjs": "Raclette oven 30\navailableFrom null\nid, name, deposit, availableFrom, category\n",
+    "references.mjs": "25 25\n20 25\nfalse true\n",
+    "solution-1.mjs": "10 Lawn mower\n",
+    "solution-2.mjs": "Projector\nundefined\n",
+    "solution-3.mjs": "[ 3, 6, 8 ] [ 3, 8 ]\n3 2\n"
   }
 }

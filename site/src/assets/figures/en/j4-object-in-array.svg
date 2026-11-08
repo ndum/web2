@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 338" role="img" aria-labelledby="j4-object-en-title j4-object-en-desc">
+<title id="j4-object-en-title">A thing as an object in the array</title>
+<desc id="j4-object-en-desc">On the left an object for the raclette oven with the keys id, name, deposit and availableFrom and their values 3, Raclette oven, 30 and null. An arrow leads into an array with the nine things of the catalog. There the object stands in third place, at items[2], after the drill at items[0] and the tent for four at items[1]. The other six things stand at items[3] to items[8].</desc>
+<defs><marker id="j4-object-en-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j4-object-en-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j4-object-en-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="338" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="248" height="260" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">OBJECT</text>
+<text class="d-meta" x="96.8528" y="40" text-anchor="start">one thing</text>
+<rect class="d-band d-band-2" x="312" y="16" width="352" height="260" rx="12"/>
+<text class="d-label d-label-blue" x="328" y="40" text-anchor="start">ARRAY</text>
+<text class="d-meta" x="384.044" y="40" text-anchor="start">the catalog with nine things</text>
+<rect class="d-shadow" x="32" y="115.5" width="216" height="136" rx="10"/>
+<rect class="d-tile d-tile-accent" x="32" y="114" width="216" height="136" rx="10"/>
+<text class="d-code" x="48" y="148" text-anchor="start">id: 3</text>
+<text class="d-code" x="48" y="176" text-anchor="start">name: 'Raclette oven'</text>
+<text class="d-code" x="48" y="204" text-anchor="start">deposit: 30</text>
+<text class="d-code" x="48" y="232" text-anchor="start">availableFrom: null</text>
+<rect class="d-shadow" x="328" y="57.5" width="320" height="44" rx="10"/>
+<rect class="d-tile" x="328" y="56" width="320" height="44" rx="10"/>
+<g class="d-icon" transform="translate(340 69) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="368" y="75" text-anchor="start">Drill</text>
+<text class="d-code" x="368" y="91" text-anchor="start">items[0]</text>
+<rect class="d-shadow" x="328" y="109.5" width="320" height="44" rx="10"/>
+<rect class="d-tile" x="328" y="108" width="320" height="44" rx="10"/>
+<g class="d-icon" transform="translate(340 121) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="368" y="127" text-anchor="start">Tent for four</text>
+<text class="d-code" x="368" y="143" text-anchor="start">items[1]</text>
+<rect class="d-shadow" x="328" y="161.5" width="320" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="328" y="160" width="320" height="44" rx="10"/>
+<g class="d-icon d-icon-accent" transform="translate(340 173) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="368" y="179" text-anchor="start">Raclette oven</text>
+<text class="d-code" x="368" y="195" text-anchor="start">items[2]</text>
+<rect class="d-placeholder" x="328" y="212" width="320" height="44" rx="10"/>
+<text class="d-sub" x="488" y="238" text-anchor="middle">six more things at items[3] to items[8]</text>
+<path class="d-arrow d-arrow-accent" d="M 248 182 L 324 182" marker-end="url(#j4-object-en-head-accent)"/>
+<text class="d-sub" x="288" y="172" text-anchor="middle">into the array</text>
+<rect class="d-strip" x="16" y="292" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="311" text-anchor="middle">The object becomes the third element of the array, at items[2].</text>
+</svg>

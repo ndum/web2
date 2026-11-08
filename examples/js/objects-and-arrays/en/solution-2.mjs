@@ -1,6 +1,21 @@
-const basket = []
-basket.push('Tent', 'Sleeping bag')
+const items = [
+  { id: 1, name: 'Drill', deposit: 20, availableFrom: null },
+  { id: 2, name: 'Tent for four', deposit: 50, availableFrom: '2026-11-12' },
+  { id: 3, name: 'Raclette oven', deposit: 30, availableFrom: null },
+  { id: 4, name: 'Beer bench set', deposit: 40, availableFrom: '2026-11-03' },
+  { id: 5, name: 'Jigsaw', deposit: 20, availableFrom: null },
+  { id: 6, name: 'Projector', deposit: 80, availableFrom: null },
+  { id: 7, name: 'Ladder', deposit: 20, availableFrom: null },
+  { id: 8, name: 'Sleeping bag', deposit: 20, availableFrom: null },
+  { id: 9, name: 'Bike trailer', deposit: 60, availableFrom: '2026-11-12' },
+]
 
-if (!basket.includes('Tent')) basket.push('Tent')
+function byId(items, id) {
+  for (const item of items) {
+    if (item.id === id) return item
+  }
+  return undefined
+}
 
-console.log(basket.length, basket.join(' + '))
+console.log(byId(items, 6).name)
+console.log(byId(items, 12))
