@@ -6,7 +6,7 @@ sidebar:
   order: 0
 ---
 
-The JS workshop refreshes the JavaScript the course assumes. Along the way you build a small program for the counter of Lorraine Commons in ten steps, the counter helper. It starts with a single thing in a few variables and ends up showing the nine things from the counter on a page, with deposit, return date and reservation.
+The JS workshop refreshes the JavaScript the course assumes. Along the way you build a small program for the counter of Lorraine Commons in ten steps, the counter helper. It starts with a single thing in a few variables, and in step 8 it shows the nine things from the counter on a page where a click reserves one. At the end it writes deposits in francs and return dates in your language.
 
 You can work through the steps in order or only through the ones the [entry test](../start/entry-test/) recommends. Every step shows at the top what the counter helper already does and the code so far, so you can also join in the middle. When a chapter assumes a topic, it points you to the matching step.
 

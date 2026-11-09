@@ -1,7 +1,7 @@
 {
   "de": {
     "q01.mjs": "object\n",
-    "q02.mjs": "20 0\n",
+    "q02.mjs": "keine 0\n",
     "q03.mjs": "50\n",
     "q04.mjs": "3\n",
     "q05.mjs": "unbekannt null\n",
@@ -16,7 +16,7 @@
   },
   "en": {
     "q01.mjs": "object\n",
-    "q02.mjs": "20 0\n",
+    "q02.mjs": "none 0\n",
     "q03.mjs": "50\n",
     "q04.mjs": "3\n",
     "q05.mjs": "unknown null\n",

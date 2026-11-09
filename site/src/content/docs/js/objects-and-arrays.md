@@ -26,7 +26,7 @@ Nach diesem Schritt kannst du
 
 ## Ein Ding als Objekt
 
-Bisher standen die Angaben zur Bohrmaschine in einzelnen Variablen. Ein Objekt fasst solche Werte unter Namen zusammen, den Schlüsseln. Du liest einen Wert mit einem Punkt, `item.deposit`, oder mit eckigen Klammern, wenn der Schlüssel in einer Variablen steht.
+In Schritt 1 standen die Angaben zur Bohrmaschine in einzelnen Variablen, und `isIn` aus Schritt 3 bekam schon ein kleines Objekt. Ein Objekt fasst solche Werte unter Namen zusammen, den Schlüsseln. Du liest einen Wert mit einem Punkt, `item.deposit`, oder mit eckigen Klammern, wenn der Schlüssel in einer Variablen steht.
 
 ::code{file="examples/js/objects-and-arrays/{lang}/item.mjs"}
 

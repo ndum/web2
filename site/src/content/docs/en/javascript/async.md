@@ -61,7 +61,7 @@ With `async` and `await`, code with promises reads almost like ordinary code. A 
 
 `oneAfterTheOther` waits for the things and only then asks for the members, 400 milliseconds in total. `atTheSameTime` starts both requests right away and waits for both with `Promise.all`, which takes as long as the slower one. So you start independent requests at the same time. If one of the promises rejects, `Promise.all` rejects too. If you need all results, the rejected ones included, use `Promise.allSettled`.
 
-In a module, `await` may also stand outside a function, as in the last lines of the example. You catch a rejected promise with `try` and `catch`, just like an error from the unit [Handling errors](../../js/errors/).
+In a module, `await` may also stand outside a function, as in the last lines of the example. You catch a rejected promise with `try` and `catch`, just like an error from the unit [J7 Handling errors](../../js/errors/).
 
 ## fetch
 
@@ -134,7 +134,7 @@ Two lines are enough, `const response = await fetch(url)` and `return response.j
 Export an error class `LoadError` from `src/load.js`. `loadItems` throws it with the message "The server answers with status 503." when the server reports an error, with its status instead of 503. If the server can't be reached, the message is "The server cannot be reached.".
 
 :::solution[Solution]
-The class extends `Error` and sets its name, as in the unit [Handling errors](../../js/errors/). `loadItems` catches the `TypeError` from `fetch` with `try` and `catch` and throws a `LoadError` instead. After the `try`, it checks `response.ok` and throws a `LoadError` with the status when the server reports an error. The overview then only prints `error.message`. The solution of the challenge shows the code.
+The class extends `Error` and sets its name, as in the unit [J7 Handling errors](../../js/errors/). `loadItems` catches the `TypeError` from `fetch` with `try` and `catch` and throws a `LoadError` instead. After the `try`, it checks `response.ok` and throws a `LoadError` with the status when the server reports an error. The overview then only prints `error.message`. The solution of the challenge shows the code.
 :::
 ::::
 

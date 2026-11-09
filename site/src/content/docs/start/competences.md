@@ -18,6 +18,6 @@ Mit diesem Raster schätzt du ein, ob du für Teil 1 bereit bist. Lies jede Zeil
 | die Meldung eines fehlgeschlagenen Tests lesen | Ändere im Setup-Projekt den Namen in `App.vue` und erkläre, was die Meldung des Tests sagt. | [Einrichten](../setup/#aufgaben-und-tests) |
 | in der Konsole der DevTools JavaScript ausführen und Fehlermeldungen lesen | Öffne die Konsole auf dieser Seite und gib `typeof null` ein. | [Einrichten](../setup/#die-devtools-des-browsers) |
 | die Ausgabe von kurzem JavaScript-Code vorhersagen | Löse den Einstiegstest und arbeite die Einheiten durch, die er dir nennt. | [Einstiegstest](../entry-test/) |
-| Werte, Funktionen, Objekte und Arrays in JavaScript sicher einsetzen | Löse die Aufgabe «Knobelei» der Einheit «Funktionen und Gültigkeitsbereich» ohne Hilfe. | [JS-Werkstatt](../../js/) |
+| Werte, Funktionen, Objekte und Arrays in JavaScript sicher einsetzen | Löse die Aufgabe «Knobelei» der Einheit «J3 Funktionen und Gültigkeitsbereich» ohne Hilfe. | [JS-Werkstatt](../../js/) |
 
 Für Teil 1 brauchst du vor allem eine Einrichtung, die läuft, und die Grundlagen aus dem Einstiegstest. Was dir in der JS-Werkstatt noch fehlt, kannst du auch unterwegs auffrischen, die Kapitel verweisen auf die passenden Einheiten.

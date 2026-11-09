@@ -1,2 +1,2 @@
-const deposit = 0
-console.log(deposit || 20, deposit ?? 20)
+const kidsIn = 0
+console.log(kidsIn || 'keine', kidsIn ?? 'keine')

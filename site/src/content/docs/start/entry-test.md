@@ -31,17 +31,17 @@ Welchen Typ meldet `typeof` für `null`?
 ::code{file="examples/js/entry-test/{lang}/q01.mjs" run="false"}
 
 :::solution[Lösung]
-`typeof null` ergibt `object`. Das ist ein Fehler aus der ersten Version von JavaScript, der nie korrigiert wurde, weil sonst bestehender Code nicht mehr liefe. Ob ein Wert `null` ist, prüfst du deshalb direkt mit `value === null`. Mehr dazu in der Einheit [Variablen, Typen und Operatoren](../../js/variables/).
+`typeof null` ergibt `object`. Das ist ein Fehler aus der ersten Version von JavaScript, der nie korrigiert wurde, weil sonst bestehender Code nicht mehr liefe. Ob ein Wert `null` ist, prüfst du deshalb direkt mit `value === null`. Mehr dazu in der Einheit [J1 Variablen, Typen und Operatoren](../../js/variables/).
 :::
 ::::
 
-::::question{answer="20 0|20, 0" unit="variables"}
-Ein Ding hat kein Pfand, das Feld steht auf 0. Was gibt das Programm aus?
+::::question{answer="keine 0|keine, 0" unit="variables"}
+In der Kategorie Kinder ist gerade kein Ding da, das Feld steht auf 0. Was gibt das Programm aus?
 
 ::code{file="examples/js/entry-test/{lang}/q02.mjs" run="false"}
 
 :::solution[Lösung]
-`||` nimmt den rechten Wert, sobald der linke als falsch gilt, und 0 gilt als falsch. `??` nimmt den rechten Wert nur, wenn der linke `null` oder `undefined` ist. Die Ausgabe ist `20 0`. Für ein Pfand, das 0 sein darf, ist `??` die richtige Wahl. Mehr dazu in der Einheit [Variablen, Typen und Operatoren](../../js/variables/).
+`||` nimmt den rechten Wert, sobald der linke als falsch gilt, und 0 gilt als falsch. `??` nimmt den rechten Wert nur, wenn der linke `null` oder `undefined` ist. Die Ausgabe ist `keine 0`. Für eine Anzahl, die 0 sein darf, ist `??` die richtige Wahl. Mehr dazu in der Einheit [J1 Variablen, Typen und Operatoren](../../js/variables/).
 :::
 ::::
 
@@ -51,7 +51,7 @@ Wie gross ist die Summe am Schluss?
 ::code{file="examples/js/entry-test/{lang}/q03.mjs" run="false"}
 
 :::solution[Lösung]
-`continue` beendet den aktuellen Durchgang und springt zum nächsten Wert. Die 50 ist grösser als 40 und wird übersprungen, es bleiben 20 und 30. Die Summe ist 50. Mehr dazu in der Einheit [Kontrollstrukturen](../../js/control-flow/).
+`continue` beendet den aktuellen Durchgang und springt zum nächsten Wert. Die 50 ist grösser als 40 und wird übersprungen, es bleiben 20 und 30. Die Summe ist 50. Mehr dazu in der Einheit [J2 Kontrollstrukturen](../../js/control-flow/).
 :::
 ::::
 
@@ -61,7 +61,7 @@ Was gibt der dritte Aufruf von `next` zurück?
 ::code{file="examples/js/entry-test/{lang}/q04.mjs" run="false"}
 
 :::solution[Lösung]
-`createCounter` gibt eine Funktion zurück, die sich die Variable `count` merkt, auch nachdem `createCounter` fertig ist. Das heisst Closure. Alle drei Aufrufe erhöhen dieselbe Variable, der dritte gibt 3 zurück. Mehr dazu in der Einheit [Funktionen und Gültigkeitsbereich](../../js/functions/).
+`createCounter` gibt eine Funktion zurück, die sich die Variable `count` merkt, auch nachdem `createCounter` fertig ist. Das heisst Closure. Alle drei Aufrufe erhöhen dieselbe Variable, der dritte gibt 3 zurück. Mehr dazu in der Einheit [J3 Funktionen und Gültigkeitsbereich](../../js/functions/).
 :::
 ::::
 
@@ -71,7 +71,7 @@ Der Parameter hat einen Standardwert. Was kommt bei `undefined` heraus und was b
 ::code{file="examples/js/entry-test/{lang}/q05.mjs" run="false"}
 
 :::solution[Lösung]
-Ein Standardwert gilt nur, wenn ein Argument fehlt oder `undefined` ist. `null` ist ein Wert, den jemand absichtlich übergibt, deshalb bleibt er stehen. Die Ausgabe ist `unbekannt null`. Mehr dazu in der Einheit [Funktionen und Gültigkeitsbereich](../../js/functions/).
+Ein Standardwert gilt nur, wenn ein Argument fehlt oder `undefined` ist. `null` ist ein Wert, den jemand absichtlich übergibt, deshalb bleibt er stehen. Die Ausgabe ist `unbekannt null`. Mehr dazu in der Einheit [J3 Funktionen und Gültigkeitsbereich](../../js/functions/).
 :::
 ::::
 
@@ -81,7 +81,7 @@ Welches Pfand hat `first` am Schluss?
 ::code{file="examples/js/entry-test/{lang}/q06.mjs" run="false"}
 
 :::solution[Lösung]
-`const second = first` kopiert nicht das Objekt, sondern den Verweis darauf. Beide Variablen zeigen auf dasselbe Objekt, darum ist die Änderung über `second` auch über `first` zu sehen. Mehr dazu in der Einheit [Objekte und Arrays](../../js/objects-and-arrays/).
+`const second = first` kopiert nicht das Objekt, sondern den Verweis darauf. Beide Variablen zeigen auf dasselbe Objekt, darum ist die Änderung über `second` auch über `first` zu sehen. Mehr dazu in der Einheit [J4 Objekte und Arrays](../../js/objects-and-arrays/).
 :::
 ::::
 
@@ -91,7 +91,7 @@ Welche zwei Namen gibt das Programm aus?
 ::code{file="examples/js/entry-test/{lang}/q07.mjs" run="false"}
 
 :::solution[Lösung]
-Beim Destrukturieren eines Arrays zählt die Position. Die leere Stelle zwischen den beiden Kommas überspringt das zweite Element, `third` bekommt das dritte. Die Ausgabe ist `Zelt Beamer`. Mehr dazu in der Einheit [Objekte und Arrays](../../js/objects-and-arrays/).
+Beim Destrukturieren eines Arrays zählt die Position. Die leere Stelle zwischen den beiden Kommas überspringt das zweite Element, `third` bekommt das dritte. Die Ausgabe ist `Zelt Beamer`. Mehr dazu in der Einheit [J4 Objekte und Arrays](../../js/objects-and-arrays/).
 :::
 ::::
 
@@ -101,7 +101,7 @@ Was bleibt vom Text übrig?
 ::code{file="examples/js/entry-test/{lang}/q08.mjs" run="false"}
 
 :::solution[Lösung]
-`toUpperCase` liefert einen neuen String in Grossbuchstaben. `slice(0, 4)` nimmt die Zeichen an den Stellen 0 bis 3, die Stelle 4 gehört nicht mehr dazu. Mehr dazu in der Einheit [Strings und Template Literals](../../js/strings/).
+`toUpperCase` liefert einen neuen String in Grossbuchstaben. `slice(0, 4)` nimmt die Zeichen an den Stellen 0 bis 3, die Stelle 4 gehört nicht mehr dazu. Mehr dazu in der Einheit [J5 Strings und Template Literals](../../js/strings/).
 :::
 ::::
 
@@ -111,7 +111,7 @@ Die Methode wird ohne Objekt davor aufgerufen. Was gibt das Programm aus?
 ::code{file="examples/js/entry-test/{lang}/q09.mjs" run="false"}
 
 :::solution[Lösung]
-`getName` ist hier eine Funktion, die nichts mehr von `shop` weiss. Beim Aufruf ohne Objekt davor ist `this` in einem Modul `undefined`, und `this.name` wirft einen `TypeError`. Der `catch`-Block gibt den Namen des Fehlers aus. Mehr dazu in der Einheit [Klassen und this](../../js/classes/).
+`getName` ist hier eine Funktion, die nichts mehr von `shop` weiss. Beim Aufruf ohne Objekt davor ist `this` in einem Modul `undefined`, und `this.name` wirft einen `TypeError`. Der `catch`-Block gibt den Namen des Fehlers aus. Mehr dazu in der Einheit [J6 Klassen und this](../../js/classes/).
 :::
 ::::
 
@@ -121,7 +121,7 @@ In welcher Reihenfolge erscheinen die Ausgaben?
 ::code{file="examples/js/entry-test/{lang}/q10.mjs" run="false"}
 
 :::solution[Lösung]
-Der `try`-Block gibt `a` aus und wirft dann einen Fehler. Das Programm springt in den `catch`-Block, der die Meldung `b` ausgibt. Der `finally`-Block läuft immer, mit oder ohne Fehler, und gibt `c` aus. Die Antwort ist `a b c`. Mehr dazu in der Einheit [Fehler behandeln](../../js/errors/).
+Der `try`-Block gibt `a` aus und wirft dann einen Fehler. Das Programm springt in den `catch`-Block, der die Meldung `b` ausgibt. Der `finally`-Block läuft immer, mit oder ohne Fehler, und gibt `c` aus. Die Antwort ist `a b c`. Mehr dazu in der Einheit [J7 Fehler behandeln](../../js/errors/).
 :::
 ::::
 
@@ -131,7 +131,7 @@ Der Listener hängt an der Liste, geklickt wird auf den letzten Eintrag. Was gib
 ::code{file="examples/js/entry-test/{lang}/q11.html" run="false"}
 
 :::solution[Lösung]
-Ein Klick auf ein Element steigt im DOM nach oben, über die Liste bis zum Dokument. Der Listener auf der Liste bekommt ihn deshalb auch. `event.target` ist das Element, auf das geklickt wurde, also der zweite Eintrag «Leiter». Mehr dazu in der Einheit [DOM und Events](../../js/dom-and-events/).
+Ein Klick auf ein Element steigt im DOM nach oben, über die Liste bis zum Dokument. Der Listener auf der Liste bekommt ihn deshalb auch. `event.target` ist das Element, auf das geklickt wurde, also der zweite Eintrag «Leiter». Mehr dazu in der Einheit [J8 DOM und Events](../../js/dom-and-events/).
 :::
 ::::
 
@@ -141,7 +141,7 @@ Welchen Text erzeugt `JSON.stringify`?
 ::code{file="examples/js/entry-test/{lang}/q12.mjs" run="false"}
 
 :::solution[Lösung]
-JSON kennt den Wert `undefined` nicht, darum lässt `JSON.stringify` das Feld `note` weg. Schlüssel und Strings stehen in doppelten Anführungszeichen, und ohne weitere Argumente gibt es keine Leerzeichen. Die Ausgabe ist `{"name":"Zelt"}`. Mehr dazu in der Einheit [JSON und Datenformate](../../js/json/).
+JSON kennt den Wert `undefined` nicht, darum lässt `JSON.stringify` das Feld `note` weg. Schlüssel und Strings stehen in doppelten Anführungszeichen, und ohne weitere Argumente gibt es keine Leerzeichen. Die Ausgabe ist `{"name":"Zelt"}`. Mehr dazu in der Einheit [J9 JSON und Datenformate](../../js/json/).
 :::
 ::::
 
@@ -151,7 +151,7 @@ Wie zeigt `Intl.NumberFormat` ein Pfand von 20 Franken?
 ::code{file="examples/js/entry-test/{lang}/q13.mjs" run="false"}
 
 :::solution[Lösung]
-Mit `style: 'currency'` setzt `Intl.NumberFormat` den Code der Währung vor den Betrag und zeigt zwei Stellen nach dem Punkt. Bei Geldbeträgen steht in der Schweiz ein Punkt, kein Komma. Mehr dazu in der Einheit [Zahlen und Daten formatieren](../../js/formatting/).
+Mit `style: 'currency'` setzt `Intl.NumberFormat` den Code der Währung vor den Betrag und zeigt zwei Stellen nach dem Punkt. Bei Geldbeträgen steht in der Schweiz ein Punkt, kein Komma. Mehr dazu in der Einheit [J10 Zahlen und Daten formatieren](../../js/formatting/).
 :::
 ::::
 :::::

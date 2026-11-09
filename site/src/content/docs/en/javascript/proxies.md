@@ -20,7 +20,7 @@ After this chapter you can
 
 ## Getters and setters
 
-A getter looks like a field from outside but is a function that runs on every read. A setter runs on every write. You know both from the classes in the unit [Classes and this](../../js/classes/), and in objects they work the same way.
+A getter looks like a field from outside but is a function that runs on every read. A setter runs on every write. You know both from the classes in the unit [J6 Classes and this](../../js/classes/), and in objects they work the same way.
 
 ::code{file="examples/01-javascript/proxies/{lang}/getter.mjs"}
 

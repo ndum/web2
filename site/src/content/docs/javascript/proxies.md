@@ -20,7 +20,7 @@ Nach diesem Kapitel kannst du
 
 ## Getter und Setter
 
-Ein Getter sieht von aussen aus wie ein Feld, ist aber eine Funktion, die bei jedem Lesen läuft. Ein Setter läuft bei jedem Schreiben. Beide kennst du von den Klassen aus der Einheit [Klassen und this](../../js/classes/), in Objekten funktionieren sie genauso.
+Ein Getter sieht von aussen aus wie ein Feld, ist aber eine Funktion, die bei jedem Lesen läuft. Ein Setter läuft bei jedem Schreiben. Beide kennst du von den Klassen aus der Einheit [J6 Klassen und this](../../js/classes/), in Objekten funktionieren sie genauso.
 
 ::code{file="examples/01-javascript/proxies/{lang}/getter.mjs"}
 

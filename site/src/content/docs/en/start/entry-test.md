@@ -31,17 +31,17 @@ Which type does `typeof` report for `null`?
 ::code{file="examples/js/entry-test/{lang}/q01.mjs" run="false"}
 
 :::solution[Solution]
-`typeof null` gives `object`. This is a bug from the first version of JavaScript that was never fixed, because existing code would break. To check whether a value is `null`, compare directly with `value === null`. More in the unit [Variables, types and operators](../../js/variables/).
+`typeof null` gives `object`. This is a bug from the first version of JavaScript that was never fixed, because existing code would break. To check whether a value is `null`, compare directly with `value === null`. More in the unit [J1 Variables, types and operators](../../js/variables/).
 :::
 ::::
 
-::::question{answer="20 0|20, 0" unit="variables"}
-A thing has no deposit, the field is 0. What does the program print?
+::::question{answer="none 0|none, 0" unit="variables"}
+No thing of the category Kids is in right now, the field is 0. What does the program print?
 
 ::code{file="examples/js/entry-test/{lang}/q02.mjs" run="false"}
 
 :::solution[Solution]
-`||` takes the right-hand value as soon as the left one counts as false, and 0 counts as false. `??` takes the right-hand value only if the left one is `null` or `undefined`. The output is `20 0`. For a deposit that may be 0, `??` is the right choice. More in the unit [Variables, types and operators](../../js/variables/).
+`||` takes the right-hand value as soon as the left one counts as false, and 0 counts as false. `??` takes the right-hand value only if the left one is `null` or `undefined`. The output is `none 0`. For a count that may be 0, `??` is the right choice. More in the unit [J1 Variables, types and operators](../../js/variables/).
 :::
 ::::
 
@@ -51,7 +51,7 @@ What is the sum at the end?
 ::code{file="examples/js/entry-test/{lang}/q03.mjs" run="false"}
 
 :::solution[Solution]
-`continue` ends the current pass and jumps to the next value. 50 is greater than 40 and gets skipped, which leaves 20 and 30. The sum is 50. More in the unit [Control flow](../../js/control-flow/).
+`continue` ends the current pass and jumps to the next value. 50 is greater than 40 and gets skipped, which leaves 20 and 30. The sum is 50. More in the unit [J2 Control flow](../../js/control-flow/).
 :::
 ::::
 
@@ -61,7 +61,7 @@ What does the third call of `next` return?
 ::code{file="examples/js/entry-test/{lang}/q04.mjs" run="false"}
 
 :::solution[Solution]
-`createCounter` returns a function that remembers the variable `count`, even after `createCounter` has finished. This is called a closure. All three calls increase the same variable, and the third one returns 3. More in the unit [Functions and scope](../../js/functions/).
+`createCounter` returns a function that remembers the variable `count`, even after `createCounter` has finished. This is called a closure. All three calls increase the same variable, and the third one returns 3. More in the unit [J3 Functions and scope](../../js/functions/).
 :::
 ::::
 
@@ -71,7 +71,7 @@ The parameter has a default value. What comes out for `undefined`, and what for 
 ::code{file="examples/js/entry-test/{lang}/q05.mjs" run="false"}
 
 :::solution[Solution]
-A default value applies only when an argument is missing or `undefined`. `null` is a value someone passes on purpose, so it stays. The output is `unknown null`. More in the unit [Functions and scope](../../js/functions/).
+A default value applies only when an argument is missing or `undefined`. `null` is a value someone passes on purpose, so it stays. The output is `unknown null`. More in the unit [J3 Functions and scope](../../js/functions/).
 :::
 ::::
 
@@ -81,7 +81,7 @@ Which deposit does `first` have at the end?
 ::code{file="examples/js/entry-test/{lang}/q06.mjs" run="false"}
 
 :::solution[Solution]
-`const second = first` doesn't copy the object but the reference to it. Both variables point to the same object, so the change made through `second` is visible through `first` too. More in the unit [Objects and arrays](../../js/objects-and-arrays/).
+`const second = first` doesn't copy the object but the reference to it. Both variables point to the same object, so the change made through `second` is visible through `first` too. More in the unit [J4 Objects and arrays](../../js/objects-and-arrays/).
 :::
 ::::
 
@@ -91,7 +91,7 @@ Which two names does the program print?
 ::code{file="examples/js/entry-test/{lang}/q07.mjs" run="false"}
 
 :::solution[Solution]
-When you destructure an array, position counts. The empty slot between the two commas skips the second element, and `third` gets the third one. The output is `Tent Projector`. More in the unit [Objects and arrays](../../js/objects-and-arrays/).
+When you destructure an array, position counts. The empty slot between the two commas skips the second element, and `third` gets the third one. The output is `Tent Projector`. More in the unit [J4 Objects and arrays](../../js/objects-and-arrays/).
 :::
 ::::
 
@@ -101,7 +101,7 @@ What is left of the text?
 ::code{file="examples/js/entry-test/{lang}/q08.mjs" run="false"}
 
 :::solution[Solution]
-`toUpperCase` returns a new string in capital letters. `slice(0, 4)` takes the characters at positions 0 to 3, and position 4 is no longer included. More in the unit [Strings and template literals](../../js/strings/).
+`toUpperCase` returns a new string in capital letters. `slice(0, 4)` takes the characters at positions 0 to 3, and position 4 is no longer included. More in the unit [J5 Strings and template literals](../../js/strings/).
 :::
 ::::
 
@@ -111,7 +111,7 @@ The method is called without an object in front of it. What does the program pri
 ::code{file="examples/js/entry-test/{lang}/q09.mjs" run="false"}
 
 :::solution[Solution]
-Here `getName` is a function that no longer knows anything about `shop`. When it is called without an object in front, `this` is `undefined` in a module, and `this.name` throws a `TypeError`. The `catch` block prints the name of the error. More in the unit [Classes and this](../../js/classes/).
+Here `getName` is a function that no longer knows anything about `shop`. When it is called without an object in front, `this` is `undefined` in a module, and `this.name` throws a `TypeError`. The `catch` block prints the name of the error. More in the unit [J6 Classes and this](../../js/classes/).
 :::
 ::::
 
@@ -121,7 +121,7 @@ In which order does the output appear?
 ::code{file="examples/js/entry-test/{lang}/q10.mjs" run="false"}
 
 :::solution[Solution]
-The `try` block prints `a` and then throws an error. The program jumps to the `catch` block, which prints the message `b`. The `finally` block always runs, with or without an error, and prints `c`. The answer is `a b c`. More in the unit [Handling errors](../../js/errors/).
+The `try` block prints `a` and then throws an error. The program jumps to the `catch` block, which prints the message `b`. The `finally` block always runs, with or without an error, and prints `c`. The answer is `a b c`. More in the unit [J7 Handling errors](../../js/errors/).
 :::
 ::::
 
@@ -131,7 +131,7 @@ The listener sits on the list, and the click goes to the last entry. What does t
 ::code{file="examples/js/entry-test/{lang}/q11.html" run="false"}
 
 :::solution[Solution]
-A click on an element rises up through the DOM, past the list and up to the document. That's why the listener on the list gets it too. `event.target` is the element that was clicked, the second entry "Ladder". More in the unit [The DOM and events](../../js/dom-and-events/).
+A click on an element rises up through the DOM, past the list and up to the document. That's why the listener on the list gets it too. `event.target` is the element that was clicked, the second entry "Ladder". More in the unit [J8 The DOM and events](../../js/dom-and-events/).
 :::
 ::::
 
@@ -141,7 +141,7 @@ Which text does `JSON.stringify` produce?
 ::code{file="examples/js/entry-test/{lang}/q12.mjs" run="false"}
 
 :::solution[Solution]
-JSON has no value `undefined`, so `JSON.stringify` leaves out the field `note`. Keys and strings are in double quotes, and without further arguments there are no spaces. The output is `{"name":"Tent"}`. More in the unit [JSON and data formats](../../js/json/).
+JSON has no value `undefined`, so `JSON.stringify` leaves out the field `note`. Keys and strings are in double quotes, and without further arguments there are no spaces. The output is `{"name":"Tent"}`. More in the unit [J9 JSON and data formats](../../js/json/).
 :::
 ::::
 
@@ -151,7 +151,7 @@ How does `Intl.NumberFormat` show a deposit of 20 francs?
 ::code{file="examples/js/entry-test/{lang}/q13.mjs" run="false"}
 
 :::solution[Solution]
-With `style: 'currency'`, `Intl.NumberFormat` puts the currency code in front of the amount and shows two decimal places. Swiss amounts of money use a period, not a comma. More in the unit [Formatting numbers and dates](../../js/formatting/).
+With `style: 'currency'`, `Intl.NumberFormat` puts the currency code in front of the amount and shows two decimal places. Swiss amounts of money use a period, not a comma. More in the unit [J10 Formatting numbers and dates](../../js/formatting/).
 :::
 ::::
 :::::

@@ -61,7 +61,7 @@ Mit `async` und `await` liest sich Code mit Promises fast wie gewöhnlicher Code
 
 `oneAfterTheOther` wartet auf die Dinge und fragt erst danach nach den Mitgliedern, zusammen 400 Millisekunden. `atTheSameTime` startet beide Anfragen sofort und wartet mit `Promise.all` auf beide, das dauert so lange wie die langsamere. Unabhängige Anfragen startest du deshalb gleichzeitig. Lehnt eines der Promises ab, lehnt auch `Promise.all` ab. Brauchst du alle Ergebnisse, auch die abgelehnten, nimmst du `Promise.allSettled`.
 
-In einem Modul darf `await` auch ausserhalb einer Funktion stehen, wie in den letzten Zeilen des Beispiels. Ein abgelehntes Promise fängst du mit `try` und `catch` ab, genau wie einen Fehler aus der Einheit [Fehler behandeln](../../js/errors/).
+In einem Modul darf `await` auch ausserhalb einer Funktion stehen, wie in den letzten Zeilen des Beispiels. Ein abgelehntes Promise fängst du mit `try` und `catch` ab, genau wie einen Fehler aus der Einheit [J7 Fehler behandeln](../../js/errors/).
 
 ## fetch
 
@@ -134,7 +134,7 @@ Zwei Zeilen genügen, `const response = await fetch(url)` und `return response.j
 Exportiere aus `src/load.js` eine Fehlerklasse `LoadError`. `loadItems` wirft sie mit der Meldung «Der Server antwortet mit dem Status 503.», wenn der Server einen Fehler meldet, mit seinem Status statt 503. Ist der Server nicht erreichbar, lautet die Meldung «Der Server ist nicht erreichbar.».
 
 :::solution[Lösung]
-Die Klasse erbt von `Error` und setzt ihren Namen, wie in der Einheit [Fehler behandeln](../../js/errors/). `loadItems` fängt den `TypeError` von `fetch` mit `try` und `catch` ab und wirft stattdessen einen `LoadError`. Nach dem `try` prüft sie `response.ok` und wirft bei einem Fehler des Servers einen `LoadError` mit dem Status. Die Übersicht gibt dann nur noch `error.message` aus. Den Code zeigt die Lösung der Knobelei.
+Die Klasse erbt von `Error` und setzt ihren Namen, wie in der Einheit [J7 Fehler behandeln](../../js/errors/). `loadItems` fängt den `TypeError` von `fetch` mit `try` und `catch` ab und wirft stattdessen einen `LoadError`. Nach dem `try` prüft sie `response.ok` und wirft bei einem Fehler des Servers einen `LoadError` mit dem Status. Die Übersicht gibt dann nur noch `error.message` aus. Den Code zeigt die Lösung der Knobelei.
 :::
 ::::
 

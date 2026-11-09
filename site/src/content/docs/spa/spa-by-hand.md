@@ -36,7 +36,7 @@ Eine SPA beruht auf einem Gedanken, den auch Vue verwendet. Alles, was die Seite
 
 ::code{file="examples/02-spa/spa-by-hand/{lang}/state.html"}
 
-Der Klick auf den Knopf ändert nicht den Absatz, sondern `state.reservations`. Danach zeichnet `render` die Seite neu. Weil `render` den Knopf jedes Mal durch einen neuen ersetzt, hängt der Listener nicht am Knopf, sondern am Container. Ein Klick steigt im DOM nach oben, und `data-action` sagt, was zu tun ist. Dieses Muster heisst Event-Delegation, die Einheit [DOM und Events](../../js/dom-and-events/) zeigt es genauer.
+Der Klick auf den Knopf ändert nicht den Absatz, sondern `state.reservations`. Danach zeichnet `render` die Seite neu. Weil `render` den Knopf jedes Mal durch einen neuen ersetzt, hängt der Listener nicht am Knopf, sondern am Container. Ein Klick steigt im DOM nach oben, und `data-action` sagt, was zu tun ist. Dieses Muster heisst Event-Delegation, die Einheit [J8 DOM und Events](../../js/dom-and-events/) zeigt es genauer.
 
 ![Der Kreislauf der SPA von Hand. Vier Karten bilden einen Kreislauf. Der Zustand ist ein Objekt mit status, items und route. Die Funktion render liest den Zustand und schreibt daraus die Seite. Auf der Seite lösen Klicks, Eingaben und hashchange Events aus. Die Handler der Events ändern den Zustand, und der Kreislauf beginnt von vorn. Die Handler ändern die Seite nie direkt.](../../../assets/figures/de/p2c2-render-loop.svg)
 

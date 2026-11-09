@@ -26,7 +26,7 @@ After this step you can
 
 ## A thing as an object
 
-So far the details of the drill sat in separate variables. An object groups such values under names, its keys. You read a value with a dot, `item.deposit`, or with square brackets when the key is stored in a variable.
+In step 1 the details of the drill sat in separate variables, and `isIn` from step 3 already received a small object. An object groups such values under names, its keys. You read a value with a dot, `item.deposit`, or with square brackets when the key is stored in a variable.
 
 ::code{file="examples/js/objects-and-arrays/{lang}/item.mjs"}
 

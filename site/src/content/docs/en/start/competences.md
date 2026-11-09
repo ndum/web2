@@ -18,6 +18,6 @@ Use this grid to judge whether you are ready for part 1. Read each row and solve
 | read the message of a failing test | Change the name in `App.vue` of the setup project and explain what the test's message says. | [Setup](../setup/#exercises-and-tests) |
 | run JavaScript in the DevTools console and read error messages | Open the console on this page and type `typeof null`. | [Setup](../setup/#the-browser-devtools) |
 | predict the output of short JavaScript code | Take the entry test and work through the units it names. | [Entry test](../entry-test/) |
-| use values, functions, objects and arrays in JavaScript with confidence | Solve the "Challenge" exercise of the unit "Functions and scope" without help. | [JS workshop](../../js/) |
+| use values, functions, objects and arrays in JavaScript with confidence | Solve the "Challenge" exercise of the unit "J3 Functions and scope" without help. | [JS workshop](../../js/) |
 
 For part 1 you mainly need a setup that works and the basics from the entry test. Whatever you still lack from the JS workshop you can also refresh along the way, since the chapters point to the matching units.

@@ -6,7 +6,7 @@ sidebar:
   order: 0
 ---
 
-Die JS-Werkstatt frischt das JavaScript auf, das der Kurs voraussetzt. In zehn Schritten baust du dabei ein kleines Programm für den Tresen von Lorraine Commons, den Tresen-Helfer. Er beginnt mit einem einzigen Ding in ein paar Variablen und zeigt am Schluss die neun Dinge vom Tresen auf einer Seite, mit Pfand, Rückgabedatum und Reservation.
+Die JS-Werkstatt frischt das JavaScript auf, das der Kurs voraussetzt. In zehn Schritten baust du dabei ein kleines Programm für den Tresen von Lorraine Commons, den Tresen-Helfer. Er beginnt mit einem einzigen Ding in ein paar Variablen und zeigt in Schritt 8 die neun Dinge vom Tresen auf einer Seite, auf der ein Klick ein Ding reserviert. Am Schluss schreibt er Pfand und Rückgabedaten so, wie man sie in der Schweiz liest.
 
 Du kannst die Schritte der Reihe nach durcharbeiten oder nur die, die dir der [Einstiegstest](../start/entry-test/) empfiehlt. Jeder Schritt zeigt oben, was der Tresen-Helfer schon kann, und den Code bis dahin, so kannst du auch mitten drin einsteigen. Wenn ein Kapitel ein Thema voraussetzt, verweist es auf den passenden Schritt.
 

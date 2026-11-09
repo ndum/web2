@@ -28,7 +28,7 @@ Nach diesem Kapitel kannst du
 - Listen mit `toSorted` und `localeCompare` sortieren, ohne das Original zu ändern,
 - Funktionen schreiben, die andere Funktionen bauen.
 
-Pfeilfunktionen und Closures kennst du aus der Einheit [Funktionen und Gültigkeitsbereich](../../js/functions/) der JS-Werkstatt.
+Pfeilfunktionen und Closures kennst du aus der Einheit [J3 Funktionen und Gültigkeitsbereich](../../js/functions/) der JS-Werkstatt.
 :::
 
 ## Funktionen als Argumente

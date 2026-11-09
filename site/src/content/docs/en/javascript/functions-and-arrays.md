@@ -28,7 +28,7 @@ After this chapter you can
 - sort lists with `toSorted` and `localeCompare` without changing the original,
 - write functions that build other functions.
 
-You know arrow functions and closures from the unit [Functions and scope](../../js/functions/) of the JS workshop.
+You know arrow functions and closures from the unit [J3 Functions and scope](../../js/functions/) of the JS workshop.
 :::
 
 ## Functions as arguments
