@@ -1,23 +1,20 @@
 <!doctype html>
-<button id="reserve">Reserve</button>
-<p id="count">0</p>
-<ul id="catalog">
-  <li data-id="1">Drill</li>
-  <li data-id="2">Tent</li>
-</ul>
+<button id="visit">Count a visit</button>
+<p id="count">Visits today: 0</p>
 <script>
-  let reservations = 0
-  document.querySelector('#reserve').addEventListener('click', () => {
-    reservations += 1
-    document.querySelector('#count').textContent = String(reservations)
-  })
+  let visits = 0
+  const button = document.querySelector('#visit')
 
-  // One listener on the list handles clicks on every entry, also on entries added later
-  document.querySelector('#catalog').addEventListener('click', (event) => {
-    const entry = event.target.closest('li')
-    if (entry) console.log('Chosen', entry.dataset.id, entry.textContent)
-  })
+  function countVisit(event) {
+    visits += 1
+    document.querySelector('#count').textContent = 'Visits today: ' + visits
+    console.log(event.type, event.target.textContent, visits)
+  }
 
-  document.querySelector('#reserve').click()
-  document.querySelector('li[data-id="2"]').click()
+  // Pass the function itself, the browser calls it on every click
+  button.addEventListener('click', countVisit)
+
+  // Two clicks from the script, so the output shows something
+  button.click()
+  button.click()
 </script>

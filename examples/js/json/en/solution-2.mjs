@@ -1,8 +1,11 @@
-const reservation = { item: 'Tent', from: new Date('2026-11-02T00:00:00Z') }
+function readFavorites(text) {
+  try {
+    return JSON.parse(text)
+  } catch (error) {
+    console.log('Favorites unreadable:', error.name)
+    return []
+  }
+}
 
-const text = JSON.stringify(reservation)
-const back = JSON.parse(text)
-back.from = new Date(back.from)
-
-console.log(text)
-console.log(back.from.getUTCDate(), back.from instanceof Date)
+console.log(readFavorites('[3,6,8]'))
+console.log(readFavorites('[3,6,'))

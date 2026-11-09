@@ -1,0 +1,34 @@
+<!doctype html>
+<h1>[%Tresen-Helfer|Counter helper%]</h1>
+<ul id="items"></ul>
+<script>
+  // [%aus Schritt 3|from step 3%]
+  const isIn = (item) => item.availableFrom === null
+
+  // [%aus Schritt 4|from step 4%]
+  const items = [
+    { id: 1, name: '[%Bohrmaschine|Drill%]', deposit: 20, availableFrom: null },
+    { id: 2, name: '[%Zelt für vier Personen|Tent for four%]', deposit: 50, availableFrom: '2026-11-12' },
+    { id: 3, name: '[%Raclette-Ofen|Raclette oven%]', deposit: 30, availableFrom: null },
+    { id: 4, name: '[%Festbankgarnitur|Beer bench set%]', deposit: 40, availableFrom: '2026-11-03' },
+    { id: 5, name: '[%Stichsäge|Jigsaw%]', deposit: 20, availableFrom: null },
+    { id: 6, name: '[%Beamer|Projector%]', deposit: 80, availableFrom: null },
+    { id: 7, name: '[%Leiter|Ladder%]', deposit: 20, availableFrom: null },
+    { id: 8, name: '[%Schlafsack|Sleeping bag%]', deposit: 20, availableFrom: null },
+    { id: 9, name: '[%Velo-Anhänger|Bike trailer%]', deposit: 60, availableFrom: '2026-11-12' },
+  ]
+
+  const chf = new Intl.NumberFormat('de-CH', { style: 'currency', currency: 'CHF' })
+  const date = new Intl.DateTimeFormat('[%de-CH|en-US%]', { dateStyle: 'long', timeZone: 'UTC' })
+  const list = document.querySelector('#items')
+
+  for (const item of items) {
+    const entry = document.createElement('li')
+    const state = isIn(item) ? '[%da|in%]' : `[%wieder verfügbar ab|available again from%] ${date.format(new Date(item.availableFrom))}`
+    entry.textContent = `${item.name}, ${chf.format(item.deposit)}, ${state}`
+    list.append(entry)
+  }
+
+  console.log(list.children.length)
+  console.log(list.children[1].textContent)
+</script>

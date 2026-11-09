@@ -1,0 +1,66 @@
+<!doctype html>
+<h1>Tresen-Helfer</h1>
+<p id="count"></p>
+<ul id="items"></ul>
+<script>
+  // aus Schritt 3
+  const isIn = (item) => item.availableFrom === null
+
+  // aus Schritt 4
+  const items = [
+    { id: 1, name: 'Bohrmaschine', deposit: 20, availableFrom: null },
+    { id: 2, name: 'Zelt für vier Personen', deposit: 50, availableFrom: '2026-11-12' },
+    { id: 3, name: 'Raclette-Ofen', deposit: 30, availableFrom: null },
+    { id: 4, name: 'Festbankgarnitur', deposit: 40, availableFrom: '2026-11-03' },
+    { id: 5, name: 'Stichsäge', deposit: 20, availableFrom: null },
+    { id: 6, name: 'Beamer', deposit: 80, availableFrom: null },
+    { id: 7, name: 'Leiter', deposit: 20, availableFrom: null },
+    { id: 8, name: 'Schlafsack', deposit: 20, availableFrom: null },
+    { id: 9, name: 'Velo-Anhänger', deposit: 60, availableFrom: '2026-11-12' },
+  ]
+
+  const list = document.querySelector('#items')
+  const count = document.querySelector('#count')
+  const reserved = []
+
+  function showCount() {
+    let inStock = 0
+    for (const item of items) {
+      if (isIn(item)) inStock += 1
+    }
+    count.textContent = `${inStock} von ${items.length} Dingen sind da, ${reserved.length} reserviert`
+  }
+
+  // Ein Eintrag pro Ding, einen Knopf bekommt nur, was da ist
+  for (const item of items) {
+    const entry = document.createElement('li')
+    entry.textContent = item.name + ' '
+    if (isIn(item)) {
+      const button = document.createElement('button')
+      button.textContent = 'Reservieren'
+      button.dataset.id = item.id
+      entry.append(button)
+    } else {
+      entry.append('(ausgeliehen)')
+    }
+    list.append(entry)
+  }
+  showCount()
+
+  // Ein Listener auf der Liste bedient alle Knöpfe, ein Klick steigt vom Knopf zu ihm auf
+  list.addEventListener('click', (event) => {
+    const button = event.target.closest('button')
+    if (!button) return
+    const id = Number(button.dataset.id)
+    const item = items.find((thing) => thing.id === id)
+    reserved.push(id)
+    button.textContent = 'reserviert'
+    button.disabled = true
+    showCount()
+    console.log('Reserviert:', item.name)
+    console.log(count.textContent)
+  })
+
+  // Ein Klick aus dem Script auf den Beamer, damit die Ausgabe etwas zeigt
+  list.querySelector('[data-id="6"]').click()
+</script>

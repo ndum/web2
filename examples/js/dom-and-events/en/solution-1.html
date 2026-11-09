@@ -1,8 +1,11 @@
 <!doctype html>
 <p id="note"></p>
 <script>
-  const input = '<img src=x onerror=alert(1)> Tent'
+  const note = '<img src=x onerror=alert(1)> Tent'
+  const paragraph = document.querySelector('#note')
+
   // textContent shows the text as it is, innerHTML would turn it into an element
-  document.querySelector('#note').textContent = input
-  console.log(document.querySelector('#note').children.length)
+  paragraph.textContent = note
+  console.log(paragraph.textContent)
+  console.log(paragraph.children.length)
 </script>

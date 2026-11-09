@@ -1,18 +1,25 @@
 <!doctype html>
 <form id="request">
-  <label>Name <input name="name" required></label>
-  <label>Tage <input name="days" type="number" min="1" max="7" value="2"></label>
+  <label>Mitglied <input name="member" required></label>
+  <label>Abholen <input name="from" type="date" value="2026-11-07"></label>
+  <label>Zurückbringen <input name="to" type="date" value="2026-11-11"></label>
   <button>Anfragen</button>
 </form>
 <p id="message"></p>
 <script>
+  // aus Schritt 3
+  const loanDays = (from, to) => (Date.parse(to) - Date.parse(from)) / 86_400_000
+
   const form = document.querySelector('#request')
   form.addEventListener('submit', (event) => {
+    // Ohne diese Zeile schickt der Browser das Formular ab und lädt eine neue Seite
     event.preventDefault()
     const data = new FormData(form)
-    document.querySelector('#message').textContent = `${data.get('name')}, ${data.get('days')} Tage`
+    const days = loanDays(data.get('from'), data.get('to'))
+    document.querySelector('#message').textContent = `${data.get('member')}, ${days} Tage`
     console.log(document.querySelector('#message').textContent)
   })
-  form.elements.name.value = 'Martina'
+
+  form.elements.member.value = 'M-117'
   form.requestSubmit()
 </script>

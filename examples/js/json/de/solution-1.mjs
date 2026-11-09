@@ -1,4 +1,8 @@
-const text = '{"id": 6, "name": "Beamer", "deposit": 80, "available": false}'
+// aus Schritt 3
+const isIn = (item) => item.availableFrom === null
 
+const text = '{"id": 6, "name": "Beamer", "deposit": 80, "availableFrom": null}'
 const item = JSON.parse(text)
-console.log(item.name, item.deposit / 2, item.available ? 'frei' : 'ausgeliehen')
+
+// Die Leiter kostet CHF 20 Pfand
+console.log(item.name, isIn(item) ? 'da' : 'ausgeliehen', item.deposit + 20)

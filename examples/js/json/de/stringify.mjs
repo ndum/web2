@@ -1,15 +1,11 @@
-const item = {
-  id: 2,
-  name: 'Zelt',
-  deposit: 50,
-  lentUntil: new Date('2026-11-12T00:00:00Z'),
-  note: undefined,
-}
+const tent = { id: 2, name: 'Zelt für vier Personen', deposit: 50, availableFrom: '2026-11-12' }
 
-const text = JSON.stringify(item)
+const text = JSON.stringify(tent)
 console.log(text)
+console.log(typeof text)
 
 const back = JSON.parse(text)
-console.log(typeof back.lentUntil, back.note)
+console.log(back.deposit, back === tent)
 
-console.log(JSON.stringify({ tags: ['Küche', 'raclette'] }, null, 2))
+// Das dritte Argument rückt den Text zum Lesen ein
+console.log(JSON.stringify({ id: 6, name: 'Beamer' }, null, 2))

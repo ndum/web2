@@ -1,13 +1,16 @@
 <!doctype html>
-<h1>Catalog</h1>
-<ul id="catalog"></ul>
+<h1>Counter helper</h1>
+<ul id="items"></ul>
 <script>
-  const names = ['Drill', 'Tent', 'Ladder']
-  const list = document.querySelector('#catalog')
+  const names = ['Drill', 'Tent for four', 'Raclette oven']
+  const list = document.querySelector('#items')
+
   for (const name of names) {
     const entry = document.createElement('li')
     entry.textContent = name
     list.append(entry)
   }
-  console.log(list.children.length)
+
+  console.log(list.children.length, document.querySelector('li').textContent)
+  console.log(document.querySelector('#count') === null)
 </script>

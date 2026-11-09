@@ -1,18 +1,20 @@
 {
   "de": {
-    "dates.mjs": "12.11.2026\nDonnerstag, 12. November\ngestern in 3 Tagen\n",
-    "money.mjs": "CHF 20.00\nCHF 1'234.50\n35%\n",
-    "solution-1.mjs": "CHF 20.00\nCHF 50.00\nCHF 12.50\n",
-    "solution-2.mjs": "Mittwoch, 17:00\n",
-    "solution-3.mjs": "Zelt, Äxte und Bohrmaschine\n1'234'567.891\n",
-    "timezones.mjs": "12.11.2026 12.11.2026 11.11.2026\n"
+    "dates.mjs": "7.11.2026\nSamstag, 7. November 2026\nin 7 Tagen nächste Woche morgen\n",
+    "desk.mjs": "Zelt für vier Personen, CHF 50.00, wieder verfügbar ab 12. November 2026\nFestbankgarnitur, CHF 40.00, wieder verfügbar ab 3. November 2026\nVelo-Anhänger, CHF 60.00, wieder verfügbar ab 12. November 2026\nPfand ausgeliehen: CHF 150.00\n",
+    "money.mjs": "CHF 20.00 CHF 150.00\nCHF 12'000.00\n67%\n",
+    "solution-1.mjs": "Raclette-Ofen CHF 30.00\nBeamer CHF 80.00\nSchlafsack CHF 20.00\nZusammen CHF 130.00\n",
+    "solution-2.mjs": "Zelt für vier Personen in 12 Tagen\nFestbankgarnitur in 3 Tagen\nVelo-Anhänger in 12 Tagen\n",
+    "solution-3.html": "9\nZelt für vier Personen, CHF 50.00, wieder verfügbar ab 12. November 2026\n",
+    "timezones.mjs": "2026-11-12T00:00:00.000Z\n12.11.2026 12.11.2026 11.11.2026\n10:00\n"
   },
   "en": {
-    "dates.mjs": "11/12/2026\nThursday, November 12\nyesterday in 3 days\n",
-    "money.mjs": "CHF 20.00\nCHF 1'234.50\n35%\n",
-    "solution-1.mjs": "CHF 20.00\nCHF 50.00\nCHF 12.50\n",
-    "solution-2.mjs": "Wednesday 5:00 PM\n",
-    "solution-3.mjs": "tent, Drill, and axe\n1'234'567.891\n",
-    "timezones.mjs": "11/12/2026 11/12/2026 11/11/2026\n"
+    "dates.mjs": "11/7/2026\nSaturday, November 7, 2026\nin 7 days next week tomorrow\n",
+    "desk.mjs": "Tent for four, CHF 50.00, available again from November 12, 2026\nBeer bench set, CHF 40.00, available again from November 3, 2026\nBike trailer, CHF 60.00, available again from November 12, 2026\nDeposit on loan: CHF 150.00\n",
+    "money.mjs": "CHF 20.00 CHF 150.00\nCHF 12'000.00\n67%\n",
+    "solution-1.mjs": "Raclette oven CHF 30.00\nProjector CHF 80.00\nSleeping bag CHF 20.00\nTogether CHF 130.00\n",
+    "solution-2.mjs": "Tent for four in 12 days\nBeer bench set in 3 days\nBike trailer in 12 days\n",
+    "solution-3.html": "9\nTent for four, CHF 50.00, available again from November 12, 2026\n",
+    "timezones.mjs": "2026-11-12T00:00:00.000Z\n11/12/2026 11/12/2026 11/11/2026\n10:00 AM\n"
   }
 }

@@ -1,16 +1,20 @@
 {
   "de": {
-    "copy.mjs": "1 2\nfalse true\nSyntaxError\n",
-    "solution-1.mjs": "Beamer 40 ausgeliehen\n",
-    "solution-2.mjs": "{\"item\":\"Zelt\",\"from\":\"2026-11-02T00:00:00.000Z\"}\n2 true\n",
-    "solution-3.mjs": "{\"pageSize\":20,\"favorites\":{}}\n{\"pageSize\":20,\"favorites\":[3,7]}\n",
-    "stringify.mjs": "{\"id\":2,\"name\":\"Zelt\",\"deposit\":50,\"lentUntil\":\"2026-11-12T00:00:00.000Z\"}\nstring undefined\n{\n  \"tags\": [\n    \"Küche\",\n    \"raclette\"\n  ]\n}\n"
+    "copy.mjs": "3 2 2\ntrue false\n",
+    "dates.mjs": "{\"itemId\":6,\"member\":\"M-117\",\"from\":\"2026-11-07T00:00:00.000Z\",\"days\":4}\nitemId, member, from, days\nstring\n6 true\n",
+    "desk.mjs": "[{\"id\":1,\"name\":\"Bohrmaschine\",\"deposit\":20,\"availableFrom\":null},{\"id\":2,\"name\":\"Zelt für vier Personen\",\"deposit\":50,\"availableFrom\":\"2026-11-12\"},{\"id\":3,\"name\":\"Raclette-Ofen\",\"deposit\":30,\"availableFrom\":null},{\"id\":4,\"name\":\"Festbankgarnitur\",\"deposit\":40,\"availableFrom\":\"2026-11-03\"},{\"id\":5,\"name\":\"Stichsäge\",\"deposit\":20,\"availableFrom\":null},{\"id\":6,\"name\":\"Beamer\",\"deposit\":80,\"availableFrom\":null},{\"id\":7,\"name\":\"Leiter\",\"deposit\":20,\"availableFrom\":null},{\"id\":8,\"name\":\"Schlafsack\",\"deposit\":20,\"availableFrom\":null},{\"id\":9,\"name\":\"Velo-Anhänger\",\"deposit\":60,\"availableFrom\":\"2026-11-12\"}]\n6 von 9 Dingen sind da\nFavoriten als Text: [3,6,8]\nRaclette-Ofen, Beamer, Schlafsack\n",
+    "solution-1.mjs": "Beamer da 100\n",
+    "solution-2.mjs": "[ 3, 6, 8 ]\nFavoriten nicht lesbar: SyntaxError\n[]\n",
+    "solution-3.mjs": "{\"member\":\"M-117\",\"favorites\":{}}\n{\"member\":\"M-117\",\"favorites\":[3,6,8]}\ntrue\n",
+    "stringify.mjs": "{\"id\":2,\"name\":\"Zelt für vier Personen\",\"deposit\":50,\"availableFrom\":\"2026-11-12\"}\nstring\n50 false\n{\n  \"id\": 6,\n  \"name\": \"Beamer\"\n}\n"
   },
   "en": {
-    "copy.mjs": "1 2\nfalse true\nSyntaxError\n",
-    "solution-1.mjs": "Projector 40 on loan\n",
-    "solution-2.mjs": "{\"item\":\"Tent\",\"from\":\"2026-11-02T00:00:00.000Z\"}\n2 true\n",
-    "solution-3.mjs": "{\"pageSize\":20,\"favorites\":{}}\n{\"pageSize\":20,\"favorites\":[3,7]}\n",
-    "stringify.mjs": "{\"id\":2,\"name\":\"Tent\",\"deposit\":50,\"lentUntil\":\"2026-11-12T00:00:00.000Z\"}\nstring undefined\n{\n  \"tags\": [\n    \"kitchen\",\n    \"raclette\"\n  ]\n}\n"
+    "copy.mjs": "3 2 2\ntrue false\n",
+    "dates.mjs": "{\"itemId\":6,\"member\":\"M-117\",\"from\":\"2026-11-07T00:00:00.000Z\",\"days\":4}\nitemId, member, from, days\nstring\n6 true\n",
+    "desk.mjs": "[{\"id\":1,\"name\":\"Drill\",\"deposit\":20,\"availableFrom\":null},{\"id\":2,\"name\":\"Tent for four\",\"deposit\":50,\"availableFrom\":\"2026-11-12\"},{\"id\":3,\"name\":\"Raclette oven\",\"deposit\":30,\"availableFrom\":null},{\"id\":4,\"name\":\"Beer bench set\",\"deposit\":40,\"availableFrom\":\"2026-11-03\"},{\"id\":5,\"name\":\"Jigsaw\",\"deposit\":20,\"availableFrom\":null},{\"id\":6,\"name\":\"Projector\",\"deposit\":80,\"availableFrom\":null},{\"id\":7,\"name\":\"Ladder\",\"deposit\":20,\"availableFrom\":null},{\"id\":8,\"name\":\"Sleeping bag\",\"deposit\":20,\"availableFrom\":null},{\"id\":9,\"name\":\"Bike trailer\",\"deposit\":60,\"availableFrom\":\"2026-11-12\"}]\n6 of 9 things are in\nFavorites as text: [3,6,8]\nRaclette oven, Projector, Sleeping bag\n",
+    "solution-1.mjs": "Projector in 100\n",
+    "solution-2.mjs": "[ 3, 6, 8 ]\nFavorites unreadable: SyntaxError\n[]\n",
+    "solution-3.mjs": "{\"member\":\"M-117\",\"favorites\":{}}\n{\"member\":\"M-117\",\"favorites\":[3,6,8]}\ntrue\n",
+    "stringify.mjs": "{\"id\":2,\"name\":\"Tent for four\",\"deposit\":50,\"availableFrom\":\"2026-11-12\"}\nstring\n50 false\n{\n  \"id\": 6,\n  \"name\": \"Projector\"\n}\n"
   }
 }

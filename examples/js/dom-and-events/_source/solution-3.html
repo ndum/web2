@@ -1,14 +1,25 @@
 <!doctype html>
 <input id="search" placeholder="[%Suchen|Search%]">
-<ul id="catalog"></ul>
+<ul id="items"></ul>
 <script>
-  const names = ['[%Bohrmaschine|Drill%]', '[%Stichsäge|Jigsaw%]', '[%Zelt|Tent%]']
-  const list = document.querySelector('#catalog')
+  const names = [
+    '[%Bohrmaschine|Drill%]',
+    '[%Zelt für vier Personen|Tent for four%]',
+    '[%Raclette-Ofen|Raclette oven%]',
+    '[%Festbankgarnitur|Beer bench set%]',
+    '[%Stichsäge|Jigsaw%]',
+    '[%Beamer|Projector%]',
+    '[%Leiter|Ladder%]',
+    '[%Schlafsack|Sleeping bag%]',
+    '[%Velo-Anhänger|Bike trailer%]',
+  ]
+  const list = document.querySelector('#items')
 
   function render(query) {
+    const wanted = query.trim().toLowerCase()
     list.replaceChildren()
     for (const name of names) {
-      if (!name.toLowerCase().includes(query.toLowerCase())) continue
+      if (!name.toLowerCase().includes(wanted)) continue
       const entry = document.createElement('li')
       entry.textContent = name
       list.append(entry)

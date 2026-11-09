@@ -1,4 +1,14 @@
-const opening = new Date('2026-11-04T16:00:00Z')
+const today = '2026-10-31'
+const onLoan = [
+  { name: 'Tent for four', availableFrom: '2026-11-12' },
+  { name: 'Beer bench set', availableFrom: '2026-11-03' },
+  { name: 'Bike trailer', availableFrom: '2026-11-12' },
+]
 
-const time = new Intl.DateTimeFormat('en-US', { weekday: 'long', hour: 'numeric', minute: '2-digit', timeZone: 'Europe/Zurich' })
-console.log(time.format(opening))
+// Works like loanDays from step 3
+const daysBetween = (from, to) => (Date.parse(to) - Date.parse(from)) / 86_400_000
+const relative = new Intl.RelativeTimeFormat('en-US', { numeric: 'auto' })
+
+for (const item of onLoan) {
+  console.log(item.name, relative.format(daysBetween(today, item.availableFrom), 'day'))
+}

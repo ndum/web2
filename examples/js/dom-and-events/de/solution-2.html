@@ -1,16 +1,22 @@
 <!doctype html>
-<ul id="catalog">
-  <li>Bohrmaschine</li>
-  <li>Zelt</li>
+<style>
+  .favorite { font-weight: bold; }
+</style>
+<ul id="items">
+  <li data-id="3">Raclette-Ofen</li>
+  <li data-id="6">Beamer</li>
+  <li data-id="8">Schlafsack</li>
 </ul>
 <script>
-  const list = document.querySelector('#catalog')
+  const list = document.querySelector('#items')
   list.addEventListener('click', (event) => {
     const entry = event.target.closest('li')
     if (!entry) return
     entry.classList.toggle('favorite')
     console.log(entry.textContent, entry.classList.contains('favorite'))
   })
-  list.querySelector('li').click()
-  list.querySelector('li').click()
+
+  const projector = list.querySelector('[data-id="6"]')
+  projector.click()
+  projector.click()
 </script>

@@ -1,14 +1,14 @@
-const original = { name: '[%Zelt|Tent%]', from: new Date('2026-11-02T00:00:00Z'), parts: ['[%Heringe|pegs%]'] }
-
-const viaJson = JSON.parse(JSON.stringify(original))
-const viaClone = structuredClone(original)
-
-viaClone.parts.push('[%Plane|tarp%]')
-console.log(original.parts.length, viaClone.parts.length)
-console.log(viaJson.from instanceof Date, viaClone.from instanceof Date)
-
-try {
-  JSON.parse("{ 'name': 'Zelt' }")
-} catch (error) {
-  console.log(error.name)
+const tent = {
+  id: 2,
+  name: '[%Zelt für vier Personen|Tent for four%]',
+  availableFrom: new Date('2026-11-12'),
+  parts: ['[%Heringe|pegs%]', '[%Stangen|poles%]'],
 }
+
+const spread = { ...tent }
+const clone = structuredClone(tent)
+const viaJson = JSON.parse(JSON.stringify(tent))
+
+spread.parts.push('[%Plane|tarp%]')
+console.log(tent.parts.length, clone.parts.length, viaJson.parts.length)
+console.log(clone.availableFrom instanceof Date, viaJson.availableFrom instanceof Date)

@@ -1,18 +1,20 @@
 {
   "de": {
-    "events.html": "Gewählt 2 Zelt\n",
-    "form.html": "Martina, 2 Tage\n",
-    "list.html": "3\n",
-    "solution-1.html": "0\n",
-    "solution-2.html": "Bohrmaschine true\nBohrmaschine false\n",
-    "solution-3.html": "3\n1\n"
+    "desk.html": "Reserviert: Beamer\n6 von 9 Dingen sind da, 1 reserviert\n",
+    "events.html": "click Besuch zählen 1\nclick Besuch zählen 2\n",
+    "form.html": "M-117, 4 Tage\n",
+    "list.html": "3 Bohrmaschine\ntrue\n",
+    "solution-1.html": "<img src=x onerror=alert(1)> Zelt\n0\n",
+    "solution-2.html": "Beamer true\nBeamer false\n",
+    "solution-3.html": "9\n1\n"
   },
   "en": {
-    "events.html": "Chosen 2 Tent\n",
-    "form.html": "Martina, 2 days\n",
-    "list.html": "3\n",
-    "solution-1.html": "0\n",
-    "solution-2.html": "Drill true\nDrill false\n",
-    "solution-3.html": "3\n1\n"
+    "desk.html": "Reserved: Projector\n6 of 9 things are in, 1 reserved\n",
+    "events.html": "click Count a visit 1\nclick Count a visit 2\n",
+    "form.html": "M-117, 4 days\n",
+    "list.html": "3 Drill\ntrue\n",
+    "solution-1.html": "<img src=x onerror=alert(1)> Tent\n0\n",
+    "solution-2.html": "Projector true\nProjector false\n",
+    "solution-3.html": "9\n1\n"
   }
 }

@@ -1,9 +1,12 @@
-const date = new Date('2026-11-12T00:00:00Z')
+// Eine Anfrage holt am Samstag, 7. November 2026, ab
+const pickup = new Date('2026-11-07')
 
-console.log(date.toLocaleDateString('de-CH', { timeZone: 'UTC' }))
+console.log(pickup.toLocaleDateString('de-CH', { timeZone: 'UTC' }))
 
-const long = new Intl.DateTimeFormat('de-CH', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' })
-console.log(long.format(date))
+const long = new Intl.DateTimeFormat('de-CH', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+console.log(long.format(pickup))
 
+// Der Tresen-Helfer arbeitet am Samstag, 31. Oktober 2026
+const days = (Date.parse('2026-11-07') - Date.parse('2026-10-31')) / 86_400_000
 const relative = new Intl.RelativeTimeFormat('de-CH', { numeric: 'auto' })
-console.log(relative.format(-1, 'day'), relative.format(3, 'day'))
+console.log(relative.format(days, 'day'), relative.format(1, 'week'), relative.format(1, 'day'))
