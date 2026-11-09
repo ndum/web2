@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 290" role="img" aria-labelledby="j3-closure-de-title j3-closure-de-desc">
+<title id="j3-closure-de-title">Die Closure von nextNumber</title>
+<desc id="j3-closure-de-desc">Links stehen drei Aufrufe der Reihe nach. Der erste, makeNumbering('R'), legt prefix und count an und gibt die Funktion nextNumber zurück. Der zweite und der dritte rufen nextNumber auf und liefern 'R-1' und 'R-2'. Rechts steht, was die Closure sich merkt, nach dem ersten Aufruf prefix gleich 'R' und count gleich 0, nach dem zweiten count gleich 1 und nach dem dritten count gleich 2. Von jedem Aufruf führt ein Pfeil zur passenden Zeile.</desc>
+<defs><marker id="j3-closure-de-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j3-closure-de-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j3-closure-de-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="290" rx="14"/>
+<rect class="d-band d-band-2" x="16" y="16" width="300" height="212" rx="12"/>
+<text class="d-label d-label-blue" x="32" y="40" text-anchor="start">AUFRUFE</text>
+<text class="d-meta" x="105.6616" y="40" text-anchor="start">der Reihe nach</text>
+<rect class="d-band d-band-3" x="364" y="16" width="300" height="212" rx="12"/>
+<text class="d-label d-label-violet" x="380" y="40" text-anchor="start">CLOSURE</text>
+<text class="d-meta" x="453.6616" y="40" text-anchor="start">eine Stelle im Speicher</text>
+<rect class="d-shadow" x="380" y="57.5" width="268" height="156" rx="10"/>
+<rect class="d-tile d-tile-violet" x="380" y="56" width="268" height="156" rx="10"/>
+<text class="d-code" x="396" y="82" text-anchor="start">prefix = 'R', count = 0</text>
+<text class="d-code" x="396" y="138" text-anchor="start">prefix = 'R', count = 1</text>
+<text class="d-code" x="396" y="194" text-anchor="start">prefix = 'R', count = 2</text>
+<circle class="d-badge" cx="42" cy="78" r="10"/>
+<text class="d-badge-text" x="42" y="82" text-anchor="middle">1</text>
+<rect class="d-shadow" x="60" y="57.5" width="240" height="44" rx="10"/>
+<rect class="d-tile" x="60" y="56" width="240" height="44" rx="10"/>
+<text class="d-title" x="180" y="75" text-anchor="middle">makeNumbering('R')</text>
+<text class="d-sub" x="180" y="91" text-anchor="middle">legt prefix und count an</text>
+<path class="d-arrow" d="M 300 78 L 376 78" marker-end="url(#j3-closure-de-head)"/>
+<circle class="d-badge d-badge-accent" cx="42" cy="134" r="10"/>
+<text class="d-badge-text d-badge-text-accent" x="42" y="138" text-anchor="middle">2</text>
+<rect class="d-shadow" x="60" y="113.5" width="240" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="60" y="112" width="240" height="44" rx="10"/>
+<text class="d-title" x="180" y="131" text-anchor="middle">nextNumber()</text>
+<text class="d-sub" x="180" y="147" text-anchor="middle">liefert 'R-1'</text>
+<path class="d-arrow d-arrow-violet" d="M 300 134 L 376 134" marker-end="url(#j3-closure-de-head-violet)"/>
+<circle class="d-badge d-badge-accent" cx="42" cy="190" r="10"/>
+<text class="d-badge-text d-badge-text-accent" x="42" y="194" text-anchor="middle">3</text>
+<rect class="d-shadow" x="60" y="169.5" width="240" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="60" y="168" width="240" height="44" rx="10"/>
+<text class="d-title" x="180" y="187" text-anchor="middle">nextNumber()</text>
+<text class="d-sub" x="180" y="203" text-anchor="middle">liefert 'R-2'</text>
+<path class="d-arrow d-arrow-violet" d="M 300 190 L 376 190" marker-end="url(#j3-closure-de-head-violet)"/>
+<rect class="d-strip" x="16" y="244" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="263" text-anchor="middle">nextNumber merkt sich prefix und count aus dem Aufruf von makeNumbering, auch nachdem er fertig ist.</text>
+</svg>

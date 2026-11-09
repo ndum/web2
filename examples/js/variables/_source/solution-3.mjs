@@ -1,6 +1,4 @@
-const francs = 0.1 + 0.2
-console.log(francs, francs === 0.3)
+const daysField = '4'
 
-// Amounts in Rappen are whole numbers, and whole numbers add up exactly
-const rappen = 10 + 20
-console.log(rappen, rappen === 30, (rappen / 100).toFixed(2))
+console.log(daysField + 1, daysField - 1, daysField * 2)
+console.log(daysField == 4, daysField === 4)

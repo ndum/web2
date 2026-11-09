@@ -1,7 +1,13 @@
-function loanDays(from, to = from) {
-  const millisecondsPerDay = 1000 * 60 * 60 * 24
-  return (new Date(to) - new Date(from)) / millisecondsPerDay + 1
+// Ohne Präfix vergibt makeNumbering Nummern für Reservationen
+function makeNumbering(prefix = 'R') {
+  let count = 0
+  return () => {
+    count += 1
+    return prefix + '-' + count
+  }
 }
 
-console.log(loanDays('2026-11-02', '2026-11-04'))
-console.log(loanDays('2026-11-02'))
+const nextNumber = makeNumbering()
+const nextLoan = makeNumbering('L')
+console.log(nextNumber(), nextNumber())
+console.log(nextLoan(), nextNumber())

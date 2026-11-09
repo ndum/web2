@@ -1,14 +1,15 @@
-function createCounter() {
+function makeNumbering(prefix) {
   let count = 0
   return {
-    increase: () => (count += 1),
-    reset: () => (count = 0),
+    next: () => {
+      count += 1
+      return prefix + '-' + count
+    },
+    // Liest count nur, ändern kann es allein next
+    issued: () => count,
   }
 }
 
-const reservations = createCounter()
-reservations.increase()
-reservations.increase()
-console.log(reservations.increase())
-reservations.reset()
-console.log(reservations.increase())
+const numbers = makeNumbering('R')
+console.log(numbers.next(), numbers.next())
+console.log(numbers.issued(), numbers.count)

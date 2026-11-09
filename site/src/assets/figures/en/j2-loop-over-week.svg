@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" role="img" aria-labelledby="j2-week-en-title j2-week-en-desc">
+<title id="j2-week-en-title">The loop over the week</title>
+<desc id="j2-week-en-desc">On the left are the seven days of the week from Monday to Sunday, numbered 1 to 7 in the order in which the loop goes through them. On the right is what the counter helper prints. An arrow leads from Wednesday to "Open on Wednesday" and one from Saturday to "Open on Saturday". For the other five days a dashed frame says "no output".</desc>
+<defs><marker id="j2-week-en-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j2-week-en-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j2-week-en-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="380" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="240" height="302" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">LOOP</text>
+<text class="d-meta" x="79.2352" y="40" text-anchor="start">one day per pass</text>
+<rect class="d-band d-band-2" x="288" y="16" width="376" height="302" rx="12"/>
+<text class="d-label d-label-blue" x="304" y="40" text-anchor="start">OUTPUT</text>
+<text class="d-meta" x="368.8528" y="40" text-anchor="start">only when the condition holds</text>
+<circle class="d-badge" cx="42" cy="71" r="10"/>
+<text class="d-badge-text" x="42" y="75" text-anchor="middle">1</text>
+<rect class="d-shadow" x="60" y="57.5" width="180" height="30" rx="10"/>
+<rect class="d-tile" x="60" y="56" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="75.5" text-anchor="middle">Monday</text>
+<rect class="d-placeholder" x="304" y="56" width="344" height="30" rx="10"/>
+<text class="d-sub" x="476" y="75" text-anchor="middle">no output</text>
+<circle class="d-badge" cx="42" cy="107" r="10"/>
+<text class="d-badge-text" x="42" y="111" text-anchor="middle">2</text>
+<rect class="d-shadow" x="60" y="93.5" width="180" height="30" rx="10"/>
+<rect class="d-tile" x="60" y="92" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="111.5" text-anchor="middle">Tuesday</text>
+<rect class="d-placeholder" x="304" y="92" width="344" height="30" rx="10"/>
+<text class="d-sub" x="476" y="111" text-anchor="middle">no output</text>
+<circle class="d-badge d-badge-accent" cx="42" cy="143" r="10"/>
+<text class="d-badge-text d-badge-text-accent" x="42" y="147" text-anchor="middle">3</text>
+<rect class="d-shadow" x="60" y="129.5" width="180" height="30" rx="10"/>
+<rect class="d-tile d-tile-accent" x="60" y="128" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="147.5" text-anchor="middle">Wednesday</text>
+<path class="d-arrow d-arrow-accent" d="M 240 143 L 300 143" marker-end="url(#j2-week-en-head-accent)"/>
+<rect class="d-shadow" x="304" y="129.5" width="344" height="30" rx="10"/>
+<rect class="d-tile d-tile-accent" x="304" y="128" width="344" height="30" rx="10"/>
+<text class="d-title" x="476" y="147.5" text-anchor="middle">Open on Wednesday</text>
+<circle class="d-badge" cx="42" cy="179" r="10"/>
+<text class="d-badge-text" x="42" y="183" text-anchor="middle">4</text>
+<rect class="d-shadow" x="60" y="165.5" width="180" height="30" rx="10"/>
+<rect class="d-tile" x="60" y="164" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="183.5" text-anchor="middle">Thursday</text>
+<rect class="d-placeholder" x="304" y="164" width="344" height="30" rx="10"/>
+<text class="d-sub" x="476" y="183" text-anchor="middle">no output</text>
+<circle class="d-badge" cx="42" cy="215" r="10"/>
+<text class="d-badge-text" x="42" y="219" text-anchor="middle">5</text>
+<rect class="d-shadow" x="60" y="201.5" width="180" height="30" rx="10"/>
+<rect class="d-tile" x="60" y="200" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="219.5" text-anchor="middle">Friday</text>
+<rect class="d-placeholder" x="304" y="200" width="344" height="30" rx="10"/>
+<text class="d-sub" x="476" y="219" text-anchor="middle">no output</text>
+<circle class="d-badge d-badge-accent" cx="42" cy="251" r="10"/>
+<text class="d-badge-text d-badge-text-accent" x="42" y="255" text-anchor="middle">6</text>
+<rect class="d-shadow" x="60" y="237.5" width="180" height="30" rx="10"/>
+<rect class="d-tile d-tile-accent" x="60" y="236" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="255.5" text-anchor="middle">Saturday</text>
+<path class="d-arrow d-arrow-accent" d="M 240 251 L 300 251" marker-end="url(#j2-week-en-head-accent)"/>
+<rect class="d-shadow" x="304" y="237.5" width="344" height="30" rx="10"/>
+<rect class="d-tile d-tile-accent" x="304" y="236" width="344" height="30" rx="10"/>
+<text class="d-title" x="476" y="255.5" text-anchor="middle">Open on Saturday</text>
+<circle class="d-badge" cx="42" cy="287" r="10"/>
+<text class="d-badge-text" x="42" y="291" text-anchor="middle">7</text>
+<rect class="d-shadow" x="60" y="273.5" width="180" height="30" rx="10"/>
+<rect class="d-tile" x="60" y="272" width="180" height="30" rx="10"/>
+<text class="d-title" x="150" y="291.5" text-anchor="middle">Sunday</text>
+<rect class="d-placeholder" x="304" y="272" width="344" height="30" rx="10"/>
+<text class="d-sub" x="476" y="291" text-anchor="middle">no output</text>
+<rect class="d-strip" x="16" y="334" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="353" text-anchor="middle">for...of takes one day after the other, if lets only Wednesday and Saturday through.</text>
+</svg>

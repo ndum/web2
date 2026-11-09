@@ -1,8 +1,9 @@
-const name = 'Drill'
-const deposit = 20
-const available = true
-const borrowedBy = null
-let returnDate
+const name = 'Raclette oven'
+const deposit = 30
+const availableFrom = null
+const available = availableFrom === null
+// The day of the pickup is not set yet
+let pickup
 
 console.log(typeof name, typeof deposit, typeof available)
-console.log(typeof borrowedBy, typeof returnDate)
+console.log(typeof availableFrom, typeof pickup)

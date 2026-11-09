@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 442" role="img" aria-labelledby="j5-columns-de-title j5-columns-de-desc">
+<title id="j5-columns-de-title">Spalten mit padEnd</title>
+<desc id="j5-columns-de-desc">Oben drei Zeilen des Tresen-Helfers ohne Auffüllen, für die Bohrmaschine, das Zelt für vier Personen und den Beamer, je mit Nummer, Name, Pfand und dem Hinweis, ob das Ding da ist. Die Namen sind verschieden lang, darum beginnt der Betrag in jeder Zeile an einer anderen Stelle. Unten dieselben Zeilen mit padEnd. Es hängt an die Bohrmaschine 10 und an den Beamer 16 Leerzeichen an, bis jeder Name 22 Zeichen hat wie das Zelt. Jetzt stehen CHF 20, CHF 50 und CHF 80 genau untereinander.</desc>
+<defs><marker id="j5-columns-de-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j5-columns-de-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j5-columns-de-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="442" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="648" height="174" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">OHNE AUFFÜLLEN</text>
+<text class="d-meta" x="162.8924" y="40" text-anchor="start">jeder Name so lang, wie er ist</text>
+<rect class="d-shadow" x="32" y="57.5" width="36" height="34" rx="10"/>
+<rect class="d-tile" x="32" y="56" width="36" height="34" rx="10"/>
+<text class="d-title" x="50" y="77.5" text-anchor="middle">1</text>
+<rect class="d-shadow" x="76" y="57.5" width="168" height="34" rx="10"/>
+<rect class="d-tile" x="76" y="56" width="168" height="34" rx="10"/>
+<text class="d-title" x="160" y="77.5" text-anchor="middle">Bohrmaschine</text>
+<rect class="d-shadow" x="252" y="57.5" width="80" height="34" rx="10"/>
+<rect class="d-tile" x="252" y="56" width="80" height="34" rx="10"/>
+<text class="d-title" x="292" y="77.5" text-anchor="middle">CHF 20</text>
+<rect class="d-shadow" x="340" y="57.5" width="140" height="34" rx="10"/>
+<rect class="d-tile" x="340" y="56" width="140" height="34" rx="10"/>
+<text class="d-title" x="410" y="77.5" text-anchor="middle">da</text>
+<rect class="d-shadow" x="32" y="99.5" width="36" height="34" rx="10"/>
+<rect class="d-tile" x="32" y="98" width="36" height="34" rx="10"/>
+<text class="d-title" x="50" y="119.5" text-anchor="middle">2</text>
+<rect class="d-shadow" x="76" y="99.5" width="308" height="34" rx="10"/>
+<rect class="d-tile" x="76" y="98" width="308" height="34" rx="10"/>
+<text class="d-title" x="230" y="119.5" text-anchor="middle">Zelt für vier Personen</text>
+<rect class="d-shadow" x="392" y="99.5" width="80" height="34" rx="10"/>
+<rect class="d-tile" x="392" y="98" width="80" height="34" rx="10"/>
+<text class="d-title" x="432" y="119.5" text-anchor="middle">CHF 50</text>
+<rect class="d-shadow" x="480" y="99.5" width="140" height="34" rx="10"/>
+<rect class="d-tile" x="480" y="98" width="140" height="34" rx="10"/>
+<text class="d-title" x="550" y="119.5" text-anchor="middle">ab 2026-11-12</text>
+<rect class="d-shadow" x="32" y="141.5" width="36" height="34" rx="10"/>
+<rect class="d-tile" x="32" y="140" width="36" height="34" rx="10"/>
+<text class="d-title" x="50" y="161.5" text-anchor="middle">6</text>
+<rect class="d-shadow" x="76" y="141.5" width="84" height="34" rx="10"/>
+<rect class="d-tile" x="76" y="140" width="84" height="34" rx="10"/>
+<text class="d-title" x="118" y="161.5" text-anchor="middle">Beamer</text>
+<rect class="d-shadow" x="168" y="141.5" width="80" height="34" rx="10"/>
+<rect class="d-tile" x="168" y="140" width="80" height="34" rx="10"/>
+<text class="d-title" x="208" y="161.5" text-anchor="middle">CHF 80</text>
+<rect class="d-shadow" x="256" y="141.5" width="140" height="34" rx="10"/>
+<rect class="d-tile" x="256" y="140" width="140" height="34" rx="10"/>
+<text class="d-title" x="326" y="161.5" text-anchor="middle">da</text>
+<rect class="d-band d-band-2" x="16" y="206" width="648" height="174" rx="12"/>
+<text class="d-label d-label-blue" x="32" y="230" text-anchor="start">MIT PADEND</text>
+<text class="d-meta" x="125.32519999999998" y="230" text-anchor="start">jeder Name 22 Zeichen lang</text>
+<rect class="d-shadow" x="32" y="247.5" width="36" height="34" rx="10"/>
+<rect class="d-tile" x="32" y="246" width="36" height="34" rx="10"/>
+<text class="d-title" x="50" y="267.5" text-anchor="middle">1</text>
+<rect class="d-shadow" x="76" y="247.5" width="168" height="34" rx="10"/>
+<rect class="d-tile" x="76" y="246" width="168" height="34" rx="10"/>
+<text class="d-title" x="160" y="267.5" text-anchor="middle">Bohrmaschine</text>
+<rect class="d-shadow" x="392" y="247.5" width="80" height="34" rx="10"/>
+<rect class="d-tile d-tile-accent" x="392" y="246" width="80" height="34" rx="10"/>
+<text class="d-title" x="432" y="267.5" text-anchor="middle">CHF 20</text>
+<rect class="d-shadow" x="480" y="247.5" width="140" height="34" rx="10"/>
+<rect class="d-tile" x="480" y="246" width="140" height="34" rx="10"/>
+<text class="d-title" x="550" y="267.5" text-anchor="middle">da</text>
+<rect class="d-placeholder" x="248" y="246" width="136" height="34" rx="10"/>
+<text class="d-sub" x="316" y="267" text-anchor="middle">10 Leerzeichen</text>
+<rect class="d-shadow" x="32" y="289.5" width="36" height="34" rx="10"/>
+<rect class="d-tile" x="32" y="288" width="36" height="34" rx="10"/>
+<text class="d-title" x="50" y="309.5" text-anchor="middle">2</text>
+<rect class="d-shadow" x="76" y="289.5" width="308" height="34" rx="10"/>
+<rect class="d-tile" x="76" y="288" width="308" height="34" rx="10"/>
+<text class="d-title" x="230" y="309.5" text-anchor="middle">Zelt für vier Personen</text>
+<rect class="d-shadow" x="392" y="289.5" width="80" height="34" rx="10"/>
+<rect class="d-tile d-tile-accent" x="392" y="288" width="80" height="34" rx="10"/>
+<text class="d-title" x="432" y="309.5" text-anchor="middle">CHF 50</text>
+<rect class="d-shadow" x="480" y="289.5" width="140" height="34" rx="10"/>
+<rect class="d-tile" x="480" y="288" width="140" height="34" rx="10"/>
+<text class="d-title" x="550" y="309.5" text-anchor="middle">ab 2026-11-12</text>
+<rect class="d-shadow" x="32" y="331.5" width="36" height="34" rx="10"/>
+<rect class="d-tile" x="32" y="330" width="36" height="34" rx="10"/>
+<text class="d-title" x="50" y="351.5" text-anchor="middle">6</text>
+<rect class="d-shadow" x="76" y="331.5" width="84" height="34" rx="10"/>
+<rect class="d-tile" x="76" y="330" width="84" height="34" rx="10"/>
+<text class="d-title" x="118" y="351.5" text-anchor="middle">Beamer</text>
+<rect class="d-shadow" x="392" y="331.5" width="80" height="34" rx="10"/>
+<rect class="d-tile d-tile-accent" x="392" y="330" width="80" height="34" rx="10"/>
+<text class="d-title" x="432" y="351.5" text-anchor="middle">CHF 80</text>
+<rect class="d-shadow" x="480" y="331.5" width="140" height="34" rx="10"/>
+<rect class="d-tile" x="480" y="330" width="140" height="34" rx="10"/>
+<text class="d-title" x="550" y="351.5" text-anchor="middle">da</text>
+<rect class="d-placeholder" x="164" y="330" width="220" height="34" rx="10"/>
+<text class="d-sub" x="274" y="351" text-anchor="middle">16 Leerzeichen</text>
+<rect class="d-strip" x="16" y="396" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="415" text-anchor="middle">padEnd füllt jeden Namen mit Leerzeichen auf 22 Zeichen auf, so steht CHF überall an derselben Stelle.</text>
+</svg>

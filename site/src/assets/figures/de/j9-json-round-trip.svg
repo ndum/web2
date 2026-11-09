@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 438" role="img" aria-labelledby="j9-json-de-title j9-json-de-desc">
+<title id="j9-json-de-title">Eine Reservation durch JSON und zurück</title>
+<desc id="j9-json-de-desc">Oben die Reservation als Objekt mit den Feldern itemId 6, member M-117, from als Date für den 7. November 2026, days 4 und note mit dem Wert undefined. JSON.stringify macht daraus einen einzigen String. Darin steht from als Text im Format ISO 8601, und note fehlt. JSON.parse liest den String als neues Objekt. Dort ist from ein String und kein Date mehr, und das Feld note gibt es nicht.</desc>
+<defs><marker id="j9-json-de-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j9-json-de-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j9-json-de-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="438" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="648" height="96" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">OBJEKT</text>
+<text class="d-meta" x="96.8528" y="40" text-anchor="start">die Reservation im Programm</text>
+<rect class="d-band d-band-2" x="16" y="148" width="648" height="96" rx="12"/>
+<text class="d-label d-label-blue" x="32" y="172" text-anchor="start">JSON</text>
+<text class="d-meta" x="79.2352" y="172" text-anchor="start">ein einziger String</text>
+<rect class="d-band d-band-1" x="16" y="280" width="648" height="96" rx="12"/>
+<text class="d-label" x="32" y="304" text-anchor="start">NEUES OBJEKT</text>
+<text class="d-meta" x="145.27479999999997" y="304" text-anchor="start">aus dem String gelesen</text>
+<rect class="d-shadow" x="32" y="55.5" width="84" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="54" width="84" height="44" rx="10"/>
+<text class="d-title" x="74" y="73" text-anchor="middle">itemId</text>
+<text class="d-code" x="74" y="89" text-anchor="middle">6</text>
+<rect class="d-shadow" x="128" y="55.5" width="104" height="44" rx="10"/>
+<rect class="d-tile" x="128" y="54" width="104" height="44" rx="10"/>
+<text class="d-title" x="180" y="73" text-anchor="middle">member</text>
+<text class="d-code" x="180" y="89" text-anchor="middle">'M-117'</text>
+<rect class="d-shadow" x="244" y="55.5" width="200" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="244" y="54" width="200" height="44" rx="10"/>
+<text class="d-title" x="344" y="73" text-anchor="middle">from</text>
+<text class="d-code" x="344" y="89" text-anchor="middle">new Date('2026-11-07')</text>
+<rect class="d-shadow" x="456" y="55.5" width="76" height="44" rx="10"/>
+<rect class="d-tile" x="456" y="54" width="76" height="44" rx="10"/>
+<text class="d-title" x="494" y="73" text-anchor="middle">days</text>
+<text class="d-code" x="494" y="89" text-anchor="middle">4</text>
+<rect class="d-shadow" x="544" y="55.5" width="104" height="44" rx="10"/>
+<rect class="d-tile" x="544" y="54" width="104" height="44" rx="10"/>
+<text class="d-title" x="596" y="73" text-anchor="middle">note</text>
+<text class="d-code" x="596" y="89" text-anchor="middle">undefined</text>
+<rect class="d-shadow" x="32" y="187.5" width="616" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="186" width="616" height="44" rx="10"/>
+<g class="d-icon" transform="translate(44 199) scale(0.75)"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g>
+<text class="d-title" x="72" y="205" text-anchor="start">text</text>
+<text class="d-code" x="72" y="221" text-anchor="start">{"itemId":6,"member":"M-117","from":"2026-11-07T00:00:00.000Z","days":4}</text>
+<rect class="d-shadow" x="32" y="319.5" width="84" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="318" width="84" height="44" rx="10"/>
+<text class="d-title" x="74" y="337" text-anchor="middle">itemId</text>
+<text class="d-code" x="74" y="353" text-anchor="middle">6</text>
+<rect class="d-shadow" x="128" y="319.5" width="104" height="44" rx="10"/>
+<rect class="d-tile" x="128" y="318" width="104" height="44" rx="10"/>
+<text class="d-title" x="180" y="337" text-anchor="middle">member</text>
+<text class="d-code" x="180" y="353" text-anchor="middle">'M-117'</text>
+<rect class="d-shadow" x="244" y="319.5" width="200" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="244" y="318" width="200" height="44" rx="10"/>
+<text class="d-title" x="344" y="337" text-anchor="middle">from</text>
+<text class="d-code" x="344" y="353" text-anchor="middle">'2026-11-07T00:00:00.000Z'</text>
+<rect class="d-shadow" x="456" y="319.5" width="76" height="44" rx="10"/>
+<rect class="d-tile" x="456" y="318" width="76" height="44" rx="10"/>
+<text class="d-title" x="494" y="337" text-anchor="middle">days</text>
+<text class="d-code" x="494" y="353" text-anchor="middle">4</text>
+<rect class="d-placeholder" x="544" y="318" width="104" height="44" rx="10"/>
+<text class="d-sub" x="596" y="344" text-anchor="middle">note fehlt</text>
+<path class="d-arrow d-arrow-accent" d="M 56 116 L 56 144" marker-end="url(#j9-json-de-head-accent)"/>
+<text class="d-code" x="68" y="134" text-anchor="start">JSON.stringify(reservation)</text>
+<path class="d-arrow d-arrow-accent" d="M 56 248 L 56 276" marker-end="url(#j9-json-de-head-accent)"/>
+<text class="d-code" x="68" y="266" text-anchor="start">JSON.parse(text)</text>
+<rect class="d-strip" x="16" y="392" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="411" text-anchor="middle">Aus dem Date wird ein String, und das Feld mit undefined fehlt.</text>
+</svg>

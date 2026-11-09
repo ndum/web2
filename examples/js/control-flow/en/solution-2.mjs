@@ -1,10 +1,11 @@
-const deposits = [20, 30, 50, 80, 10]
+// The days from a Wednesday to the next Wednesday
+const days = [
+  'Wednesday', 'Thursday', 'Friday', 'Saturday',
+  'Sunday', 'Monday', 'Tuesday', 'Wednesday',
+]
 
-let found = null
-for (const deposit of deposits) {
-  if (deposit > 40) {
-    found = deposit
-    break
-  }
+let ahead = 1
+while (days[ahead] !== 'Wednesday' && days[ahead] !== 'Saturday') {
+  ahead += 1
 }
-console.log(found)
+console.log('Next open day:', days[ahead], 'in', ahead, 'days')

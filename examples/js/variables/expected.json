@@ -1,18 +1,22 @@
 {
   "de": {
-    "equality.mjs": "false true\nNaN true\nfalse true false true\n",
-    "fallback.mjs": "20\n0\nkeine Bemerkung\n\n",
-    "solution-1.mjs": "number string boolean undefined object\n",
-    "solution-2.mjs": "50 0 20 20\n",
-    "solution-3.mjs": "0.30000000000000004 false\n30 true 0.30\n",
+    "declare.mjs": "7 150\n",
+    "desk.mjs": "Bohrmaschine CHF 20\nda: true\nTage: 4 number\n",
+    "equality.mjs": "false true true\nNaN true\nfalse false true false\n",
+    "fallback.mjs": "unbekannt\n0\nkeine Bemerkung\n\n",
+    "solution-1.mjs": "Zelt für vier Personen CHF 50\nda: false\nstring\n",
+    "solution-2.mjs": "4 false\nNaN true\n0 false\n",
+    "solution-3.mjs": "41 3 8\ntrue false\n",
     "types.mjs": "string number boolean\nobject undefined\n"
   },
   "en": {
-    "equality.mjs": "false true\nNaN true\nfalse true false true\n",
-    "fallback.mjs": "20\n0\nno note\n\n",
-    "solution-1.mjs": "number string boolean undefined object\n",
-    "solution-2.mjs": "50 0 20 20\n",
-    "solution-3.mjs": "0.30000000000000004 false\n30 true 0.30\n",
+    "declare.mjs": "7 150\n",
+    "desk.mjs": "Drill CHF 20\nin: true\ndays: 4 number\n",
+    "equality.mjs": "false true true\nNaN true\nfalse false true false\n",
+    "fallback.mjs": "unknown\n0\nno note\n\n",
+    "solution-1.mjs": "Tent for four CHF 50\nin: false\nstring\n",
+    "solution-2.mjs": "4 false\nNaN true\n0 false\n",
+    "solution-3.mjs": "41 3 8\ntrue false\n",
     "types.mjs": "string number boolean\nobject undefined\n"
   }
 }

@@ -1,10 +1,11 @@
-const deposits = [20, 30, 50, 80, 10]
+// [%Die Tage von einem Mittwoch bis zum nächsten Mittwoch|The days from a Wednesday to the next Wednesday%]
+const days = [
+  '[%Mittwoch|Wednesday%]', '[%Donnerstag|Thursday%]', '[%Freitag|Friday%]', '[%Samstag|Saturday%]',
+  '[%Sonntag|Sunday%]', '[%Montag|Monday%]', '[%Dienstag|Tuesday%]', '[%Mittwoch|Wednesday%]',
+]
 
-let found = null
-for (const deposit of deposits) {
-  if (deposit > 40) {
-    found = deposit
-    break
-  }
+let ahead = 1
+while (days[ahead] !== '[%Mittwoch|Wednesday%]' && days[ahead] !== '[%Samstag|Saturday%]') {
+  ahead += 1
 }
-console.log(found)
+console.log('[%Nächster offener Tag:|Next open day:%]', days[ahead], 'in', ahead, '[%Tagen|days%]')

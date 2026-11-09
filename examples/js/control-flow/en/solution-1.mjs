@@ -1,7 +1,17 @@
-const available = [true, false, true, true, false]
+const week = [
+  'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+  'Friday', 'Saturday', 'Sunday',
+]
 
-let count = 0
-for (const isIn of available) {
-  if (isIn) count += 1
+for (const day of week) {
+  switch (day) {
+    case 'Wednesday':
+      console.log(day, '5 to 7 p.m.')
+      break
+    case 'Saturday':
+      console.log(day, '10 a.m. to 1 p.m.')
+      break
+    default:
+      console.log(day, 'closed')
+  }
 }
-console.log(count)

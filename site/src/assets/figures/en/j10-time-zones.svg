@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 290" role="img" aria-labelledby="j10-zones-en-title j10-zones-en-desc">
+<title id="j10-zones-en-title">One point in time in three time zones</title>
+<desc id="j10-zones-en-desc">On the left the value availableFrom of the tent, the text 2026-11-12 without a time. new Date reads it as midnight in UTC. On the right the same point in time in three time zones. In UTC it is midnight on November 12, in Zurich 1 a.m. on November 12, and in New York still 7 p.m. on November 11. Formatted with timeZone UTC, a date without a time shows November 12 everywhere.</desc>
+<defs><marker id="j10-zones-en-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j10-zones-en-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j10-zones-en-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="290" rx="14"/>
+<rect class="d-band d-band-1" x="16" y="16" width="300" height="212" rx="12"/>
+<text class="d-label" x="32" y="40" text-anchor="start">VALUE</text>
+<text class="d-meta" x="88.04400000000001" y="40" text-anchor="start">availableFrom of the tent</text>
+<rect class="d-band d-band-2" x="364" y="16" width="300" height="212" rx="12"/>
+<text class="d-label d-label-blue" x="380" y="40" text-anchor="start">DISPLAY</text>
+<text class="d-meta" x="449.23080000000004" y="40" text-anchor="start">depending on the time zone</text>
+<rect class="d-shadow" x="32" y="71.5" width="268" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="70" width="268" height="44" rx="10"/>
+<g class="d-icon" transform="translate(44 83) scale(0.75)"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g>
+<text class="d-title" x="72" y="89" text-anchor="start">Date without a time</text>
+<text class="d-code" x="72" y="105" text-anchor="start">'2026-11-12'</text>
+<rect class="d-shadow" x="32" y="155.5" width="268" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="32" y="154" width="268" height="44" rx="10"/>
+<g class="d-icon d-icon-accent" transform="translate(44 167) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
+<text class="d-title" x="72" y="173" text-anchor="start">Midnight in UTC</text>
+<text class="d-code" x="72" y="189" text-anchor="start">2026-11-12T00:00:00.000Z</text>
+<path class="d-arrow" d="M 62 118 L 62 150" marker-end="url(#j10-zones-en-head)"/>
+<text class="d-code" x="74" y="138" text-anchor="start">new Date(…)</text>
+<path class="d-arrow d-arrow-violet" d="M 300 176 L 340 176 L 340 190 L 376 190" marker-end="url(#j10-zones-en-head-violet)"/>
+<path class="d-arrow" d="M 300 176 L 340 176 L 340 78 L 376 78" marker-end="url(#j10-zones-en-head)"/>
+<path class="d-arrow" d="M 300 176 L 340 176 L 340 134 L 376 134" marker-end="url(#j10-zones-en-head)"/>
+<rect class="d-shadow" x="380" y="57.5" width="268" height="44" rx="10"/>
+<rect class="d-tile" x="380" y="56" width="268" height="44" rx="10"/>
+<g class="d-icon" transform="translate(392 69) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g>
+<text class="d-title" x="420" y="75" text-anchor="start">11/12/2026, 12:00 AM</text>
+<text class="d-code" x="420" y="91" text-anchor="start">'UTC'</text>
+<rect class="d-shadow" x="380" y="113.5" width="268" height="44" rx="10"/>
+<rect class="d-tile" x="380" y="112" width="268" height="44" rx="10"/>
+<g class="d-icon" transform="translate(392 125) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g>
+<text class="d-title" x="420" y="131" text-anchor="start">11/12/2026, 1:00 AM</text>
+<text class="d-code" x="420" y="147" text-anchor="start">'Europe/Zurich'</text>
+<rect class="d-shadow" x="380" y="169.5" width="268" height="44" rx="10"/>
+<rect class="d-tile d-tile-violet" x="380" y="168" width="268" height="44" rx="10"/>
+<g class="d-icon d-icon-violet" transform="translate(392 181) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g>
+<text class="d-title d-title-violet" x="420" y="187" text-anchor="start">11/11/2026, 7:00 PM</text>
+<text class="d-code" x="420" y="203" text-anchor="start">'America/New_York'</text>
+<rect class="d-strip" x="16" y="244" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="263" text-anchor="middle">Format a date without a time with timeZone: 'UTC', and it shows November 12 everywhere.</text>
+</svg>

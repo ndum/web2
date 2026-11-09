@@ -1,18 +1,20 @@
 {
   "de": {
-    "categories.mjs": "Werkzeug Camping Sonstiges\n",
-    "conditions.mjs": "verfügbar bei dir ausgeliehen\nhohes Pfand\n",
-    "loops.mjs": "140\n1\n",
-    "solution-1.mjs": "3\n",
-    "solution-2.mjs": "50\n",
-    "solution-3.mjs": "true false true false\n"
+    "desk.mjs": "Der Tresen ist heute offen\nBohrmaschine ist da\nOffen am Mittwoch\nOffen am Samstag\n",
+    "hours.mjs": "Samstag 10 bis 13 Uhr\n",
+    "next-open.mjs": "Nächster offener Tag: Mittwoch in 4 Tagen\n",
+    "pickup.mjs": "Festbankgarnitur ist bis zur Abholung zurück\n",
+    "solution-1.mjs": "Montag geschlossen\nDienstag geschlossen\nMittwoch 17 bis 19 Uhr\nDonnerstag geschlossen\nFreitag geschlossen\nSamstag 10 bis 13 Uhr\nSonntag geschlossen\n",
+    "solution-2.mjs": "Nächster offener Tag: Samstag in 3 Tagen\n",
+    "solution-3.mjs": "4 Tage sind erlaubt\n11 Tage sind zu lang\nvier ist keine Zahl\n"
   },
   "en": {
-    "categories.mjs": "Tools Camping Other\n",
-    "conditions.mjs": "available with you on loan\nhigh deposit\n",
-    "loops.mjs": "140\n1\n",
-    "solution-1.mjs": "3\n",
-    "solution-2.mjs": "50\n",
-    "solution-3.mjs": "true false true false\n"
+    "desk.mjs": "The counter is open today\nDrill is in\nOpen on Wednesday\nOpen on Saturday\n",
+    "hours.mjs": "Saturday 10 a.m. to 1 p.m.\n",
+    "next-open.mjs": "Next open day: Wednesday in 4 days\n",
+    "pickup.mjs": "Beer bench set is back in time for the pickup\n",
+    "solution-1.mjs": "Monday closed\nTuesday closed\nWednesday 5 to 7 p.m.\nThursday closed\nFriday closed\nSaturday 10 a.m. to 1 p.m.\nSunday closed\n",
+    "solution-2.mjs": "Next open day: Saturday in 3 days\n",
+    "solution-3.mjs": "4 days are allowed\n11 days are too long\nfour is not a number\n"
   }
 }

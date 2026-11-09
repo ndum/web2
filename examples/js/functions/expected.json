@@ -1,18 +1,20 @@
 {
   "de": {
-    "closure.mjs": "R-1\nR-2\nL-1 R-3\n",
-    "defaults.mjs": "CHF 20.00\nEUR 12.50\n3\n",
+    "defaults.mjs": "Bohrmaschine für M-117\nLeiter für M-204\nBeamer für M-117\nStichsäge für null\n",
     "desk.mjs": "Bohrmaschine true\n4 Tage\nR-1 R-2\n",
-    "solution-1.mjs": "false true false\n",
-    "solution-2.mjs": "3\n1\n",
-    "solution-3.mjs": "3\n1\n"
+    "open.mjs": "true false\ntrue\n",
+    "scope.mjs": "4 true\n11 false\n",
+    "solution-1.mjs": "7 false\n11 true\n",
+    "solution-2.mjs": "R-1 R-2\nL-1 R-3\n",
+    "solution-3.mjs": "R-1 R-2\n2 undefined\n"
   },
   "en": {
-    "closure.mjs": "R-1\nR-2\nL-1 R-3\n",
-    "defaults.mjs": "CHF 20.00\nEUR 12.50\n3\n",
+    "defaults.mjs": "Drill for M-117\nLadder for M-204\nProjector for M-117\nJigsaw for null\n",
     "desk.mjs": "Drill true\n4 days\nR-1 R-2\n",
-    "solution-1.mjs": "false true false\n",
-    "solution-2.mjs": "3\n1\n",
-    "solution-3.mjs": "3\n1\n"
+    "open.mjs": "true false\ntrue\n",
+    "scope.mjs": "4 true\n11 false\n",
+    "solution-1.mjs": "7 false\n11 true\n",
+    "solution-2.mjs": "R-1 R-2\nL-1 R-3\n",
+    "solution-3.mjs": "R-1 R-2\n2 undefined\n"
   }
 }

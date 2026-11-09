@@ -1,3 +1,7 @@
-console.log(20 === '20', 20 == '20')
-console.log(Number('twenty'), Number.isNaN(Number('twenty')))
-console.log(Boolean(''), Boolean('0'), Boolean(0), Boolean([]))
+// The form delivers text, the program holds the number of days
+const daysField = '4'
+const days = 4
+
+console.log(daysField === days, daysField == days, Number(daysField) === days)
+console.log(Number('four'), Number.isNaN(Number('four')))
+console.log(Boolean(0), Boolean(''), Boolean('0'), Boolean(null))

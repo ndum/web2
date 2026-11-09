@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 394" role="img" aria-labelledby="j7-check-en-title j7-check-en-desc">
+<title id="j7-check-en-title">A request through checkRequest</title>
+<desc id="j7-check-en-desc">On the left, in the try block, the three checks of checkRequest one below the other, Wednesday or Saturday, at most seven days and thing still free, with accepted below them. A request that passes a check goes on to the next one with yes. From every check an arrow marked throw leads right into the catch block to the request that fails there. The drill from 2026-11-09 to 2026-11-11 fails the first check, the raclette oven from 2026-11-07 to 2026-11-18 the second and the projector from 2026-11-07 to 2026-11-11 the third. The projector from 2026-11-11 to 2026-11-14 passes all three and is accepted, catch stays empty for it.</desc>
+<defs><marker id="j7-check-en-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j7-check-en-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-accent" d="M 0 1 L 9 5 L 0 9 z"/></marker><marker id="j7-check-en-head-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head d-head-violet" d="M 0 1 L 9 5 L 0 9 z"/></marker></defs>
+<rect class="d-ground" x="0" y="0" width="680" height="394" rx="14"/>
+<rect class="d-band d-band-2" x="16" y="16" width="320" height="316" rx="12"/>
+<text class="d-label d-label-blue" x="32" y="40" text-anchor="start">TRY</text>
+<text class="d-meta" x="70.4264" y="40" text-anchor="start">the checks in order</text>
+<rect class="d-band d-band-3" x="384" y="16" width="280" height="316" rx="12"/>
+<text class="d-label d-label-violet" x="400" y="40" text-anchor="start">CATCH</text>
+<text class="d-meta" x="456.044" y="40" text-anchor="start">declined with a reason</text>
+<path class="d-arrow d-arrow-accent" d="M 176 100 L 176 124" marker-end="url(#j7-check-en-head-accent)"/>
+<text class="d-sub" x="184" y="118" text-anchor="start">yes</text>
+<path class="d-arrow d-arrow-violet" d="M 320 78 L 396 78" marker-end="url(#j7-check-en-head-violet)"/>
+<text class="d-code" x="360" y="70" text-anchor="middle">throw</text>
+<rect class="d-shadow" x="32" y="57.5" width="288" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="56" width="288" height="44" rx="10"/>
+<g class="d-icon" transform="translate(44 69) scale(0.75)"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g>
+<text class="d-title" x="72" y="75" text-anchor="start">Wednesday or Saturday</text>
+<text class="d-code" x="72" y="91" text-anchor="start">isOpenOn(from), isOpenOn(to)</text>
+<rect class="d-shadow" x="400" y="57.5" width="248" height="44" rx="10"/>
+<rect class="d-tile d-tile-violet" x="400" y="56" width="248" height="44" rx="10"/>
+<g class="d-icon d-icon-violet" transform="translate(412 69) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text class="d-title d-title-violet" x="440" y="75" text-anchor="start">Drill</text>
+<text class="d-code" x="440" y="91" text-anchor="start">2026-11-09 to 2026-11-11</text>
+<path class="d-arrow d-arrow-accent" d="M 176 172 L 176 196" marker-end="url(#j7-check-en-head-accent)"/>
+<text class="d-sub" x="184" y="190" text-anchor="start">yes</text>
+<path class="d-arrow d-arrow-violet" d="M 320 150 L 396 150" marker-end="url(#j7-check-en-head-violet)"/>
+<text class="d-code" x="360" y="142" text-anchor="middle">throw</text>
+<rect class="d-shadow" x="32" y="129.5" width="288" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="128" width="288" height="44" rx="10"/>
+<g class="d-icon" transform="translate(44 141) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
+<text class="d-title" x="72" y="147" text-anchor="start">At most seven days</text>
+<text class="d-code" x="72" y="163" text-anchor="start">loanDays(from, to)</text>
+<rect class="d-shadow" x="400" y="129.5" width="248" height="44" rx="10"/>
+<rect class="d-tile d-tile-violet" x="400" y="128" width="248" height="44" rx="10"/>
+<g class="d-icon d-icon-violet" transform="translate(412 141) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text class="d-title d-title-violet" x="440" y="147" text-anchor="start">Raclette oven</text>
+<text class="d-code" x="440" y="163" text-anchor="start">2026-11-07 to 2026-11-18</text>
+<path class="d-arrow d-arrow-accent" d="M 176 244 L 176 268" marker-end="url(#j7-check-en-head-accent)"/>
+<text class="d-sub" x="184" y="262" text-anchor="start">yes</text>
+<path class="d-arrow d-arrow-violet" d="M 320 222 L 396 222" marker-end="url(#j7-check-en-head-violet)"/>
+<text class="d-code" x="360" y="214" text-anchor="middle">throw</text>
+<rect class="d-shadow" x="32" y="201.5" width="288" height="44" rx="10"/>
+<rect class="d-tile" x="32" y="200" width="288" height="44" rx="10"/>
+<g class="d-icon" transform="translate(44 213) scale(0.75)"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></g>
+<text class="d-title" x="72" y="219" text-anchor="start">Thing still free</text>
+<text class="d-code" x="72" y="235" text-anchor="start">for (const other of reservations)</text>
+<rect class="d-shadow" x="400" y="201.5" width="248" height="44" rx="10"/>
+<rect class="d-tile d-tile-violet" x="400" y="200" width="248" height="44" rx="10"/>
+<g class="d-icon d-icon-violet" transform="translate(412 213) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></g>
+<text class="d-title d-title-violet" x="440" y="219" text-anchor="start">Projector</text>
+<text class="d-code" x="440" y="235" text-anchor="start">2026-11-07 to 2026-11-11</text>
+<rect class="d-shadow" x="32" y="273.5" width="288" height="44" rx="10"/>
+<rect class="d-tile d-tile-accent" x="32" y="272" width="288" height="44" rx="10"/>
+<g class="d-icon d-icon-accent" transform="translate(44 285) scale(0.75)"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></g>
+<text class="d-title" x="72" y="291" text-anchor="start">Projector accepted</text>
+<text class="d-code" x="72" y="307" text-anchor="start">2026-11-11 to 2026-11-14</text>
+<rect class="d-placeholder" x="400" y="272" width="248" height="44" rx="10"/>
+<text class="d-sub" x="524" y="298" text-anchor="middle">no throw, catch does not run</text>
+<rect class="d-strip" x="16" y="348" width="648" height="30" rx="8"/>
+<text class="d-sub" x="340" y="367" text-anchor="middle">throw leaves checkRequest at once, the remaining checks no longer run.</text>
+</svg>

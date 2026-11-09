@@ -1,89 +1,130 @@
 ---
 title: Control flow
-description: Decisions with if, else and switch, the conditional operator and loops with for...of and while.
+description: The counter helper decides whether the drill is in and whether the counter is open, and goes through the days of a week. if and else, the conditional operator, switch, loops with for...of, for and while, break and continue.
 sidebar:
   order: 2
 ---
 
-Control flow decides which code runs and how often. In Vue templates it later becomes `v-if` and `v-for`, while the script keeps using the statements of this unit.
+::::step{n="2"}
+It knows the drill with its name, deposit and `availableFrom` and turns the text of a form field into a number. In this step it decides whether the drill is in and whether the counter is open, and it goes through the days of a week.
+
+:::details[Code up to step 1]
+::code{file="examples/js/variables/{lang}/desk.mjs"}
+:::
+::::
+
+Control flow decides which code runs and how often. In Vue templates it later becomes `v-if` and `v-for`, while the script keeps using the statements of this step.
 
 :::goals
-After this unit you can
+After this step you can
 
-- distinguish between cases with `if`, `else if` and `else`,
+- distinguish between cases with `if`, `else if` and `else` and combine conditions with `&&`, `||` and `!`,
 - use the conditional operator `? :` for short decisions,
 - check a value against several fixed cases with `switch`,
-- loop over values with `for...of` and `while` and steer loops with `break` and `continue`.
+- repeat code with `for...of`, `for` and `while` and steer loops with `break` and `continue`.
 :::
 
-## Decisions
+## Decisions with if and else
 
-`if` runs a block when a condition is true. With `else if` you check further cases in turn, and `else` catches whatever is left. You combine conditions with `&&` for "and", `||` for "or" and `!` for "not". A condition doesn't have to be a boolean, since JavaScript converts every value, as the unit [Variables, types and operators](../variables/) describes.
+`if` runs a block when a condition is true. With `else if` you check further cases in turn, and `else` catches whatever is left. A condition doesn't have to be a boolean, since JavaScript converts every value, as [Variables, types and operators](../variables/) describes.
 
-::code{file="examples/js/control-flow/{lang}/conditions.mjs"}
+::code{file="examples/js/control-flow/{lang}/pickup.mjs"}
 
-A `return` ends the function immediately. Since every case ends with `return`, you could also leave out both `else`. Many developers write functions that deal with special cases early with `return` and keep the main case at the end.
+The beer bench set is on loan, so `availableFrom` isn't `null` and the first case doesn't apply. The second one compares two dates. Strings in the format YYYY-MM-DD can be compared with `<` and `<=`, because the year comes first, then the month and the day last, and JavaScript compares strings character by character. November 3 comes before November 7, so the beer bench set is back in time for the pickup. As soon as one case applies, JavaScript skips all the others, the `else` block included.
 
-For a decision between two values there is the conditional operator `condition ? ifTrue : ifFalse`. It is an expression and produces a value, so it fits into an assignment or a template literal. You will see it often in Vue templates, for example as `{{ item.available ? 'Available' : 'On loan' }}`.
+You combine conditions with `&&` for "and", `||` for "or" and `!` for "not". `availableFrom !== null && availableFrom > pickup` is true when a thing is on loan and only comes back after the pickup. `!` flips a boolean, so `!(availableFrom === null)` means the same as `availableFrom !== null`.
 
 ## Cases with switch
 
-When you check one value against several fixed cases, `switch` is easier to read than a long chain of `else if`.
+When you check one value against several fixed cases, `switch` is easier to read than a long chain of `else if`. The counter helper uses it to name the opening hours of a day.
 
-::code{file="examples/js/control-flow/{lang}/categories.mjs"}
+::code{file="examples/js/control-flow/{lang}/hours.mjs"}
 
-`switch` compares with `===`. When a case matches, the code runs from there until a `return` or `break` comes. Without `break` it runs on into the next case. This is called fall-through, and it is a common source of bugs. `default` applies when no case matches, here for `'music'`.
+`switch` compares `day` with each `case` in turn, using `===`. When a case matches, the code runs from there until a `break` comes. Without `break` it would run on into the next case. This is called fall-through, and it is a common source of bugs. `default` applies when no case matches. Click "Edit", put in another day such as `'Thursday'` and run the program again. `hours` is declared with `let` because the variable only gets its value in the matching case.
 
 ## Loops
 
-For arrays, `for...of` is the simplest loop. It hands you the values in order without making you deal with an index.
+A loop repeats code. For a list of values, `for...of` is the simplest one. It hands you the values in order without making you deal with positions. The counter helper uses it to go through the days of the week. Before that it says whether the counter is open today and whether the drill is in.
 
-::code{file="examples/js/control-flow/{lang}/loops.mjs"}
+::code{file="examples/js/control-flow/{lang}/desk.mjs"}
 
-The first loop adds up all deposits, and 20, 50, 30 and 40 make 140. The second one runs with `while` as long as a condition holds, here up to the first deposit of 40 or more. That's the deposit at position 1, since counting starts at 0. `index < deposits.length` comes first so that the loop also ends when no deposit matches.
+`today` is the Saturday the counter helper works on, October 31, 2026. The first condition combines two comparisons with `||` and is true as soon as one of them holds. For the drill, the conditional operator `condition ? ifTrue : ifFalse` is enough. It is an expression and produces a value, so it fits right into `console.log`. You'll see it often in Vue templates, for example as `{{ available ? 'in' : 'on loan' }}`.
 
-When you need the index, there's the classic counting loop `for (let i = 0; i < deposits.length; i++)`. `break` leaves a loop immediately, `continue` skips the rest of the current pass. `for...in`, by contrast, loops over the keys of an object and isn't meant for arrays.
+`week` holds the seven days in an array, a list of values in square brackets, and step 4 covers arrays in detail. `for (const day of week)` creates the constant `day` with the next day in every pass. The figure shows the seven passes.
 
-In part 1 you learn the methods `map`, `filter` and `find`, which make many loops over arrays shorter. The loops of this unit stay useful anyway, for example when you want to stop early.
+![The loop over the week. On the left are the seven days of the week from Monday to Sunday, numbered 1 to 7 in the order in which the loop goes through them. On the right is what the counter helper prints. An arrow leads from Wednesday to "Open on Wednesday" and one from Saturday to "Open on Saturday". For the other five days a dashed frame says "no output".](../../../../assets/figures/en/j2-loop-over-week.svg)
+
+The condition `day === 'Wednesday' || day === 'Saturday'` appears twice in the counter helper. In step 3 a function puts it in one place. `for...in` looks similar to `for...of`, but it loops over the keys of an object and isn't meant for arrays.
+
+## break and continue
+
+Sometimes a loop should stop early or skip a value. That's how the counter helper finds the next day the counter is open.
+
+::code{file="examples/js/control-flow/{lang}/next-open.mjs"}
+
+`days` holds the eight days from today to the next Saturday. Since the search has to know how many days it takes to reach an open day, it uses the classic counting loop. `let ahead = 1` creates the counter, `ahead < days.length` is the condition for every pass, and `ahead++` adds one after each pass, just like `ahead += 1`. The counter starts at 1 rather than 0 because today doesn't count.
+
+The condition before `continue` is the opposite of the condition in the counter helper. If a day is neither Wednesday nor Saturday, `continue` skips the rest of the pass and the loop moves on to the next day. On Wednesday it prints the day, and `break` ends the whole loop. Without `break` it would keep going and print the Saturday in 7 days as well.
+
+A `while` loop runs as long as its condition holds. It fits when you don't know in advance how many passes it takes. In the exercise "Going further" you write the search with it. In part 1 you learn the methods `map`, `filter` and `find`, which make many loops over arrays shorter. The loops of this step stay useful anyway, for example when you want to stop early.
+
+## Exercises
+
+::::exercise[Getting started]
+Print the opening hours for every day of the week. Take the loop from the counter helper and put the `switch` with the opening hours inside it.
+
+:::solution[Solution]
+::code{file="examples/js/control-flow/{lang}/solution-1.mjs"}
+
+The `switch` sits in the block of the loop, so it runs once for every day. Here `break` only ends the `switch`, not the loop. `default` applies to the five days without a case of their own.
+:::
+::::
+
+::::exercise[Going further]
+Someone who picks something up on a Wednesday wants to know when the counter is open next. Write the search from the section with `while` instead of `for`, for the days from one Wednesday to the next. Print the day and the number of days until then.
+
+:::solution[Solution]
+::code{file="examples/js/control-flow/{lang}/solution-2.mjs"}
+
+The loop runs as long as the day is neither Wednesday nor Saturday. On Saturday the condition is false, the loop ends and `ahead` is 3. Since `days` ends with the next Wednesday, the loop is sure to find an open day and never reads past the end of the array.
+:::
+::::
+
+::::exercise[Challenge]
+The counter helper checks the number of days from the form. For the entries `'4'`, `'11'` and `'four'`, print whether the loan is allowed, too long or not a number at all. A loan lasts at most seven days. Watch out for what a comparison with `NaN` gives.
+
+:::solution[Solution]
+::code{file="examples/js/control-flow/{lang}/solution-3.mjs"}
+
+The check for `NaN` comes first. Every comparison with `NaN` gives `false`, `NaN > 7` included. If the check for more than seven days came first, `'four'` would end up in the `else` and count as allowed.
+:::
+::::
 
 ## Common mistakes
 
 | Mistake | What helps |
 |---|---|
-| `if (x = 5)` assigns instead of comparing and is always true. | Compare with `===`. |
-| A `case` without `break` or `return` runs into the next case. | End every case with `break` or `return`. |
-| `for (const i in names)` gives the indexes as strings, not the names. | Use `for...of` for arrays. |
+| `if (today = 'Saturday')` assigns instead of comparing and is always true. | Compare with `===`. |
+| `if (day === 'Wednesday' \|\| 'Saturday')` always counts as true. | Write out both comparisons, `day === 'Wednesday' \|\| day === 'Saturday'`. |
+| A `case` without `break` runs into the next case. | End every case with `break`. |
+| `for (const day in week)` gives the positions as strings, not the days. | Use `for...of` for arrays. |
 | A `while` loop never changes its condition and runs forever. | Make sure every pass gets closer to the exit condition. The "Stop" button aborts such a program. |
-| `for (let i = 0; i <= names.length; i++)` reads one element too many. | Compare with `<`, the last index is `length - 1`. |
+| `for (let i = 0; i <= week.length; i++)` reads one element too many. | Compare with `<`, the last position is `length - 1`. |
 
-## Exercises
+## Self-check
 
-::::exercise[Getting started]
-The array `[true, false, true, true, false]` tells for five things whether they are in. Count with a loop how many are available.
+::::selfcheck
+1. When do you use `switch` instead of a chain of `else if`?
+2. What is the difference between `break` and `continue`?
+3. Why does the conditional operator fit right into a `console.log` while an `if` doesn't?
 
-:::solution[Solution]
-::code{file="examples/js/control-flow/{lang}/solution-1.mjs"}
-
-The output is 3. Since `isIn` already is a boolean, `if (isIn)` is enough, and there's no need to compare with `=== true`.
+:::solution[Answers]
+1. When you check one value against several fixed cases, such as a weekday. `switch` compares with `===`, so ranges like "more than seven days" stay with `if`.
+2. `break` ends the whole loop. `continue` only ends the current pass, and the loop goes on with the next value.
+3. The conditional operator is an expression and produces a value. `if` is a statement that only decides which block runs.
 :::
 ::::
 
-::::exercise[Going further]
-Find the first deposit above CHF 40 in the array `[20, 30, 50, 80, 10]`. Stop the loop as soon as you have found it. If there is none, the result should be `null`.
-
-:::solution[Solution]
-::code{file="examples/js/control-flow/{lang}/solution-2.mjs"}
-
-The output is 50. Thanks to `break`, the loop never looks at 80 and 10. `found` starts as `null` so that the result is right even if no deposit matches. In part 1, `deposits.find((deposit) => deposit > 40)` does the same in one line, but returns `undefined` instead of `null` when nothing matches.
+:::next
+In step 3 the counter helper uses functions to count the days of a loan and hand out numbers for reservations. Continue with [J3 Functions and scope](../functions/).
 :::
-::::
-
-::::exercise[Challenge]
-Write a function `isOpen(day, hour)` that tells whether Lorraine Commons is open at a full hour. It is open on Wednesday from 5 to 7 p.m. and on Saturday from 10 a.m. to 1 p.m. The days are called `'wednesday'` and `'saturday'`, and the hour uses the 24-hour clock. At 7 p.m. the shop is already closed. Check Wednesday at 6 p.m., Wednesday at 7 p.m., Saturday at 10 a.m. and Monday at 11 a.m.
-
-:::solution[Solution]
-::code{file="examples/js/control-flow/{lang}/solution-3.mjs"}
-
-The output is `true false true false`. The start counts, the end doesn't, so the left side has `>=` and the right side `<`. With this rule two time slots never overlap when one ends where the other begins. For all other days the function returns `false` at the end.
-:::
-::::
