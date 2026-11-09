@@ -1,4 +1,12 @@
-const line = 'Stichsäge; Werkzeug; 20'
+function mark(name, query) {
+  const wanted = query.trim().toLowerCase()
+  const start = name.toLowerCase().indexOf(wanted)
+  if (start === -1) return name
+  const end = start + wanted.length
+  // Die Stellen stammen aus dem Text in Kleinbuchstaben, ausgeschnitten wird aus dem Original
+  return `${name.slice(0, start)}[${name.slice(start, end)}]${name.slice(end)}`
+}
 
-const [name, category, deposit] = line.split(';').map((part) => part.trim())
-console.log(name, category, Number(deposit) + 5)
+console.log(mark('Velo-Anhänger', 'anh'))
+console.log(mark('Schlafsack', ' SACK '))
+console.log(mark('Leiter', 'zelt'))

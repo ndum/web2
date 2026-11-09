@@ -1,7 +1,6 @@
-const names = ['[%Bohrmaschine|Drill%]', '[%Stichsäge|Jigsaw%]', '[%Raclette-Ofen|Raclette oven%]']
-const query = '  [%säge|SAW%] '
+const name = '[%Zelt für vier Personen|Tent for four%]'
+const query = '[%zelt |tent %]'
 
-const wanted = query.trim().toLowerCase()
-for (const name of names) {
-  if (name.toLowerCase().includes(wanted)) console.log(name)
-}
+console.log(name.includes(query))
+console.log(name.includes(query.trim()))
+console.log(name.toLowerCase().includes(query.trim().toLowerCase()))

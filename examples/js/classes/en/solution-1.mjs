@@ -1,16 +1,14 @@
-class Reservation {
-  constructor(item, from, to) {
-    this.item = item
-    this.from = new Date(from)
-    this.to = new Date(to)
+class Member {
+  constructor(number, since) {
+    this.number = number
+    this.since = since
   }
 
-  overlaps(other) {
-    return this.item === other.item && this.from <= other.to && other.from <= this.to
+  toString() {
+    return `${this.number}, member since ${this.since}`
   }
 }
 
-const first = new Reservation('Tent', '2026-11-02', '2026-11-04')
-const second = new Reservation('Tent', '2026-11-04', '2026-11-06')
-const third = new Reservation('Tent', '2026-11-05', '2026-11-06')
-console.log(first.overlaps(second), first.overlaps(third))
+const member = new Member('M-117', 2024)
+console.log(`${member}`)
+console.log(member instanceof Member)

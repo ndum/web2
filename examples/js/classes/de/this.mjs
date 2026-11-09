@@ -1,20 +1,22 @@
-const counter = {
-  count: 0,
-  increase() {
-    this.count += 1
+const desk = {
+  inStock: 6,
+  lend() {
+    this.inStock -= 1
   },
 }
 
-counter.increase()
-console.log(counter.count)
+desk.lend()
+console.log(desk.inStock)
 
-const increase = counter.increase
+const lend = desk.lend
 try {
-  increase()
+  lend()
 } catch (error) {
   console.log(error.name)
 }
 
-const bound = counter.increase.bind(counter)
+const bound = desk.lend.bind(desk)
 bound()
-console.log(counter.count)
+const later = () => desk.lend()
+later()
+console.log(desk.inStock)

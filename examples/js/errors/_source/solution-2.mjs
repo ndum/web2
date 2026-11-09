@@ -1,11 +1,21 @@
-function readSettings(text) {
+let loading = false
+const steps = []
+
+function loadList() {
+  loading = true
   try {
-    return JSON.parse(text)
+    steps.push('try')
+    throw new Error('[%Die Liste ist nicht erreichbar|The list cannot be reached%]')
   } catch (error) {
-    console.log('[%Einstellungen unlesbar, Standard wird verwendet|Settings unreadable, using the default%]', error.name)
-    return { pageSize: 20 }
+    steps.push('catch')
+    return []
+  } finally {
+    // [%Läuft auch nach dem return im catch-Block, so verschwindet die Ladeanzeige immer|Runs even after the return in the catch block, so the loading indicator always goes away%]
+    loading = false
+    steps.push('finally')
   }
 }
 
-console.log(readSettings('{"pageSize": 50}').pageSize)
-console.log(readSettings('pageSize: 50').pageSize)
+const list = loadList()
+console.log(list.length, loading)
+console.log(steps.join(' > '))

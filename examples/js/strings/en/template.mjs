@@ -1,7 +1,12 @@
-const name = 'Tent for four'
-const days = 3
-const deposit = 50
+const item = { id: 2, name: 'Tent for four', deposit: 50, availableFrom: '2026-11-12' }
 
-console.log(`${name}, ${days} days, deposit CHF ${deposit.toFixed(2)}`)
-console.log('7'.padStart(3, '0'), 'raclette'.toUpperCase())
-console.log('Drill;Tools;20'.split(';'))
+const glued = item.name + ', CHF ' + item.deposit
+const line = `${item.name}, CHF ${item.deposit}`
+console.log(line)
+console.log(glued === line)
+
+console.log(`${item.name}: ${item.availableFrom === null ? 'in' : 'on loan'}`)
+
+const hours = `Wednesday 5 to 7 pm
+Saturday 10 am to 1 pm`
+console.log(hours)

@@ -1,12 +1,13 @@
+// [%Das Pfand eines Dings liegt zwischen 10 und 80 Franken|The deposit of a thing lies between 10 and 80 francs%]
 function parseDeposit(text) {
-  const value = Number(text)
-  if (Number.isNaN(value) || value < 0) {
-    throw new RangeError(`[%Ungültiges Pfand|Invalid deposit%] ${text}`)
+  const deposit = Number(text)
+  if (!Number.isInteger(deposit) || deposit < 10 || deposit > 80) {
+    throw new RangeError(`[%Pfand zwischen 10 und 80 Franken, nicht|Deposit between 10 and 80 francs, not%] ${text}`)
   }
-  return value
+  return deposit
 }
 
-for (const text of ['20', '-5', '[%zwanzig|twenty%]']) {
+for (const text of ['40', '5', '[%vierzig|forty%]']) {
   try {
     console.log(parseDeposit(text))
   } catch (error) {

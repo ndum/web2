@@ -1,16 +1,20 @@
 {
   "de": {
-    "reservation.mjs": "R-1: Zelt, 3 Tage\n3 undefined\n",
-    "solution-1.mjs": "true false\n",
-    "solution-2.mjs": "true Leiter 21\n",
-    "solution-3.mjs": "Willkommen bei Lorraine Commons\n",
-    "this.mjs": "1\nTypeError\n2\n"
+    "desk.mjs": "R-1 Beamer für M-117, 2026-11-07 bis 2026-11-11, 4 Tage\nR-2 Festbankgarnitur für M-117, 2026-11-07 bis 2026-11-14, 7 Tage\n",
+    "item.mjs": "Zelt für vier Personen false\nLeiter number true\ntrue function\n",
+    "note.mjs": "\"Holt den Beamer um 11 Uhr ab\"\n200\nnumber, member\n",
+    "solution-1.mjs": "M-117, Mitglied seit 2024\ntrue\n",
+    "solution-2.mjs": "false true\n",
+    "solution-3.mjs": "R-3 3\nR-1 4\nR-2 7\n",
+    "this.mjs": "5\nTypeError\n3\n"
   },
   "en": {
-    "reservation.mjs": "R-1: Tent, 3 days\n3 undefined\n",
-    "solution-1.mjs": "true false\n",
-    "solution-2.mjs": "true Ladder 21\n",
-    "solution-3.mjs": "Welcome to Lorraine Commons\n",
-    "this.mjs": "1\nTypeError\n2\n"
+    "desk.mjs": "R-1 Projector for M-117, 2026-11-07 to 2026-11-11, 4 days\nR-2 Beer bench set for M-117, 2026-11-07 to 2026-11-14, 7 days\n",
+    "item.mjs": "Tent for four false\nLadder number true\ntrue function\n",
+    "note.mjs": "\"Picks up the projector at 11 am\"\n200\nnumber, member\n",
+    "solution-1.mjs": "M-117, member since 2024\ntrue\n",
+    "solution-2.mjs": "false true\n",
+    "solution-3.mjs": "R-3 3\nR-1 4\nR-2 7\n",
+    "this.mjs": "5\nTypeError\n3\n"
   }
 }

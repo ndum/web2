@@ -1,7 +1,6 @@
-const names = ['Drill', 'Jigsaw', 'Raclette oven']
-const query = '  SAW '
+const name = 'Tent for four'
+const query = 'tent '
 
-const wanted = query.trim().toLowerCase()
-for (const name of names) {
-  if (name.toLowerCase().includes(wanted)) console.log(name)
-}
+console.log(name.includes(query))
+console.log(name.includes(query.trim()))
+console.log(name.toLowerCase().includes(query.trim().toLowerCase()))

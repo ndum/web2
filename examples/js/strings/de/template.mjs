@@ -1,7 +1,12 @@
-const name = 'Zelt für vier Personen'
-const days = 3
-const deposit = 50
+const item = { id: 2, name: 'Zelt für vier Personen', deposit: 50, availableFrom: '2026-11-12' }
 
-console.log(`${name}, ${days} Tage, Pfand CHF ${deposit.toFixed(2)}`)
-console.log('7'.padStart(3, '0'), 'raclette'.toUpperCase())
-console.log('Bohrmaschine;Werkzeug;20'.split(';'))
+const glued = item.name + ', CHF ' + item.deposit
+const line = `${item.name}, CHF ${item.deposit}`
+console.log(line)
+console.log(glued === line)
+
+console.log(`${item.name}: ${item.availableFrom === null ? 'da' : 'ausgeliehen'}`)
+
+const hours = `Mittwoch 17 bis 19 Uhr
+Samstag 10 bis 13 Uhr`
+console.log(hours)

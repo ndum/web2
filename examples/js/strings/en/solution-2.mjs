@@ -1,6 +1,10 @@
-function receiptLine(name, deposit) {
-  return `${name.padEnd(16, '.')} CHF ${deposit.toFixed(2).padStart(6)}`
+function receiptLine(label, amount) {
+  return `${label.padEnd(16, '.')} CHF ${amount.toFixed(2).padStart(6)}`
 }
 
-console.log(receiptLine('Tent', 50))
-console.log(receiptLine('Ladder', 20))
+const projector = { id: 6, name: 'Projector', deposit: 80, availableFrom: null }
+const oven = { id: 3, name: 'Raclette oven', deposit: 30, availableFrom: null }
+
+console.log(receiptLine(projector.name, projector.deposit))
+console.log(receiptLine(oven.name, oven.deposit))
+console.log(receiptLine('Total', projector.deposit + oven.deposit))

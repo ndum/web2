@@ -1,18 +1,22 @@
 {
   "de": {
-    "search.mjs": "Stichsäge\n",
-    "solution-1.mjs": "\"Velo-Anhänger\" 13 true\n",
-    "solution-2.mjs": "Zelt............ CHF  50.00\nLeiter.......... CHF  20.00\n",
-    "solution-3.mjs": "Stichsäge Werkzeug 25\n",
-    "sorting.mjs": "[ 'Bohrmaschine', 'Zelt', 'Äxte' ]\n[ 'Äxte', 'Bohrmaschine', 'Zelt' ]\n",
-    "template.mjs": "Zelt für vier Personen, 3 Tage, Pfand CHF 50.00\n007 RACLETTE\n[ 'Bohrmaschine', 'Werkzeug', '20' ]\n"
+    "desk.mjs": " 1 Bohrmaschine           CHF 20 da\n 2 Zelt für vier Personen CHF 50 ab 2026-11-12\n 3 Raclette-Ofen          CHF 30 da\n 4 Festbankgarnitur       CHF 40 ab 2026-11-03\n 5 Stichsäge              CHF 20 da\n 6 Beamer                 CHF 80 da\n 7 Leiter                 CHF 20 da\n 8 Schlafsack             CHF 20 da\n 9 Velo-Anhänger          CHF 60 ab 2026-11-12\nTreffer für «zelt»\n 2 Zelt für vier Personen CHF 50 ab 2026-11-12\n",
+    "methods.mjs": "M-117 5 8\ntrue 117\n[ '2026', '11', '12' ]\n",
+    "search.mjs": "false\nfalse\ntrue\n",
+    "solution-1.mjs": " 9 Velo-Anhänger          CHF 60 ab 2026-11-12\n10 Rasenmäher             CHF 40 da\n",
+    "solution-2.mjs": "Beamer.......... CHF  80.00\nRaclette-Ofen... CHF  30.00\nTotal........... CHF 110.00\n",
+    "solution-3.mjs": "Velo-[Anh]änger\nSchlaf[sack]\nLeiter\n",
+    "sorting.mjs": "10, 12, 2, 9\n2, 9, 10, 12\n9, 10, 2, 12\nRasenmäher, Schleifmaschine, Velo-Anhänger, Zelt für vier Personen\n",
+    "template.mjs": "Zelt für vier Personen, CHF 50\ntrue\nZelt für vier Personen: ausgeliehen\nMittwoch 17 bis 19 Uhr\nSamstag 10 bis 13 Uhr\n"
   },
   "en": {
-    "search.mjs": "Jigsaw\n",
-    "solution-1.mjs": "\"Bike trailer\" 12 true\n",
-    "solution-2.mjs": "Tent............ CHF  50.00\nLadder.......... CHF  20.00\n",
-    "solution-3.mjs": "Jigsaw Tools 25\n",
-    "sorting.mjs": "[ 'Drill', 'axe', 'tent' ]\n[ 'axe', 'Drill', 'tent' ]\n",
-    "template.mjs": "Tent for four, 3 days, deposit CHF 50.00\n007 RACLETTE\n[ 'Drill', 'Tools', '20' ]\n"
+    "desk.mjs": " 1 Drill          CHF 20 in\n 2 Tent for four  CHF 50 back 2026-11-12\n 3 Raclette oven  CHF 30 in\n 4 Beer bench set CHF 40 back 2026-11-03\n 5 Jigsaw         CHF 20 in\n 6 Projector      CHF 80 in\n 7 Ladder         CHF 20 in\n 8 Sleeping bag   CHF 20 in\n 9 Bike trailer   CHF 60 back 2026-11-12\nHits for \"tent\"\n 2 Tent for four  CHF 50 back 2026-11-12\n",
+    "methods.mjs": "M-117 5 8\ntrue 117\n[ '2026', '11', '12' ]\n",
+    "search.mjs": "false\nfalse\ntrue\n",
+    "solution-1.mjs": " 9 Bike trailer   CHF 60 back 2026-11-12\n10 Lawn mower     CHF 40 in\n",
+    "solution-2.mjs": "Projector....... CHF  80.00\nRaclette oven... CHF  30.00\nTotal........... CHF 110.00\n",
+    "solution-3.mjs": "Bike [trail]er\nSleeping [bag]\nLadder\n",
+    "sorting.mjs": "10, 12, 2, 9\n2, 9, 10, 12\n9, 10, 2, 12\nBike trailer, Lawn mower, Sander, Tent for four\n",
+    "template.mjs": "Tent for four, CHF 50\ntrue\nTent for four: on loan\nWednesday 5 to 7 pm\nSaturday 10 am to 1 pm\n"
   }
 }
